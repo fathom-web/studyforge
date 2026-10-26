@@ -66,6 +66,16 @@ async function sfSyncPublished(){
     const library=JSON.parse(content);
     if(library?.schema!=='studyforge-library/v1'||!Array.isArray(library.packs))throw Error('Ongeldig bibliotheekformaat.');
     if(library.packs.length>200)throw Error('Te veel lespakketten.');
+    // Alleen deze gepubliceerde toetsdata mag de planning vullen;
+    // leerlingen kunnen geen eigen toetsdata naar de bibliotheek schrijven.
+    window.STUDYFORGE_PUBLISHED_EXAMS=Array.isArray(library.exams)?library.exams.filter(e=>
+      e && (e.profile==='Nikki'||e.profile==='Dean') &&
+      typeof e.id==='string' && e.id.length>0 && e.id.length<=120 &&
+      typeof e.title==='string' && e.title.length>0 && e.title.length<=120 &&
+      typeof e.subject==='string' && e.subject.length>0 && e.subject.length<=80 &&
+      typeof e.date==='string' && /^\d{4}-\d{2}-\d{2}$/.test(e.date)
+    ).slice(0,200):[];
+
     if(SF_REMOTE){
       const user=await sfRemoteUser();
       if(!user)return {added:0,mode:'supabase',error:'Log in om de lessen te synchroniseren'};
