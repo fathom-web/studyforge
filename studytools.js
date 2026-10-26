@@ -27,6 +27,16 @@ async function spLoad(profile){
       spWriteLocal(profile,val);
     }catch(err){spCloudWarning='Planning wordt nog lokaal bewaard. Activeer later de aanvullende Supabase-tabel.';console.warn('StudyForge planning cloud',err)}
   }
+  // Publicatie My Future: toon Deans toets éénmalig in 'Mijn toetsen'.
+  // Bewaar de markering zodat handmatig verwijderen niet ongedaan wordt gemaakt.
+  if(Number(profile)===2 && spDate()<='2026-10-27' && !val.autoAddedEnglish20261027){
+    const already=val.exams.some(e=>String(e.date)==='2026-10-27' && String(e.subject).trim().toLowerCase()==='engels');
+    if(!already){
+      val.exams.push({id:'dean-engels-my-future-2026-10-27',title:'Engels — My Future',subject:'Engels',date:'2026-10-27',targetGrade:Number(val.goals?.targetGrade||7)});
+    }
+    val.autoAddedEnglish20261027=true;
+    try{await spSave(profile,val);}catch(err){console.warn('StudyForge: toetsdatum opslaan mislukt',err);}
+  }
   return val;
 }
 async function spSave(profile,val){
