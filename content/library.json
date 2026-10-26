@@ -1,4 +1,740 @@
 {
   "schema": "studyforge-library/v1",
-  "packs": []
+  "packs": [
+    {
+      "id": "dean-engels-my-future-2026-10-27-v1",
+      "profile": "Dean",
+      "collections": [
+        {
+          "type": "quiz",
+          "subject": "Engels",
+          "title": "My Future — examen 27 oktober 2026",
+          "description": "35 vragen voor VMBO Basis 3: opleiding en toekomst, interesses, kwaliteiten, vaardigheden, present simple, present continuous, between/around/in/at/on, very/really/quite/extremely/absolutely/too, en zinnen over toekomstplannen. 28 meerkeuzevragen, 7 open vragen. Hints, uitleg en fouten oefenen. Geen MBO 3/4 beroepenlijst.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat betekent 'career choice'?",
+              "options": [
+                "Opleiding",
+                "Beroepskeuze",
+                "Stage",
+                "Werkervaring"
+              ],
+              "correct": 1,
+              "hint": "Career betekent loopbaan.",
+              "explanation": "Career choice = beroepskeuze."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'vervolgopleiding' in het Engels?",
+              "options": [
+                "Further education",
+                "Work experience",
+                "Open day",
+                "Subject"
+              ],
+              "correct": 0,
+              "hint": "Further betekent verder.",
+              "explanation": "Further education = vervolgopleiding."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'work placement'?",
+              "options": [
+                "Werkgever",
+                "Beroep",
+                "Stage",
+                "Diploma"
+              ],
+              "correct": 2,
+              "hint": "Je doet dit bij een bedrijf om ervaring op te doen.",
+              "explanation": "Work placement of internship = stage."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'employer'?",
+              "options": [
+                "Werknemer",
+                "Werkgever",
+                "Sollicitant",
+                "Collega"
+              ],
+              "correct": 1,
+              "hint": "Een employee is een werknemer.",
+              "explanation": "Employer = werkgever. Employee = werknemer."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'solliciteren'?",
+              "options": [
+                "To manage",
+                "To travel",
+                "To apply for a job",
+                "To do sports"
+              ],
+              "correct": 2,
+              "hint": "Je probeert een baan te krijgen.",
+              "explanation": "To apply for a job = solliciteren."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'dieren verzorgen'?",
+              "options": [
+                "Working with children",
+                "Taking care of animals",
+                "Making things",
+                "Helping customers"
+              ],
+              "correct": 1,
+              "hint": "Taking care betekent verzorgen.",
+              "explanation": "Taking care of animals = dieren verzorgen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'travelling'?",
+              "options": [
+                "Verkopen",
+                "Reizen",
+                "Bouwen",
+                "Tekenen"
+              ],
+              "correct": 1,
+              "hint": "Denk aan travel.",
+              "explanation": "Travelling = reizen."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'programmeren'?",
+              "options": [
+                "Planning",
+                "Presenting",
+                "Programming",
+                "Organising"
+              ],
+              "correct": 2,
+              "hint": "Het lijkt sterk op het Nederlandse woord.",
+              "explanation": "Programming = programmeren."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'drawing and designing'?",
+              "options": [
+                "Tekenen en ontwerpen",
+                "Bouwen en maken",
+                "Koken en bakken",
+                "Verkopen en organiseren"
+              ],
+              "correct": 0,
+              "hint": "Drawing betekent tekenen.",
+              "explanation": "Drawing and designing = tekenen en ontwerpen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'reliable'?",
+              "options": [
+                "Creatief",
+                "Rustig",
+                "Betrouwbaar",
+                "Sportief"
+              ],
+              "correct": 2,
+              "hint": "Op deze persoon kun je rekenen.",
+              "explanation": "Reliable = betrouwbaar."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'independent'?",
+              "options": [
+                "Zelfstandig",
+                "Vriendelijk",
+                "Eerlijk",
+                "Geduldig"
+              ],
+              "correct": 0,
+              "hint": "Je kunt dingen zonder hulp doen.",
+              "explanation": "Independent = zelfstandig."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is 'geduldig' in het Engels?",
+              "options": [
+                "Practical",
+                "Patient",
+                "Careful",
+                "Honest"
+              ],
+              "correct": 1,
+              "hint": "Denk aan iemand die rustig kan wachten.",
+              "explanation": "Patient = geduldig."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'responsible'?",
+              "options": [
+                "Georganiseerd",
+                "Technisch",
+                "Verantwoordelijk",
+                "Behulpzaam"
+              ],
+              "correct": 2,
+              "hint": "Je neemt verantwoordelijkheid.",
+              "explanation": "Responsible = verantwoordelijk."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'solving problems'?",
+              "options": [
+                "Plannen",
+                "Problemen oplossen",
+                "Luisteren",
+                "Communiceren"
+              ],
+              "correct": 1,
+              "hint": "Solve = oplossen.",
+              "explanation": "Solving problems = problemen oplossen."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'samenwerken'?",
+              "options": [
+                "Working together",
+                "Working with numbers",
+                "Working alone",
+                "Giving advice"
+              ],
+              "correct": 0,
+              "hint": "Together betekent samen.",
+              "explanation": "Working together = samenwerken."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'presenting'?",
+              "options": [
+                "Adviseren",
+                "Analyseren",
+                "Presenteren",
+                "Leidinggeven"
+              ],
+              "correct": 2,
+              "hint": "Het lijkt op Nederlands.",
+              "explanation": "Presenting = presenteren."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'working with tools'?",
+              "options": [
+                "Met computers werken",
+                "Met gereedschap werken",
+                "Met klanten werken",
+                "Met cijfers werken"
+              ],
+              "correct": 1,
+              "hint": "Tools zijn bijvoorbeeld een hamer en schroevendraaier.",
+              "explanation": "Working with tools = met gereedschap werken."
+            },
+            {
+              "type": "mc",
+              "question": "My brother ___ football every Saturday.",
+              "options": [
+                "play",
+                "plays",
+                "is play",
+                "playing"
+              ],
+              "correct": 1,
+              "hint": "Every Saturday is een gewoonte. He/she/it krijgt meestal -s.",
+              "explanation": "My brother plays football every Saturday."
+            },
+            {
+              "type": "mc",
+              "question": "Look! They ___ in the classroom right now.",
+              "options": [
+                "study",
+                "studies",
+                "are studying",
+                "is studying"
+              ],
+              "correct": 2,
+              "hint": "Right now betekent nu. Gebruik are + -ing bij they.",
+              "explanation": "They are studying."
+            },
+            {
+              "type": "mc",
+              "question": "I usually ___ to school by bike.",
+              "options": [
+                "am going",
+                "goes",
+                "going",
+                "go"
+              ],
+              "correct": 3,
+              "hint": "Usually geeft een gewoonte aan.",
+              "explanation": "I usually go to school by bike."
+            },
+            {
+              "type": "mc",
+              "question": "She ___ English at the moment.",
+              "options": [
+                "learns",
+                "are learning",
+                "is learning",
+                "learn"
+              ],
+              "correct": 2,
+              "hint": "At the moment betekent nu. She + is + -ing.",
+              "explanation": "She is learning English at the moment."
+            },
+            {
+              "type": "mc",
+              "question": "The ball is ___ the two chairs.",
+              "options": [
+                "between",
+                "on",
+                "at",
+                "around"
+              ],
+              "correct": 0,
+              "hint": "De bal ligt tussen twee stoelen.",
+              "explanation": "Between = tussen."
+            },
+            {
+              "type": "mc",
+              "question": "We walk ___ the outside of the building, not through it.",
+              "options": [
+                "at",
+                "between",
+                "around",
+                "on"
+              ],
+              "correct": 2,
+              "hint": "Je loopt eromheen.",
+              "explanation": "Around = rondom of omheen."
+            },
+            {
+              "type": "mc",
+              "question": "My schoolbag is ___ my bedroom.",
+              "options": [
+                "at",
+                "on",
+                "between",
+                "in"
+              ],
+              "correct": 3,
+              "hint": "De tas ligt in mijn slaapkamer.",
+              "explanation": "In = in."
+            },
+            {
+              "type": "mc",
+              "question": "School starts ___ nine o'clock.",
+              "options": [
+                "in",
+                "at",
+                "on",
+                "between"
+              ],
+              "correct": 1,
+              "hint": "Bij een precies tijdstip gebruik je een vast voorzetsel.",
+              "explanation": "At nine o'clock. At gebruik je voor een tijdstip."
+            },
+            {
+              "type": "mc",
+              "question": "The book is ___ the table.",
+              "options": [
+                "on",
+                "around",
+                "between",
+                "at"
+              ],
+              "correct": 0,
+              "hint": "Het boek ligt op de tafel.",
+              "explanation": "On = op."
+            },
+            {
+              "type": "mc",
+              "question": "The tea is ___ hot to drink. (De thee is te heet om te drinken.)",
+              "options": [
+                "very",
+                "quite",
+                "too",
+                "absolutely"
+              ],
+              "correct": 2,
+              "hint": "Welk woord betekent 'te'?",
+              "explanation": "Too hot = te heet. Very hot = erg heet."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'quite easy'?",
+              "options": [
+                "Helemaal makkelijk",
+                "Best wel makkelijk",
+                "Te makkelijk",
+                "Helemaal niet makkelijk"
+              ],
+              "correct": 1,
+              "hint": "Quite geeft een gematigde versterking aan.",
+              "explanation": "Quite easy = best wel/tamelijk makkelijk."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Mijn toekomst is belangrijk.'",
+              "answer": "My future is important.",
+              "hint": "Mijn = my. Toekomst = future. Belangrijk = important.",
+              "explanation": "Vergelijk je antwoord met het voorbeeld. Andere begrijpelijke, grammaticaal passende zinnen kunnen ook goed zijn; wees niet onnodig streng op kleine spellingfouten."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Ik ben behulpzaam en betrouwbaar.'",
+              "answer": "I am helpful and reliable.",
+              "hint": "Behulpzaam = helpful. Betrouwbaar = reliable.",
+              "explanation": "Vergelijk je antwoord met het voorbeeld. Andere begrijpelijke, grammaticaal passende zinnen kunnen ook goed zijn; wees niet onnodig streng op kleine spellingfouten."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal: 'Ik ben goed in samenwerken.'",
+              "answer": "I am good at working together.",
+              "hint": "Begin met 'I am good at ...'.",
+              "explanation": "Vergelijk je antwoord met het voorbeeld. Andere begrijpelijke, grammaticaal passende zinnen kunnen ook goed zijn; wees niet onnodig streng op kleine spellingfouten."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf een Engelse zin over iets dat je elke week doet. Gebruik de present simple.",
+              "answer": "I play football every week.",
+              "hint": "Denk aan I + werkwoord, bijvoorbeeld I play of I go.",
+              "explanation": "Vergelijk je antwoord met het voorbeeld. Andere begrijpelijke, grammaticaal passende zinnen kunnen ook goed zijn; wees niet onnodig streng op kleine spellingfouten."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf een Engelse zin over wat je NU doet. Gebruik de present continuous.",
+              "answer": "I am studying English now.",
+              "hint": "I am + werkwoord met -ing.",
+              "explanation": "Vergelijk je antwoord met het voorbeeld. Andere begrijpelijke, grammaticaal passende zinnen kunnen ook goed zijn; wees niet onnodig streng op kleine spellingfouten."
+            },
+            {
+              "type": "open",
+              "question": "Maak zelf een Engelse zin met very, really, quite, extremely, absolutely of too.",
+              "answer": "I am really good at football. Of: I am very creative.",
+              "hint": "Very = erg; really = echt; extremely = extreem; absolutely = absoluut; too = te.",
+              "explanation": "Vergelijk je antwoord met het voorbeeld. Andere begrijpelijke, grammaticaal passende zinnen kunnen ook goed zijn; wees niet onnodig streng op kleine spellingfouten."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf TWEE Engelse zinnen over je toekomst. Begin met 'After Yuverta, I would like to...' en vertel waarom je dat wilt.",
+              "answer": "After Yuverta, I would like to study IT. I like working with computers.",
+              "hint": "Zin 1: After Yuverta, I would like to ... Zin 2: I like ... of Because I am ...",
+              "explanation": "Vergelijk je antwoord met het voorbeeld. Andere begrijpelijke, grammaticaal passende zinnen kunnen ook goed zijn; wees niet onnodig streng op kleine spellingfouten."
+            }
+          ]
+        },
+        {
+          "type": "flashcards",
+          "subject": "Engels",
+          "title": "My Future — 75 woordjes",
+          "description": "Begrippen uit de vier verplichte kopjes: opleiding en toekomst (20), interesses (20), kwaliteiten (20), vaardigheden (15). Nederlands naar Engels. Geen losse mbo 3/4 beroepenlijst.",
+          "cards": [
+            {
+              "front": "beroep",
+              "back": "job / profession"
+            },
+            {
+              "front": "beroepskeuze",
+              "back": "career choice"
+            },
+            {
+              "front": "toekomst",
+              "back": "future"
+            },
+            {
+              "front": "opleiding",
+              "back": "course / study programme"
+            },
+            {
+              "front": "vervolgopleiding",
+              "back": "further education"
+            },
+            {
+              "front": "mbo-opleiding",
+              "back": "vocational course"
+            },
+            {
+              "front": "mbo-niveau",
+              "back": "MBO level"
+            },
+            {
+              "front": "open dag",
+              "back": "open day"
+            },
+            {
+              "front": "stage",
+              "back": "work placement / internship"
+            },
+            {
+              "front": "stage lopen",
+              "back": "to do an internship"
+            },
+            {
+              "front": "diploma",
+              "back": "diploma / qualification"
+            },
+            {
+              "front": "vak",
+              "back": "subject"
+            },
+            {
+              "front": "solliciteren",
+              "back": "to apply for a job"
+            },
+            {
+              "front": "werkervaring",
+              "back": "work experience"
+            },
+            {
+              "front": "werknemer",
+              "back": "employee"
+            },
+            {
+              "front": "werkgever",
+              "back": "employer"
+            },
+            {
+              "front": "fulltime",
+              "back": "full-time"
+            },
+            {
+              "front": "parttime",
+              "back": "part-time"
+            },
+            {
+              "front": "leidinggeven",
+              "back": "to manage / to lead"
+            },
+            {
+              "front": "doorgroeien",
+              "back": "to progress in your career"
+            },
+            {
+              "front": "dieren verzorgen",
+              "back": "taking care of animals"
+            },
+            {
+              "front": "mensen helpen",
+              "back": "helping people"
+            },
+            {
+              "front": "met kinderen werken",
+              "back": "working with children"
+            },
+            {
+              "front": "koken",
+              "back": "cooking"
+            },
+            {
+              "front": "bakken",
+              "back": "baking"
+            },
+            {
+              "front": "sporten",
+              "back": "doing sports"
+            },
+            {
+              "front": "reizen",
+              "back": "travelling"
+            },
+            {
+              "front": "computers",
+              "back": "computers"
+            },
+            {
+              "front": "programmeren",
+              "back": "programming"
+            },
+            {
+              "front": "techniek",
+              "back": "technology / engineering"
+            },
+            {
+              "front": "auto's en voertuigen",
+              "back": "cars and vehicles"
+            },
+            {
+              "front": "bouwen",
+              "back": "building"
+            },
+            {
+              "front": "dingen maken",
+              "back": "making things"
+            },
+            {
+              "front": "tekenen en ontwerpen",
+              "back": "drawing and designing"
+            },
+            {
+              "front": "mode en uiterlijke verzorging",
+              "back": "fashion and beauty"
+            },
+            {
+              "front": "verkopen",
+              "back": "selling"
+            },
+            {
+              "front": "organiseren",
+              "back": "organising"
+            },
+            {
+              "front": "natuur en milieu",
+              "back": "nature and the environment"
+            },
+            {
+              "front": "muziek",
+              "back": "music"
+            },
+            {
+              "front": "sociale media",
+              "back": "social media"
+            },
+            {
+              "front": "behulpzaam",
+              "back": "helpful"
+            },
+            {
+              "front": "betrouwbaar",
+              "back": "reliable"
+            },
+            {
+              "front": "creatief",
+              "back": "creative"
+            },
+            {
+              "front": "eerlijk",
+              "back": "honest"
+            },
+            {
+              "front": "geduldig",
+              "back": "patient"
+            },
+            {
+              "front": "klantvriendelijk",
+              "back": "customer-friendly"
+            },
+            {
+              "front": "nauwkeurig",
+              "back": "accurate"
+            },
+            {
+              "front": "ondernemend",
+              "back": "enterprising"
+            },
+            {
+              "front": "georganiseerd",
+              "back": "organised"
+            },
+            {
+              "front": "oplossingsgericht",
+              "back": "solution-oriented"
+            },
+            {
+              "front": "praktisch",
+              "back": "practical"
+            },
+            {
+              "front": "rustig",
+              "back": "calm"
+            },
+            {
+              "front": "sociaal",
+              "back": "sociable"
+            },
+            {
+              "front": "sportief",
+              "back": "sporty"
+            },
+            {
+              "front": "stressbestendig",
+              "back": "able to work under pressure"
+            },
+            {
+              "front": "technisch",
+              "back": "technical"
+            },
+            {
+              "front": "verantwoordelijk",
+              "back": "responsible"
+            },
+            {
+              "front": "zelfstandig",
+              "back": "independent"
+            },
+            {
+              "front": "zorgvuldig",
+              "back": "careful"
+            },
+            {
+              "front": "vriendelijk",
+              "back": "friendly"
+            },
+            {
+              "front": "adviseren",
+              "back": "giving advice"
+            },
+            {
+              "front": "analyseren",
+              "back": "analysing"
+            },
+            {
+              "front": "communiceren",
+              "back": "communicating"
+            },
+            {
+              "front": "met cijfers werken",
+              "back": "working with numbers"
+            },
+            {
+              "front": "met computers werken",
+              "back": "working with computers"
+            },
+            {
+              "front": "met gereedschap werken",
+              "back": "working with tools"
+            },
+            {
+              "front": "samenwerken",
+              "back": "working together"
+            },
+            {
+              "front": "problemen oplossen",
+              "back": "solving problems"
+            },
+            {
+              "front": "plannen",
+              "back": "planning"
+            },
+            {
+              "front": "presenteren",
+              "back": "presenting"
+            },
+            {
+              "front": "luisteren",
+              "back": "listening"
+            },
+            {
+              "front": "uitleg geven",
+              "back": "explaining things"
+            },
+            {
+              "front": "klanten helpen",
+              "back": "helping customers"
+            },
+            {
+              "front": "leidinggeven",
+              "back": "managing people"
+            },
+            {
+              "front": "vreemde talen spreken",
+              "back": "speaking foreign languages"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
