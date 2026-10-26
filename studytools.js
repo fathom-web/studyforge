@@ -159,7 +159,7 @@ function spGenerateSessions(exam,limit=10){
 }
 function studyReadyContent(){
  const exam=spExamSelect();
- if(!exam)return '<div class="page-enter">'+sectionHeading('TOETSKLAAR','Toetsklaar','Zodra er een toetsdatum via het Huiswerk-project is toegevoegd, verschijnt hier jouw leeradvies.')</div>';
+ if(!exam)return '<div class="page-enter">'+sectionHeading('TOETSKLAAR','Toetsklaar','Zodra er een toetsdatum via het Huiswerk-project is toegevoegd, verschijnt hier jouw leeradvies.')+'</div>';
  const m=spReadiness(exam),sessions=spGenerateSessions(exam);
  return '<div class="page-enter">'+sectionHeading('HOE STA JE ERVOOR?','Toetsklaar · '+exam.title,'Op basis van je eigen oefeningen. Geen garantie voor je toetscijfer.')+
  '<div class="study-summary"><div><span class="study-big-label">'+htmlEscape(m.label)+'</span><h2>'+htmlEscape(exam.subject)+'</h2><p>'+spDayLabel(exam.date)+' · Streefcijfer '+m.target+'</p></div><div class="study-score">'+(m.avg===null?'—':gradeFmt(m.avg))+'<small>Gemiddelde laatste toetsen</small></div></div>'+
