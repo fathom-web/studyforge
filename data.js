@@ -71,14 +71,14 @@ async function sfSyncPublished(){
       if(!user)return {added:0,mode:'supabase',error:'Log in om de lessen te synchroniseren'};
       const client=await sfClient();
       const [rowsRes,hidesRes]=await Promise.all([
-        client.from('sf_collections').select('source_key').not('source_key','is',null),
+        client.from('sf_collections').select('id,source_key,count,content').not('source_key','is',null),
         client.from('sf_hidden_publications').select('source_key')
       ]);
       if(rowsRes.error)throw rowsRes.error;
       if(hidesRes.error)throw hidesRes.error;
       const existing=new Set((rowsRes.data||[]).map(r=>r.source_key));
       const hidden=new Set((hidesRes.data||[]).map(r=>r.source_key));
-      const inserts=[],seen=new Set();
+      const inserts=[],updates=[],seen=new Set();
       for(const pack of library.packs){
         if(!pack||typeof pack.id!=='string'||!pack.id.trim()||seen.has(pack.id))continue;
         seen.add(pack.id);
@@ -86,7 +86,15 @@ async function sfSyncPublished(){
           const {cols}=sfValidateImport(JSON.stringify({schema:'studyforge/v1',profile:pack.profile,collections:pack.collections}));
           for(const [i,col] of cols.entries()){
             const source_key=pack.id+'::'+i;
-            if(existing.has(source_key)||hidden.has(source_key))continue;
+            if(hidden.has(source_key))continue;
+            if(existing.has(source_key)){
+              if(source_key==='dean-biologie-unit1-organen-cellen-2026-10-28-v1::0'){
+                const previous=(rowsRes.data||[]).find(r=>r.source_key===source_key);
+                if(previous && (previous.count!==col.count||previous.content?.questionsPerAttempt!==col.content.questionsPerAttempt))
+                  updates.push({id:previous.id,col});
+              }
+              continue;
+            }
             inserts.push({...col,source_key,owner_id:user.id});
             existing.add(source_key);
           }
@@ -96,9 +104,13 @@ async function sfSyncPublished(){
         const res=await client.from('sf_collections').insert(inserts);
         if(res.error)throw res.error;
       }
-      return {added:inserts.length,mode:'supabase'};
+      for(const u of updates){
+        const res=await client.from('sf_collections').update({content:u.col.content,count:u.col.count,description:u.col.description}).eq('id',u.id);
+        if(res.error)throw res.error;
+      }
+      return {added:inserts.length,updated:updates.length,mode:'supabase'};
     }
-    let added=0;
+    let added=0,updated=0;
     const seen=new Set(),hidden=new Set(d.hiddenPublished||[]);
     for(const pack of library.packs){
       if(!pack||typeof pack.id!=='string'||!pack.id.trim()||pack.id.length>120||seen.has(pack.id))continue;
@@ -107,14 +119,25 @@ async function sfSyncPublished(){
         const {cols}=sfValidateImport(JSON.stringify({schema:'studyforge/v1',profile:pack.profile,collections:pack.collections}));
         for(const [i,col] of cols.entries()){
           const source_key=pack.id+'::'+i;
-          if(hidden.has(source_key)||d.sets.some(s=>s.source_key===source_key))continue;
+          if(hidden.has(source_key))continue;
+          const current=d.sets.find(s=>s.source_key===source_key);
+          if(current){
+            // Werk alleen de gepubliceerde Biologie-vragen bij. Bewaar dezelfde
+            // collectie-ID, eerdere cijfers, fouten en beoordelingen.
+            if(source_key==='dean-biologie-unit1-organen-cellen-2026-10-28-v1::0' &&
+              (current.count!==col.count||current.content?.questionsPerAttempt!==col.content.questionsPerAttempt)){
+              Object.assign(current,{subject:col.subject,title:col.title,description:col.description,count:col.count,content:col.content});
+              updated++;
+            }
+            continue;
+          }
           d.sets.push({id:d.nextId++,...col,source_key,created_at:new Date().toISOString()});
           added++;
         }
       }catch(err){console.warn('StudyForge: lespakket overgeslagen',pack.id,err);}
     }
-    if(added)sfPersist();
-    return {added};
+    if(added||updated)sfPersist();
+    return {added,updated};
   }catch(err){console.warn('StudyForge: gepubliceerde lessen niet bereikbaar',err);return {added:0,error:err.message};}
 }
 function sfGoodProfile(id){id=Number(id);if(id!==1&&id!==2)throw Error('Onbekend profiel.');return id;}
@@ -133,7 +156,9 @@ function sfLatestMissed(attempts){
 function sfCalcQuiz(col,b){
   if(!col||col.type!=='quiz')throw Error('De oefentoets is niet gevonden.');
   const questions=col.content?.questions;
-  const indices=b.mode==='mistakes'?b.indices:questions.map((_,i)=>i);
+  const indices=Array.isArray(b.indices)?b.indices:questions.map((_,i)=>i);
+  if(b.mode!=='mistakes' && Number.isInteger(col.content?.questionsPerAttempt) && indices.length!==Math.min(col.content.questionsPerAttempt,questions.length))
+    throw Error('Deze oefentoets moet het ingestelde aantal vragen bevatten.');
   if(!Array.isArray(indices)||!indices.length||indices.some(i=>!Number.isInteger(i)||i<0||i>=questions.length)||new Set(indices).size!==indices.length)throw Error('Ongeldige selectie vragen.');
   if(!Array.isArray(b.answers)||b.answers.length!==indices.length)throw Error('Niet alle antwoorden zijn ontvangen.');
   let correct=0;
@@ -158,6 +183,7 @@ function sfValidateImport(text){
     const fields=['subject','title'];for(const k of fields)if(typeof c[k]!=='string'||!c[k].trim()||c[k].length>150)throw Error(`Ongeldige ${k}.`);
     const isQuiz=c.type==='quiz';const rows=isQuiz?c.questions:c.cards;
     if(!Array.isArray(rows)||rows.length<1||rows.length>250)throw Error('Elke set moet 1 tot 250 vragen of kaarten hebben.');
+    if(isQuiz&&c.questionsPerAttempt!==undefined&&(!Number.isInteger(c.questionsPerAttempt)||c.questionsPerAttempt<1||c.questionsPerAttempt>rows.length))throw Error('Ongeldig aantal vragen per oefenronde.');
     for(const q of rows){
       if(!q||typeof q!=='object')throw Error('Een vraag of kaart is ongeldig.');
       if(isQuiz){
@@ -166,7 +192,7 @@ function sfValidateImport(text){
         if(q.type==='open' && (typeof q.answer!=='string'||!q.answer.trim()))throw Error('Open vragen hebben een modelantwoord nodig.');
       } else if(typeof q.front!=='string'||!q.front.trim()||typeof q.back!=='string'||!q.back.trim())throw Error('Een flashcard mist een vraag of antwoord.');
     }
-    return {profile_id:profile.id,type:c.type,subject:c.subject.trim(),title:c.title.trim(),description:String(c.description||'').slice(0,500),count:rows.length,content:isQuiz?{questions:rows}:{cards:rows}};
+    return {profile_id:profile.id,type:c.type,subject:c.subject.trim(),title:c.title.trim(),description:String(c.description||'').slice(0,500),count:rows.length,content:isQuiz?{questions:rows,...(c.questionsPerAttempt?{questionsPerAttempt:c.questionsPerAttempt}:{})}:{cards:rows}};
   });
   return {profile,cols};
 }
