@@ -220,14 +220,6 @@ async function sfAdapter(action,b=null,params={}){
     if(SF_REMOTE){const c=await sfClient();sfError(await c.auth.signOut());}
     SF_ADMIN=false;return {ok:true};
   }
-  if(action==='admin_login'){
-    if(SF_REMOTE){
-      const user=await sfRemoteUser();if(!user?.email)throw Error('Je moet eerst inloggen.');
-      const c=await sfClient();sfError(await c.auth.signInWithPassword({email:user.email,password:String(b.password||'')}));
-    }
-    SF_ADMIN=true;return {ok:true,csrf:'admin'};
-  }
-  if(action==='admin_logout'){SF_ADMIN=false;return {ok:true};}
   if(SF_REMOTE&&!(await sfRemoteUser()))throw Error('Je bent uitgelogd. Log opnieuw in.');
   if(action==='dashboard'){
     const pid=sfGoodProfile(params.profile);
@@ -279,30 +271,6 @@ async function sfAdapter(action,b=null,params={}){
       r.known=b.known?1:0;r.reviews++;sfPersist();
     }
     return {ok:true};
-  }
-  if(action==='import'){
-    if(SF_REMOTE&&!SF_ADMIN)throw Error('Bevestig eerst je wachtwoord bij Ouderbeheer.');
-    const {profile,cols}=sfValidateImport(String(b.text||''));
-    let existing;
-    if(SF_REMOTE){const c=await sfClient();existing=sfError(await c.from('sf_collections').select('type,title,subject').eq('profile_id',profile.id));}
-    else existing=d.sets.filter(s=>s.profile_id===profile.id);
-    const keys=new Set(existing.map(s=>`${s.type}::${s.subject}::${s.title}`.toLowerCase()));
-    const newCols=cols.filter(s=>{const key=`${s.type}::${s.subject}::${s.title}`.toLowerCase();if(keys.has(key))return false;keys.add(key);return true;});
-    if(SF_REMOTE&&newCols.length){const c=await sfClient(),u=await sfRemoteUser();sfError(await c.from('sf_collections').insert(newCols.map(x=>({...x,owner_id:u.id}))));}
-    else if(!SF_REMOTE&&newCols.length){for(const x of newCols)d.sets.push({id:d.nextId++,...x,created_at:new Date().toISOString()});sfPersist();}
-    return {ok:true,profile:profile.name,imported:newCols.length,duplicates:cols.length-newCols.length};
-  }
-  if(action==='delete'){
-    if(SF_REMOTE&&!SF_ADMIN)throw Error('Ouderbeheer is niet geopend.');
-    const id=Number(b.id);
-    if(SF_REMOTE){
-      const c=await sfClient(),u=await sfRemoteUser();
-      const col=sfError(await c.from('sf_collections').select('source_key').eq('id',id).maybeSingle());
-      if(col?.source_key)sfError(await c.from('sf_hidden_publications').upsert({owner_id:u.id,source_key:col.source_key},{onConflict:'owner_id,source_key'}));
-      sfError(await c.from('sf_collections').delete().eq('id',id));
-    }
-    else{const original=d.sets.find(s=>s.id===id);if(original?.source_key){d.hiddenPublished=d.hiddenPublished||[];if(!d.hiddenPublished.includes(original.source_key))d.hiddenPublished.push(original.source_key);}d.sets=d.sets.filter(s=>s.id!==id);d.attempts=d.attempts.filter(s=>s.collection_id!==id);d.reviews=d.reviews.filter(s=>s.collection_id!==id);sfPersist();}
-    return {ok:true,deleted:1};
   }
   throw Error(`Onbekende handeling: ${action}`);
 }
