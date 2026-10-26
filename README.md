@@ -1,5 +1,14 @@
 # StudyForge — leren via het Huiswerk-project
 
+## Profielcode (StudyForge)
+
+- Na het kiezen van **Nikki** of **Dean** verschijnt een apart codescherm.
+- De viercijferige code is **2007**; foutieve codes geven geen toegang tot het dashboard.
+- Bij het wisselen van profiel wordt de code opnieuw gevraagd.
+- **Dit is uitsluitend een schermdrempel, geen sterke beveiliging.** De websitecode is via de openbare GitHub-repository te lezen. De code staat niet gelijk aan een Supabase-login, databasewachtwoord of echte toegangsrechten.
+- Centrale synchronisatie van resultaten is nog **niet actief**: `config.js` bevat nog geen Supabase Project URL en publishable key. Er worden geen anonieme database-schrijfrechten verleend. Voor veilig delen zonder accounts is een afzonderlijke server-side koppeling met rate limiting nodig, of later een Supabase Auth-login.
+
+
 Webapp: https://fathom-web.github.io/studyforge/
 
 ## Zo werkt het
