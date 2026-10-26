@@ -63,3 +63,5 @@
 .study-parent-exam{flex-direction:column}
 .study-parent-exam span{text-align:left}
 }
+
+@media(max-width:620px){.bottom-nav{grid-template-columns:repeat(5,minmax(0,1fr));padding-left:3px;padding-right:3px}.bottom-link{font-size:10px}}
