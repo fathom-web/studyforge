@@ -7,7 +7,6 @@ const SF_STORE_KEY = 'studyforge-local-v1';
 let SF_CLIENT = null;
 let SF_ADMIN = false;
 let SF_LOCAL_DATA = null;
-let SF_DEMO_DATA = window.STUDYFORGE_EXAMPLES || [];
 
 async function sfClient(){
   if(!SF_REMOTE) return null;
@@ -22,18 +21,23 @@ async function sfClient(){
 function sfError(res){if(res?.error)throw new Error(res.error.message||String(res.error));return res?.data;}
 function sfMode(){return SF_REMOTE?'supabase':'local';}
 function sfFresh(){
-  const sets=[];
-  for(const pack of SF_DEMO_DATA){
-    const pid = SF_PROFILES.find(p=>p.name===pack.profile)?.id;
-    if(!pid)continue;
-    for(const col of pack.collections||[]){
-      const cards=col.cards||[],questions=col.questions||[];
-      sets.push({id:sets.length+1,profile_id:pid,type:col.type,subject:col.subject,
-        title:col.title,description:col.description||'',count:col.type==='quiz'?questions.length:cards.length,
-        created_at:new Date().toISOString(),content:col.type==='quiz'?{questions}:{cards}});
-    }
+  return {sets:[],attempts:[],reviews:[],hiddenPublished:[],nextId:1};
+}
+const SF_ORIGINAL_DEMOS = new Set([
+  '1|quiz|Demo · De cel',
+  '1|flashcards|Demo · Celonderdelen',
+  '2|quiz|Demo · Media en informatie',
+  '2|flashcards|Demo · Begrippen media'
+]);
+function sfCleanFormerDemos(data){
+  const removed=new Set(data.sets.filter(s=>SF_ORIGINAL_DEMOS.has(s.profile_id+'|'+s.type+'|'+s.title)).map(s=>s.id));
+  if(removed.size){
+    data.sets=data.sets.filter(s=>!removed.has(s.id));
+    data.attempts=data.attempts.filter(a=>!removed.has(a.collection_id));
+    data.reviews=data.reviews.filter(r=>!removed.has(r.collection_id));
   }
-  return {sets,attempts:[],reviews:[],nextId:sets.length+1};
+  if(!Array.isArray(data.hiddenPublished))data.hiddenPublished=[];
+  return removed.size>0;
 }
 function sfLocal(){
   if(SF_LOCAL_DATA)return SF_LOCAL_DATA;
@@ -42,13 +46,46 @@ function sfLocal(){
     if(saved){
       const parsed=JSON.parse(saved);
       if(Array.isArray(parsed.sets)&&Array.isArray(parsed.attempts)&&Array.isArray(parsed.reviews)){
-        SF_LOCAL_DATA=parsed;return SF_LOCAL_DATA;
+        SF_LOCAL_DATA=parsed;if(sfCleanFormerDemos(SF_LOCAL_DATA))sfPersist();return SF_LOCAL_DATA;
       }
     }
   }catch(e){console.warn('StudyForge: lokale opslag niet beschikbaar',e);}
   SF_LOCAL_DATA=sfFresh();sfPersist();return SF_LOCAL_DATA;
 }
 function sfPersist(){try{localStorage.setItem(SF_STORE_KEY,JSON.stringify(SF_LOCAL_DATA));}catch(e){throw Error('Opslagruimte in de browser is vol. Verwijder oude oefensets.');}}
+
+/* Lees de door ChatGPT in GitHub gepubliceerde originele oefensets in.
+   De browser bewaart zijn eigen scores; bestanden worden niet door leerlingen geüpload. */
+async function sfSyncPublished(){
+  if(SF_REMOTE)return {mode:'supabase',added:0};
+  const d=sfLocal();
+  try{
+    const response=await fetch('./content/library.json',{cache:'no-store'});
+    if(!response.ok)throw Error('HTTP '+response.status);
+    const content=await response.text();
+    if(content.length>1800000)throw Error('De gepubliceerde bibliotheek is te groot.');
+    const library=JSON.parse(content);
+    if(library?.schema!=='studyforge-library/v1'||!Array.isArray(library.packs))throw Error('Ongeldig bibliotheekformaat.');
+    if(library.packs.length>200)throw Error('Te veel lespakketten.');
+    let added=0;
+    const seen=new Set(),hidden=new Set(d.hiddenPublished||[]);
+    for(const pack of library.packs){
+      if(!pack||typeof pack.id!=='string'||!pack.id.trim()||pack.id.length>120||seen.has(pack.id))continue;
+      seen.add(pack.id);
+      try{
+        const {cols}=sfValidateImport(JSON.stringify({schema:'studyforge/v1',profile:pack.profile,collections:pack.collections}));
+        for(const [i,col] of cols.entries()){
+          const source_key=pack.id+'::'+i;
+          if(hidden.has(source_key)||d.sets.some(s=>s.source_key===source_key))continue;
+          d.sets.push({id:d.nextId++,...col,source_key,created_at:new Date().toISOString()});
+          added++;
+        }
+      }catch(err){console.warn('StudyForge: lespakket overgeslagen',pack.id,err);}
+    }
+    if(added)sfPersist();
+    return {added};
+  }catch(err){console.warn('StudyForge: gepubliceerde lessen niet bereikbaar',err);return {added:0,error:err.message};}
+}
 function sfGoodProfile(id){id=Number(id);if(id!==1&&id!==2)throw Error('Onbekend profiel.');return id;}
 function sfLatestMissed(attempts){
   const seen=new Set(),out=[];
@@ -202,10 +239,11 @@ async function sfAdapter(action,b=null,params={}){
     if(SF_REMOTE&&!SF_ADMIN)throw Error('Ouderbeheer is niet geopend.');
     const id=Number(b.id);
     if(SF_REMOTE){const c=await sfClient();sfError(await c.from('sf_collections').delete().eq('id',id));}
-    else{d.sets=d.sets.filter(s=>s.id!==id);d.attempts=d.attempts.filter(s=>s.collection_id!==id);d.reviews=d.reviews.filter(s=>s.collection_id!==id);sfPersist();}
+    else{const original=d.sets.find(s=>s.id===id);if(original?.source_key){d.hiddenPublished=d.hiddenPublished||[];if(!d.hiddenPublished.includes(original.source_key))d.hiddenPublished.push(original.source_key);}d.sets=d.sets.filter(s=>s.id!==id);d.attempts=d.attempts.filter(s=>s.collection_id!==id);d.reviews=d.reviews.filter(s=>s.collection_id!==id);sfPersist();}
     return {ok:true,deleted:1};
   }
   throw Error(`Onbekende handeling: ${action}`);
 }
+window.sfSyncPublished=sfSyncPublished;
 window.sfAdapter=sfAdapter;
 window.sfMode=sfMode;
