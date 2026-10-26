@@ -1,3 +1,26 @@
+## StudyForge 2: mijn toetsen, leerdoelen, Toetsklaar, ouderoverzicht
+
+Dit werkt ook zonder Supabase, volledig in de browser:
+- **Mijn toetsen**: geef naam, vak en toetsdatum op en eventueel het gewenste cijfer.
+- **Leerdoelen**: streefcijfer en gewenste oefensessies per week, inclusief telling van gemaakte oefentoetsen.
+- **Toetsklaar**: een indicatieve status gebaseerd op gemaakte toetsen, fouten en gekende flashcards. Dit is geen voorspelling van het echte toetscijfer.
+- **Oefenschema**: automatisch de komende maximaal 14 oefendagen; je kunt sessies afvinken en direct een gekoppelde oefenset starten.
+- **Ouderoverzicht**: voortgang en aankomende toetsen van Nikki én Dean, zonder afzonderlijke ouderpincode.
+- **Mobiel**: menu **Meer** opent aanvullende functies.
+
+### Supabase-v2 migratie en synchronisatie
+
+**De nieuwe v2-tabellen worden niet automatisch aangemaakt in Supabase.**
+1. Open je StudyForge-project in Supabase → SQL Editor.
+2. Voer **`supabase/planning-v2.sql`** eenmalig uit, boven op het eerdere `supabase/schema.sql`.
+3. Maak later een Supabase Authentication-gebruikersaccount aan voor het gezin.
+4. Vul de project-URL en de publieke `publishableKey` in `config.js` in; voer nooit een databasewachtwoord of secret key in deze publieke repository in.
+5. Publiceer `config.js` opnieuw via GitHub Pages. Bij het inloggen worden oefenresultaten, leerplanning en gepubliceerde oefensets dan tussen apparaten gesynchroniseerd.
+
+**Totdat de accountkoppeling geregeld is blijft alle persoonlijke voortgang lokaal op ieder apparaat.** Beveiligde accounts worden niet automatisch aangemaakt, en lokale voortgang wordt niet vanzelf overgezet naar Supabase. De app geeft bij problemen met de aanvullende Supabase-tabel een waarschuwing, terwijl lokaal opslaan beschikbaar blijft.
+
+> Zonder gebruikersaccount is er geen veilige manier om privéresultaten vanuit een openbare GitHub Pages-site in één gedeelde Supabase-database te synchroniseren. Er is bewust geen publiek beschrijfbare database aangemaakt.
+
 # StudyForge — GitHub Pages + optionele Supabase
 
 Een zelfstandige, responsive webapp voor Nikki en Dean met profielkeuze, dashboards, oefenexamens, flashcards, cijfers, progressie en fouten oefenen. Geen AI-koppeling en geen schoolboek-foto's/PDF/Word upload op de website.
