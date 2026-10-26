@@ -52,3 +52,23 @@ body{background:var(--bg);color:var(--ink)}h1,h2,h3,.pick-name,.brand{font-famil
 .flip-card{background:linear-gradient(135deg,#224b48,#123234);border-color:#567d73;color:#fff}.flip-card.flipped{background:linear-gradient(135deg,#554456,#322b45);border-color:#806b91}.result-big-grade,.result-big-grade.fail{background:#17372f;color:#ffc18b;border-color:#597e6b}.result-stats span{color:#afc6bd}.icon-button{background:#1d3439;border-color:#3d595f;color:#d6e6e1}.import-file-btn{background:#193832;border-color:#589c81;color:#c3f4df}.import-file-btn span{color:#acc9c1}.auth-panel p,.body-muted{color:#a8bcb7}.field-label{color:#b5d1c5}.setup-shell{background:#09151b}.setup-card{background:#122529;border-color:#2f5054}.setup-form label{color:#b7d4c5}.toast{background:#234b3a;color:#fff}.toast.bad{background:#783b40;color:#fff}.topbar-admin{color:#a4b8b1}.topbar-admin:hover{color:#fff}
 @media(max-width:900px){.welcome-art{right:-17%;opacity:.26}}
 @media(max-width:620px){.welcome-shell{background:linear-gradient(155deg,#0b1b20,#19352f)}.welcome-art{display:none}.welcome-content{padding:35px 24px}.pick-card{background:#152c2c}.topbar{background:#0b1b20}.mobile-brand .brand{color:#fff}.bottom-nav{background:#0b1b20eb;border-top:1px solid #335350}.bottom-link{color:#a3bdb6}.bottom-link.active{color:#ffb57d}.dashboard-hero{background:linear-gradient(90deg,#0d2529f7,#153031c9 60%,#153031ad),url('owl-study.webp') right bottom/auto 100% no-repeat;min-height:228px}.hero-copy h1{font-size:36px}.hero-copy p{max-width:225px;font-size:12px}.activity-title{font-size:15px}.section-heading h1{font-size:33px}.result-big-grade{background:#17372f}.metric-card{min-height:128px}}
+
+
+/* Personal profile PIN screen */
+.sf-pin-shell{justify-content:center;align-items:center;gap:clamp(12px,4vw,65px);padding:28px;overflow:hidden}
+.sf-pin-panel{position:relative;z-index:2;width:min(100%,480px);padding:clamp(24px,4vw,42px);background:#141f31ed;border:1px solid #3d5168;border-radius:24px;box-shadow:0 28px 75px #0007}
+.sf-pin-panel .brand{margin-bottom:20px}
+.sf-pin-panel h1{font-size:clamp(27px,4vw,38px);line-height:1.12;letter-spacing:-.04em;margin:8px 0 14px}
+.sf-pin-panel p{color:#b5c1d4;line-height:1.6;font-size:14px;margin:0 0 22px}
+.sf-pin-panel .eyebrow{color:#86dcc4;margin-bottom:10px}
+.sf-pin-back{display:inline-flex;align-items:center;gap:9px;background:transparent;color:#b4c8d9;border:0;padding:5px 0;font:inherit;font-size:13px;cursor:pointer}
+.sf-pin-back:hover{color:#fff}
+.sf-pin-avatar{width:55px;height:55px;margin:24px 0 15px;display:grid;place-items:center;border-radius:16px;background:#58467c;color:#f6ecff;font-size:26px;font-weight:900;box-shadow:0 8px 20px #0003}
+.sf-pin-avatar.dean{background:#375a75;color:#e8f6ff}
+.sf-pin-input{width:100%;padding:16px;text-align:center;letter-spacing:12px;font-size:27px;font-weight:700;color:#f3fff9;background:#0b1725;border:1px solid #587080;border-radius:13px;outline:none}
+.sf-pin-input:focus{border-color:#a5f3df;box-shadow:0 0 0 3px #a5f3df26}
+.sf-pin-input.sf-pin-invalid{border-color:#ff93a4}
+.sf-pin-feedback{min-height:29px;padding:8px 0 0;color:#ff9caa;font-size:13px}
+.sf-pin-owl{flex:0 1 380px;max-width:37vw}
+.sf-pin-owl img{width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 18px 45px #0006)}
+@media(max-width:770px){.sf-pin-owl{display:none}.sf-pin-shell{padding:16px}.sf-pin-panel{padding:26px}.sf-pin-input{font-size:23px;letter-spacing:11px}}
