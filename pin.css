@@ -1,0 +1,123 @@
+/* StudyForge profile PIN — standalone stylesheet, loaded with its own cache key */
+.sf-pin-shell{
+  position:relative;
+  isolation:isolate;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(24px,5vw,82px);
+  width:100%;
+  min-height:100svh;
+  padding:clamp(22px,5vw,68px);
+  box-sizing:border-box;
+  background:
+    radial-gradient(ellipse at 70% 37%,rgba(73,103,91,.23),transparent 43%),
+    radial-gradient(ellipse at 12% 88%,rgba(46,80,120,.21),transparent 40%),
+    #0b1320;
+}
+.sf-pin-shell .sf-pin-panel{
+  position:relative;
+  z-index:5;
+  flex:0 1 470px;
+  width:min(100%,470px);
+  max-width:470px;
+  min-width:0;
+  margin:0;
+  padding:clamp(27px,3.2vw,42px);
+  box-sizing:border-box;
+  border:1px solid rgba(162,207,200,.22);
+  border-radius:25px;
+  background:linear-gradient(145deg,rgba(26,41,54,.97),rgba(16,25,40,.98));
+  box-shadow:0 32px 90px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.04);
+  color:#f3f7fb;
+}
+.sf-pin-panel .brand{margin:0 0 28px}
+.sf-pin-panel .sf-pin-back{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:4px 0;
+  margin-bottom:27px;
+  background:transparent;
+  border:0;
+  color:#a8bbcb;
+  cursor:pointer;
+  font:inherit;
+  font-size:13px;
+}
+.sf-pin-panel .sf-pin-back:hover{color:#fff}
+.sf-pin-panel .sf-pin-avatar{
+  display:grid;
+  place-items:center;
+  width:54px;
+  height:54px;
+  margin:0 0 19px;
+  border-radius:17px;
+  background:linear-gradient(135deg,#7667a6,#463e71);
+  color:white;
+  font-size:25px;
+  font-weight:800;
+}
+.sf-pin-panel .sf-pin-avatar.dean{background:linear-gradient(135deg,#4c89a1,#31506d)}
+.sf-pin-panel .eyebrow{color:#a6e5d2;font-size:11px;letter-spacing:.15em}
+.sf-pin-panel h1{
+  margin:10px 0 11px;
+  color:#fff;
+  font-size:clamp(28px,2.7vw,40px);
+  line-height:1.1;
+  letter-spacing:-.045em;
+  max-width:100%;
+}
+.sf-pin-panel p{margin:0 0 26px;max-width:365px;color:#b7c7d3;font-size:14px;line-height:1.65}
+.sf-pin-panel form{width:100%;display:flex;flex-direction:column;gap:0}
+.sf-pin-panel .field-label{display:block;margin-bottom:9px;color:#c7d9df;font-size:12px;letter-spacing:.02em;font-weight:650}
+.sf-pin-panel .sf-pin-input{
+  display:block;
+  width:100%;
+  height:62px;
+  box-sizing:border-box;
+  margin:0;
+  padding:10px 15px;
+  border:1px solid #4c6673;
+  border-radius:13px;
+  background:#101d2d;
+  color:#f4faff;
+  font-size:28px;
+  font-weight:750;
+  text-align:center;
+  letter-spacing:.35em;
+  outline:0;
+}
+.sf-pin-panel .sf-pin-input:focus{border-color:#a3f5d7;box-shadow:0 0 0 3px rgba(163,245,215,.14)}
+.sf-pin-panel .sf-pin-input.sf-pin-invalid{border-color:#ffa0ae}
+.sf-pin-panel .sf-pin-feedback{min-height:31px;padding-top:8px;color:#ff9aa8;font-size:12px}
+.sf-pin-panel .btn-wide{width:100%;min-height:51px;justify-content:center;border-radius:12px}
+.sf-pin-shell .sf-pin-owl{
+  flex:0 1 345px;
+  width:min(345px,32vw);
+  min-width:0;
+  max-width:345px;
+  margin:0;
+  z-index:2;
+}
+.sf-pin-shell .sf-pin-owl img{display:block;width:100%;height:auto;max-height:470px;object-fit:contain;border-radius:19px;box-shadow:0 27px 65px rgba(0,0,0,.29)}
+@media (max-width:820px){
+  .sf-pin-shell{padding:20px;gap:18px}
+  .sf-pin-shell .sf-pin-panel{flex-basis:460px}
+  .sf-pin-shell .sf-pin-owl{width:28vw}
+}
+@media (max-width:690px){
+  .sf-pin-shell{flex-direction:column;justify-content:center;padding:20px 14px}
+  .sf-pin-shell .sf-pin-panel{flex:none;width:min(100%,470px);margin:0;padding:26px 24px}
+  .sf-pin-shell .sf-pin-owl{display:none}
+  .sf-pin-panel h1{font-size:32px}
+}
+@media (max-height:620px) and (min-width:691px){
+  .sf-pin-shell{padding:12px}
+  .sf-pin-shell .sf-pin-panel{padding:18px 29px}
+  .sf-pin-panel .brand{margin-bottom:12px}
+  .sf-pin-panel .sf-pin-back{margin-bottom:10px}
+  .sf-pin-panel .sf-pin-avatar{margin-bottom:10px}
+  .sf-pin-panel p{margin-bottom:12px}
+}
