@@ -81,7 +81,7 @@ async function sfSyncPublished(){
       if(!user)return {added:0,mode:'supabase',error:'Log in om de lessen te synchroniseren'};
       const client=await sfClient();
       const [rowsRes,hidesRes]=await Promise.all([
-        client.from('sf_collections').select('id,source_key,count,content').not('source_key','is',null),
+        client.from('sf_collections').select('id,source_key,count,content,title,subject,description').not('source_key','is',null),
         client.from('sf_hidden_publications').select('source_key')
       ]);
       if(rowsRes.error)throw rowsRes.error;
@@ -98,10 +98,12 @@ async function sfSyncPublished(){
             const source_key=pack.id+'::'+i;
             if(hidden.has(source_key))continue;
             if(existing.has(source_key)){
-              if(source_key==='dean-biologie-unit1-organen-cellen-2026-10-28-v1::0'){
-                const previous=(rowsRes.data||[]).find(r=>r.source_key===source_key);
-                if(previous && (previous.count!==col.count||previous.content?.questionsPerAttempt!==col.content.questionsPerAttempt))
-                  updates.push({id:previous.id,col});
+              const previous=(rowsRes.data||[]).find(r=>r.source_key===source_key);
+              if(previous){
+                const metadataChanged=previous.title!==col.title||previous.subject!==col.subject||previous.description!==col.description;
+                const biologyChange=source_key==='dean-biologie-unit1-organen-cellen-2026-10-28-v1::0' &&
+                  (previous.count!==col.count||previous.content?.questionsPerAttempt!==col.content.questionsPerAttempt);
+                if(biologyChange||metadataChanged)updates.push({id:previous.id,col,metadataOnly:!biologyChange});
               }
               continue;
             }
@@ -115,7 +117,7 @@ async function sfSyncPublished(){
         if(res.error)throw res.error;
       }
       for(const u of updates){
-        const res=await client.from('sf_collections').update({content:u.col.content,count:u.col.count,description:u.col.description}).eq('id',u.id);
+        const res=await client.from('sf_collections').update(u.metadataOnly?{title:u.col.title,subject:u.col.subject,description:u.col.description}:{content:u.col.content,count:u.col.count,title:u.col.title,subject:u.col.subject,description:u.col.description}).eq('id',u.id);
         if(res.error)throw res.error;
       }
       return {added:inserts.length,updated:updates.length,mode:'supabase'};
@@ -132,13 +134,12 @@ async function sfSyncPublished(){
           if(hidden.has(source_key))continue;
           const current=d.sets.find(s=>s.source_key===source_key);
           if(current){
-            // Werk alleen de gepubliceerde Biologie-vragen bij. Bewaar dezelfde
-            // collectie-ID, eerdere cijfers, fouten en beoordelingen.
-            if(source_key==='dean-biologie-unit1-organen-cellen-2026-10-28-v1::0' &&
-              (current.count!==col.count||current.content?.questionsPerAttempt!==col.content.questionsPerAttempt)){
-              Object.assign(current,{subject:col.subject,title:col.title,description:col.description,count:col.count,content:col.content});
-              updated++;
-            }
+            // Pas zichtbare omschrijvingen aan zonder eerdere resultaten te wissen.
+            const meta=current.title!==col.title||current.subject!==col.subject||current.description!==col.description;
+            const biologyChange=source_key==='dean-biologie-unit1-organen-cellen-2026-10-28-v1::0' &&
+              (current.count!==col.count||current.content?.questionsPerAttempt!==col.content.questionsPerAttempt);
+            if(biologyChange){Object.assign(current,{subject:col.subject,title:col.title,description:col.description,count:col.count,content:col.content});updated++;}
+            else if(meta){Object.assign(current,{subject:col.subject,title:col.title,description:col.description});updated++;}
             continue;
           }
           d.sets.push({id:d.nextId++,...col,source_key,created_at:new Date().toISOString()});
