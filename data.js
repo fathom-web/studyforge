@@ -57,8 +57,7 @@ function sfPersist(){try{localStorage.setItem(SF_STORE_KEY,JSON.stringify(SF_LOC
 /* Lees de door ChatGPT in GitHub gepubliceerde originele oefensets in.
    De browser bewaart zijn eigen scores; bestanden worden niet door leerlingen geüpload. */
 async function sfSyncPublished(){
-  if(SF_REMOTE)return {mode:'supabase',added:0};
-  const d=sfLocal();
+  const d=SF_REMOTE?null:sfLocal();
   try{
     const response=await fetch('./content/library.json',{cache:'no-store'});
     if(!response.ok)throw Error('HTTP '+response.status);
@@ -67,6 +66,38 @@ async function sfSyncPublished(){
     const library=JSON.parse(content);
     if(library?.schema!=='studyforge-library/v1'||!Array.isArray(library.packs))throw Error('Ongeldig bibliotheekformaat.');
     if(library.packs.length>200)throw Error('Te veel lespakketten.');
+    if(SF_REMOTE){
+      const user=await sfRemoteUser();
+      if(!user)return {added:0,mode:'supabase',error:'Log in om de lessen te synchroniseren'};
+      const client=await sfClient();
+      const [rowsRes,hidesRes]=await Promise.all([
+        client.from('sf_collections').select('source_key').not('source_key','is',null),
+        client.from('sf_hidden_publications').select('source_key')
+      ]);
+      if(rowsRes.error)throw rowsRes.error;
+      if(hidesRes.error)throw hidesRes.error;
+      const existing=new Set((rowsRes.data||[]).map(r=>r.source_key));
+      const hidden=new Set((hidesRes.data||[]).map(r=>r.source_key));
+      const inserts=[],seen=new Set();
+      for(const pack of library.packs){
+        if(!pack||typeof pack.id!=='string'||!pack.id.trim()||seen.has(pack.id))continue;
+        seen.add(pack.id);
+        try{
+          const {cols}=sfValidateImport(JSON.stringify({schema:'studyforge/v1',profile:pack.profile,collections:pack.collections}));
+          for(const [i,col] of cols.entries()){
+            const source_key=pack.id+'::'+i;
+            if(existing.has(source_key)||hidden.has(source_key))continue;
+            inserts.push({...col,source_key,owner_id:user.id});
+            existing.add(source_key);
+          }
+        }catch(error){console.warn('Lespakket overgeslagen',pack.id,error);}
+      }
+      if(inserts.length){
+        const res=await client.from('sf_collections').insert(inserts);
+        if(res.error)throw res.error;
+      }
+      return {added:inserts.length,mode:'supabase'};
+    }
     let added=0;
     const seen=new Set(),hidden=new Set(d.hiddenPublished||[]);
     for(const pack of library.packs){
@@ -238,7 +269,12 @@ async function sfAdapter(action,b=null,params={}){
   if(action==='delete'){
     if(SF_REMOTE&&!SF_ADMIN)throw Error('Ouderbeheer is niet geopend.');
     const id=Number(b.id);
-    if(SF_REMOTE){const c=await sfClient();sfError(await c.from('sf_collections').delete().eq('id',id));}
+    if(SF_REMOTE){
+      const c=await sfClient(),u=await sfRemoteUser();
+      const col=sfError(await c.from('sf_collections').select('source_key').eq('id',id).maybeSingle());
+      if(col?.source_key)sfError(await c.from('sf_hidden_publications').upsert({owner_id:u.id,source_key:col.source_key},{onConflict:'owner_id,source_key'}));
+      sfError(await c.from('sf_collections').delete().eq('id',id));
+    }
     else{const original=d.sets.find(s=>s.id===id);if(original?.source_key){d.hiddenPublished=d.hiddenPublished||[];if(!d.hiddenPublished.includes(original.source_key))d.hiddenPublished.push(original.source_key);}d.sets=d.sets.filter(s=>s.id!==id);d.attempts=d.attempts.filter(s=>s.collection_id!==id);d.reviews=d.reviews.filter(s=>s.collection_id!==id);sfPersist();}
     return {ok:true,deleted:1};
   }
