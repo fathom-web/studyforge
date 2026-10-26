@@ -37,6 +37,16 @@ async function spLoad(profile){
     val.autoAddedEnglish20261027=true;
     try{await spSave(profile,val);}catch(err){console.warn('StudyForge: toetsdatum opslaan mislukt',err);}
   }
+  // Biologie Unit 1 — eenmalig de toets van woensdag 28 oktober toevoegen.
+  // Een reeds geplande toets wordt niet dubbel aangemaakt.
+  if(Number(profile)===2 && spDate()<='2026-10-28' && !val.autoAddedBiology20261028){
+    const already=val.exams.some(e=>String(e.date)==='2026-10-28' && String(e.subject).trim().toLowerCase()==='biologie');
+    if(!already){
+      val.exams.push({id:'dean-biologie-unit1-2026-10-28',title:'Biologie — Unit 1: Organen en cellen',subject:'Biologie',date:'2026-10-28',targetGrade:Number(val.goals?.targetGrade||7)});
+    }
+    val.autoAddedBiology20261028=true;
+    try{await spSave(profile,val);}catch(err){console.warn('StudyForge: biologietoets opslaan mislukt',err);}
+  }
   return val;
 }
 async function spSave(profile,val){
