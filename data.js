@@ -240,7 +240,7 @@ async function sfAdapter(action,b=null,params={}){
       reviews=d.reviews.filter(s=>s.profile_id===pid);
     }
     const exists=new Set(sets.map(s=>s.id));
-    return {collections:sets.map(({content,...rest})=>rest),attempts:attempts.map(({details,...rest})=>rest),
+    return {collections:sets.map(({content,...rest})=>({...rest,questions_per_attempt:content?.questionsPerAttempt||null})),attempts:attempts.map(({details,...rest})=>rest),
       flash_progress:reviews,missed:sfLatestMissed(attempts).filter(m=>exists.has(m.collection_id))};
   }
   if(action==='collection'){
