@@ -181,9 +181,38 @@ async function openPack(id){
  const result=await api('collection',null,{id:pack.id,profile:state.profile});state.active=result.collection;
  if(pack.type==='quiz')startQuiz();else startFlash();
 }
+// Kies bij toetsen met een vragenlimiet steeds een andere ronde.
+ // De eerste vier rondes van 25 bestrijken samen alle 100 vragen,
+ // zonder herhaling binnen die reeks. Fouten oefenen blijft apart.
+function quizRoundIndices(pack, count, size){
+ const key='studyforge-quiz-rotation-v1:'+state.profile+':'+(pack.source_key||pack.id);
+ let prior=null;
+ try{prior=JSON.parse(localStorage.getItem(key)||'null');}catch(e){}
+ const valid=prior&&prior.count===count&&Array.isArray(prior.remaining)&&
+   new Set(prior.remaining).size===prior.remaining.length&&
+   prior.remaining.every(i=>Number.isInteger(i)&&i>=0&&i<count);
+ let remaining=valid?prior.remaining.slice():[];
+ if(remaining.length<size){
+   const previous=valid&&Array.isArray(prior.last)?prior.last:[];
+   const recent=new Set(previous);
+   remaining=[...Array(count).keys()];
+   for(let i=remaining.length-1;i>0;i--){
+     const j=Math.floor(Math.random()*(i+1));
+     [remaining[i],remaining[j]]=[remaining[j],remaining[i]];
+   }
+   // Start van een nieuwe cyclus: vermijd vragen uit de vorige ronde.
+   if(count>=size*2&&recent.size){
+     remaining=remaining.filter(i=>!recent.has(i)).concat(remaining.filter(i=>recent.has(i)));
+   }
+ }
+ const picked=remaining.slice(0,size);
+ try{localStorage.setItem(key,JSON.stringify({count,remaining:remaining.slice(size),last:picked}));}catch(e){}
+ return picked;
+}
 function startQuiz(indices=null){
  const pack=state.active;const questions=pack.content.questions;
- const ordered=indices?indices:[...questions.keys()];
+ const size=Number(pack.content.questionsPerAttempt);
+ const ordered=indices?indices:(Number.isInteger(size)&&size>0&&size<questions.length?quizRoundIndices(pack,questions.length,size):[...questions.keys()]);
  state.quiz={pack,content:pack.content,indices:ordered,index:0,answers:ordered.map(()=>({})),hint:false,result:null,isMistakes:indices!==null};
  state.route='quiz-run';render();window.scrollTo(0,0);
 }
