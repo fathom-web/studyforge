@@ -95,10 +95,19 @@ function studyDashboardWidget(){
   const upcoming=spDueExams();
   return '<section class="study-dashboard-strip"><div><div class="eyebrow">JOUW LEERPLANNING</div><h2>'+(upcoming.length?'Binnenkort: '+htmlEscape(upcoming[0].title):'Plan je volgende toets')+'</h2><p>'+(upcoming.length?'Nog '+spDaysUntil(upcoming[0].date)+' dagen · '+htmlEscape(upcoming[0].subject):'Voeg een toetsdatum toe en krijg automatisch een oefenschema.')+'</p></div><button class="study-button" data-action="nav" data-route="planning">Mijn toetsen →</button></section>';
 }
+function spWeekProgress(db=state.dashboard,goal=spCurrent.goals){
+  const d=spMidnight(spDate()),day=(d.getDay()+6)%7;
+  const start=new Date(d);start.setDate(d.getDate()-day);
+  const startDate=[start.getFullYear(),String(start.getMonth()+1).padStart(2,'0'),String(start.getDate()).padStart(2,'0')].join('-');
+  const count=(db?.attempts||[]).filter(a=>String(a.created_at||'').slice(0,10)>=startDate).length;
+  const target=Number(goal?.sessionsPerWeek||3);
+  return {count,target};
+}
 function studyPlanContent(){
   const upcoming=spDueExams();
   const subjects=[...new Set(collections().map(c=>c.subject))];
   const goals=spCurrent.goals;
+  const weekly=spWeekProgress();
   return '<div class="page-enter">'+sectionHeading('MAAK EEN PLAN','Mijn toetsen','Plan toetsdata en laat StudyForge je oefendagen verdelen.')+
   (spCloudWarning?'<p class="study-warning">'+htmlEscape(spCloudWarning)+'</p>':'')+
   '<section class="study-panel"><h2>Nieuwe toets plannen</h2><div class="study-form">'+
@@ -107,7 +116,7 @@ function studyPlanContent(){
   '<label>Toetsdatum<input id="study-exam-date" type="date" min="'+spDate()+'" value="'+spDate()+'"></label>'+
   '<label>Streefcijfer<input id="study-exam-target" type="number" min="1" max="10" step="0.5" value="'+Number(goals.targetGrade||7)+'"></label>'+
   '</div><button class="study-button" data-action="study-add-exam">Toets toevoegen</button></section>'+
-  '<section class="study-panel"><h2>Mijn leerdoelen</h2><p>We kijken naar gemaakte oefentoetsen. Dit zijn doelen, geen voorspelde cijfers.</p>'+
+  '<section class="study-panel"><h2>Mijn leerdoelen</h2><p>We kijken naar gemaakte oefentoetsen. Dit zijn doelen, geen voorspelde cijfers.</p><p><b>Deze week: '+weekly.count+' van '+weekly.target+' geplande oefensessies</b> (gemaakte oefentoetsen).</p>'+
   '<div class="study-form"><label>Oefensessies per week<input type="number" id="study-weekly-goal" min="1" max="14" value="'+Number(goals.sessionsPerWeek||3)+'"></label>'+
   '<label>Algemeen streefcijfer<input type="number" id="study-general-target" min="1" max="10" step="0.5" value="'+Number(goals.targetGrade||7)+'"></label></div>'+
   '<button class="study-button secondary" data-action="study-save-goals">Doelen opslaan</button></section>'+
