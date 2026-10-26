@@ -8,7 +8,7 @@ Een zelfstandige, responsive webapp voor Nikki en Dean met profielkeuze, dashboa
 2. Upload **alle bestanden uit deze map** naar de root van de repository. Het bestand `index.html` moet direct in de root staan.
 3. Open **Settings → Pages → Build and deployment → Deploy from a branch**. Kies `main` en `/(root)` en sla op.
 4. De app verschijnt doorgaans onder `https://<gebruikersnaam>.github.io/studyforge/`.
-5. Open de pagina, kies Nikki of Dean. Er staan voorbeeldtoetsen klaar om te testen.
+5. Open de pagina, kies Nikki of Dean. De bibliotheek begint leeg totdat je lesmateriaal laat publiceren.
 
 Zonder Supabase gebruikt StudyForge automatisch browseropslag (`localStorage`). Toetsen, cijfers en flashcardbeoordelingen worden dan bewaard op **dat apparaat in die browser**. Wisselen van browser/apparaat synchroniseert niet. De lokale startversie is **geen beveiligde privéomgeving**: het ouderbeheer staat open.
 
@@ -90,9 +90,8 @@ Multiplechoice wordt automatisch nagekeken. Bij open vragen ziet de leerling het
 - `app.js`: dashboard, oefenlogica, interactie.
 - `data.js`: browseropslag en Supabase-adapter.
 - `config.js`: Supabase-verbindingsinstellingen (leeg = lokaal).
-- `examples.js`: alleen fictieve voorbeeldlesstof.
+- `content/library.json`: gepubliceerde toetsen/flashcards die in het Huiswerk-project worden gemaakt. Deze gegevens zijn openbaar op GitHub Pages.
 - `supabase/schema.sql`: tabellen + RLS.
-- `examples/`: losse JSON-bestanden om te importeren.
 
 ## Kosten
 
@@ -100,3 +99,11 @@ GitHub Pages is voor deze statische website gratis via een openbare repository. 
 
 ## Vormgeving — StudyForge NEXT
 Tienervriendelijke dark-academia-stijl: donker petrol, warme oranje accenten en een vrolijke uil met een koptelefoon. Het bestand `owl-study.webp` hoort bij deze editie en moet ook naar GitHub Pages worden geüpload. Geen extra AI-koppeling.
+
+## Lesmateriaal rechtstreeks vanuit ChatGPT publiceren
+
+De `content/library.json`-lijst begint leeg. Voeg in dit Huiswerk-project lesmateriaal toe en vraag om een StudyForge-toets of flashcards. ChatGPT kan met toestemming de repository bijwerken en een nieuw pakket toevoegen. StudieForge laadt bij het openen nieuwe sets uit `content/library.json`. Een unieke pakket-ID is verplicht. Bewerk bestaande pakket-ID's niet om voortgang en beoordelingen consistent te houden; publiceer een nieuwe revisie als nieuw pakket.
+
+**Privacy:** GitHub-repository `fathom-web/studyforge` is openbaar. Zet hier alleen nieuw geformuleerde oefenvragen en flashcards in die geschikt zijn voor openbare publicatie. Plaats geen ruwe schooldocumenten, leerlinggegevens, cijfers of privéscans in deze map. Antwoorden en resultaten blijven voorlopig lokaal op het apparaat. Zodra Supabase met beveiligde accounts wordt gebruikt, is ook een privésynchronisatie voor de gepubliceerde sets nodig.
+
+De vier oude voorbeeldsets worden bij het openen van de app automatisch verwijderd uit bestaande browsergegevens. Andere geïmporteerde sets en resultaten blijven intact. Verwijderde gepubliceerde sets blijven op dit apparaat verborgen.
