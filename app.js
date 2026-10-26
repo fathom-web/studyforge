@@ -47,6 +47,7 @@ async function init() {
   try {
     const status=await api('status');state.csrf=status.csrf;state.admin=status.admin; const badge=$('#demobadge');if(badge)badge.textContent=window.sfMode()==='supabase'?'STUDYFORGE · SUPABASE':'STUDYFORGE · LOKALE VERSIE';
     if(status.locked){state.route='unlock';render();return;}
+    await window.sfSyncPublished?.();
     await boot();
   } catch(e){renderFatal(e.message);}
 }
