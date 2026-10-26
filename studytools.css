@@ -1,0 +1,65 @@
+
+/* StudyForge 2 — toetsen, planning, doelen en ouderoverzicht */
+.study-dashboard-strip{display:flex;align-items:center;justify-content:space-between;gap:22px;margin:0 0 24px;padding:20px 24px;border:1px solid #355267;border-radius:19px;background:linear-gradient(120deg,#20394d,#1e293c 60%,#3a2b35);color:#fff}
+.study-dashboard-strip h2{font-size:clamp(20px,2vw,27px);margin:6px 0}
+.study-dashboard-strip p{color:#c5d2df;margin:0;font-size:14px}
+.study-button,.study-link{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border:0;font:inherit;text-decoration:none;font-weight:700;transition:transform .15s ease,background .15s ease}
+.study-button{border-radius:11px;background:#ffa767;color:#231a19;padding:11px 17px;white-space:nowrap}
+.study-button:hover{transform:translateY(-1px);background:#ffbe8b}
+.study-button.secondary{background:#334556;color:#eff7fc;border:1px solid #4b647a}
+.study-link{background:transparent;color:#9ddecf;padding:7px}
+.study-link:hover{text-decoration:underline}
+.study-panel{background:var(--panel,#151d2d);border:1px solid var(--stroke,#364153);border-radius:18px;padding:22px;margin:0 0 20px}
+.study-panel h2{margin:0 0 16px;font-size:21px}
+.study-panel h3{font-size:15px;margin:16px 0}
+.study-panel p,.study-muted{color:var(--muted,#aeb8c7);font-size:14px}
+.study-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-bottom:17px}
+.study-form label{font-size:13px;display:flex;flex-direction:column;gap:7px;font-weight:600;color:#dce9f3}
+.study-form input{width:100%;min-width:0;border:1px solid #475368;background:#0e1522;border-radius:10px;padding:12px;color:#f4f7fb;font:inherit}
+.study-form input:focus{outline:2px solid #74cfbe}
+.study-section{margin:22px 0}
+.study-section h2{margin:0 0 15px;font-size:21px}
+.study-exam-grid,.study-parent-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.study-exam{border:1px solid var(--stroke,#313849);background:var(--panel,#162132);border-radius:17px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.study-exam-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.study-subject,.study-chip{font-size:12px;border-radius:999px;padding:6px 10px;background:#30453f;color:#b6ebd8;font-weight:700}
+.study-chip{background:#3a3041;color:#ffc59d}
+.study-exam h3{margin:3px 0;font-size:19px}
+.study-exam p{margin:0;color:#bdc6d2;font-size:13px}
+.study-readiness{font-size:13px;font-weight:700;color:#90dcc8}
+.study-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:auto;padding-top:8px}
+.study-summary{display:flex;align-items:center;justify-content:space-between;gap:25px;background:linear-gradient(120deg,#28443e,#1b283d);border:1px solid #457467;border-radius:19px;padding:26px;margin-bottom:18px}
+.study-summary h2{font-size:28px;margin:12px 0}
+.study-summary p{color:#bed0d2;margin:0}
+.study-big-label{background:#49725d;padding:7px 12px;border-radius:8px;font-weight:800;color:#d3ffe2;font-size:14px}
+.study-score{font-size:44px;font-weight:900;text-align:center}
+.study-score small{display:block;font-size:11px;font-weight:500;color:#d0d7df}
+.study-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.study-metrics>div{border:1px solid #3d4d5a;background:#182838;border-radius:14px;padding:16px}
+.study-metrics b{font-size:25px;display:block}
+.study-metrics span{color:#aebbc9;display:block;font-size:12px;margin-top:5px}
+.study-timeline{display:flex;flex-direction:column;gap:1px}
+.study-day{display:flex;gap:14px;align-items:center;border-bottom:1px solid #343e4b;padding:12px 0}
+.study-day:last-child{border-bottom:0}
+.study-day>div{flex:1;min-width:0}
+.study-day b{font-size:14px}
+.study-day p{font-size:13px;margin:3px 0}
+.study-check{border:1px solid #5c6d7b;color:#edf7ff;background:transparent;border-radius:50%;width:37px;height:37px;font-size:20px;cursor:pointer;flex:none}
+.study-check.done{background:#378872;border-color:#378872}
+.study-person{display:flex;gap:12px;align-items:center;margin-bottom:16px}
+.study-person h2{margin:0}
+.study-parent-grid .study-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+.study-parent-exam{display:flex;justify-content:space-between;gap:8px;padding:12px 0;border-bottom:1px solid #384454;font-size:13px}
+.study-parent-exam span{color:#afbbca;text-align:right}
+.study-warning{padding:12px 16px;background:#4a3426;border-radius:10px;color:#ffcc9a}
+@media(max-width:760px){
+.study-dashboard-strip,.study-summary{flex-direction:column;align-items:flex-start}
+.study-dashboard-strip .study-button{width:100%}
+.study-exam-grid,.study-parent-grid,.study-form{grid-template-columns:1fr}
+.study-panel{padding:17px}
+.study-summary{padding:20px}
+.study-metrics>div{padding:12px}
+.study-score{text-align:left}
+.study-parent-exam{flex-direction:column}
+.study-parent-exam span{text-align:left}
+}
