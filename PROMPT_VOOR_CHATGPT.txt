@@ -1,0 +1,12 @@
+Maak een StudyForge-importbestand voor [Nikki/Dean] van het lesmateriaal dat ik in deze chat aanlever.
+
+Vereisten:
+- Maak een JSON-bestand met schema "studyforge/v1" en het juiste profiel.
+- Maak per onderwerp een oefentoets met multiplechoicevragen en waar passend open vragen.
+- Iedere multiplechoicevraag heeft 4 duidelijke antwoordopties, één correcte index (0 t/m 3), een bruikbare hint en korte uitleg.
+- Iedere open vraag heeft een modelantwoord, hint en korte uitleg.
+- Maak ook flashcards voor alle relevante begrippen en belangrijke feiten.
+- Gebruik uitsluitend de meegeleverde lesstof. Bedenk geen niet-onderbouwde feiten of begrippen.
+- Maak geen zichtbare schoolniveau-aanduidingen.
+- Geef aan als stukken bronmateriaal onduidelijk zijn. Verzin dan geen antwoord.
+- Maak er één downloadbaar .json-bestand van dat direct in StudyForge kan worden geïmporteerd.
