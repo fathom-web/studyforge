@@ -735,6 +735,1104 @@
           ]
         }
       ]
+    },
+    {
+      "id": "dean-biologie-unit1-organen-cellen-2026-10-28-v1",
+      "profile": "Dean",
+      "collections": [
+        {
+          "type": "quiz",
+          "subject": "Biologie",
+          "title": "Unit 1 — Organen en cellen · 28 oktober",
+          "description": "60 multiplechoicevragen (10 per basis) op basis van zes foto's van de samenvatting: organismen, bouw van een organisme, microscoop, dierlijke en plantaardige cellen, levensfasen en biologisch onderzoek. VMBO Basis. Hints, uitleg, eindcijfer en foutenronde.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat is een organisme?",
+              "options": [
+                "Een levend wezen",
+                "Een levenloos voorwerp",
+                "Alleen een mens",
+                "Een voorwerp dat kan bewegen"
+              ],
+              "correct": 0,
+              "hint": "Ook schimmels zijn organismen.",
+              "explanation": "Een organisme is een levend wezen."
+            },
+            {
+              "type": "mc",
+              "question": "Welk voorbeeld is een organisme?",
+              "options": [
+                "Een steen",
+                "Een schimmel",
+                "Een plastic fles",
+                "Een stoel"
+              ],
+              "correct": 1,
+              "hint": "Het leeft, ook zonder armen.",
+              "explanation": "Ook schimmels, bacteriën, planten en dieren zijn organismen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent groei?",
+              "options": [
+                "Nieuwe dingen leren",
+                "Afvalstoffen uitscheiden",
+                "Groter en zwaarder worden",
+                "Je prikkels waarnemen"
+              ],
+              "correct": 2,
+              "hint": "Denk aan lengte en gewicht.",
+              "explanation": "Bij groei wordt een organisme groter en zwaarder."
+            },
+            {
+              "type": "mc",
+              "question": "Welk voorbeeld hoort bij ontwikkeling?",
+              "options": [
+                "Een kind wordt 3 cm langer",
+                "Een steen verkleurt",
+                "Een bal rolt weg",
+                "Een kind leert lopen"
+              ],
+              "correct": 3,
+              "hint": "Ontwikkeling gaat over verandering in bouw of vaardigheden.",
+              "explanation": "Een nieuwe vaardigheid leren is een voorbeeld van ontwikkeling."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent reageren op prikkels?",
+              "options": [
+                "Iets doen na een waarneming",
+                "Voedsel verteren",
+                "Groter worden",
+                "Nakomelingen krijgen"
+              ],
+              "correct": 0,
+              "hint": "Denk aan omkijken als je iets hoort.",
+              "explanation": "Reageren op prikkels betekent iets doen na wat je waarneemt."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is ademhaling?",
+              "options": [
+                "Alleen koolstofdioxide opnemen",
+                "Zuurstof opnemen en koolstofdioxide afgeven",
+                "Nakomelingen krijgen",
+                "Afvalstoffen via urine verliezen"
+              ],
+              "correct": 1,
+              "hint": "Denk aan de twee gassen.",
+              "explanation": "Ademhaling is het opnemen van zuurstof en afgeven van koolstofdioxide."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent stofwisseling?",
+              "options": [
+                "Alleen groter worden",
+                "Alleen de spieren bewegen",
+                "Stoffen omzetten in andere stoffen in je lichaam",
+                "Het ontvangen van geluid"
+              ],
+              "correct": 2,
+              "hint": "Stoffen veranderen.",
+              "explanation": "Stofwisseling bestaat uit omzettingen van stoffen in het organisme."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is uitscheiding?",
+              "options": [
+                "Extra zuurstof opnemen",
+                "Nieuwe cellen leren maken",
+                "Licht zien met je ogen",
+                "Afvalstoffen verlaten het lichaam"
+              ],
+              "correct": 3,
+              "hint": "Denk aan wat je lichaam kwijtraakt.",
+              "explanation": "Bij uitscheiding verlaten afvalstoffen het lichaam."
+            },
+            {
+              "type": "mc",
+              "question": "Wanneer noem je iets dood?",
+              "options": [
+                "Als het vroeger levenskenmerken had, maar nu niet meer",
+                "Als het nooit geleefd heeft",
+                "Als het stil ligt",
+                "Als het niet kan zwemmen"
+              ],
+              "correct": 0,
+              "hint": "Dood is anders dan levenloos.",
+              "explanation": "Iets is dood als het levenskenmerken hééft gehad maar nu niet meer."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom is een steen levenloos?",
+              "options": [
+                "Hij heeft vroeger geleefd",
+                "Hij heeft nooit levenskenmerken gehad",
+                "Hij slaapt",
+                "Hij ademt niet omdat hij dood is"
+              ],
+              "correct": 1,
+              "hint": "Een steen heeft nooit geleefd.",
+              "explanation": "Levenloos betekent: nooit levenskenmerken gehad."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is de goede volgorde van klein naar groot?",
+              "options": [
+                "Weefsel → cel → orgaan → organisme → orgaanstelsel",
+                "Orgaan → cel → weefsel → organisme → orgaanstelsel",
+                "Cel → weefsel → orgaan → orgaanstelsel → organisme",
+                "Cel → orgaanstelsel → weefsel → orgaan → organisme"
+              ],
+              "correct": 2,
+              "hint": "Begin met de kleinste bouwsteen.",
+              "explanation": "De vijf organisatieniveaus zijn cel, weefsel, orgaan, orgaanstelsel en organisme."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een weefsel?",
+              "options": [
+                "Eén compleet orgaanstelsel",
+                "Alle botten samen",
+                "Een celkern met celmembraan",
+                "Een groep cellen met dezelfde bouw en functie"
+              ],
+              "correct": 3,
+              "hint": "Denk aan zenuwweefsel.",
+              "explanation": "Een weefsel is een groep cellen met dezelfde bouw en functie(s)."
+            },
+            {
+              "type": "mc",
+              "question": "Waaruit bestaat een orgaan?",
+              "options": [
+                "Uit verschillende weefsels",
+                "Uit meerdere organismen",
+                "Alleen uit celwanden",
+                "Alleen uit tussencelstof"
+              ],
+              "correct": 0,
+              "hint": "Bijvoorbeeld hart of lever.",
+              "explanation": "Een orgaan bestaat uit verschillende weefsels en heeft een of meer functies."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een orgaanstelsel?",
+              "options": [
+                "Een enkele cel",
+                "Een groep samenwerkende organen",
+                "Een enkele spiercel",
+                "Een stof tussen cellen"
+              ],
+              "correct": 1,
+              "hint": "Bijvoorbeeld het verteringsstelsel.",
+              "explanation": "Een orgaanstelsel bestaat uit organen die samenwerken voor een bepaalde functie."
+            },
+            {
+              "type": "mc",
+              "question": "Wat scheidt de borstholte van de buikholte?",
+              "options": [
+                "De maag",
+                "De lever",
+                "Het middenrif",
+                "De huid"
+              ],
+              "correct": 2,
+              "hint": "Het ligt tussen de bovenste en onderste romp.",
+              "explanation": "Het middenrif scheidt de borstholte en de buikholte."
+            },
+            {
+              "type": "mc",
+              "question": "Welke organen liggen in de borstholte?",
+              "options": [
+                "Maag en nieren",
+                "Lever en darmen",
+                "Maag en lever",
+                "Hart en longen"
+              ],
+              "correct": 3,
+              "hint": "Denk aan ademhaling en bloedtransport.",
+              "explanation": "In de borstholte liggen onder andere het hart en de longen."
+            },
+            {
+              "type": "mc",
+              "question": "Welk orgaan ligt in de buikholte?",
+              "options": [
+                "De maag",
+                "Een long",
+                "Het hart",
+                "Het oculair"
+              ],
+              "correct": 0,
+              "hint": "Hier liggen ook lever, nieren en darmen.",
+              "explanation": "De maag ligt in de buikholte."
+            },
+            {
+              "type": "mc",
+              "question": "Welk stelsel vervoert stoffen en warmte door je lichaam?",
+              "options": [
+                "Bottenstelsel",
+                "Bloedvatenstelsel",
+                "Spierstelsel",
+                "Verteringsstelsel"
+              ],
+              "correct": 1,
+              "hint": "Denk aan transport.",
+              "explanation": "Het bloedvatenstelsel vervoert stoffen en warmte."
+            },
+            {
+              "type": "mc",
+              "question": "Welk orgaanstelsel verteert je voedsel?",
+              "options": [
+                "Zenuwstelsel",
+                "Zintuigenstelsel",
+                "Verteringsstelsel",
+                "Uitscheidingsstelsel"
+              ],
+              "correct": 2,
+              "hint": "Het staat in de naam.",
+              "explanation": "Het verteringsstelsel zorgt voor de vertering van je voedsel."
+            },
+            {
+              "type": "mc",
+              "question": "Waarmee kun je waarnemen?",
+              "options": [
+                "Met het bottenstelsel",
+                "Met het voortplantingsstelsel",
+                "Met het bloedvatenstelsel",
+                "Met het zintuigenstelsel"
+              ],
+              "correct": 3,
+              "hint": "Denk aan zien en horen.",
+              "explanation": "Met je zintuigenstelsel kun je waarnemen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is het oculair van een microscoop?",
+              "options": [
+                "De bovenste lens waardoor je kijkt",
+                "Het onderdeel dat licht regelt",
+                "De grote scherpstelknop",
+                "Het glasplaatje"
+              ],
+              "correct": 0,
+              "hint": "Hier kijk je doorheen.",
+              "explanation": "Het oculair is de bovenste lens waardoor je kijkt."
+            },
+            {
+              "type": "mc",
+              "question": "Waarvoor dient het statief?",
+              "options": [
+                "Hiermee wissel je objectief",
+                "Hieraan pak je de microscoop vast",
+                "Hiermee regel je het licht",
+                "Hierop leg je het preparaat"
+              ],
+              "correct": 1,
+              "hint": "Je houdt de microscoop eraan vast.",
+              "explanation": "Aan het statief pak je de microscoop vast."
+            },
+            {
+              "type": "mc",
+              "question": "Waarmee kies je een ander objectief?",
+              "options": [
+                "Het oculair",
+                "Het diafragma",
+                "De revolver",
+                "De preparaatklem"
+              ],
+              "correct": 2,
+              "hint": "Je draait dit onderdeel.",
+              "explanation": "Met de revolver kies je een ander objectief."
+            },
+            {
+              "type": "mc",
+              "question": "Wat zijn objectieven?",
+              "options": [
+                "De twee glasplaatjes",
+                "De klemmen op de tafel",
+                "De bovenste lens waardoor je kijkt",
+                "De onderste lenzen"
+              ],
+              "correct": 3,
+              "hint": "Ze zitten bij de revolver.",
+              "explanation": "Objectieven zijn de onderste lenzen."
+            },
+            {
+              "type": "mc",
+              "question": "Waar leg je het preparaat?",
+              "options": [
+                "Op de tafel",
+                "Op het oculair",
+                "Op het statief",
+                "Op het diafragma"
+              ],
+              "correct": 0,
+              "hint": "Dit onderdeel zit onder de lenzen.",
+              "explanation": "Het preparaat ligt op de microscooptafel."
+            },
+            {
+              "type": "mc",
+              "question": "Waarvoor dienen de preparaatklemmen?",
+              "options": [
+                "Om de lamp aan te zetten",
+                "Om het preparaat vast te zetten",
+                "Om het oculair te vergroten",
+                "Om van objectief te wisselen"
+              ],
+              "correct": 1,
+              "hint": "Zo schuift het glasplaatje niet weg.",
+              "explanation": "Preparaatklemmen houden het preparaat vast."
+            },
+            {
+              "type": "mc",
+              "question": "Welke schroef gebruik je om ongeveer scherp te stellen?",
+              "options": [
+                "De kleine schroef",
+                "Het diafragma",
+                "De grote schroef",
+                "De revolver"
+              ],
+              "correct": 2,
+              "hint": "Denk aan grof scherpstellen.",
+              "explanation": "Met de grote schroef stel je ongeveer scherp."
+            },
+            {
+              "type": "mc",
+              "question": "Welke schroef gebruik je om precies scherp te stellen?",
+              "options": [
+                "De grote schroef",
+                "Het statief",
+                "De tafel",
+                "De kleine schroef"
+              ],
+              "correct": 3,
+              "hint": "Denk aan nauwkeurig bijstellen.",
+              "explanation": "De kleine schroef is voor precies scherpstellen."
+            },
+            {
+              "type": "mc",
+              "question": "Met welke vergroting begin je bij de microscoop?",
+              "options": [
+                "De kleinste vergroting",
+                "De grootste vergroting",
+                "Altijd de middelste vergroting",
+                "Zonder objectief"
+              ],
+              "correct": 0,
+              "hint": "Begin met een overzichtelijk beeld.",
+              "explanation": "Stel eerst scherp bij de kleinste vergroting."
+            },
+            {
+              "type": "mc",
+              "question": "Welk onderdeel regelt de hoeveelheid licht?",
+              "options": [
+                "De preparaatklem",
+                "Het diafragma",
+                "De revolver",
+                "De tubus"
+              ],
+              "correct": 1,
+              "hint": "De lamp levert licht, dit regelt hoeveel.",
+              "explanation": "Het diafragma regelt de hoeveelheid licht."
+            },
+            {
+              "type": "mc",
+              "question": "Welk onderdeel hebben dierlijke én plantaardige cellen?",
+              "options": [
+                "De celwand",
+                "De bladgroenkorrels",
+                "De celkern",
+                "De vacuole"
+              ],
+              "correct": 2,
+              "hint": "Dit onderdeel regelt wat er gebeurt.",
+              "explanation": "Celkern, cytoplasma en celmembraan komen bij beide soorten cellen voor."
+            },
+            {
+              "type": "mc",
+              "question": "Wat doet de celkern?",
+              "options": [
+                "Houdt het microscooppreparaat vast",
+                "Is alleen gevuld met vocht",
+                "Maakt de celwand stevig",
+                "Regelt alles wat er in de cel gebeurt"
+              ],
+              "correct": 3,
+              "hint": "Het regelcentrum van de cel.",
+              "explanation": "De celkern regelt alles wat er in een cel gebeurt."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is cytoplasma?",
+              "options": [
+                "Water met opgeloste stoffen waarin de celdelen liggen",
+                "Een stevig laagje om plantencellen",
+                "Een vergrotende lens",
+                "Een orgaanstelsel"
+              ],
+              "correct": 0,
+              "hint": "De cel is hiermee verder gevuld.",
+              "explanation": "Cytoplasma bestaat uit water met opgeloste stoffen waarin de celdelen liggen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is het celmembraan?",
+              "options": [
+                "Een stevige laag om de plantencel",
+                "Een dun vliesje om het cytoplasma",
+                "Een groene korrel",
+                "Een met vocht gevuld blaasje"
+              ],
+              "correct": 1,
+              "hint": "Een membraan is dun.",
+              "explanation": "Het celmembraan is een dun vliesje om het cytoplasma."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een celwand?",
+              "options": [
+                "Een bovenste lens",
+                "Een met vocht gevuld blaasje",
+                "Een stevig laagje tussencelstof om plantencellen",
+                "Een deel dat alleen dieren hebben"
+              ],
+              "correct": 2,
+              "hint": "Dit ligt om de cel heen.",
+              "explanation": "De celwand is een stevig laagje tussencelstof om plantencellen."
+            },
+            {
+              "type": "mc",
+              "question": "Waar vindt fotosynthese plaats?",
+              "options": [
+                "In de celkern",
+                "In de vacuole",
+                "In de celwand",
+                "In de bladgroenkorrels"
+              ],
+              "correct": 3,
+              "hint": "Denk aan groene korrels.",
+              "explanation": "In bladgroenkorrels vindt fotosynthese plaats."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een vacuole?",
+              "options": [
+                "Een met vocht gevuld blaasje",
+                "De bovenste lens",
+                "Het stevige celmembraan",
+                "Het regelcentrum van de cel"
+              ],
+              "correct": 0,
+              "hint": "Vacuole hoort volgens de samenvatting bij planten.",
+              "explanation": "De vacuole is een met vocht gevuld blaasje in het cytoplasma van plantencellen."
+            },
+            {
+              "type": "mc",
+              "question": "Welke combinatie komt alleen bij plantencellen voor volgens de samenvatting?",
+              "options": [
+                "Celkern, cytoplasma en celmembraan",
+                "Celwand, bladgroenkorrels en vacuole",
+                "Celkern, bladgroenkorrels en cytoplasma",
+                "Celmembraan, celkern en vacuole"
+              ],
+              "correct": 1,
+              "hint": "Kies de drie plantenspecifieke onderdelen.",
+              "explanation": "Het boek noemt celwand, bladgroenkorrels en vacuole als onderdelen van plantencellen."
+            },
+            {
+              "type": "mc",
+              "question": "Waar bevindt de celwand zich?",
+              "options": [
+                "Midden in de celkern",
+                "Binnen in de vacuole",
+                "Om de plantencel heen",
+                "In het oculair"
+              ],
+              "correct": 2,
+              "hint": "Het is een buitenste stevige laag.",
+              "explanation": "De celwand ligt niet in de cel, maar eromheen."
+            },
+            {
+              "type": "mc",
+              "question": "Welke uitspraak klopt?",
+              "options": [
+                "Alleen dierlijke cellen hebben celmembranen",
+                "Alleen plantaardige cellen hebben celkernen",
+                "Dierlijke cellen hebben altijd bladgroenkorrels",
+                "Planten- en dierlijke cellen hebben allebei cytoplasma"
+              ],
+              "correct": 3,
+              "hint": "Zoek een gemeenschappelijk celonderdeel.",
+              "explanation": "Zowel plantaardige als dierlijke cellen hebben cytoplasma."
+            },
+            {
+              "type": "mc",
+              "question": "Wanneer stopt lichamelijke groei ongeveer volgens het boek?",
+              "options": [
+                "Rond 18 jaar",
+                "Rond 6 jaar",
+                "Rond 12 jaar",
+                "Rond 65 jaar"
+              ],
+              "correct": 0,
+              "hint": "Denk aan de overgang naar volwassen worden.",
+              "explanation": "De samenvatting zegt dat lichamelijke groei rond 18 jaar stopt; ontwikkeling gaat door."
+            },
+            {
+              "type": "mc",
+              "question": "Tot wanneer gaat geestelijke groei en ontwikkeling door?",
+              "options": [
+                "Tot 6 jaar",
+                "Totdat een mens doodgaat",
+                "Tot 12 jaar",
+                "Tot 21 jaar"
+              ],
+              "correct": 1,
+              "hint": "Nieuwe dingen leren kan je hele leven.",
+              "explanation": "Volgens het boek gaat geestelijke groei en ontwikkeling door totdat je doodgaat."
+            },
+            {
+              "type": "mc",
+              "question": "Welke leeftijd hoort bij 'baby'?",
+              "options": [
+                "1½ tot 4 jaar",
+                "4 tot 6 jaar",
+                "0 tot 1½ jaar",
+                "6 tot 12 jaar"
+              ],
+              "correct": 2,
+              "hint": "De eerste levensfase.",
+              "explanation": "Baby: 0 tot 1½ jaar."
+            },
+            {
+              "type": "mc",
+              "question": "Welke leeftijd hoort bij 'peuter'?",
+              "options": [
+                "0 tot 1½ jaar",
+                "4 tot 6 jaar",
+                "12 tot 16 jaar",
+                "1½ tot 4 jaar"
+              ],
+              "correct": 3,
+              "hint": "Na de babyfase.",
+              "explanation": "Peuter: 1½ tot 4 jaar."
+            },
+            {
+              "type": "mc",
+              "question": "Welke leeftijd hoort bij 'kleuter'?",
+              "options": [
+                "4 tot 6 jaar",
+                "1½ tot 4 jaar",
+                "6 tot 12 jaar",
+                "16 tot 21 jaar"
+              ],
+              "correct": 0,
+              "hint": "Tussen peuter en schoolkind.",
+              "explanation": "Kleuter: 4 tot 6 jaar."
+            },
+            {
+              "type": "mc",
+              "question": "Welke leeftijd hoort bij 'schoolkind'?",
+              "options": [
+                "4 tot 6 jaar",
+                "6 tot 12 jaar",
+                "12 tot 16 jaar",
+                "21 tot 65 jaar"
+              ],
+              "correct": 1,
+              "hint": "Je leert bijvoorbeeld lezen en rekenen.",
+              "explanation": "Schoolkind: 6 tot 12 jaar."
+            },
+            {
+              "type": "mc",
+              "question": "Welke leeftijd hoort bij 'puber'?",
+              "options": [
+                "6 tot 12 jaar",
+                "16 tot 21 jaar",
+                "12 tot 16 jaar",
+                "21 tot 65 jaar"
+              ],
+              "correct": 2,
+              "hint": "Een tijd met groeispurt en nieuwe gevoelens.",
+              "explanation": "Puber: 12 tot 16 jaar."
+            },
+            {
+              "type": "mc",
+              "question": "Welke leeftijd hoort bij 'adolescent'?",
+              "options": [
+                "12 tot 16 jaar",
+                "21 tot 65 jaar",
+                "65 jaar en ouder",
+                "16 tot 21 jaar"
+              ],
+              "correct": 3,
+              "hint": "Na puber en voor volwassene.",
+              "explanation": "Adolescent: 16 tot 21 jaar."
+            },
+            {
+              "type": "mc",
+              "question": "Welke leeftijd hoort bij 'volwassene'?",
+              "options": [
+                "21 tot 65 jaar",
+                "12 tot 16 jaar",
+                "16 tot 21 jaar",
+                "65 jaar en ouder"
+              ],
+              "correct": 0,
+              "hint": "De fase voordat je oudere wordt.",
+              "explanation": "Volwassene: 21 tot 65 jaar."
+            },
+            {
+              "type": "mc",
+              "question": "Welke leeftijd hoort bij 'oudere'?",
+              "options": [
+                "21 tot 50 jaar",
+                "65 jaar en ouder",
+                "50 jaar en ouder",
+                "60 jaar en ouder"
+              ],
+              "correct": 1,
+              "hint": "De laatste levensfase in deze samenvatting.",
+              "explanation": "Oudere: 65 jaar en ouder."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is de probleemstelling van een biologisch onderzoek?",
+              "options": [
+                "Het antwoord na de proef",
+                "De waarnemingen in een schema",
+                "De vraag waarmee je het onderzoek start",
+                "De hoeveelheid licht"
+              ],
+              "correct": 2,
+              "hint": "Dit is het begin van het onderzoek.",
+              "explanation": "De probleemstelling is de vraag waarmee je je onderzoek begint."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een onderzoeksvraag?",
+              "options": [
+                "Het definitieve antwoord",
+                "De conclusie in een diagram",
+                "Een lijst met alle materialen",
+                "De vraag die precies omschrijft wat je wilt onderzoeken"
+              ],
+              "correct": 3,
+              "hint": "Maak duidelijk wat je precies wilt weten.",
+              "explanation": "De onderzoeksvraag beschrijft precies wat je wilt onderzoeken."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is de verwachting bij een onderzoek?",
+              "options": [
+                "Een voorlopig antwoord op je onderzoeksvraag",
+                "Het definitieve resultaat",
+                "Het glasplaatje onder je microscoop",
+                "Een samenvatting van de conclusie"
+              ],
+              "correct": 0,
+              "hint": "Je denkt vooraf na over de uitkomst.",
+              "explanation": "Een verwachting is een antwoord dat je alvast probeert te geven."
+            },
+            {
+              "type": "mc",
+              "question": "Wat staat er in een werkplan?",
+              "options": [
+                "Alleen de conclusie",
+                "Hoe je onderzoekt, wat je nodig hebt en hoe je waarneemt",
+                "Alleen de definitieve resultaten",
+                "Alleen het rapportcijfer"
+              ],
+              "correct": 1,
+              "hint": "Hoe pak je het onderzoek aan?",
+              "explanation": "Een werkplan beschrijft uitvoering, benodigdheden en waarneming."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'uitvoering'?",
+              "options": [
+                "De fase waarin je alleen de vraag kiest",
+                "Het weergeven van resultaten in een schema",
+                "De periode waarin je het werkplan uitvoert",
+                "Het maken van een conclusie"
+              ],
+              "correct": 2,
+              "hint": "Nu ga je het doen.",
+              "explanation": "Uitvoering is wanneer je het opgestelde werkplan daadwerkelijk uitvoert."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een waarneming?",
+              "options": [
+                "Wat je vooraf denkt te gaan zien",
+                "De mening van de docent",
+                "Een verzonnen uitkomst",
+                "Wat je ziet, voelt, hoort, ruikt of proeft"
+              ],
+              "correct": 3,
+              "hint": "Je gebruikt je zintuigen.",
+              "explanation": "Waarnemingen zijn wat je met je zintuigen opmerkt."
+            },
+            {
+              "type": "mc",
+              "question": "Wat noemt de begrippenlijst 'resultaten'?",
+              "options": [
+                "Waarnemingen weergegeven in een schema of diagram",
+                "Alleen je verwachting",
+                "Alleen de materialenlijst",
+                "Je onderzoeksvraag"
+              ],
+              "correct": 0,
+              "hint": "Bijvoorbeeld een tabel of grafiek.",
+              "explanation": "Resultaten zijn volgens het boek weergegeven waarnemingen in schema of diagram."
+            },
+            {
+              "type": "mc",
+              "question": "Wat doe je in de conclusie?",
+              "options": [
+                "Je bedenkt een nieuw onderwerp zonder iets te vergelijken",
+                "Je vergelijkt je resultaten met je verwachting",
+                "Je kiest het grootste objectief",
+                "Je verandert vijf factoren"
+              ],
+              "correct": 1,
+              "hint": "Klopt het met wat je dacht?",
+              "explanation": "Bij de conclusie vergelijk je de onderzoeksresultaten met je verwachting."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom verander je maar één factor in een proef?",
+              "options": [
+                "Om minder waarnemingen te hoeven opschrijven",
+                "Omdat je dan geen controlegroep nodig hebt",
+                "Om te bepalen waardoor een verschil ontstaat",
+                "Omdat de proef altijd dezelfde uitkomst geeft"
+              ],
+              "correct": 2,
+              "hint": "De andere omstandigheden houd je gelijk.",
+              "explanation": "Onderzoek één factor terwijl alle andere omstandigheden gelijk blijven."
+            },
+            {
+              "type": "mc",
+              "question": "Planten krijgen in de proefgroep extra licht. Welke planten zijn de controlegroep?",
+              "options": [
+                "De planten met extra licht",
+                "Alle planten die wel groeien",
+                "Alleen de grootste plant",
+                "De planten zonder extra licht"
+              ],
+              "correct": 3,
+              "hint": "De controlegroep is er ter vergelijking.",
+              "explanation": "De controlegroep krijgt niet de onderzochte behandeling, zodat je kunt vergelijken."
+            }
+          ]
+        },
+        {
+          "type": "flashcards",
+          "subject": "Biologie",
+          "title": "Unit 1 — Begrippen (basis 1–6)",
+          "description": "Begrippenkaartjes over organismen, organen en orgaanstelsels, microscoop, plantencellen, levensfasen en biologisch onderzoek.",
+          "cards": [
+            {
+              "front": "organisme",
+              "back": "Levend wezen"
+            },
+            {
+              "front": "levend",
+              "back": "Heeft levenskenmerken"
+            },
+            {
+              "front": "dood",
+              "back": "Heeft levenskenmerken gehad maar nu niet meer"
+            },
+            {
+              "front": "levenloos",
+              "back": "Heeft nooit levenskenmerken gehad"
+            },
+            {
+              "front": "levenskenmerk",
+              "back": "Hieraan zie je dat iets leeft"
+            },
+            {
+              "front": "groei",
+              "back": "Groter en zwaarder worden van een organisme"
+            },
+            {
+              "front": "ontwikkeling",
+              "back": "Verandering in de bouw van een organisme"
+            },
+            {
+              "front": "beweging",
+              "back": "Verplaatsing van een organisme of een deel ervan"
+            },
+            {
+              "front": "reageren op prikkels",
+              "back": "Iets doen na een waarneming, zoals horen of voelen"
+            },
+            {
+              "front": "ademhaling",
+              "back": "Zuurstof opnemen en koolstofdioxide afgeven"
+            },
+            {
+              "front": "voeding",
+              "back": "Eten en drinken om in leven te blijven"
+            },
+            {
+              "front": "uitscheiding",
+              "back": "Afvalstoffen verlaten het lichaam"
+            },
+            {
+              "front": "voortplanting",
+              "back": "Nakomelingen krijgen"
+            },
+            {
+              "front": "stofwisseling",
+              "back": "Stoffen in het lichaam omzetten"
+            },
+            {
+              "front": "cel",
+              "back": "Kleinste bouwsteen van een organisme"
+            },
+            {
+              "front": "weefsel",
+              "back": "Groep cellen met dezelfde bouw en functie"
+            },
+            {
+              "front": "tussencelstof",
+              "back": "Stof die tussen cellen van een weefsel ligt"
+            },
+            {
+              "front": "orgaan",
+              "back": "Deel met een of meer functies, bestaande uit verschillende weefsels"
+            },
+            {
+              "front": "orgaanstelsel",
+              "back": "Samenwerkende organen met een bepaalde functie"
+            },
+            {
+              "front": "organisatieniveaus",
+              "back": "Cel → weefsel → orgaan → orgaanstelsel → organisme"
+            },
+            {
+              "front": "middenrif",
+              "back": "Scheidt de borstholte en buikholte"
+            },
+            {
+              "front": "borstholte",
+              "back": "Bovenste romp met onder andere hart en longen"
+            },
+            {
+              "front": "buikholte",
+              "back": "Onderste romp met onder andere maag, lever, nieren, darmen"
+            },
+            {
+              "front": "ademhalingsstelsel",
+              "back": "Zorgt voor de opname van zuurstof"
+            },
+            {
+              "front": "bloedvatenstelsel",
+              "back": "Vervoert stoffen en warmte door het lichaam"
+            },
+            {
+              "front": "bottenstelsel",
+              "back": "Geeft vorm, stevigheid en bescherming; maakt beweging mogelijk"
+            },
+            {
+              "front": "hormoonstelsel",
+              "back": "Regelt de hoeveelheid hormonen in het lichaam"
+            },
+            {
+              "front": "spierstelsel",
+              "back": "Maakt beweging mogelijk"
+            },
+            {
+              "front": "uitscheidingsstelsel",
+              "back": "Zorgt voor uitscheiding van afvalstoffen"
+            },
+            {
+              "front": "verteringsstelsel",
+              "back": "Zorgt voor de vertering van voedsel"
+            },
+            {
+              "front": "voortplantingsstelsel",
+              "back": "Hiermee kun je nakomelingen krijgen"
+            },
+            {
+              "front": "zenuwstelsel",
+              "back": "Vervoert impulsen (seintjes) door het lichaam"
+            },
+            {
+              "front": "zintuigenstelsel",
+              "back": "Hiermee kun je waarnemen"
+            },
+            {
+              "front": "statief",
+              "back": "Hieraan pak je de microscoop vast"
+            },
+            {
+              "front": "oculair",
+              "back": "Bovenste lens waardoor je kijkt"
+            },
+            {
+              "front": "tubus",
+              "back": "Verbindt oculair en revolver"
+            },
+            {
+              "front": "revolver",
+              "back": "Hiermee kies je een ander objectief"
+            },
+            {
+              "front": "objectieven",
+              "back": "Onderste lenzen van de microscoop"
+            },
+            {
+              "front": "tafel",
+              "back": "Hierop leg je het preparaat"
+            },
+            {
+              "front": "preparaatklemmen",
+              "back": "Hiermee zet je het preparaat vast"
+            },
+            {
+              "front": "grote schroef",
+              "back": "Hiermee stel je ongeveer scherp"
+            },
+            {
+              "front": "kleine schroef",
+              "back": "Hiermee stel je precies scherp"
+            },
+            {
+              "front": "lamp",
+              "back": "Zorgt voor licht"
+            },
+            {
+              "front": "diafragma",
+              "back": "Regelt de hoeveelheid licht"
+            },
+            {
+              "front": "preparaat",
+              "back": "Wat je bekijkt onder een microscoop"
+            },
+            {
+              "front": "voorwerpglaasje",
+              "back": "Eén van de twee glasplaatjes van een preparaat"
+            },
+            {
+              "front": "dekglaasje",
+              "back": "Glasplaatje dat op het voorwerpglaasje komt"
+            },
+            {
+              "front": "celkern",
+              "back": "Regelt alles wat er in de cel gebeurt"
+            },
+            {
+              "front": "cytoplasma",
+              "back": "Water met opgeloste stoffen waarin de celdelen liggen"
+            },
+            {
+              "front": "celmembraan",
+              "back": "Dun vliesje om het cytoplasma"
+            },
+            {
+              "front": "celwand",
+              "back": "Stevige laag tussencelstof om plantencellen"
+            },
+            {
+              "front": "bladgroenkorrels",
+              "back": "Groene korrels in plantencellen waarin fotosynthese plaatsvindt"
+            },
+            {
+              "front": "vacuole",
+              "back": "Met vocht gevuld blaasje in het cytoplasma van plantencellen"
+            },
+            {
+              "front": "levensfase",
+              "back": "Periode in het leven met bepaalde kenmerken"
+            },
+            {
+              "front": "lichamelijke groei en ontwikkeling",
+              "back": "Groei en ontwikkeling zichtbaar aan het lichaam"
+            },
+            {
+              "front": "geestelijke groei en ontwikkeling",
+              "back": "Je leert nieuwe dingen of begrijpt ze beter"
+            },
+            {
+              "front": "baby",
+              "back": "0 tot 1½ jaar"
+            },
+            {
+              "front": "peuter",
+              "back": "1½ tot 4 jaar"
+            },
+            {
+              "front": "kleuter",
+              "back": "4 tot 6 jaar"
+            },
+            {
+              "front": "schoolkind",
+              "back": "6 tot 12 jaar"
+            },
+            {
+              "front": "puber",
+              "back": "12 tot 16 jaar"
+            },
+            {
+              "front": "adolescent",
+              "back": "16 tot 21 jaar"
+            },
+            {
+              "front": "volwassene",
+              "back": "21 tot 65 jaar"
+            },
+            {
+              "front": "oudere",
+              "back": "65 jaar en ouder"
+            },
+            {
+              "front": "probleemstelling",
+              "back": "De vraag waarmee je het onderzoek start"
+            },
+            {
+              "front": "onderzoeksvraag",
+              "back": "De vraag die precies omschrijft wat je wilt onderzoeken"
+            },
+            {
+              "front": "verwachting",
+              "back": "Voorlopig antwoord op de onderzoeksvraag"
+            },
+            {
+              "front": "werkplan",
+              "back": "Beschrijving van hoe je onderzoek wilt uitvoeren"
+            },
+            {
+              "front": "uitvoering",
+              "back": "De periode waarin je het werkplan uitvoert"
+            },
+            {
+              "front": "waarnemingen",
+              "back": "Wat je ziet, voelt, hoort, ruikt of proeft"
+            },
+            {
+              "front": "resultaten",
+              "back": "Waarnemingen weergegeven in een schema of diagram"
+            },
+            {
+              "front": "conclusie",
+              "back": "Je vergelijkt de resultaten met je verwachting"
+            },
+            {
+              "front": "proefgroep",
+              "back": "Groep waarin de onderzochte factor verandert"
+            },
+            {
+              "front": "controlegroep",
+              "back": "Groep die dient ter vergelijking zonder de onderzochte verandering"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
