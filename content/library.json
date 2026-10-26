@@ -9,7 +9,7 @@
           "type": "quiz",
           "subject": "Engels",
           "title": "My Future — examen 27 oktober 2026",
-          "description": "35 vragen voor VMBO Basis 3: opleiding en toekomst, interesses, kwaliteiten, vaardigheden, present simple, present continuous, between/around/in/at/on, very/really/quite/extremely/absolutely/too, en zinnen over toekomstplannen. 28 meerkeuzevragen, 7 open vragen. Hints, uitleg en fouten oefenen. Geen MBO 3/4 beroepenlijst.",
+          "description": "35 oefenvragen over: opleiding en toekomst, interesses, kwaliteiten, vaardigheden, present simple, present continuous, between/around/in/at/on, very/really/quite/extremely/absolutely/too, en zinnen over toekomstplannen. 28 meerkeuzevragen, 7 open vragen. Hints, uitleg en fouten oefenen. Gericht op de opgegeven leerstof.",
           "questions": [
             {
               "type": "mc",
@@ -2052,7 +2052,7 @@
         {
           "type": "flashcards",
           "subject": "Biologie",
-          "title": "Unit 1 — Begrippen (basis 1–6)",
+          "title": "Unit 1 — Begrippen (onderdelen 1–6)",
           "description": "Begrippenkaartjes over organismen, organen en orgaanstelsels, microscoop, plantencellen, levensfasen en biologisch onderzoek.",
           "cards": [
             {
