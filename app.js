@@ -36,7 +36,7 @@ const ICONS = {
   refresh:'<path d="M20 11a8 8 0 1 0-2 6M20 4v7h-7"/>'
 };
 function ic(name,size=21) { return `<svg class="icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]||ICONS.spark}</svg>`; }
-const state = {csrf:'',admin:false,profiles:[],profile:null,route:'choose',dashboard:null,active:null,quiz:null,flash:null,libraryFilter:'all',search:'',importText:'',importMessage:null,authMode:null};
+const state = {csrf:'',admin:false,profiles:[],profile:null,route:'choose',dashboard:null,active:null,quiz:null,flash:null,libraryFilter:'all',search:''};
 let toastTimer;
 function toast(msg,bad=false) {const el=$('#toast');el.textContent=msg;el.className='toast show'+(bad?' bad':'');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.className='toast',4200);}
 async function api(action, data=null, params={}) {
@@ -63,7 +63,7 @@ function render(){
   if(state.route==='unlock'){renderUnlock();return;}
   if(state.route==='choose'){renderChoose();return;}
   const navItems=[['dashboard','home','Dashboard'],['quizzes','exam','Oefentoetsen'],['flashcards','cards','Flashcards'],['progress','chart','Progressie'],['library','library','Bibliotheek'],['planning','book','Mijn toetsen'],['ready','spark','Toetsklaar'],['parent','chart','Ouderoverzicht']];
-  $('#app').innerHTML=`<div class="app-layout"><aside class="sidebar">${brand()}<div class="sidebar-label">JOUW LEEROMGEVING</div><nav class="nav-list">${navItems.map(([r,i,t])=>`<button class="nav-link ${state.route===r?'active':''}" data-action="nav" data-route="${r}">${ic(i)}<span>${t}</span>${state.route===r?`<span class="nav-active-dot"></span>`:''}</button>`).join('')}</nav><div class="sidebar-bottom"><button class="nav-link" data-action="change-profile">${ic('swap')}<span>Wissel profiel</span></button><button class="nav-link ${state.route==='admin'?'active':''}" data-action="admin">${ic('gear')}<span>Ouderbeheer</span></button><button class="nav-link" data-action="logout">${ic('lock')}<span>${window.sfMode()==='supabase'?'Uitloggen':'Startscherm'}</span></button><div class="tiny sidebar-foot">GEMAAKT VOOR NIKKI & DEAN</div></div></aside><div class="main-column"><header class="topbar"><button class="mobile-brand" data-action="change-profile">${ic('swap',18)} ${brand()}</button><span class="topbar-breadcrumb">STUDYFORGE <span>/</span> ${htmlEscape(state.route==='dashboard'?'OVERZICHT':state.route==='admin'?'OUDERBEHEER':state.route.toUpperCase())}</span><div class="topbar-right"><span class="online-indicator"></span><span class="online-text">${window.sfMode()==='supabase'?'Cloudopslag':'Lokaal opgeslagen'}</span><button class="profile-chip" data-action="change-profile"><span class="avatar small ${profileName().toLowerCase()}">${htmlEscape(profileName()[0])}</span><span>${htmlEscape(profileName())}</span>${ic('swap',15)}</button><button class="topbar-admin" title="Ouderbeheer" aria-label="Ouderbeheer" data-action="admin">${ic('gear',20)}</button></div></header><main class="main-content">${routeContent()}</main><nav class="bottom-nav">${navItems.slice(0,4).map(([r,i,t])=>`<button class="bottom-link ${state.route===r?'active':''}" data-action="nav" data-route="${r}">${ic(i,21)}<span>${t==='Oefentoetsen'?'Toetsen':t}</span></button>`).join('')}<button class="bottom-link ${state.route==='more'?'active':''}" data-action="nav" data-route="more">${ic('menu',21)}<span>Meer</span></button></nav></div></div>`;
+  $('#app').innerHTML=`<div class="app-layout"><aside class="sidebar">${brand()}<div class="sidebar-label">JOUW LEEROMGEVING</div><nav class="nav-list">${navItems.map(([r,i,t])=>`<button class="nav-link ${state.route===r?'active':''}" data-action="nav" data-route="${r}">${ic(i)}<span>${t}</span>${state.route===r?`<span class="nav-active-dot"></span>`:''}</button>`).join('')}</nav><div class="sidebar-bottom"><button class="nav-link" data-action="change-profile">${ic('swap')}<span>Wissel profiel</span></button><button class="nav-link" data-action="logout">${ic('lock')}<span>${window.sfMode()==='supabase'?'Uitloggen':'Startscherm'}</span></button><div class="tiny sidebar-foot">GEMAAKT VOOR NIKKI & DEAN</div></div></aside><div class="main-column"><header class="topbar"><button class="mobile-brand" data-action="change-profile">${ic('swap',18)} ${brand()}</button><span class="topbar-breadcrumb">STUDYFORGE <span>/</span> ${htmlEscape(state.route==='dashboard'?'OVERZICHT':state.route.toUpperCase())}</span><div class="topbar-right"><span class="online-indicator"></span><span class="online-text">${window.sfMode()==='supabase'?'Cloudopslag':'Lokaal opgeslagen'}</span><button class="profile-chip" data-action="change-profile"><span class="avatar small ${profileName().toLowerCase()}">${htmlEscape(profileName()[0])}</span><span>${htmlEscape(profileName())}</span>${ic('swap',15)}</button></div></header><main class="main-content">${routeContent()}</main><nav class="bottom-nav">${navItems.slice(0,4).map(([r,i,t])=>`<button class="bottom-link ${state.route===r?'active':''}" data-action="nav" data-route="${r}">${ic(i,21)}<span>${t==='Oefentoetsen'?'Toetsen':t}</span></button>`).join('')}<button class="bottom-link ${state.route==='more'?'active':''}" data-action="nav" data-route="more">${ic('menu',21)}<span>Meer</span></button></nav></div></div>`;
 }
 function renderUnlock(){
   $('#app').innerHTML=`<main class="welcome-shell"><div class="welcome-orb one"></div><div class="welcome-orb two"></div><div class="welcome-content unlock-content">${brand()}<div class="unlock-icon">${ic('lock',30)}</div><div class="eyebrow">JULLIE PRIVÉ LEERPLEK</div><h1>Welkom terug<span class="accent-dot">.</span></h1><p class="welcome-lead">Log in op jullie Supabase-account om StudyForge te openen en resultaten tussen apparaten te synchroniseren.</p><form id="unlockForm" class="sign-in-form"><label for="family-email" class="field-label">E-mailadres</label><input id="family-email" type="email" autocomplete="username" required placeholder="jouw@email.nl"><label for="family-password" class="field-label">Wachtwoord</label><input id="family-password" type="password" autocomplete="current-password" required placeholder="Wachtwoord"><button type="submit" class="btn btn-primary btn-wide">Log in ${ic('arrow',18)}</button></form><p class="tiny">Gebruik een Supabase Auth-account dat je zelf hebt aangemaakt. Jouw wachtwoord staat niet op GitHub.</p></div></main>`;
@@ -84,7 +84,6 @@ function routeContent(){
   if(state.route==='quiz-run') return quizContent();
   if(state.route==='quiz-result') return quizResultContent();
   if(state.route==='flash-run') return flashContent();
-  if(state.route==='admin') return adminContent();
   return dashboardContent();
 }
 function moreContent(){
@@ -107,7 +106,7 @@ function dashboardContent(){
  <div class="metric-grid"><div class="metric-card"><span class="metric-icon mint">${ic('exam',21)}</span><span class="metric-number">${s.done}</span><span class="metric-label">Toetsen gemaakt</span></div><div class="metric-card"><span class="metric-icon purple">${ic('cards',21)}</span><span class="metric-number">${s.known}<small> / ${s.cards}</small></span><span class="metric-label">Flashcards gekend</span></div><div class="metric-card"><span class="metric-icon peach">${ic('trophy',21)}</span><span class="metric-number">${s.avg===null?'–':gradeFmt(s.avg)}</span><span class="metric-label">Gemiddeld cijfer</span></div><div class="metric-card"><span class="metric-icon blue">${ic('target',21)}</span><span class="metric-number">${missed().length}</span><span class="metric-label">Nog eens oefenen</span></div></div>
  <div class="section-top"><div><div class="eyebrow">KIES JOUW ACTIVITEIT</div><h2>Wat gaan we doen?</h2></div></div>
  <div class="activity-grid"><button class="activity-card activity-exams" data-action="nav" data-route="quizzes"><span class="activity-icon">${ic('exam',28)}</span><span class="activity-title">Oefenexamens</span><span class="activity-desc">Test je kennis met uitdagende vragen.</span><span class="activity-more">Start een toets ${ic('arrow',18)}</span></button><button class="activity-card activity-flash" data-action="nav" data-route="flashcards"><span class="activity-icon">${ic('cards',28)}</span><span class="activity-title">Flashcards</span><span class="activity-desc">Leer begrippen op een slimme manier.</span><span class="activity-more">Kaarten oefenen ${ic('arrow',18)}</span></button><button class="activity-card activity-progress" data-action="nav" data-route="progress"><span class="activity-icon">${ic('chart',28)}</span><span class="activity-title">Mijn progressie</span><span class="activity-desc">Bekijk hoe goed je bezig bent.</span><span class="activity-more">Mijn resultaten ${ic('arrow',18)}</span></button><button class="activity-card activity-mistakes" data-action="practice-mistakes"><span class="activity-icon">${ic('target',28)}</span><span class="activity-title">Fouten oefenen</span><span class="activity-desc">Maak moeilijke vragen nog een keer.</span><span class="activity-more">Opnieuw proberen ${ic('arrow',18)}</span></button></div>
- <div class="dashboard-lower"><section class="panel"><div class="panel-heading"><div><div class="eyebrow">VERS TOEGEVOEGD</div><h3>Mijn leermateriaal</h3></div><button class="text-link" data-action="nav" data-route="library">Bekijk alles ${ic('arrow',15)}</button></div>${last.length?`<div class="material-list">${last.map(item=>packRow(item)).join('')}</div>`:emptyState('library','Er staat nog geen lesmateriaal klaar.','Vraag de beheerder om een toets of flashcards te importeren.')}</section><section class="panel"><div class="panel-heading"><div><div class="eyebrow">JOUW RESULTATEN</div><h3>Recent geoefend</h3></div><button class="text-link" data-action="nav" data-route="progress">Progressie ${ic('arrow',15)}</button></div>${grades.length?`<div class="results-list">${grades.map(a=>`<div class="result-row"><div class="result-medal">${ic('exam',19)}</div><div class="result-info"><b>${htmlEscape(a.title)}</b><span>${htmlEscape(a.subject)} · ${fmtDate(a.created_at)}</span></div><span class="grade-pill ${+a.grade>=5.5?'pass':'fail'}">${gradeFmt(a.grade)}</span></div>`).join('')}</div>`:emptyState('chart','Nog geen cijfers','Je eerste resultaat verschijnt hier na het afronden van een toets.')}</section></div></div>`;
+ <div class="dashboard-lower"><section class="panel"><div class="panel-heading"><div><div class="eyebrow">VERS TOEGEVOEGD</div><h3>Mijn leermateriaal</h3></div><button class="text-link" data-action="nav" data-route="library">Bekijk alles ${ic('arrow',15)}</button></div>${last.length?`<div class="material-list">${last.map(item=>packRow(item)).join('')}</div>`:emptyState('library','Er staat nog geen lesmateriaal klaar.','Nieuwe toetsen en flashcards verschijnen hier zodra ze vanuit het Huiswerk-project zijn toegevoegd.')}</section><section class="panel"><div class="panel-heading"><div><div class="eyebrow">JOUW RESULTATEN</div><h3>Recent geoefend</h3></div><button class="text-link" data-action="nav" data-route="progress">Progressie ${ic('arrow',15)}</button></div>${grades.length?`<div class="results-list">${grades.map(a=>`<div class="result-row"><div class="result-medal">${ic('exam',19)}</div><div class="result-info"><b>${htmlEscape(a.title)}</b><span>${htmlEscape(a.subject)} · ${fmtDate(a.created_at)}</span></div><span class="grade-pill ${+a.grade>=5.5?'pass':'fail'}">${gradeFmt(a.grade)}</span></div>`).join('')}</div>`:emptyState('chart','Nog geen cijfers','Je eerste resultaat verschijnt hier na het afronden van een toets.')}</section></div></div>`;
 }
 function emptyState(icon,title,desc){return `<div class="empty-state">${ic(icon,32)}<h3>${htmlEscape(title)}</h3><p>${htmlEscape(desc)}</p></div>`;}
 function packRow(item){return `<button class="material-row" data-action="open-pack" data-id="${item.id}"><span class="material-icon ${item.type==='quiz'?'exam-tile':'flash-tile'}">${ic(item.type==='quiz'?'exam':'cards',21)}</span><span class="material-info"><b>${htmlEscape(item.title)}</b><span>${htmlEscape(item.subject)} <span class="bullet">·</span> ${item.type==='quiz'&&item.questions_per_attempt?item.questions_per_attempt+' per toets · '+item.count+' totaal':item.count+' '+(item.type==='quiz'?'vragen':'kaarten')}</span></span><span class="material-chevron">${ic('chevron',18)}</span></button>`;}
@@ -116,7 +115,7 @@ function listContent(type){
  const subjectList=[...new Set(available.map(c=>c.subject))];
  return `<div class="page-enter">${sectionHeading(type==='quiz'?'TEST JE KENNIS':'LEREN IN JE EIGEN TEMPO',type==='quiz'?'Oefenexamens':'Flashcards',type==='quiz'?'Maak een toets, krijg direct een cijfer en ontdek wat je nog kunt oefenen.':'Draai kaarten om en onthoud steeds een beetje meer.')}
  <div class="page-stats"><span class="badge-soft">${ic(type==='quiz'?'exam':'cards',16)} ${available.length} sets beschikbaar</span><span class="badge-soft">${ic('book',16)} ${subjectList.length} vakken</span></div>
- ${available.length?`<div class="pack-grid">${available.map(c=>packCard(c)).join('')}</div>`:emptyState(type==='quiz'?'exam':'cards',type==='quiz'?'Nog geen oefenexamens':'Nog geen flashcards','Zodra er een importbestand is toegevoegd, vind je het hier terug.')}</div>`;
+ ${available.length?`<div class="pack-grid">${available.map(c=>packCard(c)).join('')}</div>`:emptyState(type==='quiz'?'exam':'cards',type==='quiz'?'Nog geen oefenexamens':'Nog geen flashcards','Nieuwe toetsen en flashcards worden vanuit het Huiswerk-project toegevoegd.')}</div>`;
 }
 function packCard(c){
  const progress=c.type==='flashcards'?flashes().filter(p=>+p.collection_id===c.id && +p.known===1).length:0;
@@ -128,7 +127,7 @@ function libraryContent(){
  const filtered=items.filter(x=>(state.libraryFilter==='all'||x.subject===state.libraryFilter)&&(!state.search||`${x.title} ${x.subject} ${x.description}`.toLowerCase().includes(state.search.toLowerCase())));
  return `<div class="page-enter">${sectionHeading('ALLES BIJ ELKAAR','Mijn bibliotheek','Al je oefentoetsen en flashcards op één plek.')}
  <div class="library-tools"><div class="search-wrap">${ic('search',19)}<input id="library-search" placeholder="Zoek lesmateriaal..." value="${htmlEscape(state.search)}" aria-label="Zoek lesmateriaal"></div><div class="filter-pills"><button class="filter-pill ${state.libraryFilter==='all'?'on':''}" data-action="filter" data-value="all">Alles</button>${subjects.map(s=>`<button class="filter-pill ${state.libraryFilter===s?'on':''}" data-action="filter" data-value="${htmlEscape(s)}">${htmlEscape(s)}</button>`).join('')}</div></div>
- ${filtered.length?`<div class="library-list">${filtered.map(packRow).join('')}</div>`:emptyState('library','Geen lesmateriaal gevonden','Pas je zoekopdracht aan of voeg een importbestand toe.')}</div>`;
+ ${filtered.length?`<div class="library-list">${filtered.map(packRow).join('')}</div>`:emptyState('library','Geen lesmateriaal gevonden','Probeer een andere zoekopdracht.')}</div>`;
 }
 function progressContent(){
  const s=stats();const as=attempts();const profilesubjects=[...new Set(as.map(a=>a.subject))];
@@ -164,14 +163,6 @@ function flashContent(){
  }
  const id=f.order[f.index];const card=f.content.cards[id];
  return `<div class="page-enter focus-page flash-page"><button class="back-link" data-action="nav" data-route="flashcards">${ic('back',18)} Terug naar flashcards</button><div class="focus-header"><div><div class="eyebrow">${htmlEscape(f.pack.subject)} <span class="bullet">·</span> FLASHCARDS</div><h2>${htmlEscape(f.pack.title)}</h2></div><span class="step-count">Kaart ${f.index+1} <span>/ ${f.order.length}</span></span></div><div class="step-bar"><div style="width:${f.index/f.order.length*100}%"></div></div><button class="flip-card ${f.flipped?'flipped':''}" data-action="flip"><span class="flip-inner"><span class="flip-label">${f.flipped?'ANTWOORD':'VRAAG'}</span><span class="flip-text">${htmlEscape(f.flipped?card.back:card.front)}</span><span class="flip-tip">${ic('refresh',17)} Tik om ${f.flipped?'de vraag':'het antwoord'} te zien</span></span></button><div class="flash-controls">${f.flipped?`<button class="btn btn-red" data-action="rate-flash" data-known="0">${ic('refresh',18)} Nog oefenen</button><button class="btn btn-primary" data-action="rate-flash" data-known="1">${ic('check',18)} Ik weet het!</button>`:`<button class="btn btn-secondary" data-action="flip">Draai kaart om ${ic('arrow',18)}</button>`}</div></div>`;
-}
-function adminContent(){
- if(!state.admin) return `<div class="page-enter admin-login">${sectionHeading('ALLEEN VOOR OUDERS','Ouderbeheer','Importeer nieuwe oefentoetsen en flashcards vanuit ChatGPT.')}
- <div class="panel auth-panel"><div class="auth-icon">${ic('lock',27)}</div><h2>Beveiligde toegang</h2><p>Bevestig je accountwachtwoord opnieuw om toetsen toe te voegen of te verwijderen.</p><form id="adminForm"><label class="sr-only" for="adminPass">Accountwachtwoord</label><input id="adminPass" type="password" autocomplete="current-password" required placeholder="Accountwachtwoord"><button type="submit" class="btn btn-primary btn-wide">Open ouderbeheer ${ic('arrow',18)}</button></form></div></div>`;
- const all=collections();
- return `<div class="page-enter">${sectionHeading('OUDEROMGEVING','Ouderbeheer','Lesmateriaal wordt in ChatGPT gemaakt en hier als JSON geïmporteerd.')}
- <div class="admin-grid"><section class="panel"><div class="panel-heading"><div><div class="eyebrow">STAP 1</div><h3>Importeer leerstof</h3></div><span class="tag-muted">${ic('shield',15)} Beheeromgeving</span></div><p class="body-muted">Maak hier in ChatGPT een StudyForge-importbestand voor Nikki of Dean. Kies daarna het JSON-bestand of plak de inhoud hieronder.</p><div class="import-zone"><input id="jsonFile" type="file" accept=".json,application/json" class="sr-only"><button class="import-file-btn" data-action="choose-file">${ic('upload',25)}<b>Kies JSON-bestand</b><span>Of plak de JSON hieronder</span></button></div><label class="field-label" for="importText">JSON-inhoud</label><textarea id="importText" class="import-editor" placeholder='{"schema":"studyforge/v1","profile":"Dean",...}' spellcheck="false">${htmlEscape(state.importText)}</textarea><button class="btn btn-primary btn-wide" data-action="import">${ic('plus',18)} Importeer in StudyForge</button>${state.importMessage?`<div class="notice ${state.importMessage.bad?'error':'success'}">${htmlEscape(state.importMessage.text)}</div>`:''}<p class="tiny">Maximaal 1,8 MB per importbestand. Er worden geen afbeeldingen, PDF's of Word-documenten opgeslagen.</p></section>
- <section class="panel"><div class="panel-heading"><div><div class="eyebrow">STAP 2</div><h3>Beheer sets</h3></div><span class="tag-muted">${all.length} sets</span></div><p class="body-muted">Verwijder een set als je een nieuwe versie wilt importeren. Let op: bij verwijderen verdwijnen ook de bijbehorende resultaten.</p>${all.length?`<div class="admin-list">${all.map(c=>`<div class="admin-row"><span class="material-icon ${c.type==='quiz'?'exam-tile':'flash-tile'}">${ic(c.type==='quiz'?'exam':'cards',18)}</span><span class="admin-info"><b>${htmlEscape(c.title)}</b><span>${htmlEscape(c.subject)} · ${htmlEscape(state.profiles.find(p=>+p.id===c.profile_id)?.name||'')}</span></span><button class="icon-button danger" title="Set verwijderen" aria-label="Verwijder ${htmlEscape(c.title)}" data-action="delete" data-id="${c.id}">${ic('trash',18)}</button></div>`).join('')}</div>`:emptyState('library','Nog geen sets','Importeer je eerste set om deze hier te zien.')}<div class="admin-actions"><button class="btn btn-outline" data-action="admin-logout">${ic('lock',18)} Ouderbeheer sluiten</button></div></section></div></div>`;
 }
 async function selectProfile(id){state.profile=id;await refreshDashboard();await window.studyBeforeRoute?.('dashboard');state.route='dashboard';render();}
 async function refreshDashboard(){if(!state.profile)return;state.dashboard=await api('dashboard',null,{profile:state.profile});}
@@ -242,15 +233,6 @@ async function flashRate(known){
  if(known)f.sessionKnown++;f.index++;f.flipped=false;
  if(f.index===f.order.length)await refreshDashboard();render();
 }
-async function importJson(){
- const el=$('#importText');const text=el?.value||'';state.importText=text;if(!text.trim()){toast('Selecteer een bestand of plak JSON.',true);return;}
- const r=await api('import',{text});state.importMessage={bad:false,text:`${r.imported} set(s) toegevoegd voor ${r.profile}.${r.duplicates?' '+r.duplicates+' dubbele set(s) overgeslagen.':''}`};state.importText='';await refreshDashboard();render();toast('Import afgerond!');
-}
-async function deletePack(id){
- const col=collections().find(c=>c.id===+id);if(!col)return;
- if(!window.confirm(`Weet je zeker dat je "${col.title}" wilt verwijderen? Bijbehorende resultaten worden ook verwijderd.`))return;
- await api('delete',{id:+id});await refreshDashboard();render();toast('Set verwijderd.');
-}
 function handleError(e){console.error(e);toast(e?.message||'Er ging iets mis.',true);if(e?.message?.includes('uitgelogd')){state.route='unlock';render();}}
 document.addEventListener('click',async ev=>{
  const btn=ev.target.closest('[data-action]');if(!btn||btn.disabled)return;
@@ -262,7 +244,6 @@ document.addEventListener('click',async ev=>{
    case 'select-profile':await selectProfile(+btn.dataset.id);break;
    case 'change-profile':state.profile=null;state.route='choose';state.dashboard=null;render();break;
    case 'nav':await navigate(btn.dataset.route);break;
-   case 'admin':await navigate('admin');break;
    case 'logout':await api('logout',{});state.route=window.sfMode()==='supabase'?'unlock':'choose';state.profile=null;state.admin=window.sfMode()==='local';render();break;
    case 'open-pack':await openPack(btn.dataset.id);break;
    case 'practice-mistakes':await practiceMistakes();break;
@@ -278,23 +259,17 @@ document.addEventListener('click',async ev=>{
    case 'rate-flash':await flashRate(btn.dataset.known==='1');break;
    case 'restart-flash':startFlash();break;
    case 'filter':state.libraryFilter=btn.dataset.value;render();break;
-   case 'choose-file':$('#jsonFile')?.click();break;
-   case 'import':await importJson();break;
-   case 'delete':await deletePack(btn.dataset.id);break;
-   case 'admin-logout':await api('admin_logout',{});state.admin=false;render();break;
   }
  }catch(e){handleError(e);}
 });
 document.addEventListener('submit',async ev=>{
- const form=ev.target;if(!['unlockForm','adminForm'].includes(form.id))return;ev.preventDefault();
+ const form=ev.target;if(form.id!=='unlockForm')return;ev.preventDefault();
  try{
   if(form.id==='unlockForm') {const r=await api('unlock',{email:$('#family-email').value,password:$('#family-password').value});state.csrf=r.csrf;await window.sfSyncPublished?.();await boot();}
-  else {const r=await api('admin_login',{password:$('#adminPass').value});state.admin=true;state.csrf=r.csrf;render();toast('Ouderbeheer geopend.');}
  }catch(e){handleError(e);}
 });
 document.addEventListener('input',ev=>{
  if(ev.target.id==='open-text'&&state.quiz)state.quiz.answers[state.quiz.index].typed=ev.target.value;
- if(ev.target.id==='importText')state.importText=ev.target.value;
  if(ev.target.id==='library-search') {
   state.search=ev.target.value;
   const selStart=ev.target.selectionStart;
@@ -304,11 +279,5 @@ document.addEventListener('input',ev=>{
   if(target)target.innerHTML=items.map(packRow).join('')||emptyState('search','Geen resultaten','Probeer iets anders te zoeken.');
   else {render();const f=$('#library-search');if(f){f.focus();f.setSelectionRange(selStart,selStart);}}
  }
-});
-document.addEventListener('change',async ev=>{
- if(ev.target.id!=='jsonFile')return;
- const file=ev.target.files?.[0];if(!file)return;
- if(file.size>1800000){toast('Dit bestand is te groot (maximaal 1,8 MB).',true);return;}
- try{const content=await file.text();state.importText=content;const txt=$('#importText');if(txt)txt.value=content;toast('JSON-bestand ingelezen. Klik op importeren.');}catch(e){handleError(e);}
 });
 init();
