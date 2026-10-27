@@ -4755,6 +4755,1281 @@
           ]
         }
       ]
+    },
+    {
+      "id": "nikki-geschiedenis-h1-havo-vwo-open-20261027",
+      "profile": "Nikki",
+      "collections": [
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "H1 §1 · Jagers-verzamelaars (havo/vwo)",
+          "description": "Open vragen op havo/vwo-niveau: zelf formuleren, verklaren, vergelijken, oorzaak en gevolg. Modelantwoorden en hints.",
+          "questions": [
+            {
+              "type": "open",
+              "question": "Waarom konden de eerste mensachtigen door rechtop te lopen andere activiteiten uitvoeren?",
+              "answer": "Hun handen kwamen vrij om bijvoorbeeld voorwerpen te dragen en gereedschap te gebruiken.",
+              "hint": "Verbind lichaamsbouw met gedrag.",
+              "explanation": "Hun handen kwamen vrij om bijvoorbeeld voorwerpen te dragen en gereedschap te gebruiken."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit hoe archeologen met schedels veranderingen bij mensensoorten onderzoeken.",
+              "answer": "Ze vergelijken fossiele schedels, onder andere de grootte van de hersenruimte, om veranderingen over lange tijd te bestuderen.",
+              "hint": "Wat kun je uit een schedel afleiden?",
+              "explanation": "Ze vergelijken fossiele schedels, onder andere de grootte van de hersenruimte, om veranderingen over lange tijd te bestuderen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was het gebruik van vuur belangrijk voor de overlevingskansen van vroege mensen?",
+              "answer": "Vuur hielp voedsel te bereiden en roofdieren op afstand te houden, waardoor leven veiliger en voedsel beter bruikbaar werd.",
+              "hint": "Noem twee toepassingen en hun gevolgen.",
+              "explanation": "Vuur hielp voedsel te bereiden en roofdieren op afstand te houden, waardoor leven veiliger en voedsel beter bruikbaar werd."
+            },
+            {
+              "type": "open",
+              "question": "Hoe verschilde het leven van de moderne mens in het begin van dat van een boer?",
+              "answer": "De eerste moderne mensen leefden als jagers-verzamelaars en trokken rond; boeren produceerden zelf voedsel en bleven meestal op één plek.",
+              "hint": "Vergelijk bestaansmiddelen en woonplaats.",
+              "explanation": "De eerste moderne mensen leefden als jagers-verzamelaars en trokken rond; boeren produceerden zelf voedsel en bleven meestal op één plek."
+            },
+            {
+              "type": "open",
+              "question": "Waarom konden jagers-verzamelaars meestal niet met duizenden mensen op één plek blijven?",
+              "answer": "Voedsel uit de omgeving raakte snel op; grotere groepen hadden meer voedsel nodig en moesten verder zoeken.",
+              "hint": "Verklaar de relatie tussen groepsgrootte en voedselaanbod.",
+              "explanation": "Voedsel uit de omgeving raakte snel op; grotere groepen hadden meer voedsel nodig en moesten verder zoeken."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit waarom jagers-verzamelaars verplaatsbare tenten gebruikten.",
+              "answer": "Ze trokken geregeld verder voor voedsel en hadden daarom onderkomens nodig die makkelijk meegenomen konden worden.",
+              "hint": "Verbind woning met leefwijze.",
+              "explanation": "Ze trokken geregeld verder voor voedsel en hadden daarom onderkomens nodig die makkelijk meegenomen konden worden."
+            },
+            {
+              "type": "open",
+              "question": "Wat betekent taakverdeling bij jagers-verzamelaars? Geef een voorbeeld.",
+              "answer": "Groepsleden verdeelden werkzaamheden, bijvoorbeeld sommige mensen jaagden terwijl anderen voedsel verzamelden.",
+              "hint": "Noem begrip én voorbeeld.",
+              "explanation": "Groepsleden verdeelden werkzaamheden, bijvoorbeeld sommige mensen jaagden terwijl anderen voedsel verzamelden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom waren de sociale verschillen onder jagers-verzamelaars volgens de tekst meestal klein?",
+              "answer": "De groepsleden bezaten doorgaans ongeveer evenveel spullen en namen vrij gelijkwaardig deel aan beslissingen.",
+              "hint": "Betrek bezit en macht.",
+              "explanation": "De groepsleden bezaten doorgaans ongeveer evenveel spullen en namen vrij gelijkwaardig deel aan beslissingen."
+            },
+            {
+              "type": "open",
+              "question": "Wat is het verschil tussen een geschreven en ongeschreven historische bron? Geef van beide een voorbeeld.",
+              "answer": "Een geschreven bron bevat tekst, zoals een belastinglijst; een ongeschreven bron is bijvoorbeeld een stenen bijl of skelet.",
+              "hint": "Noem kenmerk en voorbeelden.",
+              "explanation": "Een geschreven bron bevat tekst, zoals een belastinglijst; een ongeschreven bron is bijvoorbeeld een stenen bijl of skelet."
+            },
+            {
+              "type": "open",
+              "question": "Waarom begint de historie pas met het ontstaan van schrift, terwijl mensen al veel langer bestaan?",
+              "answer": "Pas vanaf schriftgebruik zijn er geschreven bronnen die gebeurtenissen, wetten en opvattingen rechtstreeks kunnen vastleggen.",
+              "hint": "Denk aan het type informatie dat bronnen geven.",
+              "explanation": "Pas vanaf schriftgebruik zijn er geschreven bronnen die gebeurtenissen, wetten en opvattingen rechtstreeks kunnen vastleggen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom weten we relatief weinig over de cultuur van mensen in de prehistorie?",
+              "answer": "Er zijn geen geschreven getuigenissen, en veel voorwerpen vergingen; archeologische vondsten vertellen niet altijd wat mensen dachten of geloofden.",
+              "hint": "Beschrijf twee beperkingen van bronnen.",
+              "explanation": "Er zijn geen geschreven getuigenissen, en veel voorwerpen vergingen; archeologische vondsten vertellen niet altijd wat mensen dachten of geloofden."
+            },
+            {
+              "type": "open",
+              "question": "Een rotsschildering toont mensen bij een kudde. Wat kun je daar wel en niet met zekerheid uit afleiden?",
+              "answer": "Je kunt vaststellen dat mensen dieren afbeeldden; je kunt niet zeker weten waarom zij dat schilderden of welke ideeën zij hadden.",
+              "hint": "Onderscheid waarneming van interpretatie.",
+              "explanation": "Je kunt vaststellen dat mensen dieren afbeeldden; je kunt niet zeker weten waarom zij dat schilderden of welke ideeën zij hadden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom is de naam 'steentijd' een vereenvoudiging van de werkelijkheid?",
+              "answer": "Ook hout, huiden, riet en bot werden gebruikt, maar die materialen bleven minder vaak bewaard dan stenen werktuigen.",
+              "hint": "Verklaar waarom vondsten een vertekend beeld kunnen geven.",
+              "explanation": "Ook hout, huiden, riet en bot werden gebruikt, maar die materialen bleven minder vaak bewaard dan stenen werktuigen."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit waarom archeologen verschillende soorten bronnen met elkaar vergelijken.",
+              "answer": "Verschillende vondsten en teksten kunnen elkaar aanvullen en helpen om conclusies beter te controleren.",
+              "hint": "Denk aan betrouwbaarheid.",
+              "explanation": "Verschillende vondsten en teksten kunnen elkaar aanvullen en helpen om conclusies beter te controleren."
+            },
+            {
+              "type": "open",
+              "question": "De moderne mens verscheen volgens het boek rond 200.000 jaar geleden. Waarom betekent dit niet dat de menselijke ontwikkeling toen begon?",
+              "answer": "Er leefden al miljoenen jaren eerder mensachtigen en andere mensensoorten; de moderne mens is een latere ontwikkeling.",
+              "hint": "Gebruik de tijdlijn.",
+              "explanation": "Er leefden al miljoenen jaren eerder mensachtigen en andere mensensoorten; de moderne mens is een latere ontwikkeling."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "H1 §2 · Agrarische revolutie (havo/vwo)",
+          "description": "Open vragen op havo/vwo-niveau: zelf formuleren, verklaren, vergelijken, oorzaak en gevolg. Modelantwoorden en hints.",
+          "questions": [
+            {
+              "type": "open",
+              "question": "Wat is het verschil tussen akkerbouw, veeteelt en landbouw?",
+              "answer": "Akkerbouw is gewassen verbouwen; veeteelt is dieren houden; beide samen vormen landbouw.",
+              "hint": "Definieer drie verwante begrippen.",
+              "explanation": "Akkerbouw is gewassen verbouwen; veeteelt is dieren houden; beide samen vormen landbouw."
+            },
+            {
+              "type": "open",
+              "question": "Waarom ontstond landbouw niet van de ene op de andere dag?",
+              "answer": "Mensen experimenteerden geleidelijk met zaaien, planten verzorgen en dieren temmen en leerden daarvan.",
+              "hint": "Beschrijf het proces.",
+              "explanation": "Mensen experimenteerden geleidelijk met zaaien, planten verzorgen en dieren temmen en leerden daarvan."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was het Midden-Oosten een geschikte plek voor vroege landbouw?",
+              "answer": "Daar groeiden geschikte wilde granen en bonen en leefden dieren zoals runderen, schapen en geiten die konden worden getemd.",
+              "hint": "Verbind natuur met ontwikkeling.",
+              "explanation": "Daar groeiden geschikte wilde granen en bonen en leefden dieren zoals runderen, schapen en geiten die konden worden getemd."
+            },
+            {
+              "type": "open",
+              "question": "Leg de drie fasen uit waarin mensen volgens het boek boeren werden.",
+              "answer": "Eerst bracht een beter klimaat meer natuurlijk voedsel en vaste woonplaatsen; daarna experimenteerden mensen met landbouw; door bevolkingsgroei werd landbouw noodzakelijk.",
+              "hint": "Beschrijf de volgorde en oorzaken.",
+              "explanation": "Eerst bracht een beter klimaat meer natuurlijk voedsel en vaste woonplaatsen; daarna experimenteerden mensen met landbouw; door bevolkingsgroei werd landbouw noodzakelijk."
+            },
+            {
+              "type": "open",
+              "question": "Waarom noemen historici de overgang naar landbouw de agrarische revolutie?",
+              "answer": "Omdat de geleidelijke overgang zeer grote economische, sociale en culturele gevolgen had voor het bestaan van mensen.",
+              "hint": "Verklaar waarom 'revolutie' past.",
+              "explanation": "Omdat de geleidelijke overgang zeer grote economische, sociale en culturele gevolgen had voor het bestaan van mensen."
+            },
+            {
+              "type": "open",
+              "question": "Hoe kon klimaatverbetering bijdragen aan een vaste woonplaats?",
+              "answer": "Door meer voedsel uit de natuur hoefden groepen minder te trekken en konden zij langer op één plek blijven.",
+              "hint": "Beschrijf oorzaak en gevolg.",
+              "explanation": "Door meer voedsel uit de natuur hoefden groepen minder te trekken en konden zij langer op één plek blijven."
+            },
+            {
+              "type": "open",
+              "question": "Waarom moesten boeren vaker permanent op één plek blijven wonen?",
+              "answer": "Akkers en vee moesten voortdurend verzorgd worden en konden niet zomaar meegenomen worden.",
+              "hint": "Vergelijk met rondtrekkende jagers.",
+              "explanation": "Akkers en vee moesten voortdurend verzorgd worden en konden niet zomaar meegenomen worden."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit hoe landbouw tot bevolkingsgroei leidde.",
+              "answer": "Met akkerbouw en veeteelt werd meer voedsel geproduceerd, waardoor meer mensen konden overleven en de bevolking groeide.",
+              "hint": "Gebruik voedselproductie als tussenstap.",
+              "explanation": "Met akkerbouw en veeteelt werd meer voedsel geproduceerd, waardoor meer mensen konden overleven en de bevolking groeide."
+            },
+            {
+              "type": "open",
+              "question": "Waarom leidde de groei van dorpen tot het ontstaan van leiders?",
+              "answer": "Bij veel inwoners kon niet meer iedereen over elke beslissing meebeslissen; sommige mensen namen leiding en kregen macht.",
+              "hint": "Denk aan besluitvorming.",
+              "explanation": "Bij veel inwoners kon niet meer iedereen over elke beslissing meebeslissen; sommige mensen namen leiding en kregen macht."
+            },
+            {
+              "type": "open",
+              "question": "Hoe vergrootte landbouw de verschillen in rijkdom tussen mensen?",
+              "answer": "Sommigen hadden meer land, vee of oogst en konden daardoor meer bezit en invloed opbouwen dan anderen.",
+              "hint": "Betrek bezit en sociale lagen.",
+              "explanation": "Sommigen hadden meer land, vee of oogst en konden daardoor meer bezit en invloed opbouwen dan anderen."
+            },
+            {
+              "type": "open",
+              "question": "Geef twee voorbeelden van culturele veranderingen als gevolg van landbouw.",
+              "answer": "Mensen woonden in vaste huizen en rijke bewoners lieten opvallende sieraden, kleding, wapens of grotere huizen maken.",
+              "hint": "Denk aan leefwijze en statussymbolen.",
+              "explanation": "Mensen woonden in vaste huizen en rijke bewoners lieten opvallende sieraden, kleding, wapens of grotere huizen maken."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was de overgang naar landbouw niet voor iedereen gezonder?",
+              "answer": "Boeren werkten vaak harder, aten minder gevarieerd en leefden dicht bij vee dat ziekten kon overdragen.",
+              "hint": "Noem minstens twee oorzaken.",
+              "explanation": "Boeren werkten vaak harder, aten minder gevarieerd en leefden dicht bij vee dat ziekten kon overdragen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom waren boeren kwetsbaar wanneer een oogst mislukte?",
+              "answer": "Ze waren afhankelijk van hun akkers en konden niet eenvoudig rondtrekken om ergens anders voedsel te vinden.",
+              "hint": "Verbind vaste woonplaats aan afhankelijkheid.",
+              "explanation": "Ze waren afhankelijk van hun akkers en konden niet eenvoudig rondtrekken om ergens anders voedsel te vinden."
+            },
+            {
+              "type": "open",
+              "question": "Leg het verband tussen grotere voedselvoorraden en sociale verschillen uit.",
+              "answer": "Overschotten maakten het mogelijk dat sommige mensen meer voedsel en bezit verzamelden dan anderen, wat ongelijkheid vergrootte.",
+              "hint": "Hoe kan bezit ongelijk verdeeld raken?",
+              "explanation": "Overschotten maakten het mogelijk dat sommige mensen meer voedsel en bezit verzamelden dan anderen, wat ongelijkheid vergrootte."
+            },
+            {
+              "type": "open",
+              "question": "Vergelijk een eerste boerendorp met een groep jagers-verzamelaars op twee punten.",
+              "answer": "Een boerendorp had een vaste woonplaats en landbouw; jagers-verzamelaars trokken rond en leefden van natuurvoedsel. Dorpen waren doorgaans groter.",
+              "hint": "Kies woonplaats, beroep of groepsgrootte.",
+              "explanation": "Een boerendorp had een vaste woonplaats en landbouw; jagers-verzamelaars trokken rond en leefden van natuurvoedsel. Dorpen waren doorgaans groter."
+            },
+            {
+              "type": "open",
+              "question": "Waarom kan een uitvinding voordelen voor de samenleving hebben en tegelijk nadelen voor afzonderlijke mensen?",
+              "answer": "Landbouw maakte bevolkingsgroei en vaste dorpen mogelijk, maar betekende vaak harder werken, meer ziekte en risico bij misoogst.",
+              "hint": "Wegen van positieve en negatieve gevolgen.",
+              "explanation": "Landbouw maakte bevolkingsgroei en vaste dorpen mogelijk, maar betekende vaak harder werken, meer ziekte en risico bij misoogst."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "H1 §3 · Egypte: economie en staat (havo/vwo)",
+          "description": "Open vragen op havo/vwo-niveau: zelf formuleren, verklaren, vergelijken, oorzaak en gevolg. Modelantwoorden en hints.",
+          "questions": [
+            {
+              "type": "open",
+              "question": "Leg uit hoe de jaarlijkse overstroming van de Nijl landbouw mogelijk maakte.",
+              "answer": "De rivier bracht water en vruchtbaar slib; na het zakken van het water konden boeren gewassen verbouwen op vruchtbare grond.",
+              "hint": "Gebruik het begrip slib.",
+              "explanation": "De rivier bracht water en vruchtbaar slib; na het zakken van het water konden boeren gewassen verbouwen op vruchtbare grond."
+            },
+            {
+              "type": "open",
+              "question": "Waarom had Egypte irrigatiekanalen én waterbekkens nodig?",
+              "answer": "Kanalen brachten water naar verder gelegen akkers; bekkens hielden water vast voor droge perioden.",
+              "hint": "Noem de verschillende functies.",
+              "explanation": "Kanalen brachten water naar verder gelegen akkers; bekkens hielden water vast voor droge perioden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom is irrigatielandbouw een voorbeeld van het aanpassen van de natuur?",
+              "answer": "Mensen legden dijken, kanalen en bekkens aan om water te beheersen en akkers te bevloeien.",
+              "hint": "Beschrijf de menselijke ingreep.",
+              "explanation": "Mensen legden dijken, kanalen en bekkens aan om water te beheersen en akkers te bevloeien."
+            },
+            {
+              "type": "open",
+              "question": "Hoe leidde irrigatielandbouw tot meer verschillende beroepen in Egypte?",
+              "answer": "Irrigatie zorgde voor voedseloverschotten, waardoor niet iedereen boer hoefde te zijn en mensen zich konden specialiseren.",
+              "hint": "Schakel irrigatie, overschot en specialisatie.",
+              "explanation": "Irrigatie zorgde voor voedseloverschotten, waardoor niet iedereen boer hoefde te zijn en mensen zich konden specialiseren."
+            },
+            {
+              "type": "open",
+              "question": "Leg het verschil uit tussen nijverheid en handel met een voorbeeld.",
+              "answer": "Nijverheid is met de hand producten maken, zoals potten; handel is die potten ruilen of verkopen voor andere benodigdheden.",
+              "hint": "Definieer beide begrippen.",
+              "explanation": "Nijverheid is met de hand producten maken, zoals potten; handel is die potten ruilen of verkopen voor andere benodigdheden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom versterkten specialisatie en handel elkaar?",
+              "answer": "Gespecialiseerde vaklieden maakten bepaalde goederen en hadden voor andere goederen ruil of handel nodig.",
+              "hint": "Leg het wederzijdse verband uit.",
+              "explanation": "Gespecialiseerde vaklieden maakten bepaalde goederen en hadden voor andere goederen ruil of handel nodig."
+            },
+            {
+              "type": "open",
+              "question": "Hoe zorgden voedseloverschotten voor het ontstaan van steden?",
+              "answer": "Meer mensen konden in de buurt blijven wonen en andere beroepen uitoefenen, waardoor dorpen uitgroeiden tot steden.",
+              "hint": "Noem bevolking en beroepen.",
+              "explanation": "Meer mensen konden in de buurt blijven wonen en andere beroepen uitoefenen, waardoor dorpen uitgroeiden tot steden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was de Egyptische stad een stedelijke gemeenschap?",
+              "answer": "Er leefden samen handwerkslieden, boeren, bestuurders, priesters en handelaren met verschillende werkzaamheden.",
+              "hint": "Leg uit wat de groepen verbindt.",
+              "explanation": "Er leefden samen handwerkslieden, boeren, bestuurders, priesters en handelaren met verschillende werkzaamheden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was de ontdekking van brons belangrijk voor werktuigen?",
+              "answer": "Koper en tin konden worden samengesmolten en gegoten, zodat gereedschap met meer verschillende vormen mogelijk werd dan met steen.",
+              "hint": "Vergelijk materiaal en maakwijze.",
+              "explanation": "Koper en tin konden worden samengesmolten en gegoten, zodat gereedschap met meer verschillende vormen mogelijk werd dan met steen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom hadden Egyptische boeren belang bij een sterk bestuur?",
+              "answer": "Dijken en kanalen vroegen gezamenlijk onderhoud en toezicht; zonder goed waterbeheer kon de oogst tegenvallen.",
+              "hint": "Verbind bestuur en landbouw.",
+              "explanation": "Dijken en kanalen vroegen gezamenlijk onderhoud en toezicht; zonder goed waterbeheer kon de oogst tegenvallen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was een centrale staat voor Egypte praktisch?",
+              "answer": "Eén bestuur kon regels maken, orde bewaren en grote irrigatiewerken organiseren in het hele gebied.",
+              "hint": "Noem taken die lokale dorpen overstijgen.",
+              "explanation": "Eén bestuur kon regels maken, orde bewaren en grote irrigatiewerken organiseren in het hele gebied."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit waarom de farao ambtenaren nodig had.",
+              "answer": "Eén heerser kon niet zelf alle belastingen innen, rechtszaken behandelen en besluiten uitvoeren; ambtenaren deden dat namens hem.",
+              "hint": "Denk aan de omvang van de staat.",
+              "explanation": "Eén heerser kon niet zelf alle belastingen innen, rechtszaken behandelen en besluiten uitvoeren; ambtenaren deden dat namens hem."
+            },
+            {
+              "type": "open",
+              "question": "Waarom betaalden boeren belasting in de vorm van een deel van de oogst?",
+              "answer": "Graan was een belangrijk product waarmee de staat bestuurders en soldaten kon onderhouden en bouwwerken mogelijk maakte.",
+              "hint": "Denk aan landbouwsamenleving.",
+              "explanation": "Graan was een belangrijk product waarmee de staat bestuurders en soldaten kon onderhouden en bouwwerken mogelijk maakte."
+            },
+            {
+              "type": "open",
+              "question": "Hoe kon de farao met voedselvoorraden zijn positie versterken?",
+              "answer": "Bij lage waterstand of sprinkhanen kon hij voedsel beschikbaar stellen, waardoor de staat mensen kon ondersteunen.",
+              "hint": "Verbind reserves en macht.",
+              "explanation": "Bij lage waterstand of sprinkhanen kon hij voedsel beschikbaar stellen, waardoor de staat mensen kon ondersteunen."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit waarom de Nijl tegelijkertijd een natuurlijke en een politieke factor was.",
+              "answer": "De rivier bracht water en vruchtbaarheid, maar het beheer ervan vereiste samenwerking, regels en bestuur.",
+              "hint": "Combineer aardrijkskunde met bestuur.",
+              "explanation": "De rivier bracht water en vruchtbaarheid, maar het beheer ervan vereiste samenwerking, regels en bestuur."
+            },
+            {
+              "type": "open",
+              "question": "Waarom is de ontwikkeling van Egypte een voorbeeld van samenhang tussen economie en politiek?",
+              "answer": "Landbouw leverde voedsel en belasting op; een bestuur zorgde vervolgens voor irrigatie, orde en uitvoering van regels.",
+              "hint": "Twee richtingen van beïnvloeding.",
+              "explanation": "Landbouw leverde voedsel en belasting op; een bestuur zorgde vervolgens voor irrigatie, orde en uitvoering van regels."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "H1 §4 · Cultuur, schrift en godsdienst (havo/vwo)",
+          "description": "Open vragen op havo/vwo-niveau: zelf formuleren, verklaren, vergelijken, oorzaak en gevolg. Modelantwoorden en hints.",
+          "questions": [
+            {
+              "type": "open",
+              "question": "Waarom nam de sociale ongelijkheid in Egypte toe vergeleken met jagers-verzamelaars?",
+              "answer": "Verschillen in land, vee, beroepen en bestuur zorgden voor ongelijke rijkdom, status en macht.",
+              "hint": "Noem economische en politieke factoren.",
+              "explanation": "Verschillen in land, vee, beroepen en bestuur zorgden voor ongelijke rijkdom, status en macht."
+            },
+            {
+              "type": "open",
+              "question": "Vergelijk de positie van boeren en de farao in de Egyptische samenleving.",
+              "answer": "Boeren vormden de grootste groep maar hadden weinig macht; de farao bezat veel land en had het meeste gezag.",
+              "hint": "Vergelijk omvang en macht.",
+              "explanation": "Boeren vormden de grootste groep maar hadden weinig macht; de farao bezat veel land en had het meeste gezag."
+            },
+            {
+              "type": "open",
+              "question": "Wat betekende slavernij voor de vrijheid van de betrokken mensen?",
+              "answer": "Zij waren eigendom van anderen, konden nauwelijks over hun leven beslissen en moesten gedwongen zwaar werk verrichten.",
+              "hint": "Denk aan rechten en werk.",
+              "explanation": "Zij waren eigendom van anderen, konden nauwelijks over hun leven beslissen en moesten gedwongen zwaar werk verrichten."
+            },
+            {
+              "type": "open",
+              "question": "Waarom hadden geschoolde schrijvers vaak meer aanzien dan gewone handwerkslieden?",
+              "answer": "Schrijvers beschikten over een bijzondere vaardigheid die belangrijk was voor bestuur, belasting en administratie.",
+              "hint": "Verbind opleiding met maatschappelijke waarde.",
+              "explanation": "Schrijvers beschikten over een bijzondere vaardigheid die belangrijk was voor bestuur, belasting en administratie."
+            },
+            {
+              "type": "open",
+              "question": "Waarom lieten machtige farao's piramides bouwen?",
+              "answer": "Als indrukwekkende grafmonumenten die ook hun macht, aanzien en belang na hun dood zichtbaar maakten.",
+              "hint": "Functie én boodschap van het bouwwerk.",
+              "explanation": "Als indrukwekkende grafmonumenten die ook hun macht, aanzien en belang na hun dood zichtbaar maakten."
+            },
+            {
+              "type": "open",
+              "question": "Wat zegt de tekst over rechten en beperkingen van vrouwen in Egypte?",
+              "answer": "Vrouwen konden bezit hebben en hadden bij de rechtbank dezelfde rechten als mannen, maar konden volgens de tekst geen hoge bestuurder worden.",
+              "hint": "Maak onderscheid tussen mogelijkheden en grenzen.",
+              "explanation": "Vrouwen konden bezit hebben en hadden bij de rechtbank dezelfde rechten als mannen, maar konden volgens de tekst geen hoge bestuurder worden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom is het moeilijk om precies te bepalen hoe vrouwen in het oude Egypte leefden?",
+              "answer": "Veel bewaarde beschrijvingen zijn door mannen geschreven en laten mogelijk niet alle ervaringen en perspectieven zien.",
+              "hint": "Denk aan perspectief en bronnen.",
+              "explanation": "Veel bewaarde beschrijvingen zijn door mannen geschreven en laten mogelijk niet alle ervaringen en perspectieven zien."
+            },
+            {
+              "type": "open",
+              "question": "Wat betekenen polytheïsme en natuurgodsdienst en hoe hangen ze in Egypte samen?",
+              "answer": "Polytheïsme is geloof in meerdere goden; bij natuurgodsdienst worden natuurkrachten vereerd. Egyptenaren vereerden onder meer de zon en de Nijl.",
+              "hint": "Vergelijk twee begrippen.",
+              "explanation": "Polytheïsme is geloof in meerdere goden; bij natuurgodsdienst worden natuurkrachten vereerd. Egyptenaren vereerden onder meer de zon en de Nijl."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was de zonnegod Re belangrijk in de Egyptische godsdienst?",
+              "answer": "Egyptenaren geloofden dat goden het leven en natuurverschijnselen beheersten; Re stond voor de opkomende zon.",
+              "hint": "Gebruik de plaats van de zon.",
+              "explanation": "Egyptenaren geloofden dat goden het leven en natuurverschijnselen beheersten; Re stond voor de opkomende zon."
+            },
+            {
+              "type": "open",
+              "question": "Waarom presenteerde de farao zich als goddelijke zoon van Re?",
+              "answer": "Dat verbond zijn koninklijke macht aan de goden en ondersteunde zijn bijzondere positie.",
+              "hint": "Religie als bron van gezag.",
+              "explanation": "Dat verbond zijn koninklijke macht aan de goden en ondersteunde zijn bijzondere positie."
+            },
+            {
+              "type": "open",
+              "question": "Waarom waren tempels en priesters belangrijk voor de farao?",
+              "answer": "Via tempels, priesters en offers probeerde men de goden gunstig te stemmen zodat Egypte voorspoed zou houden.",
+              "hint": "Betrek het doel van eredienst.",
+              "explanation": "Via tempels, priesters en offers probeerde men de goden gunstig te stemmen zodat Egypte voorspoed zou houden."
+            },
+            {
+              "type": "open",
+              "question": "Wat is volgens de leerstof het verband tussen mummificatie en het Egyptische geloof?",
+              "answer": "Men dacht dat het lichaam bewaard moest blijven om na de dood het dodenrijk te bereiken.",
+              "hint": "Geloof bepaalt begrafenispraktijk.",
+              "explanation": "Men dacht dat het lichaam bewaard moest blijven om na de dood het dodenrijk te bereiken."
+            },
+            {
+              "type": "open",
+              "question": "Waarom kregen rijke Egyptenaren grafgiften mee?",
+              "answer": "Zij geloofden dat de overledene spullen nodig kon hebben in het dodenrijk.",
+              "hint": "Verbind voorwerp en overtuiging.",
+              "explanation": "Zij geloofden dat de overledene spullen nodig kon hebben in het dodenrijk."
+            },
+            {
+              "type": "open",
+              "question": "Wat vertellen verschillen tussen rijke en arme begrafenissen over Egypte?",
+              "answer": "De rijkdomsverschillen bleven zichtbaar in het graf: sommigen kregen mummificatie en grafgiften, anderen eenvoudige graven.",
+              "hint": "Gebruik begrafenissen als historische bron.",
+              "explanation": "De rijkdomsverschillen bleven zichtbaar in het graf: sommigen kregen mummificatie en grafgiften, anderen eenvoudige graven."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was hiërogliefenschrift nuttig voor het Egyptische bestuur?",
+              "answer": "Belastingen, wetten, verdragen en gebeurtenissen konden nauwkeurig worden vastgelegd en teruggelezen.",
+              "hint": "Verbind schrijven met administratie.",
+              "explanation": "Belastingen, wetten, verdragen en gebeurtenissen konden nauwkeurig worden vastgelegd en teruggelezen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom maakte de uitvinding van een alfabet lezen en schrijven toegankelijker?",
+              "answer": "In plaats van honderden of duizenden tekens hoefde iemand een kleiner aantal lettertekens te leren om woorden te vormen.",
+              "hint": "Vergelijk hoeveelheden tekens.",
+              "explanation": "In plaats van honderden of duizenden tekens hoefde iemand een kleiner aantal lettertekens te leren om woorden te vormen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom verspreidde het Fenicische alfabet zich naar andere gebieden?",
+              "answer": "De Feniciërs waren handelaren en brachten hun letters via contacten langs de Middellandse Zee in andere gebieden.",
+              "hint": "Denk aan handel als verspreidingsmiddel.",
+              "explanation": "De Feniciërs waren handelaren en brachten hun letters via contacten langs de Middellandse Zee in andere gebieden."
+            },
+            {
+              "type": "open",
+              "question": "Wat kan een afbeelding van ambtenaren die graan tellen ons vertellen over de Egyptische staat?",
+              "answer": "Het tellen van oogsten laat zien dat de overheid administratie voerde, waarschijnlijk om belastingen vast te stellen.",
+              "hint": "Koppel bron aan bestuur.",
+              "explanation": "Het tellen van oogsten laat zien dat de overheid administratie voerde, waarschijnlijk om belastingen vast te stellen."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit hoe godsdienst en politiek in Egypte met elkaar verweven waren.",
+              "answer": "De farao bestuurde het land én gold als goddelijke zoon van Re, terwijl tempels en priesters zijn rol in de godsdienst ondersteunden.",
+              "hint": "Laat zien waarom gezag meer dan politiek was.",
+              "explanation": "De farao bestuurde het land én gold als goddelijke zoon van Re, terwijl tempels en priesters zijn rol in de godsdienst ondersteunden."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "H1 · Grote oefentoets · alleen open vragen",
+          "description": "Havo/vwo: 25 wisselende open vragen uit alle paragrafen. Typ het antwoord, vergelijk het modelantwoord en beoordeel zelf.",
+          "questions": [
+            {
+              "type": "open",
+              "question": "Waarom konden de eerste mensachtigen door rechtop te lopen andere activiteiten uitvoeren?",
+              "answer": "Hun handen kwamen vrij om bijvoorbeeld voorwerpen te dragen en gereedschap te gebruiken.",
+              "hint": "Verbind lichaamsbouw met gedrag.",
+              "explanation": "Hun handen kwamen vrij om bijvoorbeeld voorwerpen te dragen en gereedschap te gebruiken."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit hoe archeologen met schedels veranderingen bij mensensoorten onderzoeken.",
+              "answer": "Ze vergelijken fossiele schedels, onder andere de grootte van de hersenruimte, om veranderingen over lange tijd te bestuderen.",
+              "hint": "Wat kun je uit een schedel afleiden?",
+              "explanation": "Ze vergelijken fossiele schedels, onder andere de grootte van de hersenruimte, om veranderingen over lange tijd te bestuderen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was het gebruik van vuur belangrijk voor de overlevingskansen van vroege mensen?",
+              "answer": "Vuur hielp voedsel te bereiden en roofdieren op afstand te houden, waardoor leven veiliger en voedsel beter bruikbaar werd.",
+              "hint": "Noem twee toepassingen en hun gevolgen.",
+              "explanation": "Vuur hielp voedsel te bereiden en roofdieren op afstand te houden, waardoor leven veiliger en voedsel beter bruikbaar werd."
+            },
+            {
+              "type": "open",
+              "question": "Hoe verschilde het leven van de moderne mens in het begin van dat van een boer?",
+              "answer": "De eerste moderne mensen leefden als jagers-verzamelaars en trokken rond; boeren produceerden zelf voedsel en bleven meestal op één plek.",
+              "hint": "Vergelijk bestaansmiddelen en woonplaats.",
+              "explanation": "De eerste moderne mensen leefden als jagers-verzamelaars en trokken rond; boeren produceerden zelf voedsel en bleven meestal op één plek."
+            },
+            {
+              "type": "open",
+              "question": "Waarom konden jagers-verzamelaars meestal niet met duizenden mensen op één plek blijven?",
+              "answer": "Voedsel uit de omgeving raakte snel op; grotere groepen hadden meer voedsel nodig en moesten verder zoeken.",
+              "hint": "Verklaar de relatie tussen groepsgrootte en voedselaanbod.",
+              "explanation": "Voedsel uit de omgeving raakte snel op; grotere groepen hadden meer voedsel nodig en moesten verder zoeken."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit waarom jagers-verzamelaars verplaatsbare tenten gebruikten.",
+              "answer": "Ze trokken geregeld verder voor voedsel en hadden daarom onderkomens nodig die makkelijk meegenomen konden worden.",
+              "hint": "Verbind woning met leefwijze.",
+              "explanation": "Ze trokken geregeld verder voor voedsel en hadden daarom onderkomens nodig die makkelijk meegenomen konden worden."
+            },
+            {
+              "type": "open",
+              "question": "Wat betekent taakverdeling bij jagers-verzamelaars? Geef een voorbeeld.",
+              "answer": "Groepsleden verdeelden werkzaamheden, bijvoorbeeld sommige mensen jaagden terwijl anderen voedsel verzamelden.",
+              "hint": "Noem begrip én voorbeeld.",
+              "explanation": "Groepsleden verdeelden werkzaamheden, bijvoorbeeld sommige mensen jaagden terwijl anderen voedsel verzamelden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom waren de sociale verschillen onder jagers-verzamelaars volgens de tekst meestal klein?",
+              "answer": "De groepsleden bezaten doorgaans ongeveer evenveel spullen en namen vrij gelijkwaardig deel aan beslissingen.",
+              "hint": "Betrek bezit en macht.",
+              "explanation": "De groepsleden bezaten doorgaans ongeveer evenveel spullen en namen vrij gelijkwaardig deel aan beslissingen."
+            },
+            {
+              "type": "open",
+              "question": "Wat is het verschil tussen een geschreven en ongeschreven historische bron? Geef van beide een voorbeeld.",
+              "answer": "Een geschreven bron bevat tekst, zoals een belastinglijst; een ongeschreven bron is bijvoorbeeld een stenen bijl of skelet.",
+              "hint": "Noem kenmerk en voorbeelden.",
+              "explanation": "Een geschreven bron bevat tekst, zoals een belastinglijst; een ongeschreven bron is bijvoorbeeld een stenen bijl of skelet."
+            },
+            {
+              "type": "open",
+              "question": "Waarom begint de historie pas met het ontstaan van schrift, terwijl mensen al veel langer bestaan?",
+              "answer": "Pas vanaf schriftgebruik zijn er geschreven bronnen die gebeurtenissen, wetten en opvattingen rechtstreeks kunnen vastleggen.",
+              "hint": "Denk aan het type informatie dat bronnen geven.",
+              "explanation": "Pas vanaf schriftgebruik zijn er geschreven bronnen die gebeurtenissen, wetten en opvattingen rechtstreeks kunnen vastleggen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom weten we relatief weinig over de cultuur van mensen in de prehistorie?",
+              "answer": "Er zijn geen geschreven getuigenissen, en veel voorwerpen vergingen; archeologische vondsten vertellen niet altijd wat mensen dachten of geloofden.",
+              "hint": "Beschrijf twee beperkingen van bronnen.",
+              "explanation": "Er zijn geen geschreven getuigenissen, en veel voorwerpen vergingen; archeologische vondsten vertellen niet altijd wat mensen dachten of geloofden."
+            },
+            {
+              "type": "open",
+              "question": "Een rotsschildering toont mensen bij een kudde. Wat kun je daar wel en niet met zekerheid uit afleiden?",
+              "answer": "Je kunt vaststellen dat mensen dieren afbeeldden; je kunt niet zeker weten waarom zij dat schilderden of welke ideeën zij hadden.",
+              "hint": "Onderscheid waarneming van interpretatie.",
+              "explanation": "Je kunt vaststellen dat mensen dieren afbeeldden; je kunt niet zeker weten waarom zij dat schilderden of welke ideeën zij hadden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom is de naam 'steentijd' een vereenvoudiging van de werkelijkheid?",
+              "answer": "Ook hout, huiden, riet en bot werden gebruikt, maar die materialen bleven minder vaak bewaard dan stenen werktuigen.",
+              "hint": "Verklaar waarom vondsten een vertekend beeld kunnen geven.",
+              "explanation": "Ook hout, huiden, riet en bot werden gebruikt, maar die materialen bleven minder vaak bewaard dan stenen werktuigen."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit waarom archeologen verschillende soorten bronnen met elkaar vergelijken.",
+              "answer": "Verschillende vondsten en teksten kunnen elkaar aanvullen en helpen om conclusies beter te controleren.",
+              "hint": "Denk aan betrouwbaarheid.",
+              "explanation": "Verschillende vondsten en teksten kunnen elkaar aanvullen en helpen om conclusies beter te controleren."
+            },
+            {
+              "type": "open",
+              "question": "De moderne mens verscheen volgens het boek rond 200.000 jaar geleden. Waarom betekent dit niet dat de menselijke ontwikkeling toen begon?",
+              "answer": "Er leefden al miljoenen jaren eerder mensachtigen en andere mensensoorten; de moderne mens is een latere ontwikkeling.",
+              "hint": "Gebruik de tijdlijn.",
+              "explanation": "Er leefden al miljoenen jaren eerder mensachtigen en andere mensensoorten; de moderne mens is een latere ontwikkeling."
+            },
+            {
+              "type": "open",
+              "question": "Wat is het verschil tussen akkerbouw, veeteelt en landbouw?",
+              "answer": "Akkerbouw is gewassen verbouwen; veeteelt is dieren houden; beide samen vormen landbouw.",
+              "hint": "Definieer drie verwante begrippen.",
+              "explanation": "Akkerbouw is gewassen verbouwen; veeteelt is dieren houden; beide samen vormen landbouw."
+            },
+            {
+              "type": "open",
+              "question": "Waarom ontstond landbouw niet van de ene op de andere dag?",
+              "answer": "Mensen experimenteerden geleidelijk met zaaien, planten verzorgen en dieren temmen en leerden daarvan.",
+              "hint": "Beschrijf het proces.",
+              "explanation": "Mensen experimenteerden geleidelijk met zaaien, planten verzorgen en dieren temmen en leerden daarvan."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was het Midden-Oosten een geschikte plek voor vroege landbouw?",
+              "answer": "Daar groeiden geschikte wilde granen en bonen en leefden dieren zoals runderen, schapen en geiten die konden worden getemd.",
+              "hint": "Verbind natuur met ontwikkeling.",
+              "explanation": "Daar groeiden geschikte wilde granen en bonen en leefden dieren zoals runderen, schapen en geiten die konden worden getemd."
+            },
+            {
+              "type": "open",
+              "question": "Leg de drie fasen uit waarin mensen volgens het boek boeren werden.",
+              "answer": "Eerst bracht een beter klimaat meer natuurlijk voedsel en vaste woonplaatsen; daarna experimenteerden mensen met landbouw; door bevolkingsgroei werd landbouw noodzakelijk.",
+              "hint": "Beschrijf de volgorde en oorzaken.",
+              "explanation": "Eerst bracht een beter klimaat meer natuurlijk voedsel en vaste woonplaatsen; daarna experimenteerden mensen met landbouw; door bevolkingsgroei werd landbouw noodzakelijk."
+            },
+            {
+              "type": "open",
+              "question": "Waarom noemen historici de overgang naar landbouw de agrarische revolutie?",
+              "answer": "Omdat de geleidelijke overgang zeer grote economische, sociale en culturele gevolgen had voor het bestaan van mensen.",
+              "hint": "Verklaar waarom 'revolutie' past.",
+              "explanation": "Omdat de geleidelijke overgang zeer grote economische, sociale en culturele gevolgen had voor het bestaan van mensen."
+            },
+            {
+              "type": "open",
+              "question": "Hoe kon klimaatverbetering bijdragen aan een vaste woonplaats?",
+              "answer": "Door meer voedsel uit de natuur hoefden groepen minder te trekken en konden zij langer op één plek blijven.",
+              "hint": "Beschrijf oorzaak en gevolg.",
+              "explanation": "Door meer voedsel uit de natuur hoefden groepen minder te trekken en konden zij langer op één plek blijven."
+            },
+            {
+              "type": "open",
+              "question": "Waarom moesten boeren vaker permanent op één plek blijven wonen?",
+              "answer": "Akkers en vee moesten voortdurend verzorgd worden en konden niet zomaar meegenomen worden.",
+              "hint": "Vergelijk met rondtrekkende jagers.",
+              "explanation": "Akkers en vee moesten voortdurend verzorgd worden en konden niet zomaar meegenomen worden."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit hoe landbouw tot bevolkingsgroei leidde.",
+              "answer": "Met akkerbouw en veeteelt werd meer voedsel geproduceerd, waardoor meer mensen konden overleven en de bevolking groeide.",
+              "hint": "Gebruik voedselproductie als tussenstap.",
+              "explanation": "Met akkerbouw en veeteelt werd meer voedsel geproduceerd, waardoor meer mensen konden overleven en de bevolking groeide."
+            },
+            {
+              "type": "open",
+              "question": "Waarom leidde de groei van dorpen tot het ontstaan van leiders?",
+              "answer": "Bij veel inwoners kon niet meer iedereen over elke beslissing meebeslissen; sommige mensen namen leiding en kregen macht.",
+              "hint": "Denk aan besluitvorming.",
+              "explanation": "Bij veel inwoners kon niet meer iedereen over elke beslissing meebeslissen; sommige mensen namen leiding en kregen macht."
+            },
+            {
+              "type": "open",
+              "question": "Hoe vergrootte landbouw de verschillen in rijkdom tussen mensen?",
+              "answer": "Sommigen hadden meer land, vee of oogst en konden daardoor meer bezit en invloed opbouwen dan anderen.",
+              "hint": "Betrek bezit en sociale lagen.",
+              "explanation": "Sommigen hadden meer land, vee of oogst en konden daardoor meer bezit en invloed opbouwen dan anderen."
+            },
+            {
+              "type": "open",
+              "question": "Geef twee voorbeelden van culturele veranderingen als gevolg van landbouw.",
+              "answer": "Mensen woonden in vaste huizen en rijke bewoners lieten opvallende sieraden, kleding, wapens of grotere huizen maken.",
+              "hint": "Denk aan leefwijze en statussymbolen.",
+              "explanation": "Mensen woonden in vaste huizen en rijke bewoners lieten opvallende sieraden, kleding, wapens of grotere huizen maken."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was de overgang naar landbouw niet voor iedereen gezonder?",
+              "answer": "Boeren werkten vaak harder, aten minder gevarieerd en leefden dicht bij vee dat ziekten kon overdragen.",
+              "hint": "Noem minstens twee oorzaken.",
+              "explanation": "Boeren werkten vaak harder, aten minder gevarieerd en leefden dicht bij vee dat ziekten kon overdragen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom waren boeren kwetsbaar wanneer een oogst mislukte?",
+              "answer": "Ze waren afhankelijk van hun akkers en konden niet eenvoudig rondtrekken om ergens anders voedsel te vinden.",
+              "hint": "Verbind vaste woonplaats aan afhankelijkheid.",
+              "explanation": "Ze waren afhankelijk van hun akkers en konden niet eenvoudig rondtrekken om ergens anders voedsel te vinden."
+            },
+            {
+              "type": "open",
+              "question": "Leg het verband tussen grotere voedselvoorraden en sociale verschillen uit.",
+              "answer": "Overschotten maakten het mogelijk dat sommige mensen meer voedsel en bezit verzamelden dan anderen, wat ongelijkheid vergrootte.",
+              "hint": "Hoe kan bezit ongelijk verdeeld raken?",
+              "explanation": "Overschotten maakten het mogelijk dat sommige mensen meer voedsel en bezit verzamelden dan anderen, wat ongelijkheid vergrootte."
+            },
+            {
+              "type": "open",
+              "question": "Vergelijk een eerste boerendorp met een groep jagers-verzamelaars op twee punten.",
+              "answer": "Een boerendorp had een vaste woonplaats en landbouw; jagers-verzamelaars trokken rond en leefden van natuurvoedsel. Dorpen waren doorgaans groter.",
+              "hint": "Kies woonplaats, beroep of groepsgrootte.",
+              "explanation": "Een boerendorp had een vaste woonplaats en landbouw; jagers-verzamelaars trokken rond en leefden van natuurvoedsel. Dorpen waren doorgaans groter."
+            },
+            {
+              "type": "open",
+              "question": "Waarom kan een uitvinding voordelen voor de samenleving hebben en tegelijk nadelen voor afzonderlijke mensen?",
+              "answer": "Landbouw maakte bevolkingsgroei en vaste dorpen mogelijk, maar betekende vaak harder werken, meer ziekte en risico bij misoogst.",
+              "hint": "Wegen van positieve en negatieve gevolgen.",
+              "explanation": "Landbouw maakte bevolkingsgroei en vaste dorpen mogelijk, maar betekende vaak harder werken, meer ziekte en risico bij misoogst."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit hoe de jaarlijkse overstroming van de Nijl landbouw mogelijk maakte.",
+              "answer": "De rivier bracht water en vruchtbaar slib; na het zakken van het water konden boeren gewassen verbouwen op vruchtbare grond.",
+              "hint": "Gebruik het begrip slib.",
+              "explanation": "De rivier bracht water en vruchtbaar slib; na het zakken van het water konden boeren gewassen verbouwen op vruchtbare grond."
+            },
+            {
+              "type": "open",
+              "question": "Waarom had Egypte irrigatiekanalen én waterbekkens nodig?",
+              "answer": "Kanalen brachten water naar verder gelegen akkers; bekkens hielden water vast voor droge perioden.",
+              "hint": "Noem de verschillende functies.",
+              "explanation": "Kanalen brachten water naar verder gelegen akkers; bekkens hielden water vast voor droge perioden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom is irrigatielandbouw een voorbeeld van het aanpassen van de natuur?",
+              "answer": "Mensen legden dijken, kanalen en bekkens aan om water te beheersen en akkers te bevloeien.",
+              "hint": "Beschrijf de menselijke ingreep.",
+              "explanation": "Mensen legden dijken, kanalen en bekkens aan om water te beheersen en akkers te bevloeien."
+            },
+            {
+              "type": "open",
+              "question": "Hoe leidde irrigatielandbouw tot meer verschillende beroepen in Egypte?",
+              "answer": "Irrigatie zorgde voor voedseloverschotten, waardoor niet iedereen boer hoefde te zijn en mensen zich konden specialiseren.",
+              "hint": "Schakel irrigatie, overschot en specialisatie.",
+              "explanation": "Irrigatie zorgde voor voedseloverschotten, waardoor niet iedereen boer hoefde te zijn en mensen zich konden specialiseren."
+            },
+            {
+              "type": "open",
+              "question": "Leg het verschil uit tussen nijverheid en handel met een voorbeeld.",
+              "answer": "Nijverheid is met de hand producten maken, zoals potten; handel is die potten ruilen of verkopen voor andere benodigdheden.",
+              "hint": "Definieer beide begrippen.",
+              "explanation": "Nijverheid is met de hand producten maken, zoals potten; handel is die potten ruilen of verkopen voor andere benodigdheden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom versterkten specialisatie en handel elkaar?",
+              "answer": "Gespecialiseerde vaklieden maakten bepaalde goederen en hadden voor andere goederen ruil of handel nodig.",
+              "hint": "Leg het wederzijdse verband uit.",
+              "explanation": "Gespecialiseerde vaklieden maakten bepaalde goederen en hadden voor andere goederen ruil of handel nodig."
+            },
+            {
+              "type": "open",
+              "question": "Hoe zorgden voedseloverschotten voor het ontstaan van steden?",
+              "answer": "Meer mensen konden in de buurt blijven wonen en andere beroepen uitoefenen, waardoor dorpen uitgroeiden tot steden.",
+              "hint": "Noem bevolking en beroepen.",
+              "explanation": "Meer mensen konden in de buurt blijven wonen en andere beroepen uitoefenen, waardoor dorpen uitgroeiden tot steden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was de Egyptische stad een stedelijke gemeenschap?",
+              "answer": "Er leefden samen handwerkslieden, boeren, bestuurders, priesters en handelaren met verschillende werkzaamheden.",
+              "hint": "Leg uit wat de groepen verbindt.",
+              "explanation": "Er leefden samen handwerkslieden, boeren, bestuurders, priesters en handelaren met verschillende werkzaamheden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was de ontdekking van brons belangrijk voor werktuigen?",
+              "answer": "Koper en tin konden worden samengesmolten en gegoten, zodat gereedschap met meer verschillende vormen mogelijk werd dan met steen.",
+              "hint": "Vergelijk materiaal en maakwijze.",
+              "explanation": "Koper en tin konden worden samengesmolten en gegoten, zodat gereedschap met meer verschillende vormen mogelijk werd dan met steen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom hadden Egyptische boeren belang bij een sterk bestuur?",
+              "answer": "Dijken en kanalen vroegen gezamenlijk onderhoud en toezicht; zonder goed waterbeheer kon de oogst tegenvallen.",
+              "hint": "Verbind bestuur en landbouw.",
+              "explanation": "Dijken en kanalen vroegen gezamenlijk onderhoud en toezicht; zonder goed waterbeheer kon de oogst tegenvallen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was een centrale staat voor Egypte praktisch?",
+              "answer": "Eén bestuur kon regels maken, orde bewaren en grote irrigatiewerken organiseren in het hele gebied.",
+              "hint": "Noem taken die lokale dorpen overstijgen.",
+              "explanation": "Eén bestuur kon regels maken, orde bewaren en grote irrigatiewerken organiseren in het hele gebied."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit waarom de farao ambtenaren nodig had.",
+              "answer": "Eén heerser kon niet zelf alle belastingen innen, rechtszaken behandelen en besluiten uitvoeren; ambtenaren deden dat namens hem.",
+              "hint": "Denk aan de omvang van de staat.",
+              "explanation": "Eén heerser kon niet zelf alle belastingen innen, rechtszaken behandelen en besluiten uitvoeren; ambtenaren deden dat namens hem."
+            },
+            {
+              "type": "open",
+              "question": "Waarom betaalden boeren belasting in de vorm van een deel van de oogst?",
+              "answer": "Graan was een belangrijk product waarmee de staat bestuurders en soldaten kon onderhouden en bouwwerken mogelijk maakte.",
+              "hint": "Denk aan landbouwsamenleving.",
+              "explanation": "Graan was een belangrijk product waarmee de staat bestuurders en soldaten kon onderhouden en bouwwerken mogelijk maakte."
+            },
+            {
+              "type": "open",
+              "question": "Hoe kon de farao met voedselvoorraden zijn positie versterken?",
+              "answer": "Bij lage waterstand of sprinkhanen kon hij voedsel beschikbaar stellen, waardoor de staat mensen kon ondersteunen.",
+              "hint": "Verbind reserves en macht.",
+              "explanation": "Bij lage waterstand of sprinkhanen kon hij voedsel beschikbaar stellen, waardoor de staat mensen kon ondersteunen."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit waarom de Nijl tegelijkertijd een natuurlijke en een politieke factor was.",
+              "answer": "De rivier bracht water en vruchtbaarheid, maar het beheer ervan vereiste samenwerking, regels en bestuur.",
+              "hint": "Combineer aardrijkskunde met bestuur.",
+              "explanation": "De rivier bracht water en vruchtbaarheid, maar het beheer ervan vereiste samenwerking, regels en bestuur."
+            },
+            {
+              "type": "open",
+              "question": "Waarom is de ontwikkeling van Egypte een voorbeeld van samenhang tussen economie en politiek?",
+              "answer": "Landbouw leverde voedsel en belasting op; een bestuur zorgde vervolgens voor irrigatie, orde en uitvoering van regels.",
+              "hint": "Twee richtingen van beïnvloeding.",
+              "explanation": "Landbouw leverde voedsel en belasting op; een bestuur zorgde vervolgens voor irrigatie, orde en uitvoering van regels."
+            },
+            {
+              "type": "open",
+              "question": "Waarom nam de sociale ongelijkheid in Egypte toe vergeleken met jagers-verzamelaars?",
+              "answer": "Verschillen in land, vee, beroepen en bestuur zorgden voor ongelijke rijkdom, status en macht.",
+              "hint": "Noem economische en politieke factoren.",
+              "explanation": "Verschillen in land, vee, beroepen en bestuur zorgden voor ongelijke rijkdom, status en macht."
+            },
+            {
+              "type": "open",
+              "question": "Vergelijk de positie van boeren en de farao in de Egyptische samenleving.",
+              "answer": "Boeren vormden de grootste groep maar hadden weinig macht; de farao bezat veel land en had het meeste gezag.",
+              "hint": "Vergelijk omvang en macht.",
+              "explanation": "Boeren vormden de grootste groep maar hadden weinig macht; de farao bezat veel land en had het meeste gezag."
+            },
+            {
+              "type": "open",
+              "question": "Wat betekende slavernij voor de vrijheid van de betrokken mensen?",
+              "answer": "Zij waren eigendom van anderen, konden nauwelijks over hun leven beslissen en moesten gedwongen zwaar werk verrichten.",
+              "hint": "Denk aan rechten en werk.",
+              "explanation": "Zij waren eigendom van anderen, konden nauwelijks over hun leven beslissen en moesten gedwongen zwaar werk verrichten."
+            },
+            {
+              "type": "open",
+              "question": "Waarom hadden geschoolde schrijvers vaak meer aanzien dan gewone handwerkslieden?",
+              "answer": "Schrijvers beschikten over een bijzondere vaardigheid die belangrijk was voor bestuur, belasting en administratie.",
+              "hint": "Verbind opleiding met maatschappelijke waarde.",
+              "explanation": "Schrijvers beschikten over een bijzondere vaardigheid die belangrijk was voor bestuur, belasting en administratie."
+            },
+            {
+              "type": "open",
+              "question": "Waarom lieten machtige farao's piramides bouwen?",
+              "answer": "Als indrukwekkende grafmonumenten die ook hun macht, aanzien en belang na hun dood zichtbaar maakten.",
+              "hint": "Functie én boodschap van het bouwwerk.",
+              "explanation": "Als indrukwekkende grafmonumenten die ook hun macht, aanzien en belang na hun dood zichtbaar maakten."
+            },
+            {
+              "type": "open",
+              "question": "Wat zegt de tekst over rechten en beperkingen van vrouwen in Egypte?",
+              "answer": "Vrouwen konden bezit hebben en hadden bij de rechtbank dezelfde rechten als mannen, maar konden volgens de tekst geen hoge bestuurder worden.",
+              "hint": "Maak onderscheid tussen mogelijkheden en grenzen.",
+              "explanation": "Vrouwen konden bezit hebben en hadden bij de rechtbank dezelfde rechten als mannen, maar konden volgens de tekst geen hoge bestuurder worden."
+            },
+            {
+              "type": "open",
+              "question": "Waarom is het moeilijk om precies te bepalen hoe vrouwen in het oude Egypte leefden?",
+              "answer": "Veel bewaarde beschrijvingen zijn door mannen geschreven en laten mogelijk niet alle ervaringen en perspectieven zien.",
+              "hint": "Denk aan perspectief en bronnen.",
+              "explanation": "Veel bewaarde beschrijvingen zijn door mannen geschreven en laten mogelijk niet alle ervaringen en perspectieven zien."
+            },
+            {
+              "type": "open",
+              "question": "Wat betekenen polytheïsme en natuurgodsdienst en hoe hangen ze in Egypte samen?",
+              "answer": "Polytheïsme is geloof in meerdere goden; bij natuurgodsdienst worden natuurkrachten vereerd. Egyptenaren vereerden onder meer de zon en de Nijl.",
+              "hint": "Vergelijk twee begrippen.",
+              "explanation": "Polytheïsme is geloof in meerdere goden; bij natuurgodsdienst worden natuurkrachten vereerd. Egyptenaren vereerden onder meer de zon en de Nijl."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was de zonnegod Re belangrijk in de Egyptische godsdienst?",
+              "answer": "Egyptenaren geloofden dat goden het leven en natuurverschijnselen beheersten; Re stond voor de opkomende zon.",
+              "hint": "Gebruik de plaats van de zon.",
+              "explanation": "Egyptenaren geloofden dat goden het leven en natuurverschijnselen beheersten; Re stond voor de opkomende zon."
+            },
+            {
+              "type": "open",
+              "question": "Waarom presenteerde de farao zich als goddelijke zoon van Re?",
+              "answer": "Dat verbond zijn koninklijke macht aan de goden en ondersteunde zijn bijzondere positie.",
+              "hint": "Religie als bron van gezag.",
+              "explanation": "Dat verbond zijn koninklijke macht aan de goden en ondersteunde zijn bijzondere positie."
+            },
+            {
+              "type": "open",
+              "question": "Waarom waren tempels en priesters belangrijk voor de farao?",
+              "answer": "Via tempels, priesters en offers probeerde men de goden gunstig te stemmen zodat Egypte voorspoed zou houden.",
+              "hint": "Betrek het doel van eredienst.",
+              "explanation": "Via tempels, priesters en offers probeerde men de goden gunstig te stemmen zodat Egypte voorspoed zou houden."
+            },
+            {
+              "type": "open",
+              "question": "Wat is volgens de leerstof het verband tussen mummificatie en het Egyptische geloof?",
+              "answer": "Men dacht dat het lichaam bewaard moest blijven om na de dood het dodenrijk te bereiken.",
+              "hint": "Geloof bepaalt begrafenispraktijk.",
+              "explanation": "Men dacht dat het lichaam bewaard moest blijven om na de dood het dodenrijk te bereiken."
+            },
+            {
+              "type": "open",
+              "question": "Waarom kregen rijke Egyptenaren grafgiften mee?",
+              "answer": "Zij geloofden dat de overledene spullen nodig kon hebben in het dodenrijk.",
+              "hint": "Verbind voorwerp en overtuiging.",
+              "explanation": "Zij geloofden dat de overledene spullen nodig kon hebben in het dodenrijk."
+            },
+            {
+              "type": "open",
+              "question": "Wat vertellen verschillen tussen rijke en arme begrafenissen over Egypte?",
+              "answer": "De rijkdomsverschillen bleven zichtbaar in het graf: sommigen kregen mummificatie en grafgiften, anderen eenvoudige graven.",
+              "hint": "Gebruik begrafenissen als historische bron.",
+              "explanation": "De rijkdomsverschillen bleven zichtbaar in het graf: sommigen kregen mummificatie en grafgiften, anderen eenvoudige graven."
+            },
+            {
+              "type": "open",
+              "question": "Waarom was hiërogliefenschrift nuttig voor het Egyptische bestuur?",
+              "answer": "Belastingen, wetten, verdragen en gebeurtenissen konden nauwkeurig worden vastgelegd en teruggelezen.",
+              "hint": "Verbind schrijven met administratie.",
+              "explanation": "Belastingen, wetten, verdragen en gebeurtenissen konden nauwkeurig worden vastgelegd en teruggelezen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom maakte de uitvinding van een alfabet lezen en schrijven toegankelijker?",
+              "answer": "In plaats van honderden of duizenden tekens hoefde iemand een kleiner aantal lettertekens te leren om woorden te vormen.",
+              "hint": "Vergelijk hoeveelheden tekens.",
+              "explanation": "In plaats van honderden of duizenden tekens hoefde iemand een kleiner aantal lettertekens te leren om woorden te vormen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom verspreidde het Fenicische alfabet zich naar andere gebieden?",
+              "answer": "De Feniciërs waren handelaren en brachten hun letters via contacten langs de Middellandse Zee in andere gebieden.",
+              "hint": "Denk aan handel als verspreidingsmiddel.",
+              "explanation": "De Feniciërs waren handelaren en brachten hun letters via contacten langs de Middellandse Zee in andere gebieden."
+            },
+            {
+              "type": "open",
+              "question": "Wat kan een afbeelding van ambtenaren die graan tellen ons vertellen over de Egyptische staat?",
+              "answer": "Het tellen van oogsten laat zien dat de overheid administratie voerde, waarschijnlijk om belastingen vast te stellen.",
+              "hint": "Koppel bron aan bestuur.",
+              "explanation": "Het tellen van oogsten laat zien dat de overheid administratie voerde, waarschijnlijk om belastingen vast te stellen."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit hoe godsdienst en politiek in Egypte met elkaar verweven waren.",
+              "answer": "De farao bestuurde het land én gold als goddelijke zoon van Re, terwijl tempels en priesters zijn rol in de godsdienst ondersteunden.",
+              "hint": "Laat zien waarom gezag meer dan politiek was.",
+              "explanation": "De farao bestuurde het land én gold als goddelijke zoon van Re, terwijl tempels en priesters zijn rol in de godsdienst ondersteunden."
+            }
+          ],
+          "questionsPerAttempt": 25
+        },
+        {
+          "type": "flashcards",
+          "subject": "Geschiedenis",
+          "title": "Flashcards §1 · Jagers en verzamelaars",
+          "description": "Begrippen en belangrijkste feiten uit paragraaf 1. Begrippen ter voorbereiding op open vragen.",
+          "cards": [
+            {
+              "front": "Eerste mensachtigen",
+              "back": "Verschenen ongeveer 4 miljoen jaar geleden in Afrika."
+            },
+            {
+              "front": "Rechtop lopen",
+              "back": "Zorgde ervoor dat de handen vrij kwamen."
+            },
+            {
+              "front": "Moderne mens",
+              "back": "Ontstond circa 200.000 jaar geleden in Afrika."
+            },
+            {
+              "front": "Neanderthaler",
+              "back": "Een uitgestorven mensensoort."
+            },
+            {
+              "front": "Vuur gebruiken",
+              "back": "Eten bereiden en roofdieren verjagen."
+            },
+            {
+              "front": "Jagers-verzamelaars",
+              "back": "Leefden van jagen, vissen en voedsel verzamelen."
+            },
+            {
+              "front": "Bestaansmiddelen",
+              "back": "Activiteiten waarmee je in leven blijft."
+            },
+            {
+              "front": "Rondtrekken",
+              "back": "Verplaatsen omdat voedselbronnen opraken."
+            },
+            {
+              "front": "Groepsgrootte jagers-verzamelaars",
+              "back": "Meestal circa 25 tot 40 mensen."
+            },
+            {
+              "front": "Taakverdeling",
+              "back": "De werkzaamheden binnen een groep verdelen."
+            },
+            {
+              "front": "Sociale verschillen",
+              "back": "Verschillen in aanzien, bezit en macht."
+            },
+            {
+              "front": "Prehistorie",
+              "back": "De tijd vóór het gebruik van schrift."
+            },
+            {
+              "front": "Historie",
+              "back": "De tijd vanaf het gebruik van schrift."
+            },
+            {
+              "front": "Archeoloog",
+              "back": "Onderzoekt resten uit het verleden."
+            },
+            {
+              "front": "Steentijd",
+              "back": "Oudste prehistorische periode met veel stenen vondsten."
+            }
+          ]
+        },
+        {
+          "type": "flashcards",
+          "subject": "Geschiedenis",
+          "title": "Flashcards §2 · De eerste boeren",
+          "description": "Begrippen en gevolgen van de agrarische revolutie. Begrippen ter voorbereiding op open vragen.",
+          "cards": [
+            {
+              "front": "Akkerbouw",
+              "back": "Het verbouwen van gewassen zoals graan."
+            },
+            {
+              "front": "Veeteelt",
+              "back": "Dieren houden voor bijvoorbeeld melk en vlees."
+            },
+            {
+              "front": "Landbouw",
+              "back": "Akkerbouw en veeteelt samen."
+            },
+            {
+              "front": "Agrarische revolutie",
+              "back": "Overgang van jagen en verzamelen naar landbouw."
+            },
+            {
+              "front": "Begin akkerbouw",
+              "back": "Ongeveer 9000 v.C. in het Midden-Oosten."
+            },
+            {
+              "front": "Vaste woonplaats",
+              "back": "Boeren bleven bij hun akkers en vee."
+            },
+            {
+              "front": "Boerendorp",
+              "back": "Vaste nederzetting van mensen met landbouw."
+            },
+            {
+              "front": "Kleihuizen",
+              "back": "Woningen van gedroogde klei, soms ook stal."
+            },
+            {
+              "front": "Economische gevolgen",
+              "back": "Meer voedsel en soms grotere rijkdom."
+            },
+            {
+              "front": "Sociale gevolgen",
+              "back": "Grotere verschillen in macht en bezit."
+            },
+            {
+              "front": "Culturele gevolgen",
+              "back": "Meer dure kleding, sieraden en grotere huizen."
+            },
+            {
+              "front": "Leiderschap",
+              "back": "In grote groepen nemen sommigen beslissingen."
+            },
+            {
+              "front": "Voedseloverschot",
+              "back": "Meer oogst dan nodig voor eigen gebruik."
+            },
+            {
+              "front": "Gezondheidsnadeel",
+              "back": "Meer infecties door samenleven met vee."
+            },
+            {
+              "front": "Misoogst",
+              "back": "Een tegenvallende of mislukte oogst."
+            },
+            {
+              "front": "Economie",
+              "back": "Hoe mensen in hun onderhoud voorzien en opbrengsten verdelen."
+            }
+          ]
+        },
+        {
+          "type": "flashcards",
+          "subject": "Geschiedenis",
+          "title": "Flashcards §3 · De Nijl en de samenleving",
+          "description": "Irrigatie, nijverheid, handel, steden en sociale lagen. Begrippen ter voorbereiding op open vragen.",
+          "cards": [
+            {
+              "front": "De Nijl",
+              "back": "Rivier die de landbouw in Egypte mogelijk maakte."
+            },
+            {
+              "front": "Nijldelta",
+              "back": "Gebied bij de monding van de Nijl."
+            },
+            {
+              "front": "Overstroming",
+              "back": "Nijlwater bedekte de oevers en akkers."
+            },
+            {
+              "front": "Slib",
+              "back": "Vruchtbare grond die de rivier achterliet."
+            },
+            {
+              "front": "Irrigatielandbouw",
+              "back": "Akkerbouw met beheerst water via kanalen en dijken."
+            },
+            {
+              "front": "Waterbekken",
+              "back": "Bewaart water voor drogere perioden."
+            },
+            {
+              "front": "Kanaal",
+              "back": "Brengt water naar verder gelegen akkers."
+            },
+            {
+              "front": "Dijk",
+              "back": "Helpt rivierwater te beheersen en vast te houden."
+            },
+            {
+              "front": "Nijverheid",
+              "back": "Met de hand voorwerpen maken."
+            },
+            {
+              "front": "Specialisatie",
+              "back": "Je op één beroep richten."
+            },
+            {
+              "front": "Handel",
+              "back": "Goederen of diensten ruilen."
+            },
+            {
+              "front": "Pottenbakker",
+              "back": "Vakman die potten maakt."
+            },
+            {
+              "front": "Brons",
+              "back": "Mengsel van koper en tin."
+            },
+            {
+              "front": "Memphis en Thebe",
+              "back": "Voorbeelden van Egyptische steden."
+            },
+            {
+              "front": "Stedelijke gemeenschap",
+              "back": "Inwoners van een stad met verschillende beroepen."
+            },
+            {
+              "front": "Sociale lagen",
+              "back": "Groepen met verschillende rijkdom, aanzien en macht."
+            },
+            {
+              "front": "Boeren in Egypte",
+              "back": "De grootste bevolkingsgroep."
+            },
+            {
+              "front": "Slavernij",
+              "back": "Mensen zijn eigendom van anderen."
+            }
+          ]
+        },
+        {
+          "type": "flashcards",
+          "subject": "Geschiedenis",
+          "title": "Flashcards §4 · Farao, schrift en goden",
+          "description": "Bestuur, schrift, polytheïsme en leven na de dood. Begrippen ter voorbereiding op open vragen.",
+          "cards": [
+            {
+              "front": "Staat",
+              "back": "Gebied met grenzen, één bestuur en gemeenschappelijke regels."
+            },
+            {
+              "front": "Farao",
+              "back": "Koning en hoogste bestuurder van Egypte."
+            },
+            {
+              "front": "Ambtenaren",
+              "back": "Voerden de besluiten van de farao uit."
+            },
+            {
+              "front": "Belasting",
+              "back": "Deel van de oogst voor het bestuur."
+            },
+            {
+              "front": "Alexander de Grote",
+              "back": "Griekse veroveraar; vanaf 332 v.C. macht over Egypte."
+            },
+            {
+              "front": "Hiërogliefenschrift",
+              "back": "Egyptisch schrift met beeldtekens."
+            },
+            {
+              "front": "Hiërogliefen",
+              "back": "Tekens voor woorden of klanken."
+            },
+            {
+              "front": "Alfabet",
+              "back": "Beperkt aantal letters voor klanken."
+            },
+            {
+              "front": "Feniciërs",
+              "back": "Handelaren die een alfabet met 22 letters verspreidden."
+            },
+            {
+              "front": "Polytheïsme",
+              "back": "Geloof in meerdere goden."
+            },
+            {
+              "front": "Natuurgodsdienst",
+              "back": "Natuurkrachten en natuurverschijnselen worden vereerd."
+            },
+            {
+              "front": "Re",
+              "back": "Egyptische zonnegod."
+            },
+            {
+              "front": "Osiris",
+              "back": "God van het dodenrijk."
+            },
+            {
+              "front": "Tempel",
+              "back": "Gebouw voor de verering van goden."
+            },
+            {
+              "front": "Priester",
+              "back": "Onderhoudt het contact met de goden."
+            },
+            {
+              "front": "Offer",
+              "back": "Geschenk aan een god."
+            },
+            {
+              "front": "Mummie",
+              "back": "Lichaam dat na de dood tegen vergaan is behandeld."
+            },
+            {
+              "front": "Grafgiften",
+              "back": "Voorwerpen meegegeven voor het dodenrijk."
+            },
+            {
+              "front": "Piramide",
+              "back": "Groot grafmonument van machtige farao's."
+            }
+          ]
+        }
+      ]
     }
   ],
   "exams": []
