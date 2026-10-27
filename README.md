@@ -1,5 +1,18 @@
 # StudyForge — leren via het Huiswerk-project
 
+## Centrale voortgang zonder persoonlijke gebruikersaccounts
+
+De cloudadapter staat in `sharedsync.js`; SQL in `supabase/shared-progress.sql`. Het profielscherm vraagt om 2007. Zodra `config.js` een geldige Supabase publishable key heeft en de SQL is uitgevoerd, wordt 2007 ook via de database gecontroleerd. Daarna synchroniseren toetsresultaten, foute vragen, flashcards, leerdoelen en toetsplanning voor Nikki en Dean tussen apparaten. De eerste keer worden bestaande lokale resultaten zoveel mogelijk meegenomen.
+
+**Laatste inrichting:**
+1. Supabase → SQL Editor → kopieer en voer `supabase/shared-progress.sql` uit.
+2. Supabase → Project Settings → API Keys → kopieer uitsluitend de **publishable key** (`sb_publishable_...`) of oude **anon**-key.
+3. Zet die openbare sleutel in `config.js` → `publishableKey`. Het project-URL-veld en `sharedMode: true` staan al ingevuld.
+4. GitHub Pages herladen. Kies Nikki/Dean en gebruik 2007; na succesvolle cloudverbinding staat bovenin **Cloudopslag**.
+
+De tabellen kunnen niet rechtstreeks vanuit een anonieme client worden gelezen of gewijzigd. Alle toegang loopt via een beperkte databasefunctie met profielcode. De code 2007 is openbaar in de GitHub-code en is geen sterke beveiliging. Publiceer geen privédocumenten of gevoelige persoonsgegevens.
+
+
 ## Profielcode (StudyForge)
 
 - Na het kiezen van **Nikki** of **Dean** verschijnt een apart codescherm.
