@@ -14,7 +14,8 @@ let SF_LOCAL_DATA = null;
 const SF_ARCHIVED_PACK_IDS = new Set([
   'dean-engels-my-future-2026-10-27-v1',
   'dean-engels-my-future-2026-10-27-mc-extra-1-v1',
-  'dean-engels-my-future-2026-10-27-mc-extra-2-v1'
+  'dean-engels-my-future-2026-10-27-mc-extra-2-v1',
+  'nikki-geschiedenis-h1-jagers-boeren-egypte-2026-10-27-v1'
 ]);
 function sfIsArchivedCollection(col){
   if(!col || typeof col.source_key!=='string')return false;
