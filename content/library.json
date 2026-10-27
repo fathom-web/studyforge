@@ -2797,7 +2797,7 @@
             },
             {
               "type": "mc",
-              "question": "Wat betekent 'career choice'?",
+              "question": "You need to make a career choice. Wat betekent 'career choice' in deze zin?",
               "options": [
                 "Beroepskeuze",
                 "Stageverslag",
@@ -2810,7 +2810,7 @@
             },
             {
               "type": "mc",
-              "question": "Hoe zeg je 'solliciteren'?",
+              "question": "Welke Engelse uitdrukking gebruik je als je op een baan wilt solliciteren?",
               "options": [
                 "To do an internship",
                 "To work together",
@@ -2901,7 +2901,7 @@
             },
             {
               "type": "mc",
-              "question": "Wat betekent 'responsible'?",
+              "question": "I am responsible. Welke kwaliteit beschrijft dit?",
               "options": [
                 "Verantwoordelijk",
                 "Zelfstandig",
