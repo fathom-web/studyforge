@@ -1,7 +1,9 @@
-/* Kopieer hier uitsluitend je Supabase Project URL en publishable/anon key.
-   Laat de velden leeg om StudyForge direct lokaal in de browser te gebruiken.
-   NOOIT een service_role of secret key in GitHub Pages plaatsen! */
+/* StudyForge centrale opslag via Supabase; geen individuele e-mailaccounts.
+   Vul uitsluitend de PUBLIEKE publishable (of anon) API key in.
+   SQL Editor: voer eerst supabase/shared-progress.sql uit.
+   Geen databasewachtwoorden, service_role keys of secret keys gebruiken! */
 window.STUDYFORGE_SUPABASE = {
-  url: '',
-  publishableKey: ''
+  url: 'https://vjgqodidvpkybeoectxu.supabase.co',
+  publishableKey: '', // Nog in te vullen in Supabase -> Project Settings -> API Keys
+  sharedMode: true
 };
