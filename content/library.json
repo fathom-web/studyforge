@@ -2354,6 +2354,814 @@
           ]
         }
       ]
+    },
+    {
+      "id": "dean-engels-my-future-2026-10-27-mc-extra-1-v1",
+      "profile": "Dean",
+      "collections": [
+        {
+          "type": "quiz",
+          "subject": "Engels",
+          "title": "My Future — Extra oefentoets 1 (30 MC)",
+          "description": "30 nieuwe multiplechoicevragen op basis van het begrippenblad My Future en de exameninstructie: opleiding en toekomst, interesses, kwaliteiten, vaardigheden, present simple/continuous, between/around/in/at/on, versterkende bijwoorden en toekomstplannen. Met hints, uitleg, cijfer en fouten oefenen. Geen MBO-3/4 beroepenlijst.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat betekent 'work experience'?",
+              "options": [
+                "Werkgever",
+                "Werkervaring",
+                "Vervolgopleiding",
+                "Werkplaats"
+              ],
+              "correct": 1,
+              "hint": "Experience betekent ervaring.",
+              "explanation": "Het juiste antwoord is: Werkervaring."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is de Engelse vertaling van 'werkgever'?",
+              "options": [
+                "Employer",
+                "Employee",
+                "Subject",
+                "Internship"
+              ],
+              "correct": 0,
+              "hint": "Een werknemer heet employee.",
+              "explanation": "Het juiste antwoord is: Employer."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'vocational course'?",
+              "options": [
+                "Open dag",
+                "Hobby",
+                "Sollicitatie",
+                "Mbo-opleiding"
+              ],
+              "correct": 3,
+              "hint": "Het gaat om leren voor een beroep.",
+              "explanation": "Het juiste antwoord is: Mbo-opleiding."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe vertaal je 'vak' op school?",
+              "options": [
+                "Career",
+                "Employee",
+                "Subject",
+                "Skillful"
+              ],
+              "correct": 2,
+              "hint": "English is a school ...",
+              "explanation": "Het juiste antwoord is: Subject."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'to do an internship'?",
+              "options": [
+                "Diploma halen",
+                "Stage lopen",
+                "Solliciteren",
+                "Doorgroeien"
+              ],
+              "correct": 1,
+              "hint": "Internship betekent stage.",
+              "explanation": "Het juiste antwoord is: Stage lopen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'open day'?",
+              "options": [
+                "Open dag",
+                "Vrije dag",
+                "Werkdag",
+                "Toetsdag"
+              ],
+              "correct": 0,
+              "hint": "Je kunt dan bij een opleiding kijken.",
+              "explanation": "Het juiste antwoord is: Open dag."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe vertaal je 'betrouwbaar'?",
+              "options": [
+                "Sporty",
+                "Honest",
+                "Calm",
+                "Reliable"
+              ],
+              "correct": 3,
+              "hint": "Iemand op wie je kunt rekenen.",
+              "explanation": "Het juiste antwoord is: Reliable."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'accurate'?",
+              "options": [
+                "Geduldig",
+                "Ondernemend",
+                "Nauwkeurig",
+                "Sociaal"
+              ],
+              "correct": 2,
+              "hint": "Iemand werkt heel precies.",
+              "explanation": "Het juiste antwoord is: Nauwkeurig."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe vertaal je 'zelfstandig'?",
+              "options": [
+                "Organised",
+                "Independent",
+                "Helpful",
+                "Patient"
+              ],
+              "correct": 1,
+              "hint": "Je hebt niet steeds hulp nodig.",
+              "explanation": "Het juiste antwoord is: Independent."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'able to work under pressure'?",
+              "options": [
+                "Stressbestendig",
+                "Praktisch",
+                "Creatief",
+                "Technisch"
+              ],
+              "correct": 0,
+              "hint": "Je kunt rustig doorwerken wanneer het druk is.",
+              "explanation": "Het juiste antwoord is: Stressbestendig."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'met gereedschap werken'?",
+              "options": [
+                "Working with numbers",
+                "Working together",
+                "Working with children",
+                "Working with tools"
+              ],
+              "correct": 3,
+              "hint": "Tools zijn bijvoorbeeld een hamer en tang.",
+              "explanation": "Het juiste antwoord is: Working with tools."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'giving advice'?",
+              "options": [
+                "Analyseren",
+                "Organiseren",
+                "Adviseren",
+                "Presenteren"
+              ],
+              "correct": 2,
+              "hint": "Advice is advies.",
+              "explanation": "Het juiste antwoord is: Adviseren."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'taking care of animals'?",
+              "options": [
+                "Met kinderen werken",
+                "Dieren verzorgen",
+                "Natuur beschermen",
+                "Bouwen"
+              ],
+              "correct": 1,
+              "hint": "Taking care of betekent verzorgen.",
+              "explanation": "Het juiste antwoord is: Dieren verzorgen."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'tekenen en ontwerpen'?",
+              "options": [
+                "Drawing and designing",
+                "Making and cooking",
+                "Organising and selling",
+                "Helping and planning"
+              ],
+              "correct": 0,
+              "hint": "Drawing betekent tekenen.",
+              "explanation": "Het juiste antwoord is: Drawing and designing."
+            },
+            {
+              "type": "mc",
+              "question": "Every Monday, Dean ___ English.",
+              "options": [
+                "study",
+                "is studying",
+                "are studying",
+                "studies"
+              ],
+              "correct": 3,
+              "hint": "Every Monday = gewoonte; Dean = he.",
+              "explanation": "Bij he/she/it krijgt het werkwoord -s of -ies: studies."
+            },
+            {
+              "type": "mc",
+              "question": "I ___ football with my friends every week.",
+              "options": [
+                "plays",
+                "am playing",
+                "play",
+                "playing"
+              ],
+              "correct": 2,
+              "hint": "Every week geeft een gewoonte aan.",
+              "explanation": "Bij I in de present simple: I play."
+            },
+            {
+              "type": "mc",
+              "question": "Listen! The teacher ___ now.",
+              "options": [
+                "talk",
+                "is talking",
+                "talks",
+                "are talking"
+              ],
+              "correct": 1,
+              "hint": "Now en listen: het gebeurt op dit moment.",
+              "explanation": "Present continuous bij the teacher: is talking."
+            },
+            {
+              "type": "mc",
+              "question": "They ___ for their exam at the moment.",
+              "options": [
+                "are studying",
+                "studies",
+                "study",
+                "is studying"
+              ],
+              "correct": 0,
+              "hint": "They + are + werkwoord-ing.",
+              "explanation": "They are studying: nu bezig."
+            },
+            {
+              "type": "mc",
+              "question": "My brother ___ computers.",
+              "options": [
+                "like",
+                "is liking",
+                "liking",
+                "likes"
+              ],
+              "correct": 3,
+              "hint": "Een gewone voorkeur; my brother = he.",
+              "explanation": "Present simple: he likes."
+            },
+            {
+              "type": "mc",
+              "question": "Look! I ___ a new website.",
+              "options": [
+                "build",
+                "builds",
+                "am building",
+                "is building"
+              ],
+              "correct": 2,
+              "hint": "Het gebeurt nu; I + am.",
+              "explanation": "I am building is de present continuous."
+            },
+            {
+              "type": "mc",
+              "question": "___ she usually go to school by bike?",
+              "options": [
+                "Do",
+                "Does",
+                "Is",
+                "Are"
+              ],
+              "correct": 1,
+              "hint": "Present simple vraag bij she.",
+              "explanation": "Does she usually go ...?"
+            },
+            {
+              "type": "mc",
+              "question": "We ___ dinner right now.",
+              "options": [
+                "are cooking",
+                "cook",
+                "cooks",
+                "is cooking"
+              ],
+              "correct": 0,
+              "hint": "Right now betekent op dit moment.",
+              "explanation": "We are cooking dinner right now."
+            },
+            {
+              "type": "mc",
+              "question": "Our lesson starts ___ nine o'clock.",
+              "options": [
+                "in",
+                "on",
+                "between",
+                "at"
+              ],
+              "correct": 3,
+              "hint": "Een precies tijdstip.",
+              "explanation": "At gebruik je bij een tijdstip."
+            },
+            {
+              "type": "mc",
+              "question": "My phone is ___ the desk.",
+              "options": [
+                "in",
+                "around",
+                "on",
+                "at"
+              ],
+              "correct": 2,
+              "hint": "Het ligt boven op de tafel.",
+              "explanation": "On betekent op."
+            },
+            {
+              "type": "mc",
+              "question": "The school is ___ the park and the station.",
+              "options": [
+                "around",
+                "between",
+                "on",
+                "at"
+              ],
+              "correct": 1,
+              "hint": "Er zijn twee plekken genoemd.",
+              "explanation": "Between betekent tussen."
+            },
+            {
+              "type": "mc",
+              "question": "My laptop is ___ my schoolbag.",
+              "options": [
+                "in",
+                "on",
+                "at",
+                "between"
+              ],
+              "correct": 0,
+              "hint": "Hij zit binnen in de tas.",
+              "explanation": "In betekent in."
+            },
+            {
+              "type": "mc",
+              "question": "This exercise is ___ easy. (best wel makkelijk)",
+              "options": [
+                "too",
+                "absolutely",
+                "extremely",
+                "quite"
+              ],
+              "correct": 3,
+              "hint": "Quite is minder sterk dan extremely.",
+              "explanation": "Quite = best wel / tamelijk."
+            },
+            {
+              "type": "mc",
+              "question": "The box is ___ heavy to carry. (te zwaar)",
+              "options": [
+                "really",
+                "very",
+                "too",
+                "quite"
+              ],
+              "correct": 2,
+              "hint": "Het kan niet omdat het te zwaar is.",
+              "explanation": "Too = te."
+            },
+            {
+              "type": "mc",
+              "question": "I am ___ interested in technology. (echt geïnteresseerd)",
+              "options": [
+                "on",
+                "really",
+                "between",
+                "at"
+              ],
+              "correct": 1,
+              "hint": "Really betekent echt.",
+              "explanation": "Really interested = echt geïnteresseerd."
+            },
+            {
+              "type": "mc",
+              "question": "Welke zin past bij een toekomstplan?",
+              "options": [
+                "After Yuverta, I would like to work with computers.",
+                "After Yuverta, I working with computers.",
+                "After Yuverta, I would likes to work.",
+                "After Yuverta, I am like computers."
+              ],
+              "correct": 0,
+              "hint": "Gebruik would like to + werkwoord.",
+              "explanation": "After Yuverta, I would like to ... is de structuur uit de exameninstructie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dean-engels-my-future-2026-10-27-mc-extra-2-v1",
+      "profile": "Dean",
+      "collections": [
+        {
+          "type": "quiz",
+          "subject": "Engels",
+          "title": "My Future — Extra oefentoets 2 (30 MC)",
+          "description": "30 nieuwe multiplechoicevragen op basis van het begrippenblad My Future en de exameninstructie: opleiding en toekomst, interesses, kwaliteiten, vaardigheden, present simple/continuous, between/around/in/at/on, versterkende bijwoorden en toekomstplannen. Met hints, uitleg, cijfer en fouten oefenen. Geen MBO-3/4 beroepenlijst.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat betekent 'further education'?",
+              "options": [
+                "Bijbaan",
+                "Vakantie",
+                "Vervolgopleiding",
+                "Werkgever"
+              ],
+              "correct": 2,
+              "hint": "Further betekent verder.",
+              "explanation": "Het juiste antwoord is: Vervolgopleiding."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe vertaal je 'beroep'?",
+              "options": [
+                "Subject / class",
+                "Job / profession",
+                "Work placement",
+                "Career choice"
+              ],
+              "correct": 1,
+              "hint": "Het is wat je later als werk doet.",
+              "explanation": "Het juiste antwoord is: Job / profession."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'career choice'?",
+              "options": [
+                "Beroepskeuze",
+                "Stageverslag",
+                "Werkervaring",
+                "Vrije tijd"
+              ],
+              "correct": 0,
+              "hint": "Career = loopbaan.",
+              "explanation": "Het juiste antwoord is: Beroepskeuze."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'solliciteren'?",
+              "options": [
+                "To do an internship",
+                "To work together",
+                "To get a qualification",
+                "To apply for a job"
+              ],
+              "correct": 3,
+              "hint": "Je probeert een baan te krijgen.",
+              "explanation": "Het juiste antwoord is: To apply for a job."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'employee'?",
+              "options": [
+                "Werkgever",
+                "Docent",
+                "Werknemer",
+                "Klant"
+              ],
+              "correct": 2,
+              "hint": "Employer = werkgever; employee = ...",
+              "explanation": "Employee betekent werknemer."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'planning'?",
+              "options": [
+                "Analyseren",
+                "Plannen",
+                "Luisteren",
+                "Adviseren"
+              ],
+              "correct": 1,
+              "hint": "Het lijkt op het Nederlands.",
+              "explanation": "Het juiste antwoord is: Plannen."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe vertaal je 'problemen oplossen'?",
+              "options": [
+                "Solving problems",
+                "Working with tools",
+                "Giving advice",
+                "Presenting"
+              ],
+              "correct": 0,
+              "hint": "Solve = oplossen.",
+              "explanation": "Het juiste antwoord is: Solving problems."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'organised' als kwaliteit?",
+              "options": [
+                "Eerlijk",
+                "Betrouwbaar",
+                "Vriendelijk",
+                "Georganiseerd"
+              ],
+              "correct": 3,
+              "hint": "Het lijkt op het Nederlands.",
+              "explanation": "Het juiste antwoord is: Georganiseerd."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'honest'?",
+              "options": [
+                "Behulpzaam",
+                "Rustig",
+                "Eerlijk",
+                "Sportief"
+              ],
+              "correct": 2,
+              "hint": "Je vertelt de waarheid.",
+              "explanation": "Het juiste antwoord is: Eerlijk."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'geduldig'?",
+              "options": [
+                "Creative",
+                "Patient",
+                "Accurate",
+                "Technical"
+              ],
+              "correct": 1,
+              "hint": "Iemand kan rustig wachten.",
+              "explanation": "Het juiste antwoord is: Patient."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'responsible'?",
+              "options": [
+                "Verantwoordelijk",
+                "Zelfstandig",
+                "Ondernemend",
+                "Klantvriendelijk"
+              ],
+              "correct": 0,
+              "hint": "Denk aan verantwoordelijkheid.",
+              "explanation": "Het juiste antwoord is: Verantwoordelijk."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe vertaal je 'mensen helpen'?",
+              "options": [
+                "Working with children",
+                "Helping customers",
+                "Doing sports",
+                "Helping people"
+              ],
+              "correct": 3,
+              "hint": "People = mensen.",
+              "explanation": "Het juiste antwoord is: Helping people."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'programming'?",
+              "options": [
+                "Bouwen",
+                "Verkopen",
+                "Programmeren",
+                "Reizen"
+              ],
+              "correct": 2,
+              "hint": "Het lijkt op Nederlands.",
+              "explanation": "Het juiste antwoord is: Programmeren."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe vertaal je 'vreemde talen spreken'?",
+              "options": [
+                "Explaining things",
+                "Speaking foreign languages",
+                "Working with numbers",
+                "Taking care of animals"
+              ],
+              "correct": 1,
+              "hint": "Foreign languages betekent vreemde talen.",
+              "explanation": "Het juiste antwoord is: Speaking foreign languages."
+            },
+            {
+              "type": "mc",
+              "question": "He ___ in an office every day.",
+              "options": [
+                "works",
+                "work",
+                "is working",
+                "are working"
+              ],
+              "correct": 0,
+              "hint": "Every day, he.",
+              "explanation": "He works: een gewoonte."
+            },
+            {
+              "type": "mc",
+              "question": "Look! My friends ___ football.",
+              "options": [
+                "plays",
+                "play",
+                "is playing",
+                "are playing"
+              ],
+              "correct": 3,
+              "hint": "Look = het gebeurt nu; friends = they.",
+              "explanation": "My friends are playing."
+            },
+            {
+              "type": "mc",
+              "question": "I ___ English at the moment.",
+              "options": [
+                "learn",
+                "learns",
+                "am learning",
+                "are learning"
+              ],
+              "correct": 2,
+              "hint": "I + am + -ing.",
+              "explanation": "I am learning English at the moment."
+            },
+            {
+              "type": "mc",
+              "question": "My sister ___ travelling.",
+              "options": [
+                "like",
+                "likes",
+                "is liking",
+                "are liking"
+              ],
+              "correct": 1,
+              "hint": "Een vaste voorkeur, sister = she.",
+              "explanation": "She likes travelling."
+            },
+            {
+              "type": "mc",
+              "question": "We usually ___ to school at eight.",
+              "options": [
+                "go",
+                "goes",
+                "are going",
+                "going"
+              ],
+              "correct": 0,
+              "hint": "Usually = present simple.",
+              "explanation": "We go is correct."
+            },
+            {
+              "type": "mc",
+              "question": "Why ___ he study English every week?",
+              "options": [
+                "do",
+                "is",
+                "are",
+                "does"
+              ],
+              "correct": 3,
+              "hint": "Present simple vraag bij he.",
+              "explanation": "Why does he study ...?"
+            },
+            {
+              "type": "mc",
+              "question": "Right now, she ___ a letter about her future.",
+              "options": [
+                "write",
+                "writes",
+                "is writing",
+                "are writing"
+              ],
+              "correct": 2,
+              "hint": "Now; she + is.",
+              "explanation": "She is writing is present continuous."
+            },
+            {
+              "type": "mc",
+              "question": "Which sentence is present continuous?",
+              "options": [
+                "They work together every week.",
+                "They are working together now.",
+                "He works in a hotel.",
+                "I like computers."
+              ],
+              "correct": 1,
+              "hint": "Zoek am/is/are + -ing.",
+              "explanation": "They are working is een handeling die nu bezig is."
+            },
+            {
+              "type": "mc",
+              "question": "I work ___ a restaurant.",
+              "options": [
+                "in",
+                "on",
+                "between",
+                "around"
+              ],
+              "correct": 0,
+              "hint": "Je werkt in het restaurant.",
+              "explanation": "In a restaurant."
+            },
+            {
+              "type": "mc",
+              "question": "The picture is ___ the wall.",
+              "options": [
+                "at",
+                "in",
+                "between",
+                "on"
+              ],
+              "correct": 3,
+              "hint": "Een plaatje hangt op de muur.",
+              "explanation": "On the wall."
+            },
+            {
+              "type": "mc",
+              "question": "We meet ___ the open day.",
+              "options": [
+                "on",
+                "between",
+                "at",
+                "around"
+              ],
+              "correct": 2,
+              "hint": "Bij een evenement/locatie kun je at gebruiken.",
+              "explanation": "At the open day."
+            },
+            {
+              "type": "mc",
+              "question": "We walk ___ the school building to the other side.",
+              "options": [
+                "between",
+                "around",
+                "on",
+                "in"
+              ],
+              "correct": 1,
+              "hint": "Je loopt eromheen.",
+              "explanation": "Around = rondom of omheen."
+            },
+            {
+              "type": "mc",
+              "question": "The job is ___ difficult. (heel erg moeilijk)",
+              "options": [
+                "extremely",
+                "between",
+                "at",
+                "on"
+              ],
+              "correct": 0,
+              "hint": "Extremely is heel sterk.",
+              "explanation": "Extremely difficult betekent extreem moeilijk."
+            },
+            {
+              "type": "mc",
+              "question": "That answer is ___ correct. (helemaal correct)",
+              "options": [
+                "between",
+                "too",
+                "on",
+                "absolutely"
+              ],
+              "correct": 3,
+              "hint": "Absolutely betekent absoluut / helemaal.",
+              "explanation": "Absolutely correct = helemaal correct."
+            },
+            {
+              "type": "mc",
+              "question": "This computer is ___ expensive for me. (te duur)",
+              "options": [
+                "quite",
+                "very",
+                "too",
+                "really"
+              ],
+              "correct": 2,
+              "hint": "Het is meer dan je kunt betalen.",
+              "explanation": "Too expensive = te duur."
+            },
+            {
+              "type": "mc",
+              "question": "Which sentence uses 'would like to' correctly?",
+              "options": [
+                "I would like doing a vocational course.",
+                "I would like to do a vocational course.",
+                "I would likes to a vocational course.",
+                "I would like do vocational course."
+              ],
+              "correct": 1,
+              "hint": "Would like to + heel werkwoord.",
+              "explanation": "I would like to do a vocational course past bij toekomstplannen."
+            }
+          ]
+        }
+      ]
     }
   ],
   "exams": []
