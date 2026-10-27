@@ -19,6 +19,13 @@ function spWriteLocal(profile,record){
 async function spLoad(profile){
   let val=spReadLocal(profile);
   spCloudWarning='';
+  if(window.sfCloudEnabled&&window.sfCloud?.pin){
+    const cloudPlan=await window.sfCloud.getPlan(profile);
+    if(cloudPlan&&Array.isArray(cloudPlan.exams)){
+      val={...SP_EMPTY(),...cloudPlan,goals:{...SP_EMPTY().goals,...cloudPlan.goals}};
+      spWriteLocal(profile,val);
+    }
+  }
   if(window.sfMode?.()==='supabase'){
     try{
       const client=await sfClient(),res=await client.from('sf_study_state').select('payload').eq('profile_id',profile).maybeSingle();
@@ -61,6 +68,12 @@ async function spLoad(profile){
 }
 async function spSave(profile,val){
   spWriteLocal(profile,val);
+  if(window.sfCloudEnabled&&window.sfCloud?.pin){
+    try{
+      await window.sfCloud.savePlan(profile,val);
+      spCloudWarning='';
+    }catch(err){spCloudWarning='Planning lokaal bewaard, maar cloud synchronisatie is mislukt.';toast(spCloudWarning,true);}
+  }
   if(window.sfMode?.()==='supabase'){
     try{
       const client=await sfClient(),user=await sfRemoteUser();
