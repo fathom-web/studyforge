@@ -2,7 +2,8 @@
 'use strict';
 const SF_PROFILES = [{id:1,name:'Nikki'},{id:2,name:'Dean'}];
 const SF_CONFIG = window.STUDYFORGE_SUPABASE || {};
-const SF_REMOTE = !!(SF_CONFIG.url && (SF_CONFIG.publishableKey || SF_CONFIG.anonKey));
+const SF_CLOUD = !!(SF_CONFIG.sharedMode && SF_CONFIG.url && (SF_CONFIG.publishableKey || SF_CONFIG.anonKey));
+const SF_REMOTE = !!(!SF_CONFIG.sharedMode && SF_CONFIG.url && (SF_CONFIG.publishableKey || SF_CONFIG.anonKey));
 const SF_STORE_KEY = 'studyforge-local-v1';
 let SF_CLIENT = null;
 let SF_ADMIN = false;
@@ -21,7 +22,7 @@ function sfIsArchivedCollection(col){
 }
 
 async function sfClient(){
-  if(!SF_REMOTE) return null;
+  if(!SF_REMOTE&&!SF_CLOUD) return null;
   if(!SF_CLIENT){
     const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2.95.2');
     SF_CLIENT = createClient(SF_CONFIG.url, SF_CONFIG.publishableKey || SF_CONFIG.anonKey, {
@@ -31,7 +32,7 @@ async function sfClient(){
   return SF_CLIENT;
 }
 function sfError(res){if(res?.error)throw new Error(res.error.message||String(res.error));return res?.data;}
-function sfMode(){return SF_REMOTE?'supabase':'local';}
+function sfMode(){return SF_CLOUD?'shared':SF_REMOTE?'supabase':'local';}
 function sfFresh(){
   return {sets:[],attempts:[],reviews:[],hiddenPublished:[],nextId:1};
 }
