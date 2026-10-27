@@ -1619,6 +1619,3142 @@
           ]
         }
       ]
+    },
+    {
+      "id": "nikki-geschiedenis-h1-jagers-boeren-egypte-2026-10-27-v1",
+      "profile": "Nikki",
+      "collections": [
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "§1 · De eerste mensen en jagers-verzamelaars",
+          "description": "25 vragen uit de leerstof over de eerste mensen, jagen, verzamelen, taakverdeling, archeologie en prehistorie. Iedere ronde 15 wisselende vragen.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Waar verschenen volgens de les de eerste mensachtige wezens?",
+              "options": [
+                "In Amerika",
+                "In Afrika",
+                "In Europa",
+                "In Egypte"
+              ],
+              "correct": 1,
+              "hint": "Denk aan het continent van onze oudste voorouders.",
+              "explanation": "Het juiste antwoord is: In Afrika."
+            },
+            {
+              "type": "mc",
+              "question": "Ongeveer wanneer verschenen de eerste mensachtige wezens?",
+              "options": [
+                "Vierhonderd jaar geleden",
+                "Tweehonderd miljoen jaar geleden",
+                "Vier miljoen jaar geleden",
+                "Vierduizend jaar geleden"
+              ],
+              "correct": 2,
+              "hint": "De les gaat terug tot vóór de moderne mens.",
+              "explanation": "Het juiste antwoord is: Vier miljoen jaar geleden."
+            },
+            {
+              "type": "mc",
+              "question": "Wat konden de eerste mensachtige wezens dat bijzonder was?",
+              "options": [
+                "Schrijven met letters",
+                "Metalen gereedschap maken",
+                "Piramides bouwen",
+                "Rechtop lopen"
+              ],
+              "correct": 3,
+              "hint": "Denk aan hun houding.",
+              "explanation": "Het juiste antwoord is: Rechtop lopen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat leverde rechtop lopen onze voorouders op?",
+              "options": [
+                "Ze kregen hun handen vrij",
+                "Ze hoefden niet meer te eten",
+                "Ze konden direct lezen",
+                "Ze hoefden geen gereedschap te gebruiken"
+              ],
+              "correct": 0,
+              "hint": "Met vrije handen kun je voorwerpen vasthouden.",
+              "explanation": "Het juiste antwoord is: Ze kregen hun handen vrij."
+            },
+            {
+              "type": "mc",
+              "question": "Welke voorwerpen gebruikten de vroegste mensachtigen als hulpmiddel?",
+              "options": [
+                "Bronzen zwaarden",
+                "Stokken, botten en stenen",
+                "Computers en machines",
+                "Papyrus en boeken"
+              ],
+              "correct": 1,
+              "hint": "Denk aan materialen uit de natuur.",
+              "explanation": "Het juiste antwoord is: Stokken, botten en stenen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat ontdekte men door oude schedels te bestuderen?",
+              "options": [
+                "Iedereen was even groot",
+                "De eerste mensen konden al schrijven",
+                "De hersenen werden geleidelijk groter",
+                "Mensen hadden vroeger geen hersenen"
+              ],
+              "correct": 2,
+              "hint": "De schedel vertelt iets over herseninhoud.",
+              "explanation": "Het juiste antwoord is: De hersenen werden geleidelijk groter."
+            },
+            {
+              "type": "mc",
+              "question": "Welke belangrijke ontdekking maakte het mogelijk voedsel te bereiden?",
+              "options": [
+                "Het ontstaan van alfabetten",
+                "Het bouwen van tempels",
+                "Het gebruik van geld",
+                "Het gebruik van vuur"
+              ],
+              "correct": 3,
+              "hint": "Met deze ontdekking kon men ook roofdieren afschrikken.",
+              "explanation": "Het juiste antwoord is: Het gebruik van vuur."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een neanderthaler volgens de tekst?",
+              "options": [
+                "Een uitgestorven mensensoort",
+                "Een Egyptische farao",
+                "Een soort landbouwgereedschap",
+                "De eerste schrijver"
+              ],
+              "correct": 0,
+              "hint": "Denk aan andere mensensoorten naast ons.",
+              "explanation": "Het juiste antwoord is: Een uitgestorven mensensoort."
+            },
+            {
+              "type": "mc",
+              "question": "Wanneer ontstond de moderne mens ongeveer?",
+              "options": [
+                "500 jaar geleden",
+                "200.000 jaar geleden",
+                "2000 jaar geleden",
+                "4 miljoen jaar geleden"
+              ],
+              "correct": 1,
+              "hint": "Vergelijk de tijdlijn op pagina 17.",
+              "explanation": "Het juiste antwoord is: 200.000 jaar geleden."
+            },
+            {
+              "type": "mc",
+              "question": "Waar ontstond de moderne mens volgens de les?",
+              "options": [
+                "Bij de Noordpool",
+                "In Mesopotamië",
+                "In Afrika",
+                "In Rome"
+              ],
+              "correct": 2,
+              "hint": "De moderne mens verspreidde zich daarna over de wereld.",
+              "explanation": "Het juiste antwoord is: In Afrika."
+            },
+            {
+              "type": "mc",
+              "question": "Wat zijn jagers-verzamelaars?",
+              "options": [
+                "Mensen die vooral graan verhandelen",
+                "Mensen die altijd in steden wonen",
+                "Mensen die belasting innen",
+                "Mensen die leven van jagen, vissen en verzamelen"
+              ],
+              "correct": 3,
+              "hint": "De naam zegt iets over hun voedselvoorziening.",
+              "explanation": "Het juiste antwoord is: Mensen die leven van jagen, vissen en verzamelen."
+            },
+            {
+              "type": "mc",
+              "question": "Welke drie activiteiten leverden jagers-verzamelaars voedsel op?",
+              "options": [
+                "Jagen, vissen en verzamelen",
+                "Zaaien, oogsten en belasting betalen",
+                "Schrijven, handelen en bouwen",
+                "Pottenbakken, weven en smeden"
+              ],
+              "correct": 0,
+              "hint": "Denk aan eten uit de natuur.",
+              "explanation": "Het juiste antwoord is: Jagen, vissen en verzamelen."
+            },
+            {
+              "type": "mc",
+              "question": "Welke groep bestaat uit verzameld voedsel?",
+              "options": [
+                "Belasting en loon",
+                "Bessen, noten en wortels",
+                "Brood uit een fabriek",
+                "IJzeren bijlen en potten"
+              ],
+              "correct": 1,
+              "hint": "Wat kun je zonder akkerbouw vinden?",
+              "explanation": "Het juiste antwoord is: Bessen, noten en wortels."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom trokken jagers-verzamelaars rond?",
+              "options": [
+                "Ze wilden grote piramides bouwen",
+                "Ze konden nog niet lopen",
+                "Ze zochten steeds nieuwe voedselbronnen",
+                "Ze moesten dagelijks belasting betalen"
+              ],
+              "correct": 2,
+              "hint": "Het voedsel in één gebied raakte op.",
+              "explanation": "Het juiste antwoord is: Ze zochten steeds nieuwe voedselbronnen."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe groot waren de groepen jagers-verzamelaars volgens de tekst meestal?",
+              "options": [
+                "Duizenden mensen",
+                "Precies twee mensen",
+                "Meer dan tienduizend mensen",
+                "Ongeveer 25 tot 40 mensen"
+              ],
+              "correct": 3,
+              "hint": "Het waren kleine rondtrekkende groepen.",
+              "explanation": "Het juiste antwoord is: Ongeveer 25 tot 40 mensen."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom bleef een groep jagers-verzamelaars vaak klein?",
+              "options": [
+                "Een grotere groep had meer voedsel nodig",
+                "Een grotere groep mocht geen vuur gebruiken",
+                "Grote groepen konden niet praten",
+                "Niemand kon in een groep beslissen"
+              ],
+              "correct": 0,
+              "hint": "Denk aan de hoeveelheid beschikbare natuurvoeding.",
+              "explanation": "Het juiste antwoord is: Een grotere groep had meer voedsel nodig."
+            },
+            {
+              "type": "mc",
+              "question": "Van welk materiaal maakten jagers-verzamelaars kleding?",
+              "options": [
+                "IJzerplaten",
+                "Dierenhuiden",
+                "Plastic",
+                "Katoen uit fabrieken"
+              ],
+              "correct": 1,
+              "hint": "Ze gebruikten wat de jacht opleverde.",
+              "explanation": "Het juiste antwoord is: Dierenhuiden."
+            },
+            {
+              "type": "mc",
+              "question": "Waarvoor gebruikten jagers-verzamelaars tenten?",
+              "options": [
+                "Als permanente stenen paleizen",
+                "Als tempels voor Re",
+                "Om mee te kunnen verhuizen",
+                "Om graanbelasting op te slaan"
+              ],
+              "correct": 2,
+              "hint": "Hun woonplek moest verplaatsbaar zijn.",
+              "explanation": "Het juiste antwoord is: Om mee te kunnen verhuizen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent taakverdeling?",
+              "options": [
+                "Iedereen doet altijd precies dezelfde taak",
+                "Een farao verbiedt handel",
+                "Het verdelen van een land in provincies",
+                "Mensen binnen een groep verdelen werkzaamheden"
+              ],
+              "correct": 3,
+              "hint": "Sommigen verzamelen en anderen jagen.",
+              "explanation": "Het juiste antwoord is: Mensen binnen een groep verdelen werkzaamheden."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe groot waren de sociale verschillen binnen jagers-verzamelaars meestal?",
+              "options": [
+                "Vrij klein",
+                "Heel groot zoals in een rijk",
+                "Alleen priesters hadden macht",
+                "Iedereen was slaaf"
+              ],
+              "correct": 0,
+              "hint": "In de les hadden de meeste mensen ongeveer evenveel.",
+              "explanation": "Het juiste antwoord is: Vrij klein."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom weten we weinig van wat prehistorische mensen dachten?",
+              "options": [
+                "Er bestonden geen talen",
+                "Ze lieten geen schriftelijke bronnen na",
+                "Niemand maakte voorwerpen",
+                "Er zijn nooit botten gevonden"
+              ],
+              "correct": 1,
+              "hint": "Denk aan het ontbreken van teksten.",
+              "explanation": "Het juiste antwoord is: Ze lieten geen schriftelijke bronnen na."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent prehistorie?",
+              "options": [
+                "Alleen de Romeinse tijd",
+                "De tijd waarin al computers waren",
+                "De tijd voordat mensen schrift gebruikten",
+                "De tijd nadat de farao regeerde"
+              ],
+              "correct": 2,
+              "hint": "Het tegenovergestelde van geschreven geschiedenis.",
+              "explanation": "Het juiste antwoord is: De tijd voordat mensen schrift gebruikten."
+            },
+            {
+              "type": "mc",
+              "question": "Wat bestuderen archeologen vooral om de prehistorie te onderzoeken?",
+              "options": [
+                "Alleen moderne kranten",
+                "Alleen schriftelijke wetten",
+                "Alleen huidige landsgrenzen",
+                "Overblijfselen zoals botten en werktuigen"
+              ],
+              "correct": 3,
+              "hint": "Er waren nog geen geschreven bronnen.",
+              "explanation": "Het juiste antwoord is: Overblijfselen zoals botten en werktuigen."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom is het woord steentijd volgens de tekst wat misleidend?",
+              "options": [
+                "Ook hout, huiden en botten werden gebruikt",
+                "Mensen kenden toen helemaal geen stenen",
+                "Iedereen woonde in stenen huizen",
+                "Alle werktuigen waren van brons"
+              ],
+              "correct": 0,
+              "hint": "Veel materialen zijn minder goed bewaard gebleven.",
+              "explanation": "Het juiste antwoord is: Ook hout, huiden en botten werden gebruikt."
+            },
+            {
+              "type": "mc",
+              "question": "Wanneer laten historici de historie beginnen?",
+              "options": [
+                "Toen de eerste dieren verschenen",
+                "Als mensen beginnen te schrijven",
+                "Bij het ontstaan van de aarde",
+                "Toen mensen leerden jagen"
+              ],
+              "correct": 1,
+              "hint": "De geschreven bron maakt het verschil.",
+              "explanation": "Het juiste antwoord is: Als mensen beginnen te schrijven."
+            }
+          ],
+          "questionsPerAttempt": 15
+        },
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "§2 · De eerste boeren en de agrarische revolutie",
+          "description": "25 vragen over akkerbouw, veeteelt, vaste woonplaatsen en de economische, sociale en culturele gevolgen. Iedere ronde 15 wisselende vragen.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat betekent akkerbouw?",
+              "options": [
+                "Een huis van steen bouwen",
+                "Zelf gewassen zoals graan en groenten verbouwen",
+                "Wilde dieren vangen met speren",
+                "Alleen dieren temmen"
+              ],
+              "correct": 1,
+              "hint": "Een akker gebruik je om te verbouwen.",
+              "explanation": "Het juiste antwoord is: Zelf gewassen zoals graan en groenten verbouwen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent veeteelt?",
+              "options": [
+                "Alleen vissen in rivieren",
+                "Belastingen betalen aan de farao",
+                "Dieren houden voor bijvoorbeeld melk, vlees of wol",
+                "Gras maaien langs de weg"
+              ],
+              "correct": 2,
+              "hint": "Denk aan koeien, geiten en schapen.",
+              "explanation": "Het juiste antwoord is: Dieren houden voor bijvoorbeeld melk, vlees of wol."
+            },
+            {
+              "type": "mc",
+              "question": "Wat noemen we samen landbouw?",
+              "options": [
+                "Handel en belasting",
+                "Jagen en verzamelen",
+                "Schrijven en lezen",
+                "Akkerbouw en veeteelt"
+              ],
+              "correct": 3,
+              "hint": "Het gaat om gewassen én dieren.",
+              "explanation": "Het juiste antwoord is: Akkerbouw en veeteelt."
+            },
+            {
+              "type": "mc",
+              "question": "Ongeveer wanneer begon de eerste ontwikkeling naar akkerbouw volgens de les?",
+              "options": [
+                "Rond 9000 v.C.",
+                "Rond 1000 n.C.",
+                "Rond 2000 n.C.",
+                "Rond 332 v.C."
+              ],
+              "correct": 0,
+              "hint": "Kijk naar het begin van de agrarische revolutie.",
+              "explanation": "Het juiste antwoord is: Rond 9000 v.C.."
+            },
+            {
+              "type": "mc",
+              "question": "In welk gebied ontstond volgens de tekst de vroege landbouw?",
+              "options": [
+                "Australië",
+                "Het Midden-Oosten",
+                "De Noordpool",
+                "West-Europa"
+              ],
+              "correct": 1,
+              "hint": "Daar groeiden veel geschikte wilde graansoorten.",
+              "explanation": "Het juiste antwoord is: Het Midden-Oosten."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent de agrarische revolutie?",
+              "options": [
+                "De uitvinding van internet",
+                "Het ontstaan van moderne fabrieken",
+                "De overgang van jagen en verzamelen naar landbouw",
+                "Een oorlog tussen twee farao's"
+              ],
+              "correct": 2,
+              "hint": "Agrarisch heeft te maken met landbouw.",
+              "explanation": "Het juiste antwoord is: De overgang van jagen en verzamelen naar landbouw."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom spreken we van een revolutie bij de overgang naar landbouw?",
+              "options": [
+                "Alle veranderingen gebeurden in één dag",
+                "Alle boeren vochten tegen jagers",
+                "Het schrift werd verboden",
+                "De overgang had enorm grote gevolgen"
+              ],
+              "correct": 3,
+              "hint": "Een revolutie verandert het leven ingrijpend.",
+              "explanation": "Het juiste antwoord is: De overgang had enorm grote gevolgen."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom konden mensen eerst langer op één plek blijven wonen?",
+              "options": [
+                "Het klimaat verbeterde en er was meer voedsel",
+                "Het regende nooit meer",
+                "Ze hadden al auto's",
+                "Ze waren bang om te lopen"
+              ],
+              "correct": 0,
+              "hint": "De tekst beschrijft een verandering in de natuur.",
+              "explanation": "Het juiste antwoord is: Het klimaat verbeterde en er was meer voedsel."
+            },
+            {
+              "type": "mc",
+              "question": "Wat deden mensen in de tweede fase van het ontstaan van landbouw?",
+              "options": [
+                "Een alfabet verspreiden",
+                "Experimenteren met zaaien en oogsten",
+                "Meteen grote steden bouwen",
+                "Alleen nog op mammoeten jagen"
+              ],
+              "correct": 1,
+              "hint": "Ze ontdekten stap voor stap hoe planten groeiden.",
+              "explanation": "Het juiste antwoord is: Experimenteren met zaaien en oogsten."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom werd landbouw uiteindelijk noodzakelijk?",
+              "options": [
+                "Alle wilde dieren verdwenen direct",
+                "De farao voerde al belastingen in",
+                "Meer mensen hadden steeds meer voedsel nodig",
+                "Iedereen moest priester worden"
+              ],
+              "correct": 2,
+              "hint": "De bevolking groeide.",
+              "explanation": "Het juiste antwoord is: Meer mensen hadden steeds meer voedsel nodig."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom kozen boeren een vaste woonplaats?",
+              "options": [
+                "Ze moesten elke dag verhuizen",
+                "Ze konden niet in huizen wonen",
+                "Ze wilden geen dorpen stichten",
+                "Hun gewassen en vee hadden verzorging nodig"
+              ],
+              "correct": 3,
+              "hint": "Een akker kun je niet meenemen.",
+              "explanation": "Het juiste antwoord is: Hun gewassen en vee hadden verzorging nodig."
+            },
+            {
+              "type": "mc",
+              "question": "Welk type woning gebruikten de eerste landbouwers vaak?",
+              "options": [
+                "Een huis van gedroogde klei",
+                "Een flat van beton",
+                "Een wolkenkrabber",
+                "Een ijzeren hut"
+              ],
+              "correct": 0,
+              "hint": "Kijk naar de tekst bij bron 4.",
+              "explanation": "Het juiste antwoord is: Een huis van gedroogde klei."
+            },
+            {
+              "type": "mc",
+              "question": "Waarvoor werden de huizen van eerste boeren ook gebruikt?",
+              "options": [
+                "Als boekenwinkel",
+                "Als stal en opslagplaats voor de oogst",
+                "Als vliegveld",
+                "Alleen als koninklijke tempel"
+              ],
+              "correct": 1,
+              "hint": "Denk aan vee en geoogst voedsel.",
+              "explanation": "Het juiste antwoord is: Als stal en opslagplaats voor de oogst."
+            },
+            {
+              "type": "mc",
+              "question": "Wat ontstond doordat boeren bij elkaar bleven wonen?",
+              "options": [
+                "Wereldrijken van één dag",
+                "Grote fabrieken",
+                "Dorpen",
+                "Luchthavens"
+              ],
+              "correct": 2,
+              "hint": "Mensen bleven op vaste plekken.",
+              "explanation": "Het juiste antwoord is: Dorpen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat was een economisch gevolg van de landbouw?",
+              "options": [
+                "Iedereen verdiende precies hetzelfde",
+                "Al het voedsel verdween",
+                "Niemand werkte meer",
+                "Meer voedsel en soms meer rijkdom"
+              ],
+              "correct": 3,
+              "hint": "Overschotten maakten verschil mogelijk.",
+              "explanation": "Het juiste antwoord is: Meer voedsel en soms meer rijkdom."
+            },
+            {
+              "type": "mc",
+              "question": "Wat was een sociaal gevolg van de landbouw?",
+              "options": [
+                "Verschillen in macht en rijkdom namen toe",
+                "Alle dorpen werden even klein",
+                "Niemand nam meer besluiten",
+                "Iedereen werd jager"
+              ],
+              "correct": 0,
+              "hint": "Niet iedereen bezat evenveel spullen of land.",
+              "explanation": "Het juiste antwoord is: Verschillen in macht en rijkdom namen toe."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom kregen sommige mensen in grote dorpen meer macht?",
+              "options": [
+                "Er was geen samenwerking meer",
+                "Er waren leiders nodig voor gezamenlijke besluiten",
+                "Iedereen werd automatisch koning",
+                "Alleen kinderen mochten beslissen"
+              ],
+              "correct": 1,
+              "hint": "Grote groepen kunnen niet altijd alles samen bespreken.",
+              "explanation": "Het juiste antwoord is: Er waren leiders nodig voor gezamenlijke besluiten."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe veranderde de cultuur na de agrarische revolutie?",
+              "options": [
+                "Er kwamen geen nieuwe gewoontes",
+                "Alle kunst verdween",
+                "Rijke mensen lieten grotere huizen en sieraden maken",
+                "Mensen mochten geen kleding meer dragen"
+              ],
+              "correct": 2,
+              "hint": "Denk aan laten zien hoe rijk je bent.",
+              "explanation": "Het juiste antwoord is: Rijke mensen lieten grotere huizen en sieraden maken."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom was landbouw niet altijd gezonder dan jagen en verzamelen?",
+              "options": [
+                "Boeren hoefden niet te werken",
+                "Iedereen at veel gevarieerder",
+                "Boeren verhuisden ieder uur",
+                "Mensen konden ziek worden door samenleven met vee"
+              ],
+              "correct": 3,
+              "hint": "Sommige ziekten kunnen van dieren op mensen overgaan.",
+              "explanation": "Het juiste antwoord is: Mensen konden ziek worden door samenleven met vee."
+            },
+            {
+              "type": "mc",
+              "question": "Wat gebeurde er met het voedselpatroon van boeren?",
+              "options": [
+                "Het werd vaak minder gevarieerd",
+                "Ze aten altijd meer verschillende planten",
+                "Ze aten alleen vis",
+                "Ze aten helemaal niets"
+              ],
+              "correct": 0,
+              "hint": "Boeren verbouwden vaak maar enkele gewassen.",
+              "explanation": "Het juiste antwoord is: Het werd vaak minder gevarieerd."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom waren misoogsten extra gevaarlijk voor boeren?",
+              "options": [
+                "Er waren toen al supermarkten",
+                "Ze konden niet gemakkelijk verhuizen om ander voedsel te zoeken",
+                "Ze hadden altijd onbeperkt voedsel",
+                "Ze konden voedsel toveren"
+              ],
+              "correct": 1,
+              "hint": "Een vaste akker maakt minder flexibel.",
+              "explanation": "Het juiste antwoord is: Ze konden niet gemakkelijk verhuizen om ander voedsel te zoeken."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent economie in de tekst?",
+              "options": [
+                "Alleen het bouwen van piramides",
+                "De studie van vulkanen",
+                "Hoe mensen in hun onderhoud voorzien en opbrengsten verdelen",
+                "Alleen handel met geld"
+              ],
+              "correct": 2,
+              "hint": "Het gaat ook over werk, voedsel en verdeling.",
+              "explanation": "Het juiste antwoord is: Hoe mensen in hun onderhoud voorzien en opbrengsten verdelen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een voordeel van landbouw voor bevolkingsgroei?",
+              "options": [
+                "Niemand hoefde meer te eten",
+                "Alle ziekten verdwenen",
+                "Er waren geen kinderen meer",
+                "Er kon meer voedsel geproduceerd worden"
+              ],
+              "correct": 3,
+              "hint": "Een grotere voedselvoorraad kan meer mensen voeden.",
+              "explanation": "Het juiste antwoord is: Er kon meer voedsel geproduceerd worden."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een voorbeeld van veeteelt?",
+              "options": [
+                "Geiten houden voor melk",
+                "In het bos bessen plukken",
+                "Stenen werktuigen opgraven",
+                "Wilde vissen met een speer vangen"
+              ],
+              "correct": 0,
+              "hint": "Het dier wordt gehouden, niet alleen gevangen.",
+              "explanation": "Het juiste antwoord is: Geiten houden voor melk."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom was landbouw geen plotselinge uitvinding?",
+              "options": [
+                "Iedereen gebruikte meteen machines",
+                "Mensen leerden in kleine stappen steeds meer over zaaien en dieren",
+                "Eén koning bedacht in een nacht alles",
+                "Het werd tegelijk overal ingevoerd"
+              ],
+              "correct": 1,
+              "hint": "De ontwikkeling verliep geleidelijk.",
+              "explanation": "Het juiste antwoord is: Mensen leerden in kleine stappen steeds meer over zaaien en dieren."
+            }
+          ],
+          "questionsPerAttempt": 15
+        },
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "§3 · De Nijl, handel en de Egyptische samenleving",
+          "description": "26 vragen over irrigatielandbouw, specialisatie, handel, steden, brons en sociale lagen. Iedere ronde 15 wisselende vragen.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat maakte het land langs de Nijl vruchtbaar?",
+              "options": [
+                "Zout water uit de zee",
+                "Slib dat de rivier na overstromingen achterliet",
+                "Een jaarlijkse sneeuwstorm",
+                "Alleen kunstmest uit fabrieken"
+              ],
+              "correct": 1,
+              "hint": "De rivier nam vruchtbare grond mee.",
+              "explanation": "Het juiste antwoord is: Slib dat de rivier na overstromingen achterliet."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom steeg het waterpeil van de Nijl elke zomer?",
+              "options": [
+                "Omdat farao's het water omhoog pompten",
+                "Door een vulkaan naast de rivier",
+                "Door hevige regenval ver naar het zuiden",
+                "Door het smelten van sneeuw in Egypte"
+              ],
+              "correct": 2,
+              "hint": "De regen viel duizenden kilometers verderop.",
+              "explanation": "Het juiste antwoord is: Door hevige regenval ver naar het zuiden."
+            },
+            {
+              "type": "mc",
+              "question": "Wanneer konden de Egyptenaren hun gewassen verbouwen?",
+              "options": [
+                "Alleen midden in de overstroming",
+                "Alleen op boten",
+                "Tijdens een zandstorm",
+                "Nadat het overstromingswater was gezakt"
+              ],
+              "correct": 3,
+              "hint": "De akkers kwamen weer droog te liggen.",
+              "explanation": "Het juiste antwoord is: Nadat het overstromingswater was gezakt."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is irrigatielandbouw?",
+              "options": [
+                "Landbouw met aangelegd waterbeheer via dijken en kanalen",
+                "Landbouw zonder ooit water te gebruiken",
+                "Landbouw alleen in bossen",
+                "Het aanleggen van piramides"
+              ],
+              "correct": 0,
+              "hint": "Irrigatie betekent water naar de akkers brengen.",
+              "explanation": "Het juiste antwoord is: Landbouw met aangelegd waterbeheer via dijken en kanalen."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom legden Egyptenaren kanalen aan?",
+              "options": [
+                "Om mummies te vervoeren",
+                "Om ook verder gelegen akkers te bevloeien",
+                "Om de zon te laten opkomen",
+                "Om huizen te verwarmen"
+              ],
+              "correct": 1,
+              "hint": "Niet iedere akker lag aan de rivier.",
+              "explanation": "Het juiste antwoord is: Om ook verder gelegen akkers te bevloeien."
+            },
+            {
+              "type": "mc",
+              "question": "Waarvoor dienden waterbekkens?",
+              "options": [
+                "Om bronzen voorwerpen te bewaren",
+                "Om tekst op te schrijven",
+                "Om water langer vast te houden",
+                "Om belastingen te tellen"
+              ],
+              "correct": 2,
+              "hint": "Denk aan de droge perioden.",
+              "explanation": "Het juiste antwoord is: Om water langer vast te houden."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom legden Egyptenaren dijken aan?",
+              "options": [
+                "Om het hele land onder zout water te zetten",
+                "Om steden te verplaatsen",
+                "Om de god Re gevangen te houden",
+                "Om het water te beheersen en vast te houden"
+              ],
+              "correct": 3,
+              "hint": "Irrigatie vraagt controle van water.",
+              "explanation": "Het juiste antwoord is: Om het water te beheersen en vast te houden."
+            },
+            {
+              "type": "mc",
+              "question": "Welke gewassen verbouwden Egyptische boeren volgens de les?",
+              "options": [
+                "Graan, uien en bonen",
+                "Alleen rijst en koffie",
+                "Alleen ananas",
+                "Alleen aardappelen"
+              ],
+              "correct": 0,
+              "hint": "Denk aan voorbeelden uit de paragraaf.",
+              "explanation": "Het juiste antwoord is: Graan, uien en bonen."
+            },
+            {
+              "type": "mc",
+              "question": "Welk voedsel haalden Egyptenaren behalve landbouwproducten uit de Nijl?",
+              "options": [
+                "Glas",
+                "Vis",
+                "Chocolade",
+                "Aardolie"
+              ],
+              "correct": 1,
+              "hint": "In de rivier leefden dieren.",
+              "explanation": "Het juiste antwoord is: Vis."
+            },
+            {
+              "type": "mc",
+              "question": "Welk gevolg had irrigatielandbouw voor de oogst?",
+              "options": [
+                "Niemand hoefde nog te eten",
+                "Het land werd onmiddellijk een woestijn",
+                "Er werd meer voedsel geproduceerd dan boeren zelf nodig hadden",
+                "De oogst verdween voorgoed"
+              ],
+              "correct": 2,
+              "hint": "Denk aan voedseloverschotten.",
+              "explanation": "Het juiste antwoord is: Er werd meer voedsel geproduceerd dan boeren zelf nodig hadden."
+            },
+            {
+              "type": "mc",
+              "question": "Welk gevolg hadden hoge oogsten voor de bevolking?",
+              "options": [
+                "Er werden geen kinderen meer geboren",
+                "Alle dorpen verdwenen",
+                "Iedereen werd soldaat",
+                "De bevolking groeide"
+              ],
+              "correct": 3,
+              "hint": "Meer voedsel maakt meer inwoners mogelijk.",
+              "explanation": "Het juiste antwoord is: De bevolking groeide."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom hoefde in Egypte niet iedereen boer te zijn?",
+              "options": [
+                "Voedseloverschotten maakten andere beroepen mogelijk",
+                "Iedereen werd farao",
+                "Er mochten geen gewassen meer groeien",
+                "De rivier leverde geen voedsel meer"
+              ],
+              "correct": 0,
+              "hint": "Anderen konden eten van wat boeren overhielden.",
+              "explanation": "Het juiste antwoord is: Voedseloverschotten maakten andere beroepen mogelijk."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is nijverheid?",
+              "options": [
+                "Een land bestuurd door priesters",
+                "Met de hand voorwerpen maken",
+                "Een militaire oorlog voeren",
+                "Alleen de Nijl oversteken"
+              ],
+              "correct": 1,
+              "hint": "Denk aan potten, meubels en kleding.",
+              "explanation": "Het juiste antwoord is: Met de hand voorwerpen maken."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent specialisatie?",
+              "options": [
+                "Mensen stoppen allemaal met werken",
+                "Alleen voedsel verzamelen",
+                "Je richt je op één beroep of vaardigheid",
+                "Iedereen maakt altijd alles zelf"
+              ],
+              "correct": 2,
+              "hint": "Denk aan een pottenbakker of wever.",
+              "explanation": "Het juiste antwoord is: Je richt je op één beroep of vaardigheid."
+            },
+            {
+              "type": "mc",
+              "question": "Welk beroep past bij nijverheid?",
+              "options": [
+                "Farao",
+                "Belastingontvanger",
+                "Soldaat",
+                "Pottenbakker"
+              ],
+              "correct": 3,
+              "hint": "Dit beroep maakt voorwerpen met de hand.",
+              "explanation": "Het juiste antwoord is: Pottenbakker."
+            },
+            {
+              "type": "mc",
+              "question": "Wat ontstond doordat vaklieden producten ruilden?",
+              "options": [
+                "Handel",
+                "Een nieuwe ijstijd",
+                "Het einde van alle dorpen",
+                "De afschaffing van beroepen"
+              ],
+              "correct": 0,
+              "hint": "Producten en diensten werden uitgewisseld.",
+              "explanation": "Het juiste antwoord is: Handel."
+            },
+            {
+              "type": "mc",
+              "question": "Welke goederen haalden Egyptenaren volgens de tekst van buiten Egypte?",
+              "options": [
+                "Boeken van drukpersen",
+                "Ivoor, hout, vee en kostbare stenen",
+                "Computers en vliegtuigen",
+                "IJsblokjes en benzine"
+              ],
+              "correct": 1,
+              "hint": "Denk aan grondstoffen en waardevolle producten.",
+              "explanation": "Het juiste antwoord is: Ivoor, hout, vee en kostbare stenen."
+            },
+            {
+              "type": "mc",
+              "question": "Welke twee Egyptische steden worden genoemd?",
+              "options": [
+                "Parijs en Londen",
+                "Jericho en Amsterdam",
+                "Memphis en Thebe",
+                "Athene en Rome"
+              ],
+              "correct": 2,
+              "hint": "De steden groeiden langs de Nijl.",
+              "explanation": "Het juiste antwoord is: Memphis en Thebe."
+            },
+            {
+              "type": "mc",
+              "question": "Wie woonden er behalve ambachtslieden en handelaren in Egyptische steden?",
+              "options": [
+                "Alleen reizende jagers",
+                "Alleen buitenlandse koningen",
+                "Niemand anders",
+                "Ook bestuurders, priesters en boeren"
+              ],
+              "correct": 3,
+              "hint": "De stad had veel verschillende groepen.",
+              "explanation": "Het juiste antwoord is: Ook bestuurders, priesters en boeren."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een stedelijke gemeenschap?",
+              "options": [
+                "Mensen met verschillende beroepen die samen in een stad wonen",
+                "Alleen jagers die rondtrekken",
+                "Een akker zonder inwoners",
+                "Een alleenstaande farao"
+              ],
+              "correct": 0,
+              "hint": "Ook boeren bij de stad horen erbij.",
+              "explanation": "Het juiste antwoord is: Mensen met verschillende beroepen die samen in een stad wonen."
+            },
+            {
+              "type": "mc",
+              "question": "Welke uitvindingen werden door de landbouw en specialisatie belangrijk?",
+              "options": [
+                "De stoommachine en de auto",
+                "De pottenbakkersschijf, het wiel en de ploeg",
+                "De trein en de televisie",
+                "De telefoon en de computer"
+              ],
+              "correct": 1,
+              "hint": "Denk aan gereedschap uit de oudheid.",
+              "explanation": "Het juiste antwoord is: De pottenbakkersschijf, het wiel en de ploeg."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe maakten mensen brons?",
+              "options": [
+                "Door zout met water te mengen",
+                "Door stenen tot stof te malen",
+                "Door koper en tin samen te smelten",
+                "Door alleen hout te verbranden"
+              ],
+              "correct": 2,
+              "hint": "Het is een mengsel van metalen.",
+              "explanation": "Het juiste antwoord is: Door koper en tin samen te smelten."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom verving brons steeds meer stenen werktuigen?",
+              "options": [
+                "Brons bestond uit zacht brood",
+                "Het was onmogelijk brons te vormen",
+                "Alle stenen waren verdwenen",
+                "Je kon met gegoten brons veel vormen maken"
+              ],
+              "correct": 3,
+              "hint": "Gieten maakte meer vormen mogelijk.",
+              "explanation": "Het juiste antwoord is: Je kon met gegoten brons veel vormen maken."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent sociale lagen in het oude Egypte?",
+              "options": [
+                "Groepen mensen met verschillende rijkdom en macht",
+                "Verschillende grondsoorten langs de rivier",
+                "Alleen verdiepingen van huizen",
+                "De vier seizoenen"
+              ],
+              "correct": 0,
+              "hint": "Denk aan wie veel of weinig aanzien had.",
+              "explanation": "Het juiste antwoord is: Groepen mensen met verschillende rijkdom en macht."
+            },
+            {
+              "type": "mc",
+              "question": "Welke groep was volgens de les het grootst in Egypte?",
+              "options": [
+                "Koninklijke schrijvers",
+                "Boeren",
+                "Farao's",
+                "Hoge priesters"
+              ],
+              "correct": 1,
+              "hint": "De meeste mensen werkten op het land.",
+              "explanation": "Het juiste antwoord is: Boeren."
+            },
+            {
+              "type": "mc",
+              "question": "Wat was de positie van tot slaaf gemaakte mensen volgens de tekst?",
+              "options": [
+                "Ze hoefden nooit te werken",
+                "Ze bezaten allemaal piramides",
+                "Ze hadden weinig zeggenschap en moesten zwaar werk doen",
+                "Ze waren altijd de hoogste bestuurders"
+              ],
+              "correct": 2,
+              "hint": "De tekst noemt de laagste maatschappelijke positie.",
+              "explanation": "Het juiste antwoord is: Ze hadden weinig zeggenschap en moesten zwaar werk doen."
+            }
+          ],
+          "questionsPerAttempt": 15
+        },
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "§4 · Farao, schrift en godsdienst",
+          "description": "25 vragen over het bestuur, ambtenaren, belastingen, hiërogliefen, goden, mummies en grafgiften. Iedere ronde 15 wisselende vragen.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat is een staat?",
+              "options": [
+                "Een verzameling zonder grenzen",
+                "Een gebied met grenzen, één bestuur en dezelfde regels",
+                "Een groep zonder wetten of leider",
+                "Alleen een klein vissersbootje"
+              ],
+              "correct": 1,
+              "hint": "Denk aan bestuur en gemeenschappelijke wetten.",
+              "explanation": "Het juiste antwoord is: Een gebied met grenzen, één bestuur en dezelfde regels."
+            },
+            {
+              "type": "mc",
+              "question": "Rond welk jaar kreeg één bestuurder de macht over heel Egypte?",
+              "options": [
+                "Rond 9000 v.C.",
+                "Rond 1000 n.C.",
+                "Rond 3100 v.C.",
+                "Rond 2026 n.C."
+              ],
+              "correct": 2,
+              "hint": "Het gebeurde vele eeuwen voor Alexander de Grote.",
+              "explanation": "Het juiste antwoord is: Rond 3100 v.C.."
+            },
+            {
+              "type": "mc",
+              "question": "Wie was de hoogste bestuurder van het oude Egypte?",
+              "options": [
+                "De pottenbakker",
+                "De gewone soldaat",
+                "De visser",
+                "De farao"
+              ],
+              "correct": 3,
+              "hint": "Dit was de koning van Egypte.",
+              "explanation": "Het juiste antwoord is: De farao."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom hield de farao toezicht op de irrigatiewerken?",
+              "options": [
+                "Dijken en kanalen moesten goed onderhouden worden voor de oogst",
+                "De Nijl mocht nooit meer overstromen",
+                "Hij wilde alle boeren laten verhuizen",
+                "Schrift moest worden verboden"
+              ],
+              "correct": 0,
+              "hint": "De waterwerken waren belangrijk voor voedsel.",
+              "explanation": "Het juiste antwoord is: Dijken en kanalen moesten goed onderhouden worden voor de oogst."
+            },
+            {
+              "type": "mc",
+              "question": "Welke taak hoorde bij de farao?",
+              "options": [
+                "Alleen vuur aanmaken",
+                "Wetten maken en voor orde en verdediging zorgen",
+                "Alleen graan malen",
+                "Alleen kleding weven"
+              ],
+              "correct": 1,
+              "hint": "Hij had meerdere bestuurstaken.",
+              "explanation": "Het juiste antwoord is: Wetten maken en voor orde en verdediging zorgen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat zijn ambtenaren?",
+              "options": [
+                "Wilde dieren langs de Nijl",
+                "Mensen die altijd jagen",
+                "Mensen die namens het bestuur taken uitvoeren",
+                "Alleen Egyptische goden"
+              ],
+              "correct": 2,
+              "hint": "Denk aan schrijvers en belastinginners.",
+              "explanation": "Het juiste antwoord is: Mensen die namens het bestuur taken uitvoeren."
+            },
+            {
+              "type": "mc",
+              "question": "Waarmee betaalden Egyptenaren volgens de les belasting?",
+              "options": [
+                "Met bankpassen",
+                "Alleen met eurobiljetten",
+                "Met computers",
+                "Met een deel van hun oogst"
+              ],
+              "correct": 3,
+              "hint": "Geld was niet de enige manier om te betalen.",
+              "explanation": "Het juiste antwoord is: Met een deel van hun oogst."
+            },
+            {
+              "type": "mc",
+              "question": "Waarvoor gebruikte de farao belasting volgens de tekst?",
+              "options": [
+                "Voor tempels, paleizen, ambtenaren en soldaten",
+                "Alleen voor zijn verjaardag",
+                "Om alle kanalen af te breken",
+                "Om alle schrijvers weg te sturen"
+              ],
+              "correct": 0,
+              "hint": "Het bestuur en bouwwerken kostten middelen.",
+              "explanation": "Het juiste antwoord is: Voor tempels, paleizen, ambtenaren en soldaten."
+            },
+            {
+              "type": "mc",
+              "question": "Wat legden Egyptische bestuurders aan als reserve voor slechte tijden?",
+              "options": [
+                "Meer woestijnzand",
+                "Voorraden voedsel",
+                "Alleen voorraadkamers met stenen",
+                "Grote voorraden computers"
+              ],
+              "correct": 1,
+              "hint": "Denk aan misoogsten en sprinkhanen.",
+              "explanation": "Het juiste antwoord is: Voorraden voedsel."
+            },
+            {
+              "type": "mc",
+              "question": "Wie veroverde Egypte vanaf 332 v.C. volgens de tekst?",
+              "options": [
+                "De Feniciërs in 2026",
+                "Een prehistorische jager",
+                "Alexander de Grote en zijn opvolgers",
+                "Julius Caesar in 9000 v.C."
+              ],
+              "correct": 2,
+              "hint": "Hij was een Griekse veroveraar.",
+              "explanation": "Het juiste antwoord is: Alexander de Grote en zijn opvolgers."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom was het schrift nuttig voor de farao?",
+              "options": [
+                "Om overstromingen tegen te houden",
+                "Om graan sneller te laten groeien",
+                "Om bronzen zwaarden te smelten",
+                "Om belastingen, wetten en besluiten vast te leggen"
+              ],
+              "correct": 3,
+              "hint": "Besturen vraagt administratie.",
+              "explanation": "Het juiste antwoord is: Om belastingen, wetten en besluiten vast te leggen."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe heet het oude Egyptische schrift?",
+              "options": [
+                "Hiërogliefenschrift",
+                "Brailleschrift",
+                "Morsecode",
+                "Spijkerschrift uit het Latijn"
+              ],
+              "correct": 0,
+              "hint": "Denk aan tekens van dieren en voorwerpen.",
+              "explanation": "Het juiste antwoord is: Hiërogliefenschrift."
+            },
+            {
+              "type": "mc",
+              "question": "Rond wanneer ontstond het hiërogliefenschrift volgens de les?",
+              "options": [
+                "Rond 100 v.C.",
+                "Rond 3100 v.C.",
+                "Rond 2000 n.C.",
+                "Rond 500 n.C."
+              ],
+              "correct": 1,
+              "hint": "Ongeveer toen Egypte één staat werd.",
+              "explanation": "Het juiste antwoord is: Rond 3100 v.C.."
+            },
+            {
+              "type": "mc",
+              "question": "Waaruit bestonden hiërogliefen?",
+              "options": [
+                "Alleen cijfers van computers",
+                "Alleen gekleurde stippen",
+                "Tekens die woorden of klanken uitbeeldden",
+                "Alleen de letters A tot Z"
+              ],
+              "correct": 2,
+              "hint": "Denk aan afbeeldingen uit het dagelijks leven.",
+              "explanation": "Het juiste antwoord is: Tekens die woorden of klanken uitbeeldden."
+            },
+            {
+              "type": "mc",
+              "question": "Wat was een voordeel van een alfabet ten opzichte van heel veel hiëroglieftekens?",
+              "options": [
+                "Niemand hoefde meer te lezen",
+                "De letters stonden alleen voor complete verhalen",
+                "Het alfabet bevatte altijd duizenden tekens",
+                "Je hoefde veel minder tekens te leren"
+              ],
+              "correct": 3,
+              "hint": "Een beperkt aantal letters kan veel woorden vormen.",
+              "explanation": "Het juiste antwoord is: Je hoefde veel minder tekens te leren."
+            },
+            {
+              "type": "mc",
+              "question": "Welk volk verspreidde rond 1000 v.C. een alfabet met 22 letters?",
+              "options": [
+                "De Feniciërs",
+                "De Vikingen",
+                "De Inca's",
+                "De Romeinen uit 2026"
+              ],
+              "correct": 0,
+              "hint": "Het waren handelaren rond de Middellandse Zee.",
+              "explanation": "Het juiste antwoord is: De Feniciërs."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent polytheïsme?",
+              "options": [
+                "Geloof dat de farao een boer is",
+                "Geloof in meerdere goden",
+                "Geloof in precies één god",
+                "Geloof dat er helemaal geen goden zijn"
+              ],
+              "correct": 1,
+              "hint": "Poly betekent veel.",
+              "explanation": "Het juiste antwoord is: Geloof in meerdere goden."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een natuurgodsdienst?",
+              "options": [
+                "Alleen een stelsel van wetten",
+                "Alleen een beroep als handelaar",
+                "Een godsdienst die natuurkrachten vereert",
+                "Een godsdienst zonder natuur"
+              ],
+              "correct": 2,
+              "hint": "Denk aan de zon en de Nijl.",
+              "explanation": "Het juiste antwoord is: Een godsdienst die natuurkrachten vereert."
+            },
+            {
+              "type": "mc",
+              "question": "Wie was Re volgens de Egyptische godsdienst?",
+              "options": [
+                "De god van de onderwereld",
+                "Een Griekse veroveraar",
+                "Een Egyptische schrijver",
+                "De zonnegod"
+              ],
+              "correct": 3,
+              "hint": "Elke ochtend kwam zijn zon opnieuw op.",
+              "explanation": "Het juiste antwoord is: De zonnegod."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom liet de farao tempels bouwen?",
+              "options": [
+                "Voor de verering van de goden",
+                "Om de oogst te meten",
+                "Alleen om soldaten te laten slapen",
+                "Om wilde dieren te vangen"
+              ],
+              "correct": 0,
+              "hint": "Denk aan het godsdienstige leven.",
+              "explanation": "Het juiste antwoord is: Voor de verering van de goden."
+            },
+            {
+              "type": "mc",
+              "question": "Welke taak hadden priesters?",
+              "options": [
+                "Het schrift afschaffen",
+                "Het contact met de goden onderhouden en offers brengen",
+                "Belasting betalen namens alle boeren",
+                "Alleen jagen op dieren"
+              ],
+              "correct": 1,
+              "hint": "Zij werkten in tempels.",
+              "explanation": "Het juiste antwoord is: Het contact met de goden onderhouden en offers brengen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een offer in deze les?",
+              "options": [
+                "Een deel van een waterkanaal",
+                "Een soort strijdwagen",
+                "Een geschenk aan een god om hem tevreden te houden",
+                "Een rekening van een handelaar"
+              ],
+              "correct": 2,
+              "hint": "Het gebeurt in een godsdienstige context.",
+              "explanation": "Het juiste antwoord is: Een geschenk aan een god om hem tevreden te houden."
+            },
+            {
+              "type": "mc",
+              "question": "Welke god leidde volgens de Egyptenaren het dodenrijk?",
+              "options": [
+                "Re",
+                "Alexander",
+                "De farao als mens",
+                "Osiris"
+              ],
+              "correct": 3,
+              "hint": "Deze god hoorde bij het leven na de dood.",
+              "explanation": "Het juiste antwoord is: Osiris."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom maakten rijke Egyptenaren mummies?",
+              "options": [
+                "Het lichaam moest bewaard blijven voor het dodenrijk",
+                "Om hun oogst te vergroten",
+                "Om het schrift te verspreiden",
+                "Om stenen werktuigen te maken"
+              ],
+              "correct": 0,
+              "hint": "Denk aan hun geloof in het hiernamaals.",
+              "explanation": "Het juiste antwoord is: Het lichaam moest bewaard blijven voor het dodenrijk."
+            },
+            {
+              "type": "mc",
+              "question": "Wat zijn grafgiften?",
+              "options": [
+                "Cadeaus voor een pasgeboren kind",
+                "Spullen die aan een dode worden meegegeven voor het hiernamaals",
+                "Belastingen voor een boer",
+                "Graan dat in een kanaal groeit"
+              ],
+              "correct": 1,
+              "hint": "De doden zouden deze dingen nodig hebben.",
+              "explanation": "Het juiste antwoord is: Spullen die aan een dode worden meegegeven voor het hiernamaals."
+            }
+          ],
+          "questionsPerAttempt": 15
+        },
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "Hoofdstuk 1 · Grote oefentoets (wisselende vragen)",
+          "description": "101 vragen in de vragenbank over §1, §2, de Nijl en Egypte. Elke toets bevat 25 wisselende vragen. Met hints, uitleg en een eindcijfer.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Waar verschenen volgens de les de eerste mensachtige wezens?",
+              "options": [
+                "In Amerika",
+                "In Afrika",
+                "In Europa",
+                "In Egypte"
+              ],
+              "correct": 1,
+              "hint": "Denk aan het continent van onze oudste voorouders.",
+              "explanation": "Het juiste antwoord is: In Afrika."
+            },
+            {
+              "type": "mc",
+              "question": "Ongeveer wanneer verschenen de eerste mensachtige wezens?",
+              "options": [
+                "Vierhonderd jaar geleden",
+                "Tweehonderd miljoen jaar geleden",
+                "Vier miljoen jaar geleden",
+                "Vierduizend jaar geleden"
+              ],
+              "correct": 2,
+              "hint": "De les gaat terug tot vóór de moderne mens.",
+              "explanation": "Het juiste antwoord is: Vier miljoen jaar geleden."
+            },
+            {
+              "type": "mc",
+              "question": "Wat konden de eerste mensachtige wezens dat bijzonder was?",
+              "options": [
+                "Schrijven met letters",
+                "Metalen gereedschap maken",
+                "Piramides bouwen",
+                "Rechtop lopen"
+              ],
+              "correct": 3,
+              "hint": "Denk aan hun houding.",
+              "explanation": "Het juiste antwoord is: Rechtop lopen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat leverde rechtop lopen onze voorouders op?",
+              "options": [
+                "Ze kregen hun handen vrij",
+                "Ze hoefden niet meer te eten",
+                "Ze konden direct lezen",
+                "Ze hoefden geen gereedschap te gebruiken"
+              ],
+              "correct": 0,
+              "hint": "Met vrije handen kun je voorwerpen vasthouden.",
+              "explanation": "Het juiste antwoord is: Ze kregen hun handen vrij."
+            },
+            {
+              "type": "mc",
+              "question": "Welke voorwerpen gebruikten de vroegste mensachtigen als hulpmiddel?",
+              "options": [
+                "Bronzen zwaarden",
+                "Stokken, botten en stenen",
+                "Computers en machines",
+                "Papyrus en boeken"
+              ],
+              "correct": 1,
+              "hint": "Denk aan materialen uit de natuur.",
+              "explanation": "Het juiste antwoord is: Stokken, botten en stenen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat ontdekte men door oude schedels te bestuderen?",
+              "options": [
+                "Iedereen was even groot",
+                "De eerste mensen konden al schrijven",
+                "De hersenen werden geleidelijk groter",
+                "Mensen hadden vroeger geen hersenen"
+              ],
+              "correct": 2,
+              "hint": "De schedel vertelt iets over herseninhoud.",
+              "explanation": "Het juiste antwoord is: De hersenen werden geleidelijk groter."
+            },
+            {
+              "type": "mc",
+              "question": "Welke belangrijke ontdekking maakte het mogelijk voedsel te bereiden?",
+              "options": [
+                "Het ontstaan van alfabetten",
+                "Het bouwen van tempels",
+                "Het gebruik van geld",
+                "Het gebruik van vuur"
+              ],
+              "correct": 3,
+              "hint": "Met deze ontdekking kon men ook roofdieren afschrikken.",
+              "explanation": "Het juiste antwoord is: Het gebruik van vuur."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een neanderthaler volgens de tekst?",
+              "options": [
+                "Een uitgestorven mensensoort",
+                "Een Egyptische farao",
+                "Een soort landbouwgereedschap",
+                "De eerste schrijver"
+              ],
+              "correct": 0,
+              "hint": "Denk aan andere mensensoorten naast ons.",
+              "explanation": "Het juiste antwoord is: Een uitgestorven mensensoort."
+            },
+            {
+              "type": "mc",
+              "question": "Wanneer ontstond de moderne mens ongeveer?",
+              "options": [
+                "500 jaar geleden",
+                "200.000 jaar geleden",
+                "2000 jaar geleden",
+                "4 miljoen jaar geleden"
+              ],
+              "correct": 1,
+              "hint": "Vergelijk de tijdlijn op pagina 17.",
+              "explanation": "Het juiste antwoord is: 200.000 jaar geleden."
+            },
+            {
+              "type": "mc",
+              "question": "Waar ontstond de moderne mens volgens de les?",
+              "options": [
+                "Bij de Noordpool",
+                "In Mesopotamië",
+                "In Afrika",
+                "In Rome"
+              ],
+              "correct": 2,
+              "hint": "De moderne mens verspreidde zich daarna over de wereld.",
+              "explanation": "Het juiste antwoord is: In Afrika."
+            },
+            {
+              "type": "mc",
+              "question": "Wat zijn jagers-verzamelaars?",
+              "options": [
+                "Mensen die vooral graan verhandelen",
+                "Mensen die altijd in steden wonen",
+                "Mensen die belasting innen",
+                "Mensen die leven van jagen, vissen en verzamelen"
+              ],
+              "correct": 3,
+              "hint": "De naam zegt iets over hun voedselvoorziening.",
+              "explanation": "Het juiste antwoord is: Mensen die leven van jagen, vissen en verzamelen."
+            },
+            {
+              "type": "mc",
+              "question": "Welke drie activiteiten leverden jagers-verzamelaars voedsel op?",
+              "options": [
+                "Jagen, vissen en verzamelen",
+                "Zaaien, oogsten en belasting betalen",
+                "Schrijven, handelen en bouwen",
+                "Pottenbakken, weven en smeden"
+              ],
+              "correct": 0,
+              "hint": "Denk aan eten uit de natuur.",
+              "explanation": "Het juiste antwoord is: Jagen, vissen en verzamelen."
+            },
+            {
+              "type": "mc",
+              "question": "Welke groep bestaat uit verzameld voedsel?",
+              "options": [
+                "Belasting en loon",
+                "Bessen, noten en wortels",
+                "Brood uit een fabriek",
+                "IJzeren bijlen en potten"
+              ],
+              "correct": 1,
+              "hint": "Wat kun je zonder akkerbouw vinden?",
+              "explanation": "Het juiste antwoord is: Bessen, noten en wortels."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom trokken jagers-verzamelaars rond?",
+              "options": [
+                "Ze wilden grote piramides bouwen",
+                "Ze konden nog niet lopen",
+                "Ze zochten steeds nieuwe voedselbronnen",
+                "Ze moesten dagelijks belasting betalen"
+              ],
+              "correct": 2,
+              "hint": "Het voedsel in één gebied raakte op.",
+              "explanation": "Het juiste antwoord is: Ze zochten steeds nieuwe voedselbronnen."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe groot waren de groepen jagers-verzamelaars volgens de tekst meestal?",
+              "options": [
+                "Duizenden mensen",
+                "Precies twee mensen",
+                "Meer dan tienduizend mensen",
+                "Ongeveer 25 tot 40 mensen"
+              ],
+              "correct": 3,
+              "hint": "Het waren kleine rondtrekkende groepen.",
+              "explanation": "Het juiste antwoord is: Ongeveer 25 tot 40 mensen."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom bleef een groep jagers-verzamelaars vaak klein?",
+              "options": [
+                "Een grotere groep had meer voedsel nodig",
+                "Een grotere groep mocht geen vuur gebruiken",
+                "Grote groepen konden niet praten",
+                "Niemand kon in een groep beslissen"
+              ],
+              "correct": 0,
+              "hint": "Denk aan de hoeveelheid beschikbare natuurvoeding.",
+              "explanation": "Het juiste antwoord is: Een grotere groep had meer voedsel nodig."
+            },
+            {
+              "type": "mc",
+              "question": "Van welk materiaal maakten jagers-verzamelaars kleding?",
+              "options": [
+                "IJzerplaten",
+                "Dierenhuiden",
+                "Plastic",
+                "Katoen uit fabrieken"
+              ],
+              "correct": 1,
+              "hint": "Ze gebruikten wat de jacht opleverde.",
+              "explanation": "Het juiste antwoord is: Dierenhuiden."
+            },
+            {
+              "type": "mc",
+              "question": "Waarvoor gebruikten jagers-verzamelaars tenten?",
+              "options": [
+                "Als permanente stenen paleizen",
+                "Als tempels voor Re",
+                "Om mee te kunnen verhuizen",
+                "Om graanbelasting op te slaan"
+              ],
+              "correct": 2,
+              "hint": "Hun woonplek moest verplaatsbaar zijn.",
+              "explanation": "Het juiste antwoord is: Om mee te kunnen verhuizen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent taakverdeling?",
+              "options": [
+                "Iedereen doet altijd precies dezelfde taak",
+                "Een farao verbiedt handel",
+                "Het verdelen van een land in provincies",
+                "Mensen binnen een groep verdelen werkzaamheden"
+              ],
+              "correct": 3,
+              "hint": "Sommigen verzamelen en anderen jagen.",
+              "explanation": "Het juiste antwoord is: Mensen binnen een groep verdelen werkzaamheden."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe groot waren de sociale verschillen binnen jagers-verzamelaars meestal?",
+              "options": [
+                "Vrij klein",
+                "Heel groot zoals in een rijk",
+                "Alleen priesters hadden macht",
+                "Iedereen was slaaf"
+              ],
+              "correct": 0,
+              "hint": "In de les hadden de meeste mensen ongeveer evenveel.",
+              "explanation": "Het juiste antwoord is: Vrij klein."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom weten we weinig van wat prehistorische mensen dachten?",
+              "options": [
+                "Er bestonden geen talen",
+                "Ze lieten geen schriftelijke bronnen na",
+                "Niemand maakte voorwerpen",
+                "Er zijn nooit botten gevonden"
+              ],
+              "correct": 1,
+              "hint": "Denk aan het ontbreken van teksten.",
+              "explanation": "Het juiste antwoord is: Ze lieten geen schriftelijke bronnen na."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent prehistorie?",
+              "options": [
+                "Alleen de Romeinse tijd",
+                "De tijd waarin al computers waren",
+                "De tijd voordat mensen schrift gebruikten",
+                "De tijd nadat de farao regeerde"
+              ],
+              "correct": 2,
+              "hint": "Het tegenovergestelde van geschreven geschiedenis.",
+              "explanation": "Het juiste antwoord is: De tijd voordat mensen schrift gebruikten."
+            },
+            {
+              "type": "mc",
+              "question": "Wat bestuderen archeologen vooral om de prehistorie te onderzoeken?",
+              "options": [
+                "Alleen moderne kranten",
+                "Alleen schriftelijke wetten",
+                "Alleen huidige landsgrenzen",
+                "Overblijfselen zoals botten en werktuigen"
+              ],
+              "correct": 3,
+              "hint": "Er waren nog geen geschreven bronnen.",
+              "explanation": "Het juiste antwoord is: Overblijfselen zoals botten en werktuigen."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom is het woord steentijd volgens de tekst wat misleidend?",
+              "options": [
+                "Ook hout, huiden en botten werden gebruikt",
+                "Mensen kenden toen helemaal geen stenen",
+                "Iedereen woonde in stenen huizen",
+                "Alle werktuigen waren van brons"
+              ],
+              "correct": 0,
+              "hint": "Veel materialen zijn minder goed bewaard gebleven.",
+              "explanation": "Het juiste antwoord is: Ook hout, huiden en botten werden gebruikt."
+            },
+            {
+              "type": "mc",
+              "question": "Wanneer laten historici de historie beginnen?",
+              "options": [
+                "Toen de eerste dieren verschenen",
+                "Als mensen beginnen te schrijven",
+                "Bij het ontstaan van de aarde",
+                "Toen mensen leerden jagen"
+              ],
+              "correct": 1,
+              "hint": "De geschreven bron maakt het verschil.",
+              "explanation": "Het juiste antwoord is: Als mensen beginnen te schrijven."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent akkerbouw?",
+              "options": [
+                "Een huis van steen bouwen",
+                "Zelf gewassen zoals graan en groenten verbouwen",
+                "Wilde dieren vangen met speren",
+                "Alleen dieren temmen"
+              ],
+              "correct": 1,
+              "hint": "Een akker gebruik je om te verbouwen.",
+              "explanation": "Het juiste antwoord is: Zelf gewassen zoals graan en groenten verbouwen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent veeteelt?",
+              "options": [
+                "Alleen vissen in rivieren",
+                "Belastingen betalen aan de farao",
+                "Dieren houden voor bijvoorbeeld melk, vlees of wol",
+                "Gras maaien langs de weg"
+              ],
+              "correct": 2,
+              "hint": "Denk aan koeien, geiten en schapen.",
+              "explanation": "Het juiste antwoord is: Dieren houden voor bijvoorbeeld melk, vlees of wol."
+            },
+            {
+              "type": "mc",
+              "question": "Wat noemen we samen landbouw?",
+              "options": [
+                "Handel en belasting",
+                "Jagen en verzamelen",
+                "Schrijven en lezen",
+                "Akkerbouw en veeteelt"
+              ],
+              "correct": 3,
+              "hint": "Het gaat om gewassen én dieren.",
+              "explanation": "Het juiste antwoord is: Akkerbouw en veeteelt."
+            },
+            {
+              "type": "mc",
+              "question": "Ongeveer wanneer begon de eerste ontwikkeling naar akkerbouw volgens de les?",
+              "options": [
+                "Rond 9000 v.C.",
+                "Rond 1000 n.C.",
+                "Rond 2000 n.C.",
+                "Rond 332 v.C."
+              ],
+              "correct": 0,
+              "hint": "Kijk naar het begin van de agrarische revolutie.",
+              "explanation": "Het juiste antwoord is: Rond 9000 v.C.."
+            },
+            {
+              "type": "mc",
+              "question": "In welk gebied ontstond volgens de tekst de vroege landbouw?",
+              "options": [
+                "Australië",
+                "Het Midden-Oosten",
+                "De Noordpool",
+                "West-Europa"
+              ],
+              "correct": 1,
+              "hint": "Daar groeiden veel geschikte wilde graansoorten.",
+              "explanation": "Het juiste antwoord is: Het Midden-Oosten."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent de agrarische revolutie?",
+              "options": [
+                "De uitvinding van internet",
+                "Het ontstaan van moderne fabrieken",
+                "De overgang van jagen en verzamelen naar landbouw",
+                "Een oorlog tussen twee farao's"
+              ],
+              "correct": 2,
+              "hint": "Agrarisch heeft te maken met landbouw.",
+              "explanation": "Het juiste antwoord is: De overgang van jagen en verzamelen naar landbouw."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom spreken we van een revolutie bij de overgang naar landbouw?",
+              "options": [
+                "Alle veranderingen gebeurden in één dag",
+                "Alle boeren vochten tegen jagers",
+                "Het schrift werd verboden",
+                "De overgang had enorm grote gevolgen"
+              ],
+              "correct": 3,
+              "hint": "Een revolutie verandert het leven ingrijpend.",
+              "explanation": "Het juiste antwoord is: De overgang had enorm grote gevolgen."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom konden mensen eerst langer op één plek blijven wonen?",
+              "options": [
+                "Het klimaat verbeterde en er was meer voedsel",
+                "Het regende nooit meer",
+                "Ze hadden al auto's",
+                "Ze waren bang om te lopen"
+              ],
+              "correct": 0,
+              "hint": "De tekst beschrijft een verandering in de natuur.",
+              "explanation": "Het juiste antwoord is: Het klimaat verbeterde en er was meer voedsel."
+            },
+            {
+              "type": "mc",
+              "question": "Wat deden mensen in de tweede fase van het ontstaan van landbouw?",
+              "options": [
+                "Een alfabet verspreiden",
+                "Experimenteren met zaaien en oogsten",
+                "Meteen grote steden bouwen",
+                "Alleen nog op mammoeten jagen"
+              ],
+              "correct": 1,
+              "hint": "Ze ontdekten stap voor stap hoe planten groeiden.",
+              "explanation": "Het juiste antwoord is: Experimenteren met zaaien en oogsten."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom werd landbouw uiteindelijk noodzakelijk?",
+              "options": [
+                "Alle wilde dieren verdwenen direct",
+                "De farao voerde al belastingen in",
+                "Meer mensen hadden steeds meer voedsel nodig",
+                "Iedereen moest priester worden"
+              ],
+              "correct": 2,
+              "hint": "De bevolking groeide.",
+              "explanation": "Het juiste antwoord is: Meer mensen hadden steeds meer voedsel nodig."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom kozen boeren een vaste woonplaats?",
+              "options": [
+                "Ze moesten elke dag verhuizen",
+                "Ze konden niet in huizen wonen",
+                "Ze wilden geen dorpen stichten",
+                "Hun gewassen en vee hadden verzorging nodig"
+              ],
+              "correct": 3,
+              "hint": "Een akker kun je niet meenemen.",
+              "explanation": "Het juiste antwoord is: Hun gewassen en vee hadden verzorging nodig."
+            },
+            {
+              "type": "mc",
+              "question": "Welk type woning gebruikten de eerste landbouwers vaak?",
+              "options": [
+                "Een huis van gedroogde klei",
+                "Een flat van beton",
+                "Een wolkenkrabber",
+                "Een ijzeren hut"
+              ],
+              "correct": 0,
+              "hint": "Kijk naar de tekst bij bron 4.",
+              "explanation": "Het juiste antwoord is: Een huis van gedroogde klei."
+            },
+            {
+              "type": "mc",
+              "question": "Waarvoor werden de huizen van eerste boeren ook gebruikt?",
+              "options": [
+                "Als boekenwinkel",
+                "Als stal en opslagplaats voor de oogst",
+                "Als vliegveld",
+                "Alleen als koninklijke tempel"
+              ],
+              "correct": 1,
+              "hint": "Denk aan vee en geoogst voedsel.",
+              "explanation": "Het juiste antwoord is: Als stal en opslagplaats voor de oogst."
+            },
+            {
+              "type": "mc",
+              "question": "Wat ontstond doordat boeren bij elkaar bleven wonen?",
+              "options": [
+                "Wereldrijken van één dag",
+                "Grote fabrieken",
+                "Dorpen",
+                "Luchthavens"
+              ],
+              "correct": 2,
+              "hint": "Mensen bleven op vaste plekken.",
+              "explanation": "Het juiste antwoord is: Dorpen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat was een economisch gevolg van de landbouw?",
+              "options": [
+                "Iedereen verdiende precies hetzelfde",
+                "Al het voedsel verdween",
+                "Niemand werkte meer",
+                "Meer voedsel en soms meer rijkdom"
+              ],
+              "correct": 3,
+              "hint": "Overschotten maakten verschil mogelijk.",
+              "explanation": "Het juiste antwoord is: Meer voedsel en soms meer rijkdom."
+            },
+            {
+              "type": "mc",
+              "question": "Wat was een sociaal gevolg van de landbouw?",
+              "options": [
+                "Verschillen in macht en rijkdom namen toe",
+                "Alle dorpen werden even klein",
+                "Niemand nam meer besluiten",
+                "Iedereen werd jager"
+              ],
+              "correct": 0,
+              "hint": "Niet iedereen bezat evenveel spullen of land.",
+              "explanation": "Het juiste antwoord is: Verschillen in macht en rijkdom namen toe."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom kregen sommige mensen in grote dorpen meer macht?",
+              "options": [
+                "Er was geen samenwerking meer",
+                "Er waren leiders nodig voor gezamenlijke besluiten",
+                "Iedereen werd automatisch koning",
+                "Alleen kinderen mochten beslissen"
+              ],
+              "correct": 1,
+              "hint": "Grote groepen kunnen niet altijd alles samen bespreken.",
+              "explanation": "Het juiste antwoord is: Er waren leiders nodig voor gezamenlijke besluiten."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe veranderde de cultuur na de agrarische revolutie?",
+              "options": [
+                "Er kwamen geen nieuwe gewoontes",
+                "Alle kunst verdween",
+                "Rijke mensen lieten grotere huizen en sieraden maken",
+                "Mensen mochten geen kleding meer dragen"
+              ],
+              "correct": 2,
+              "hint": "Denk aan laten zien hoe rijk je bent.",
+              "explanation": "Het juiste antwoord is: Rijke mensen lieten grotere huizen en sieraden maken."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom was landbouw niet altijd gezonder dan jagen en verzamelen?",
+              "options": [
+                "Boeren hoefden niet te werken",
+                "Iedereen at veel gevarieerder",
+                "Boeren verhuisden ieder uur",
+                "Mensen konden ziek worden door samenleven met vee"
+              ],
+              "correct": 3,
+              "hint": "Sommige ziekten kunnen van dieren op mensen overgaan.",
+              "explanation": "Het juiste antwoord is: Mensen konden ziek worden door samenleven met vee."
+            },
+            {
+              "type": "mc",
+              "question": "Wat gebeurde er met het voedselpatroon van boeren?",
+              "options": [
+                "Het werd vaak minder gevarieerd",
+                "Ze aten altijd meer verschillende planten",
+                "Ze aten alleen vis",
+                "Ze aten helemaal niets"
+              ],
+              "correct": 0,
+              "hint": "Boeren verbouwden vaak maar enkele gewassen.",
+              "explanation": "Het juiste antwoord is: Het werd vaak minder gevarieerd."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom waren misoogsten extra gevaarlijk voor boeren?",
+              "options": [
+                "Er waren toen al supermarkten",
+                "Ze konden niet gemakkelijk verhuizen om ander voedsel te zoeken",
+                "Ze hadden altijd onbeperkt voedsel",
+                "Ze konden voedsel toveren"
+              ],
+              "correct": 1,
+              "hint": "Een vaste akker maakt minder flexibel.",
+              "explanation": "Het juiste antwoord is: Ze konden niet gemakkelijk verhuizen om ander voedsel te zoeken."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent economie in de tekst?",
+              "options": [
+                "Alleen het bouwen van piramides",
+                "De studie van vulkanen",
+                "Hoe mensen in hun onderhoud voorzien en opbrengsten verdelen",
+                "Alleen handel met geld"
+              ],
+              "correct": 2,
+              "hint": "Het gaat ook over werk, voedsel en verdeling.",
+              "explanation": "Het juiste antwoord is: Hoe mensen in hun onderhoud voorzien en opbrengsten verdelen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een voordeel van landbouw voor bevolkingsgroei?",
+              "options": [
+                "Niemand hoefde meer te eten",
+                "Alle ziekten verdwenen",
+                "Er waren geen kinderen meer",
+                "Er kon meer voedsel geproduceerd worden"
+              ],
+              "correct": 3,
+              "hint": "Een grotere voedselvoorraad kan meer mensen voeden.",
+              "explanation": "Het juiste antwoord is: Er kon meer voedsel geproduceerd worden."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een voorbeeld van veeteelt?",
+              "options": [
+                "Geiten houden voor melk",
+                "In het bos bessen plukken",
+                "Stenen werktuigen opgraven",
+                "Wilde vissen met een speer vangen"
+              ],
+              "correct": 0,
+              "hint": "Het dier wordt gehouden, niet alleen gevangen.",
+              "explanation": "Het juiste antwoord is: Geiten houden voor melk."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom was landbouw geen plotselinge uitvinding?",
+              "options": [
+                "Iedereen gebruikte meteen machines",
+                "Mensen leerden in kleine stappen steeds meer over zaaien en dieren",
+                "Eén koning bedacht in een nacht alles",
+                "Het werd tegelijk overal ingevoerd"
+              ],
+              "correct": 1,
+              "hint": "De ontwikkeling verliep geleidelijk.",
+              "explanation": "Het juiste antwoord is: Mensen leerden in kleine stappen steeds meer over zaaien en dieren."
+            },
+            {
+              "type": "mc",
+              "question": "Wat maakte het land langs de Nijl vruchtbaar?",
+              "options": [
+                "Zout water uit de zee",
+                "Slib dat de rivier na overstromingen achterliet",
+                "Een jaarlijkse sneeuwstorm",
+                "Alleen kunstmest uit fabrieken"
+              ],
+              "correct": 1,
+              "hint": "De rivier nam vruchtbare grond mee.",
+              "explanation": "Het juiste antwoord is: Slib dat de rivier na overstromingen achterliet."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom steeg het waterpeil van de Nijl elke zomer?",
+              "options": [
+                "Omdat farao's het water omhoog pompten",
+                "Door een vulkaan naast de rivier",
+                "Door hevige regenval ver naar het zuiden",
+                "Door het smelten van sneeuw in Egypte"
+              ],
+              "correct": 2,
+              "hint": "De regen viel duizenden kilometers verderop.",
+              "explanation": "Het juiste antwoord is: Door hevige regenval ver naar het zuiden."
+            },
+            {
+              "type": "mc",
+              "question": "Wanneer konden de Egyptenaren hun gewassen verbouwen?",
+              "options": [
+                "Alleen midden in de overstroming",
+                "Alleen op boten",
+                "Tijdens een zandstorm",
+                "Nadat het overstromingswater was gezakt"
+              ],
+              "correct": 3,
+              "hint": "De akkers kwamen weer droog te liggen.",
+              "explanation": "Het juiste antwoord is: Nadat het overstromingswater was gezakt."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is irrigatielandbouw?",
+              "options": [
+                "Landbouw met aangelegd waterbeheer via dijken en kanalen",
+                "Landbouw zonder ooit water te gebruiken",
+                "Landbouw alleen in bossen",
+                "Het aanleggen van piramides"
+              ],
+              "correct": 0,
+              "hint": "Irrigatie betekent water naar de akkers brengen.",
+              "explanation": "Het juiste antwoord is: Landbouw met aangelegd waterbeheer via dijken en kanalen."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom legden Egyptenaren kanalen aan?",
+              "options": [
+                "Om mummies te vervoeren",
+                "Om ook verder gelegen akkers te bevloeien",
+                "Om de zon te laten opkomen",
+                "Om huizen te verwarmen"
+              ],
+              "correct": 1,
+              "hint": "Niet iedere akker lag aan de rivier.",
+              "explanation": "Het juiste antwoord is: Om ook verder gelegen akkers te bevloeien."
+            },
+            {
+              "type": "mc",
+              "question": "Waarvoor dienden waterbekkens?",
+              "options": [
+                "Om bronzen voorwerpen te bewaren",
+                "Om tekst op te schrijven",
+                "Om water langer vast te houden",
+                "Om belastingen te tellen"
+              ],
+              "correct": 2,
+              "hint": "Denk aan de droge perioden.",
+              "explanation": "Het juiste antwoord is: Om water langer vast te houden."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom legden Egyptenaren dijken aan?",
+              "options": [
+                "Om het hele land onder zout water te zetten",
+                "Om steden te verplaatsen",
+                "Om de god Re gevangen te houden",
+                "Om het water te beheersen en vast te houden"
+              ],
+              "correct": 3,
+              "hint": "Irrigatie vraagt controle van water.",
+              "explanation": "Het juiste antwoord is: Om het water te beheersen en vast te houden."
+            },
+            {
+              "type": "mc",
+              "question": "Welke gewassen verbouwden Egyptische boeren volgens de les?",
+              "options": [
+                "Graan, uien en bonen",
+                "Alleen rijst en koffie",
+                "Alleen ananas",
+                "Alleen aardappelen"
+              ],
+              "correct": 0,
+              "hint": "Denk aan voorbeelden uit de paragraaf.",
+              "explanation": "Het juiste antwoord is: Graan, uien en bonen."
+            },
+            {
+              "type": "mc",
+              "question": "Welk voedsel haalden Egyptenaren behalve landbouwproducten uit de Nijl?",
+              "options": [
+                "Glas",
+                "Vis",
+                "Chocolade",
+                "Aardolie"
+              ],
+              "correct": 1,
+              "hint": "In de rivier leefden dieren.",
+              "explanation": "Het juiste antwoord is: Vis."
+            },
+            {
+              "type": "mc",
+              "question": "Welk gevolg had irrigatielandbouw voor de oogst?",
+              "options": [
+                "Niemand hoefde nog te eten",
+                "Het land werd onmiddellijk een woestijn",
+                "Er werd meer voedsel geproduceerd dan boeren zelf nodig hadden",
+                "De oogst verdween voorgoed"
+              ],
+              "correct": 2,
+              "hint": "Denk aan voedseloverschotten.",
+              "explanation": "Het juiste antwoord is: Er werd meer voedsel geproduceerd dan boeren zelf nodig hadden."
+            },
+            {
+              "type": "mc",
+              "question": "Welk gevolg hadden hoge oogsten voor de bevolking?",
+              "options": [
+                "Er werden geen kinderen meer geboren",
+                "Alle dorpen verdwenen",
+                "Iedereen werd soldaat",
+                "De bevolking groeide"
+              ],
+              "correct": 3,
+              "hint": "Meer voedsel maakt meer inwoners mogelijk.",
+              "explanation": "Het juiste antwoord is: De bevolking groeide."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom hoefde in Egypte niet iedereen boer te zijn?",
+              "options": [
+                "Voedseloverschotten maakten andere beroepen mogelijk",
+                "Iedereen werd farao",
+                "Er mochten geen gewassen meer groeien",
+                "De rivier leverde geen voedsel meer"
+              ],
+              "correct": 0,
+              "hint": "Anderen konden eten van wat boeren overhielden.",
+              "explanation": "Het juiste antwoord is: Voedseloverschotten maakten andere beroepen mogelijk."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is nijverheid?",
+              "options": [
+                "Een land bestuurd door priesters",
+                "Met de hand voorwerpen maken",
+                "Een militaire oorlog voeren",
+                "Alleen de Nijl oversteken"
+              ],
+              "correct": 1,
+              "hint": "Denk aan potten, meubels en kleding.",
+              "explanation": "Het juiste antwoord is: Met de hand voorwerpen maken."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent specialisatie?",
+              "options": [
+                "Mensen stoppen allemaal met werken",
+                "Alleen voedsel verzamelen",
+                "Je richt je op één beroep of vaardigheid",
+                "Iedereen maakt altijd alles zelf"
+              ],
+              "correct": 2,
+              "hint": "Denk aan een pottenbakker of wever.",
+              "explanation": "Het juiste antwoord is: Je richt je op één beroep of vaardigheid."
+            },
+            {
+              "type": "mc",
+              "question": "Welk beroep past bij nijverheid?",
+              "options": [
+                "Farao",
+                "Belastingontvanger",
+                "Soldaat",
+                "Pottenbakker"
+              ],
+              "correct": 3,
+              "hint": "Dit beroep maakt voorwerpen met de hand.",
+              "explanation": "Het juiste antwoord is: Pottenbakker."
+            },
+            {
+              "type": "mc",
+              "question": "Wat ontstond doordat vaklieden producten ruilden?",
+              "options": [
+                "Handel",
+                "Een nieuwe ijstijd",
+                "Het einde van alle dorpen",
+                "De afschaffing van beroepen"
+              ],
+              "correct": 0,
+              "hint": "Producten en diensten werden uitgewisseld.",
+              "explanation": "Het juiste antwoord is: Handel."
+            },
+            {
+              "type": "mc",
+              "question": "Welke goederen haalden Egyptenaren volgens de tekst van buiten Egypte?",
+              "options": [
+                "Boeken van drukpersen",
+                "Ivoor, hout, vee en kostbare stenen",
+                "Computers en vliegtuigen",
+                "IJsblokjes en benzine"
+              ],
+              "correct": 1,
+              "hint": "Denk aan grondstoffen en waardevolle producten.",
+              "explanation": "Het juiste antwoord is: Ivoor, hout, vee en kostbare stenen."
+            },
+            {
+              "type": "mc",
+              "question": "Welke twee Egyptische steden worden genoemd?",
+              "options": [
+                "Parijs en Londen",
+                "Jericho en Amsterdam",
+                "Memphis en Thebe",
+                "Athene en Rome"
+              ],
+              "correct": 2,
+              "hint": "De steden groeiden langs de Nijl.",
+              "explanation": "Het juiste antwoord is: Memphis en Thebe."
+            },
+            {
+              "type": "mc",
+              "question": "Wie woonden er behalve ambachtslieden en handelaren in Egyptische steden?",
+              "options": [
+                "Alleen reizende jagers",
+                "Alleen buitenlandse koningen",
+                "Niemand anders",
+                "Ook bestuurders, priesters en boeren"
+              ],
+              "correct": 3,
+              "hint": "De stad had veel verschillende groepen.",
+              "explanation": "Het juiste antwoord is: Ook bestuurders, priesters en boeren."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een stedelijke gemeenschap?",
+              "options": [
+                "Mensen met verschillende beroepen die samen in een stad wonen",
+                "Alleen jagers die rondtrekken",
+                "Een akker zonder inwoners",
+                "Een alleenstaande farao"
+              ],
+              "correct": 0,
+              "hint": "Ook boeren bij de stad horen erbij.",
+              "explanation": "Het juiste antwoord is: Mensen met verschillende beroepen die samen in een stad wonen."
+            },
+            {
+              "type": "mc",
+              "question": "Welke uitvindingen werden door de landbouw en specialisatie belangrijk?",
+              "options": [
+                "De stoommachine en de auto",
+                "De pottenbakkersschijf, het wiel en de ploeg",
+                "De trein en de televisie",
+                "De telefoon en de computer"
+              ],
+              "correct": 1,
+              "hint": "Denk aan gereedschap uit de oudheid.",
+              "explanation": "Het juiste antwoord is: De pottenbakkersschijf, het wiel en de ploeg."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe maakten mensen brons?",
+              "options": [
+                "Door zout met water te mengen",
+                "Door stenen tot stof te malen",
+                "Door koper en tin samen te smelten",
+                "Door alleen hout te verbranden"
+              ],
+              "correct": 2,
+              "hint": "Het is een mengsel van metalen.",
+              "explanation": "Het juiste antwoord is: Door koper en tin samen te smelten."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom verving brons steeds meer stenen werktuigen?",
+              "options": [
+                "Brons bestond uit zacht brood",
+                "Het was onmogelijk brons te vormen",
+                "Alle stenen waren verdwenen",
+                "Je kon met gegoten brons veel vormen maken"
+              ],
+              "correct": 3,
+              "hint": "Gieten maakte meer vormen mogelijk.",
+              "explanation": "Het juiste antwoord is: Je kon met gegoten brons veel vormen maken."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent sociale lagen in het oude Egypte?",
+              "options": [
+                "Groepen mensen met verschillende rijkdom en macht",
+                "Verschillende grondsoorten langs de rivier",
+                "Alleen verdiepingen van huizen",
+                "De vier seizoenen"
+              ],
+              "correct": 0,
+              "hint": "Denk aan wie veel of weinig aanzien had.",
+              "explanation": "Het juiste antwoord is: Groepen mensen met verschillende rijkdom en macht."
+            },
+            {
+              "type": "mc",
+              "question": "Welke groep was volgens de les het grootst in Egypte?",
+              "options": [
+                "Koninklijke schrijvers",
+                "Boeren",
+                "Farao's",
+                "Hoge priesters"
+              ],
+              "correct": 1,
+              "hint": "De meeste mensen werkten op het land.",
+              "explanation": "Het juiste antwoord is: Boeren."
+            },
+            {
+              "type": "mc",
+              "question": "Wat was de positie van tot slaaf gemaakte mensen volgens de tekst?",
+              "options": [
+                "Ze hoefden nooit te werken",
+                "Ze bezaten allemaal piramides",
+                "Ze hadden weinig zeggenschap en moesten zwaar werk doen",
+                "Ze waren altijd de hoogste bestuurders"
+              ],
+              "correct": 2,
+              "hint": "De tekst noemt de laagste maatschappelijke positie.",
+              "explanation": "Het juiste antwoord is: Ze hadden weinig zeggenschap en moesten zwaar werk doen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een staat?",
+              "options": [
+                "Een verzameling zonder grenzen",
+                "Een gebied met grenzen, één bestuur en dezelfde regels",
+                "Een groep zonder wetten of leider",
+                "Alleen een klein vissersbootje"
+              ],
+              "correct": 1,
+              "hint": "Denk aan bestuur en gemeenschappelijke wetten.",
+              "explanation": "Het juiste antwoord is: Een gebied met grenzen, één bestuur en dezelfde regels."
+            },
+            {
+              "type": "mc",
+              "question": "Rond welk jaar kreeg één bestuurder de macht over heel Egypte?",
+              "options": [
+                "Rond 9000 v.C.",
+                "Rond 1000 n.C.",
+                "Rond 3100 v.C.",
+                "Rond 2026 n.C."
+              ],
+              "correct": 2,
+              "hint": "Het gebeurde vele eeuwen voor Alexander de Grote.",
+              "explanation": "Het juiste antwoord is: Rond 3100 v.C.."
+            },
+            {
+              "type": "mc",
+              "question": "Wie was de hoogste bestuurder van het oude Egypte?",
+              "options": [
+                "De pottenbakker",
+                "De gewone soldaat",
+                "De visser",
+                "De farao"
+              ],
+              "correct": 3,
+              "hint": "Dit was de koning van Egypte.",
+              "explanation": "Het juiste antwoord is: De farao."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom hield de farao toezicht op de irrigatiewerken?",
+              "options": [
+                "Dijken en kanalen moesten goed onderhouden worden voor de oogst",
+                "De Nijl mocht nooit meer overstromen",
+                "Hij wilde alle boeren laten verhuizen",
+                "Schrift moest worden verboden"
+              ],
+              "correct": 0,
+              "hint": "De waterwerken waren belangrijk voor voedsel.",
+              "explanation": "Het juiste antwoord is: Dijken en kanalen moesten goed onderhouden worden voor de oogst."
+            },
+            {
+              "type": "mc",
+              "question": "Welke taak hoorde bij de farao?",
+              "options": [
+                "Alleen vuur aanmaken",
+                "Wetten maken en voor orde en verdediging zorgen",
+                "Alleen graan malen",
+                "Alleen kleding weven"
+              ],
+              "correct": 1,
+              "hint": "Hij had meerdere bestuurstaken.",
+              "explanation": "Het juiste antwoord is: Wetten maken en voor orde en verdediging zorgen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat zijn ambtenaren?",
+              "options": [
+                "Wilde dieren langs de Nijl",
+                "Mensen die altijd jagen",
+                "Mensen die namens het bestuur taken uitvoeren",
+                "Alleen Egyptische goden"
+              ],
+              "correct": 2,
+              "hint": "Denk aan schrijvers en belastinginners.",
+              "explanation": "Het juiste antwoord is: Mensen die namens het bestuur taken uitvoeren."
+            },
+            {
+              "type": "mc",
+              "question": "Waarmee betaalden Egyptenaren volgens de les belasting?",
+              "options": [
+                "Met bankpassen",
+                "Alleen met eurobiljetten",
+                "Met computers",
+                "Met een deel van hun oogst"
+              ],
+              "correct": 3,
+              "hint": "Geld was niet de enige manier om te betalen.",
+              "explanation": "Het juiste antwoord is: Met een deel van hun oogst."
+            },
+            {
+              "type": "mc",
+              "question": "Waarvoor gebruikte de farao belasting volgens de tekst?",
+              "options": [
+                "Voor tempels, paleizen, ambtenaren en soldaten",
+                "Alleen voor zijn verjaardag",
+                "Om alle kanalen af te breken",
+                "Om alle schrijvers weg te sturen"
+              ],
+              "correct": 0,
+              "hint": "Het bestuur en bouwwerken kostten middelen.",
+              "explanation": "Het juiste antwoord is: Voor tempels, paleizen, ambtenaren en soldaten."
+            },
+            {
+              "type": "mc",
+              "question": "Wat legden Egyptische bestuurders aan als reserve voor slechte tijden?",
+              "options": [
+                "Meer woestijnzand",
+                "Voorraden voedsel",
+                "Alleen voorraadkamers met stenen",
+                "Grote voorraden computers"
+              ],
+              "correct": 1,
+              "hint": "Denk aan misoogsten en sprinkhanen.",
+              "explanation": "Het juiste antwoord is: Voorraden voedsel."
+            },
+            {
+              "type": "mc",
+              "question": "Wie veroverde Egypte vanaf 332 v.C. volgens de tekst?",
+              "options": [
+                "De Feniciërs in 2026",
+                "Een prehistorische jager",
+                "Alexander de Grote en zijn opvolgers",
+                "Julius Caesar in 9000 v.C."
+              ],
+              "correct": 2,
+              "hint": "Hij was een Griekse veroveraar.",
+              "explanation": "Het juiste antwoord is: Alexander de Grote en zijn opvolgers."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom was het schrift nuttig voor de farao?",
+              "options": [
+                "Om overstromingen tegen te houden",
+                "Om graan sneller te laten groeien",
+                "Om bronzen zwaarden te smelten",
+                "Om belastingen, wetten en besluiten vast te leggen"
+              ],
+              "correct": 3,
+              "hint": "Besturen vraagt administratie.",
+              "explanation": "Het juiste antwoord is: Om belastingen, wetten en besluiten vast te leggen."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe heet het oude Egyptische schrift?",
+              "options": [
+                "Hiërogliefenschrift",
+                "Brailleschrift",
+                "Morsecode",
+                "Spijkerschrift uit het Latijn"
+              ],
+              "correct": 0,
+              "hint": "Denk aan tekens van dieren en voorwerpen.",
+              "explanation": "Het juiste antwoord is: Hiërogliefenschrift."
+            },
+            {
+              "type": "mc",
+              "question": "Rond wanneer ontstond het hiërogliefenschrift volgens de les?",
+              "options": [
+                "Rond 100 v.C.",
+                "Rond 3100 v.C.",
+                "Rond 2000 n.C.",
+                "Rond 500 n.C."
+              ],
+              "correct": 1,
+              "hint": "Ongeveer toen Egypte één staat werd.",
+              "explanation": "Het juiste antwoord is: Rond 3100 v.C.."
+            },
+            {
+              "type": "mc",
+              "question": "Waaruit bestonden hiërogliefen?",
+              "options": [
+                "Alleen cijfers van computers",
+                "Alleen gekleurde stippen",
+                "Tekens die woorden of klanken uitbeeldden",
+                "Alleen de letters A tot Z"
+              ],
+              "correct": 2,
+              "hint": "Denk aan afbeeldingen uit het dagelijks leven.",
+              "explanation": "Het juiste antwoord is: Tekens die woorden of klanken uitbeeldden."
+            },
+            {
+              "type": "mc",
+              "question": "Wat was een voordeel van een alfabet ten opzichte van heel veel hiëroglieftekens?",
+              "options": [
+                "Niemand hoefde meer te lezen",
+                "De letters stonden alleen voor complete verhalen",
+                "Het alfabet bevatte altijd duizenden tekens",
+                "Je hoefde veel minder tekens te leren"
+              ],
+              "correct": 3,
+              "hint": "Een beperkt aantal letters kan veel woorden vormen.",
+              "explanation": "Het juiste antwoord is: Je hoefde veel minder tekens te leren."
+            },
+            {
+              "type": "mc",
+              "question": "Welk volk verspreidde rond 1000 v.C. een alfabet met 22 letters?",
+              "options": [
+                "De Feniciërs",
+                "De Vikingen",
+                "De Inca's",
+                "De Romeinen uit 2026"
+              ],
+              "correct": 0,
+              "hint": "Het waren handelaren rond de Middellandse Zee.",
+              "explanation": "Het juiste antwoord is: De Feniciërs."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent polytheïsme?",
+              "options": [
+                "Geloof dat de farao een boer is",
+                "Geloof in meerdere goden",
+                "Geloof in precies één god",
+                "Geloof dat er helemaal geen goden zijn"
+              ],
+              "correct": 1,
+              "hint": "Poly betekent veel.",
+              "explanation": "Het juiste antwoord is: Geloof in meerdere goden."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een natuurgodsdienst?",
+              "options": [
+                "Alleen een stelsel van wetten",
+                "Alleen een beroep als handelaar",
+                "Een godsdienst die natuurkrachten vereert",
+                "Een godsdienst zonder natuur"
+              ],
+              "correct": 2,
+              "hint": "Denk aan de zon en de Nijl.",
+              "explanation": "Het juiste antwoord is: Een godsdienst die natuurkrachten vereert."
+            },
+            {
+              "type": "mc",
+              "question": "Wie was Re volgens de Egyptische godsdienst?",
+              "options": [
+                "De god van de onderwereld",
+                "Een Griekse veroveraar",
+                "Een Egyptische schrijver",
+                "De zonnegod"
+              ],
+              "correct": 3,
+              "hint": "Elke ochtend kwam zijn zon opnieuw op.",
+              "explanation": "Het juiste antwoord is: De zonnegod."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom liet de farao tempels bouwen?",
+              "options": [
+                "Voor de verering van de goden",
+                "Om de oogst te meten",
+                "Alleen om soldaten te laten slapen",
+                "Om wilde dieren te vangen"
+              ],
+              "correct": 0,
+              "hint": "Denk aan het godsdienstige leven.",
+              "explanation": "Het juiste antwoord is: Voor de verering van de goden."
+            },
+            {
+              "type": "mc",
+              "question": "Welke taak hadden priesters?",
+              "options": [
+                "Het schrift afschaffen",
+                "Het contact met de goden onderhouden en offers brengen",
+                "Belasting betalen namens alle boeren",
+                "Alleen jagen op dieren"
+              ],
+              "correct": 1,
+              "hint": "Zij werkten in tempels.",
+              "explanation": "Het juiste antwoord is: Het contact met de goden onderhouden en offers brengen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een offer in deze les?",
+              "options": [
+                "Een deel van een waterkanaal",
+                "Een soort strijdwagen",
+                "Een geschenk aan een god om hem tevreden te houden",
+                "Een rekening van een handelaar"
+              ],
+              "correct": 2,
+              "hint": "Het gebeurt in een godsdienstige context.",
+              "explanation": "Het juiste antwoord is: Een geschenk aan een god om hem tevreden te houden."
+            },
+            {
+              "type": "mc",
+              "question": "Welke god leidde volgens de Egyptenaren het dodenrijk?",
+              "options": [
+                "Re",
+                "Alexander",
+                "De farao als mens",
+                "Osiris"
+              ],
+              "correct": 3,
+              "hint": "Deze god hoorde bij het leven na de dood.",
+              "explanation": "Het juiste antwoord is: Osiris."
+            },
+            {
+              "type": "mc",
+              "question": "Waarom maakten rijke Egyptenaren mummies?",
+              "options": [
+                "Het lichaam moest bewaard blijven voor het dodenrijk",
+                "Om hun oogst te vergroten",
+                "Om het schrift te verspreiden",
+                "Om stenen werktuigen te maken"
+              ],
+              "correct": 0,
+              "hint": "Denk aan hun geloof in het hiernamaals.",
+              "explanation": "Het juiste antwoord is: Het lichaam moest bewaard blijven voor het dodenrijk."
+            },
+            {
+              "type": "mc",
+              "question": "Wat zijn grafgiften?",
+              "options": [
+                "Cadeaus voor een pasgeboren kind",
+                "Spullen die aan een dode worden meegegeven voor het hiernamaals",
+                "Belastingen voor een boer",
+                "Graan dat in een kanaal groeit"
+              ],
+              "correct": 1,
+              "hint": "De doden zouden deze dingen nodig hebben.",
+              "explanation": "Het juiste antwoord is: Spullen die aan een dode worden meegegeven voor het hiernamaals."
+            }
+          ],
+          "questionsPerAttempt": 25
+        },
+        {
+          "type": "quiz",
+          "subject": "Geschiedenis",
+          "title": "Hoofdstuk 1 · Open vragen en uitleggen",
+          "description": "21 uitlegvragen volgens de leerdoelen. Typ je antwoord en vergelijk het met het modelantwoord; zelf beoordelen zonder strenge spellingcontrole.",
+          "questions": [
+            {
+              "type": "open",
+              "question": "Leg uit waarom jagers-verzamelaars rondtrokken.",
+              "answer": "Voedsel uit de natuur raakte op; daarom zochten ze steeds nieuwe plekken om te jagen, vissen en verzamelen.",
+              "hint": "Denk aan de beschikbare voedselvoorraad.",
+              "explanation": "Voedsel uit de natuur raakte op; daarom zochten ze steeds nieuwe plekken om te jagen, vissen en verzamelen."
+            },
+            {
+              "type": "open",
+              "question": "Noem twee bestaansmiddelen van jagers-verzamelaars.",
+              "answer": "Bijvoorbeeld jagen en vissen, of vissen en verzamelen; ook jagen en verzamelen is goed.",
+              "hint": "Welke activiteiten leverden hun voedsel?",
+              "explanation": "Bijvoorbeeld jagen en vissen, of vissen en verzamelen; ook jagen en verzamelen is goed."
+            },
+            {
+              "type": "open",
+              "question": "Waarom waren groepen jagers-verzamelaars meestal niet groot?",
+              "answer": "Meer mensen hadden meer voedsel nodig. Dat was op één plek moeilijk genoeg te vinden.",
+              "hint": "Meer groepsleden betekent meer ...",
+              "explanation": "Meer mensen hadden meer voedsel nodig. Dat was op één plek moeilijk genoeg te vinden."
+            },
+            {
+              "type": "open",
+              "question": "Leg het verschil tussen prehistorie en historie uit.",
+              "answer": "Prehistorie is de tijd zonder schriftelijke bronnen; historie begint wanneer mensen schrift gaan gebruiken.",
+              "hint": "Denk aan wel of niet kunnen lezen van geschreven bronnen.",
+              "explanation": "Prehistorie is de tijd zonder schriftelijke bronnen; historie begint wanneer mensen schrift gaan gebruiken."
+            },
+            {
+              "type": "open",
+              "question": "Noem één reden waarom archeologen niet alles weten over de prehistorie.",
+              "answer": "Mensen schreven niets op en veel materialen zoals hout of huiden zijn vergaan.",
+              "hint": "Niet alles blijft duizenden jaren bewaard.",
+              "explanation": "Mensen schreven niets op en veel materialen zoals hout of huiden zijn vergaan."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit wat de agrarische revolutie is.",
+              "answer": "De geleidelijke overgang van jagen en verzamelen naar akkerbouw en veeteelt, met grote gevolgen.",
+              "hint": "Wat veranderde aan de manier om voedsel te krijgen?",
+              "explanation": "De geleidelijke overgang van jagen en verzamelen naar akkerbouw en veeteelt, met grote gevolgen."
+            },
+            {
+              "type": "open",
+              "question": "Noem twee voordelen die de komst van landbouw voor de samenleving had.",
+              "answer": "Meer voedsel en bevolkingsgroei; ook vaste dorpen of specialisatie tellen.",
+              "hint": "Denk aan voedsel en woonplaatsen.",
+              "explanation": "Meer voedsel en bevolkingsgroei; ook vaste dorpen of specialisatie tellen."
+            },
+            {
+              "type": "open",
+              "question": "Noem één nadeel van de overgang naar landbouw voor de gezondheid.",
+              "answer": "Harder werken, minder afwisselend eten of meer ziekten door samenleven met vee.",
+              "hint": "Vergelijk het leven van boeren met jagers-verzamelaars.",
+              "explanation": "Harder werken, minder afwisselend eten of meer ziekten door samenleven met vee."
+            },
+            {
+              "type": "open",
+              "question": "Waarom ontstonden dorpen na de komst van de landbouw?",
+              "answer": "Boeren moesten bij de akkers en hun vee blijven om die te verzorgen.",
+              "hint": "Een boer kan zijn akker niet verplaatsen.",
+              "explanation": "Boeren moesten bij de akkers en hun vee blijven om die te verzorgen."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit hoe landbouw tot grotere sociale verschillen leidde.",
+              "answer": "Sommigen kregen meer land, vee, bezit of een leidersrol en daarmee meer macht en rijkdom.",
+              "hint": "Denk aan verschillen in bezit en zeggenschap.",
+              "explanation": "Sommigen kregen meer land, vee, bezit of een leidersrol en daarmee meer macht en rijkdom."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit waarom de overstroming van de Nijl goed was voor de landbouw.",
+              "answer": "Na het zakken van het water bleef vruchtbaar slib achter, waardoor gewassen goed konden groeien.",
+              "hint": "Wat bracht het rivierwater mee?",
+              "explanation": "Na het zakken van het water bleef vruchtbaar slib achter, waardoor gewassen goed konden groeien."
+            },
+            {
+              "type": "open",
+              "question": "Waarom hadden Egyptenaren irrigatiewerken nodig?",
+              "answer": "Om water vast te houden en via kanalen ook verder gelegen akkers te bevloeien.",
+              "hint": "Denk aan perioden zonder overstroming.",
+              "explanation": "Om water vast te houden en via kanalen ook verder gelegen akkers te bevloeien."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit hoe irrigatielandbouw leidde tot specialisatie.",
+              "answer": "Boeren produceerden meer voedsel dan ze nodig hadden. Daardoor konden anderen een ander beroep krijgen.",
+              "hint": "Een voedseloverschot maakt werk buiten de landbouw mogelijk.",
+              "explanation": "Boeren produceerden meer voedsel dan ze nodig hadden. Daardoor konden anderen een ander beroep krijgen."
+            },
+            {
+              "type": "open",
+              "question": "Leg uit hoe specialisatie leidde tot handel.",
+              "answer": "Mensen maakten verschillende producten en gingen die ruilen tegen voedsel of andere producten.",
+              "hint": "Denk aan het ruilen van een pot tegen graan.",
+              "explanation": "Mensen maakten verschillende producten en gingen die ruilen tegen voedsel of andere producten."
+            },
+            {
+              "type": "open",
+              "question": "Noem twee groepen uit de sociale lagen van Egypte en beschrijf het verschil.",
+              "answer": "Bijvoorbeeld farao: veel macht; boeren: weinig aanzien; slaven: weinig rechten; schrijvers: meer respect.",
+              "hint": "Kies twee groepen uit de paragraaf.",
+              "explanation": "Bijvoorbeeld farao: veel macht; boeren: weinig aanzien; slaven: weinig rechten; schrijvers: meer respect."
+            },
+            {
+              "type": "open",
+              "question": "Waarom had Egypte één centraal bestuur nodig?",
+              "answer": "Dijken en kanalen moesten gezamenlijk onderhouden worden; afspraken en toezicht waren nodig.",
+              "hint": "Wie regelt grote irrigatiewerken?",
+              "explanation": "Dijken en kanalen moesten gezamenlijk onderhouden worden; afspraken en toezicht waren nodig."
+            },
+            {
+              "type": "open",
+              "question": "Noem twee taken van de farao.",
+              "answer": "Bijvoorbeeld irrigatie bewaken, wetten maken, rechtspreken, orde bewaren en het land verdedigen.",
+              "hint": "Denk aan besturen en veiligheid.",
+              "explanation": "Bijvoorbeeld irrigatie bewaken, wetten maken, rechtspreken, orde bewaren en het land verdedigen."
+            },
+            {
+              "type": "open",
+              "question": "Waarom moest de bevolking belasting betalen aan de farao?",
+              "answer": "Om bestuurders en soldaten te betalen en tempels en paleizen te bouwen.",
+              "hint": "Een bestuur heeft middelen nodig.",
+              "explanation": "Om bestuurders en soldaten te betalen en tempels en paleizen te bouwen."
+            },
+            {
+              "type": "open",
+              "question": "Waarvoor gebruikten Egyptische ambtenaren het schrift?",
+              "answer": "Voor administratie, zoals het bijhouden van belasting en oogst, en het vastleggen van wetten.",
+              "hint": "Ze moesten aantallen kunnen noteren.",
+              "explanation": "Voor administratie, zoals het bijhouden van belasting en oogst, en het vastleggen van wetten."
+            },
+            {
+              "type": "open",
+              "question": "Leg het verschil tussen polytheïsme en natuurgodsdienst uit.",
+              "answer": "Polytheïsme is geloof in meerdere goden; natuurgodsdienst vereert natuurkrachten zoals zon en rivier.",
+              "hint": "De begrippen gaan over iets anders: aantal goden en wat vereerd wordt.",
+              "explanation": "Polytheïsme is geloof in meerdere goden; natuurgodsdienst vereert natuurkrachten zoals zon en rivier."
+            },
+            {
+              "type": "open",
+              "question": "Waarom lieten rijke Egyptenaren een mummie maken en grafgiften meegeven?",
+              "answer": "Ze geloofden in een dodenrijk en dachten dat een bewaard lichaam en spullen nodig waren na de dood.",
+              "hint": "Wat dacht men over het leven na de dood?",
+              "explanation": "Ze geloofden in een dodenrijk en dachten dat een bewaard lichaam en spullen nodig waren na de dood."
+            }
+          ]
+        },
+        {
+          "type": "flashcards",
+          "subject": "Geschiedenis",
+          "title": "Flashcards §1 · Jagers en verzamelaars",
+          "description": "Begrippen en belangrijkste feiten uit paragraaf 1.",
+          "cards": [
+            {
+              "front": "Eerste mensachtigen",
+              "back": "Verschenen ongeveer 4 miljoen jaar geleden in Afrika."
+            },
+            {
+              "front": "Rechtop lopen",
+              "back": "Zorgde ervoor dat de handen vrij kwamen."
+            },
+            {
+              "front": "Moderne mens",
+              "back": "Ontstond circa 200.000 jaar geleden in Afrika."
+            },
+            {
+              "front": "Neanderthaler",
+              "back": "Een uitgestorven mensensoort."
+            },
+            {
+              "front": "Vuur gebruiken",
+              "back": "Eten bereiden en roofdieren verjagen."
+            },
+            {
+              "front": "Jagers-verzamelaars",
+              "back": "Leefden van jagen, vissen en voedsel verzamelen."
+            },
+            {
+              "front": "Bestaansmiddelen",
+              "back": "Activiteiten waarmee je in leven blijft."
+            },
+            {
+              "front": "Rondtrekken",
+              "back": "Verplaatsen omdat voedselbronnen opraken."
+            },
+            {
+              "front": "Groepsgrootte jagers-verzamelaars",
+              "back": "Meestal circa 25 tot 40 mensen."
+            },
+            {
+              "front": "Taakverdeling",
+              "back": "De werkzaamheden binnen een groep verdelen."
+            },
+            {
+              "front": "Sociale verschillen",
+              "back": "Verschillen in aanzien, bezit en macht."
+            },
+            {
+              "front": "Prehistorie",
+              "back": "De tijd vóór het gebruik van schrift."
+            },
+            {
+              "front": "Historie",
+              "back": "De tijd vanaf het gebruik van schrift."
+            },
+            {
+              "front": "Archeoloog",
+              "back": "Onderzoekt resten uit het verleden."
+            },
+            {
+              "front": "Steentijd",
+              "back": "Oudste prehistorische periode met veel stenen vondsten."
+            }
+          ]
+        },
+        {
+          "type": "flashcards",
+          "subject": "Geschiedenis",
+          "title": "Flashcards §2 · De eerste boeren",
+          "description": "Begrippen en gevolgen van de agrarische revolutie.",
+          "cards": [
+            {
+              "front": "Akkerbouw",
+              "back": "Het verbouwen van gewassen zoals graan."
+            },
+            {
+              "front": "Veeteelt",
+              "back": "Dieren houden voor bijvoorbeeld melk en vlees."
+            },
+            {
+              "front": "Landbouw",
+              "back": "Akkerbouw en veeteelt samen."
+            },
+            {
+              "front": "Agrarische revolutie",
+              "back": "Overgang van jagen en verzamelen naar landbouw."
+            },
+            {
+              "front": "Begin akkerbouw",
+              "back": "Ongeveer 9000 v.C. in het Midden-Oosten."
+            },
+            {
+              "front": "Vaste woonplaats",
+              "back": "Boeren bleven bij hun akkers en vee."
+            },
+            {
+              "front": "Boerendorp",
+              "back": "Vaste nederzetting van mensen met landbouw."
+            },
+            {
+              "front": "Kleihuizen",
+              "back": "Woningen van gedroogde klei, soms ook stal."
+            },
+            {
+              "front": "Economische gevolgen",
+              "back": "Meer voedsel en soms grotere rijkdom."
+            },
+            {
+              "front": "Sociale gevolgen",
+              "back": "Grotere verschillen in macht en bezit."
+            },
+            {
+              "front": "Culturele gevolgen",
+              "back": "Meer dure kleding, sieraden en grotere huizen."
+            },
+            {
+              "front": "Leiderschap",
+              "back": "In grote groepen nemen sommigen beslissingen."
+            },
+            {
+              "front": "Voedseloverschot",
+              "back": "Meer oogst dan nodig voor eigen gebruik."
+            },
+            {
+              "front": "Gezondheidsnadeel",
+              "back": "Meer infecties door samenleven met vee."
+            },
+            {
+              "front": "Misoogst",
+              "back": "Een tegenvallende of mislukte oogst."
+            },
+            {
+              "front": "Economie",
+              "back": "Hoe mensen in hun onderhoud voorzien en opbrengsten verdelen."
+            }
+          ]
+        },
+        {
+          "type": "flashcards",
+          "subject": "Geschiedenis",
+          "title": "Flashcards §3 · De Nijl en de samenleving",
+          "description": "Irrigatie, nijverheid, handel, steden en sociale lagen.",
+          "cards": [
+            {
+              "front": "De Nijl",
+              "back": "Rivier die de landbouw in Egypte mogelijk maakte."
+            },
+            {
+              "front": "Nijldelta",
+              "back": "Gebied bij de monding van de Nijl."
+            },
+            {
+              "front": "Overstroming",
+              "back": "Nijlwater bedekte de oevers en akkers."
+            },
+            {
+              "front": "Slib",
+              "back": "Vruchtbare grond die de rivier achterliet."
+            },
+            {
+              "front": "Irrigatielandbouw",
+              "back": "Akkerbouw met beheerst water via kanalen en dijken."
+            },
+            {
+              "front": "Waterbekken",
+              "back": "Bewaart water voor drogere perioden."
+            },
+            {
+              "front": "Kanaal",
+              "back": "Brengt water naar verder gelegen akkers."
+            },
+            {
+              "front": "Dijk",
+              "back": "Helpt rivierwater te beheersen en vast te houden."
+            },
+            {
+              "front": "Nijverheid",
+              "back": "Met de hand voorwerpen maken."
+            },
+            {
+              "front": "Specialisatie",
+              "back": "Je op één beroep richten."
+            },
+            {
+              "front": "Handel",
+              "back": "Goederen of diensten ruilen."
+            },
+            {
+              "front": "Pottenbakker",
+              "back": "Vakman die potten maakt."
+            },
+            {
+              "front": "Brons",
+              "back": "Mengsel van koper en tin."
+            },
+            {
+              "front": "Memphis en Thebe",
+              "back": "Voorbeelden van Egyptische steden."
+            },
+            {
+              "front": "Stedelijke gemeenschap",
+              "back": "Inwoners van een stad met verschillende beroepen."
+            },
+            {
+              "front": "Sociale lagen",
+              "back": "Groepen met verschillende rijkdom, aanzien en macht."
+            },
+            {
+              "front": "Boeren in Egypte",
+              "back": "De grootste bevolkingsgroep."
+            },
+            {
+              "front": "Slavernij",
+              "back": "Mensen zijn eigendom van anderen."
+            }
+          ]
+        },
+        {
+          "type": "flashcards",
+          "subject": "Geschiedenis",
+          "title": "Flashcards §4 · Farao, schrift en goden",
+          "description": "Bestuur, schrift, polytheïsme en leven na de dood.",
+          "cards": [
+            {
+              "front": "Staat",
+              "back": "Gebied met grenzen, één bestuur en gemeenschappelijke regels."
+            },
+            {
+              "front": "Farao",
+              "back": "Koning en hoogste bestuurder van Egypte."
+            },
+            {
+              "front": "Ambtenaren",
+              "back": "Voerden de besluiten van de farao uit."
+            },
+            {
+              "front": "Belasting",
+              "back": "Deel van de oogst voor het bestuur."
+            },
+            {
+              "front": "Alexander de Grote",
+              "back": "Griekse veroveraar; vanaf 332 v.C. macht over Egypte."
+            },
+            {
+              "front": "Hiërogliefenschrift",
+              "back": "Egyptisch schrift met beeldtekens."
+            },
+            {
+              "front": "Hiërogliefen",
+              "back": "Tekens voor woorden of klanken."
+            },
+            {
+              "front": "Alfabet",
+              "back": "Beperkt aantal letters voor klanken."
+            },
+            {
+              "front": "Feniciërs",
+              "back": "Handelaren die een alfabet met 22 letters verspreidden."
+            },
+            {
+              "front": "Polytheïsme",
+              "back": "Geloof in meerdere goden."
+            },
+            {
+              "front": "Natuurgodsdienst",
+              "back": "Natuurkrachten en natuurverschijnselen worden vereerd."
+            },
+            {
+              "front": "Re",
+              "back": "Egyptische zonnegod."
+            },
+            {
+              "front": "Osiris",
+              "back": "God van het dodenrijk."
+            },
+            {
+              "front": "Tempel",
+              "back": "Gebouw voor de verering van goden."
+            },
+            {
+              "front": "Priester",
+              "back": "Onderhoudt het contact met de goden."
+            },
+            {
+              "front": "Offer",
+              "back": "Geschenk aan een god."
+            },
+            {
+              "front": "Mummie",
+              "back": "Lichaam dat na de dood tegen vergaan is behandeld."
+            },
+            {
+              "front": "Grafgiften",
+              "back": "Voorwerpen meegegeven voor het dodenrijk."
+            },
+            {
+              "front": "Piramide",
+              "back": "Groot grafmonument van machtige farao's."
+            }
+          ]
+        }
+      ]
     }
   ],
   "exams": []
