@@ -7,6 +7,18 @@ const SF_STORE_KEY = 'studyforge-local-v1';
 let SF_CLIENT = null;
 let SF_ADMIN = false;
 let SF_LOCAL_DATA = null;
+/* Afgeronde Engelse My Future-pakketten (27 oktober 2026).
+   Alleen verbergen in het oefenaanbod, NIET verwijderen uit de opslag:
+   historische cijfers en flashcardbeoordelingen blijven intact. */
+const SF_ARCHIVED_PACK_IDS = new Set([
+  'dean-engels-my-future-2026-10-27-v1',
+  'dean-engels-my-future-2026-10-27-mc-extra-1-v1',
+  'dean-engels-my-future-2026-10-27-mc-extra-2-v1'
+]);
+function sfIsArchivedCollection(col){
+  if(!col || typeof col.source_key!=='string')return false;
+  return SF_ARCHIVED_PACK_IDS.has(col.source_key.split('::')[0]);
+}
 
 async function sfClient(){
   if(!SF_REMOTE) return null;
@@ -242,7 +254,11 @@ async function sfAdapter(action,b=null,params={}){
       attempts=d.attempts.filter(s=>s.profile_id===pid).slice().sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));
       reviews=d.reviews.filter(s=>s.profile_id===pid);
     }
+    // Verberg afgeronde lespakketten uit het actuele aanbod.
+    // Eerdere toetsresultaten blijven zichtbaar bij Progressie.
+    sets=sets.filter(s=>!sfIsArchivedCollection(s));
     const exists=new Set(sets.map(s=>s.id));
+    reviews=reviews.filter(r=>exists.has(r.collection_id));
     return {collections:sets.map(({content,...rest})=>({...rest,questions_per_attempt:content?.questionsPerAttempt||null})),attempts:attempts.map(({details,...rest})=>rest),
       flash_progress:reviews,missed:sfLatestMissed(attempts).filter(m=>exists.has(m.collection_id))};
   }
@@ -251,7 +267,7 @@ async function sfAdapter(action,b=null,params={}){
     let set;
     if(SF_REMOTE){const c=await sfClient();set=sfError(await c.from('sf_collections').select('*').eq('id',id).eq('profile_id',pid).maybeSingle());}
     else set=d.sets.find(s=>s.id===id&&s.profile_id===pid);
-    if(!set)throw Error('Oefenset niet gevonden.');return {collection:set};
+    if(!set||sfIsArchivedCollection(set))throw Error('Deze oefenset is afgerond en gearchiveerd.');return {collection:set};
   }
   if(action==='save_quiz'){
     const pid=sfGoodProfile(b.profile);const id=Number(b.collection_id);
