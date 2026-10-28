@@ -78,6 +78,18 @@ async function sfSyncPublished(){
     const content=await response.text();
     if(content.length>1800000)throw Error('De gepubliceerde bibliotheek is te groot.');
     const library=JSON.parse(content);
+    // StudyForge extra lespakketten: kleine afzonderlijke bestanden voorkomen
+    // dat de volledige centrale bibliotheek steeds opnieuw moet worden geschreven.
+    for(const extraPath of ['./content/nikki-wiskunde-deel1.json','./content/nikki-wiskunde-deel2.json']){
+      try{
+        const extraRes=await fetch(extraPath,{cache:'no-store'});
+        if(!extraRes.ok)throw Error('HTTP '+extraRes.status);
+        const extra=await extraRes.json();
+        if(extra.schema==='studyforge-library/v1'&&Array.isArray(extra.packs)){
+          library.packs.push(...extra.packs);
+        }
+      }catch(err){console.warn('Extra lespakket niet beschikbaar:',extraPath,err);}
+    }
     if(library?.schema!=='studyforge-library/v1'||!Array.isArray(library.packs))throw Error('Ongeldig bibliotheekformaat.');
     if(library.packs.length>200)throw Error('Te veel lespakketten.');
     // Alleen deze gepubliceerde toetsdata mag de planning vullen;
