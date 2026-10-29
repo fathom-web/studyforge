@@ -2,13 +2,14 @@
 
 ## Centrale voortgang zonder persoonlijke gebruikersaccounts
 
-De cloudadapter staat in `sharedsync.js`; SQL in `supabase/shared-progress.sql`. Het profielscherm vraagt om 2007. Zodra `config.js` een geldige Supabase publishable key heeft en de SQL is uitgevoerd, wordt 2007 ook via de database gecontroleerd. Daarna synchroniseren toetsresultaten, foute vragen, flashcards, leerdoelen en toetsplanning voor Nikki en Dean tussen apparaten. De eerste keer worden bestaande lokale resultaten zoveel mogelijk meegenomen.
+De cloudadapter staat in `sharedsync.js`; SQL in `supabase/shared-progress.sql`. Het profielscherm vraagt om 2007. De publieke Supabase publishable key en project-URL zijn sinds 29 oktober 2026 in `config.js` ingesteld; de SQL werd door de beheerder uitgevoerd. De code 2007 wordt via de databasefunctie gecontroleerd zodra de verbinding lukt. Daarna synchroniseren toetsresultaten, foute vragen, flashcards, leerdoelen en toetsplanning voor Nikki en Dean tussen apparaten. De eerste keer worden bestaande lokale resultaten zoveel mogelijk meegenomen.
 
-**Laatste inrichting:**
-1. Supabase → SQL Editor → kopieer en voer `supabase/shared-progress.sql` uit.
-2. Supabase → Project Settings → API Keys → kopieer uitsluitend de **publishable key** (`sb_publishable_...`) of oude **anon**-key.
-3. Zet die openbare sleutel in `config.js` → `publishableKey`. Het project-URL-veld en `sharedMode: true` staan al ingevuld.
-4. GitHub Pages herladen. Kies Nikki/Dean en gebruik 2007; na succesvolle cloudverbinding staat bovenin **Cloudopslag**.
+**Installatie bijgewerkt (29 oktober 2026):**
+- SQL uitgevoerd volgens screenshot van de beheerder.
+- Project-URL en publieke publishable key in de GitHub-configuratie geplaatst.
+- De site laadt een cache-gebuste config en gebruikt `sharedMode: true`.
+- De clientflow is getest met twee gesimuleerde browsers. De live Supabase-verbinding kan pas door de gebruiker in de browser daadwerkelijk worden bevestigd.
+- Gebruik het profielscherm en code 2007; na succesvolle verbinding staat bovenin **Cloudopslag**.
 
 De tabellen kunnen niet rechtstreeks vanuit een anonieme client worden gelezen of gewijzigd. Alle toegang loopt via een beperkte databasefunctie met profielcode. De code 2007 is openbaar in de GitHub-code en is geen sterke beveiliging. Publiceer geen privédocumenten of gevoelige persoonsgegevens.
 
@@ -19,7 +20,7 @@ De tabellen kunnen niet rechtstreeks vanuit een anonieme client worden gelezen o
 - De viercijferige code is **2007**; foutieve codes geven geen toegang tot het dashboard.
 - Bij het wisselen van profiel wordt de code opnieuw gevraagd.
 - **Dit is uitsluitend een schermdrempel, geen sterke beveiliging.** De websitecode is via de openbare GitHub-repository te lezen. De code staat niet gelijk aan een Supabase-login, databasewachtwoord of echte toegangsrechten.
-- Centrale synchronisatie van resultaten is nog **niet actief**: `config.js` bevat nog geen Supabase Project URL en publishable key. Er worden geen anonieme database-schrijfrechten verleend. Voor veilig delen zonder accounts is een afzonderlijke server-side koppeling met rate limiting nodig, of later een Supabase Auth-login.
+- Centrale synchronisatie is in de code ingeschakeld. Gebruik de site om de daadwerkelijke verbinding te verifiëren. Met de korte publiek bekende code 2007 blijft dit een eenvoudige gedeelde toegang en geen sterke bescherming tegen misbruik.
 
 
 Webapp: https://fathom-web.github.io/studyforge/
@@ -45,10 +46,10 @@ Er is dus geen JSON-upload, beheerders-importscherm, invoerformulier voor toetsd
 - Ouderoverzicht voor beide profielen raadplegen
 
 ## Gegevens en Supabase
-- Zonder account: `localStorage` op hetzelfde apparaat en in dezelfde browser.
-- De Supabase-tabellen zijn beschreven in `supabase/schema.sql` en `supabase/planning-v2.sql`. De huidige app gebruikt standaard lokale opslag totdat een gezinsaccount en `config.js` met uitsluitend de **publieke** Supabase-projectsleutel zijn ingesteld.
-- Een account is nodig voor veilige synchronisatie. Er worden **geen anonieme schrijfrechten** gegeven. Geen databasewachtwoorden of `service_role`-sleutels publiceren.
-- Lokale voortgang wordt niet automatisch naar Supabase gemigreerd.
+- De huidige configuratie gebruikt de gedeelde cloudmodus met Supabase RPC `sf_shared_sync`; er is geen persoonlijk e-mailaccount nodig.
+- De tabellen staan beschreven in `supabase/schema.sql`, `supabase/planning-v2.sql` en `supabase/shared-progress.sql`.
+- Lokaal bewaarde resultaten worden bij het eerste geldige profielbezoek per apparaat waar mogelijk naar de cloud overgezet. De publieke GitHub-bibliotheek bevat alleen lesmateriaal, niet de cijfers.
+- De profielcode is geen sterke authenticatie. De RPC heeft beperkte permissies; plaats geen gevoelige persoonsgegevens of vertrouwelijke bestanden. Geen databasewachtwoorden of `service_role`-sleutels publiceren.
 
 ## Gepubliceerde bibliotheek
 `content/library.json`:
