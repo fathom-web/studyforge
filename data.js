@@ -80,7 +80,7 @@ async function sfSyncPublished(){
     const library=JSON.parse(content);
     // StudyForge extra lespakketten: kleine afzonderlijke bestanden voorkomen
     // dat de volledige centrale bibliotheek steeds opnieuw moet worden geschreven.
-    for(const extraPath of ['./content/nikki-wiskunde-deel1.json','./content/nikki-wiskunde-deel2.json']){
+    for(const extraPath of ['./content/nikki-wiskunde-deel1.json','./content/nikki-wiskunde-deel2.json','./content/nikki-frans-2026-10-29.json']){
       try{
         const extraRes=await fetch(extraPath,{cache:'no-store'});
         if(!extraRes.ok)throw Error('HTTP '+extraRes.status);
