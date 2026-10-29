@@ -4,6 +4,6 @@
    Geen databasewachtwoorden, service_role keys of secret keys gebruiken! */
 window.STUDYFORGE_SUPABASE = {
   url: 'https://vjgqodidvpkybeoectxu.supabase.co',
-  publishableKey: '', // Nog in te vullen in Supabase -> Project Settings -> API Keys
+  publishableKey: 'sb_publishable_wazrGrYlvv0ANucwPL_KeA_yTwrQd8y', // Publieke API-sleutel (geen geheime sleutel)
   sharedMode: true
 };
