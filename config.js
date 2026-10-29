@@ -3,7 +3,7 @@
    SQL Editor: voer eerst supabase/shared-progress.sql uit.
    Geen databasewachtwoorden, service_role keys of secret keys gebruiken! */
 window.STUDYFORGE_SUPABASE = {
-  url: 'https://vjgqodidvpkybeoectxu.supabase.co',
+  url: 'https://vjqgodidvpkybeoectxu.supabase.co',
   publishableKey: 'sb_publishable_wazrGrYlvv0ANucwPL_KeA_yTwrQd8y', // Publieke API-sleutel (geen geheime sleutel)
   sharedMode: true
 };
