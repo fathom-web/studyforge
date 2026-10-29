@@ -6820,6 +6820,401 @@
           ]
         }
       ]
+    },
+    {
+      "id": "nikki-frans-proeftoets-37-punten-juf-2026-10-29-v1",
+      "profile": "Nikki",
+      "collections": [
+        {
+          "type": "quiz",
+          "subject": "Frans",
+          "title": "Proeftoets Frans · Precies volgens de juf (37 punten)",
+          "description": "7 opdrachten, 37 punten: luisteren (6, Franse computerstem), woorden kiezen (5), lezen (8), vertalen (5), schrijven (3), lidwoorden en meervoud (6), avoir (4). Alle vaardigheden behalve spreken. 18 meerkeuze en 19 open. Volgens de aantekeningen: 60% havo, 65% vwo. Dit is een oefentoets, geen origineel luisterfragment.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Opdracht 1 – Luisteren · Wat is de leeftijd van het meisje? Luister naar het fragment.",
+              "options": [
+                "Elf jaar",
+                "Twaalf jaar",
+                "Dertien jaar",
+                "Veertien jaar"
+              ],
+              "correct": 1,
+              "hint": "Hoor je 'douze', 'treize' of iets anders?",
+              "explanation": "J'ai douze ans = ik ben twaalf jaar.",
+              "audioText": "Bonjour ! Je m'appelle Léa. J'ai douze ans."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 1 – Luisteren · In welke stad woont de spreker? Luister.",
+              "options": [
+                "Paris",
+                "Lille",
+                "Zwolle",
+                "Amsterdam"
+              ],
+              "correct": 0,
+              "hint": "Let op het woord na 'j'habite à'.",
+              "explanation": "J'habite à Paris = ik woon in Parijs.",
+              "audioText": "Bonjour, je suis Hugo. J'habite à Paris."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 1 – Luisteren · Welke familieleden noemt de spreker? Luister.",
+              "options": [
+                "Een broer en een zus",
+                "Twee broers",
+                "Een neef en een tante",
+                "Een vader en een moeder"
+              ],
+              "correct": 0,
+              "hint": "Frère is broer en sœur is zus.",
+              "explanation": "J'ai un frère et une sœur = ik heb een broer en een zus.",
+              "audioText": "J'ai un frère et une sœur."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 1 – Luisteren · Welk dier heeft de broer? Luister.",
+              "options": [
+                "Een hond",
+                "Een kat",
+                "Een paard",
+                "Geen dier"
+              ],
+              "correct": 0,
+              "hint": "Chien = hond, chat = kat.",
+              "explanation": "Mon frère a un chien = mijn broer heeft een hond.",
+              "audioText": "Mon frère a un chien."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 1 – Luisteren · Met welke cijfers begint het telefoonnummer? Luister.",
+              "options": [
+                "07",
+                "05",
+                "06",
+                "08"
+              ],
+              "correct": 2,
+              "hint": "Luister naar 'zéro six'.",
+              "explanation": "Zéro six betekent 06.",
+              "audioText": "Mon numéro de téléphone, c'est le zéro six, quatorze, zéro sept, dix-huit, cinq."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 1 – Luisteren · Wat zegt de spreker over zichzelf? Luister.",
+              "options": [
+                "Ik hou van vakantie",
+                "Ik hou van sport",
+                "Ik hou van school",
+                "Ik heb een hond"
+              ],
+              "correct": 1,
+              "hint": "J'aime betekent ik vind leuk / ik houd van.",
+              "explanation": "J'aime le sport = ik houd van sport.",
+              "audioText": "Bonjour ! Je m'appelle Emma. J'aime le sport."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 2 – Woorden kiezen · Kies het juiste Franse woord: Je suis à la ___.",
+              "options": [
+                "tante",
+                "plage",
+                "famille",
+                "sœur"
+              ],
+              "correct": 1,
+              "hint": "Denk aan het strand.",
+              "explanation": "La plage = het strand; je suis à la plage = ik ben op het strand."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 2 – Woorden kiezen · Kies het juiste Franse woord: J'ai une ___.",
+              "options": [
+                "frère",
+                "cousin",
+                "sœur",
+                "chien"
+              ],
+              "correct": 2,
+              "hint": "Une vraagt een vrouwelijk woord.",
+              "explanation": "Une sœur = een zus."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 2 – Woorden kiezen · Kies het juiste Franse woord: Mon ___ de téléphone, c'est le 06-14-07-18-5.",
+              "options": [
+                "nom",
+                "âge",
+                "numéro",
+                "copain"
+              ],
+              "correct": 2,
+              "hint": "Wat gaat direct voor 'de téléphone'?",
+              "explanation": "Mon numéro de téléphone = mijn telefoonnummer."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 2 – Woorden kiezen · Kies de juiste vorm: Nous ___ un chien.",
+              "options": [
+                "ai",
+                "avez",
+                "ont",
+                "avons"
+              ],
+              "correct": 3,
+              "hint": "Nous is wij, avoir is hebben.",
+              "explanation": "Nous avons = wij hebben."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 2 – Woorden kiezen · Kies het juiste woord: J'habite ___ Paris.",
+              "options": [
+                "en",
+                "de",
+                "à",
+                "avec"
+              ],
+              "correct": 2,
+              "hint": "Steden: j'habite à ...",
+              "explanation": "J'habite à Paris = ik woon in Parijs."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 3 – Leestekst · Hoe heet de persoon die de tekst vertelt?",
+              "options": [
+                "Emma",
+                "Sophie",
+                "Amélie",
+                "Léa"
+              ],
+              "correct": 2,
+              "hint": "Zoek de zin 'Je m'appelle ...'.",
+              "explanation": "De verteller zegt: Je m'appelle Amélie.",
+              "passage": "Bonjour ! Je m'appelle Amélie. J'ai treize ans. J'habite à Lille avec ma famille. J'ai un frère, Hugo, et une sœur, Sophie. Nous avons un chien. Hugo a un chat. J'aime le sport et la plage. Mon numéro de téléphone, c'est le 06-14-07-18-5."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 3 – Leestekst · Hoe oud is Amélie?",
+              "options": [
+                "12",
+                "13",
+                "14",
+                "15"
+              ],
+              "correct": 1,
+              "hint": "Zoek de zin met 'ans'.",
+              "explanation": "J'ai treize ans = ik ben 13 jaar.",
+              "passage": "Bonjour ! Je m'appelle Amélie. J'ai treize ans. J'habite à Lille avec ma famille. J'ai un frère, Hugo, et une sœur, Sophie. Nous avons un chien. Hugo a un chat. J'aime le sport et la plage. Mon numéro de téléphone, c'est le 06-14-07-18-5."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 3 – Leestekst · In welke stad woont Amélie? Schrijf de plaatsnaam.",
+              "answer": "Lille",
+              "hint": "Zoek 'J'habite à ...'.",
+              "explanation": "J'habite à Lille betekent ik woon in Lille.",
+              "passage": "Bonjour ! Je m'appelle Amélie. J'ai treize ans. J'habite à Lille avec ma famille. J'ai un frère, Hugo, et une sœur, Sophie. Nous avons un chien. Hugo a un chat. J'aime le sport et la plage. Mon numéro de téléphone, c'est le 06-14-07-18-5."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 3 – Leestekst · Hoe heet de broer van Amélie?",
+              "answer": "Hugo",
+              "hint": "Zoek het woord 'frère'.",
+              "explanation": "J'ai un frère, Hugo = ik heb een broer, Hugo.",
+              "passage": "Bonjour ! Je m'appelle Amélie. J'ai treize ans. J'habite à Lille avec ma famille. J'ai un frère, Hugo, et une sœur, Sophie. Nous avons un chien. Hugo a un chat. J'aime le sport et la plage. Mon numéro de téléphone, c'est le 06-14-07-18-5."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 3 – Leestekst · Hoe heet de zus van Amélie?",
+              "answer": "Sophie",
+              "hint": "Zoek het woord 'sœur'.",
+              "explanation": "Une sœur, Sophie = een zus, Sophie.",
+              "passage": "Bonjour ! Je m'appelle Amélie. J'ai treize ans. J'habite à Lille avec ma famille. J'ai un frère, Hugo, et une sœur, Sophie. Nous avons un chien. Hugo a un chat. J'aime le sport et la plage. Mon numéro de téléphone, c'est le 06-14-07-18-5."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 3 – Leestekst · Welk huisdier heeft het gezin samen? Antwoord in het Nederlands.",
+              "answer": "Een hond",
+              "hint": "Zoek de zin die met 'Nous avons' begint.",
+              "explanation": "Nous avons un chien = wij hebben een hond.",
+              "passage": "Bonjour ! Je m'appelle Amélie. J'ai treize ans. J'habite à Lille avec ma famille. J'ai un frère, Hugo, et une sœur, Sophie. Nous avons un chien. Hugo a un chat. J'aime le sport et la plage. Mon numéro de téléphone, c'est le 06-14-07-18-5."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 3 – Leestekst · Welk huisdier heeft Hugo? Antwoord in het Nederlands.",
+              "answer": "Een kat",
+              "hint": "Zoek 'Hugo a ...'.",
+              "explanation": "Hugo a un chat = Hugo heeft een kat.",
+              "passage": "Bonjour ! Je m'appelle Amélie. J'ai treize ans. J'habite à Lille avec ma famille. J'ai un frère, Hugo, et une sœur, Sophie. Nous avons un chien. Hugo a un chat. J'aime le sport et la plage. Mon numéro de téléphone, c'est le 06-14-07-18-5."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 3 – Leestekst · Noem twee dingen die Amélie leuk vindt, in het Nederlands.",
+              "answer": "Sport en het strand",
+              "hint": "Zoek de zin met 'J'aime'.",
+              "explanation": "J'aime le sport et la plage = ik houd van sport en het strand.",
+              "passage": "Bonjour ! Je m'appelle Amélie. J'ai treize ans. J'habite à Lille avec ma famille. J'ai un frère, Hugo, et une sœur, Sophie. Nous avons un chien. Hugo a un chat. J'aime le sport et la plage. Mon numéro de téléphone, c'est le 06-14-07-18-5."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 4 – Vertalen · Vertaal 'la plage' naar het Nederlands.",
+              "answer": "het strand",
+              "hint": "Dit woord komt voor bij de vakantie.",
+              "explanation": "La plage = het strand."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 4 – Vertalen · Vertaal 'la famille' naar het Nederlands.",
+              "answer": "de familie",
+              "hint": "Dit woord lijkt op het Nederlands.",
+              "explanation": "La famille = de familie."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 4 – Vertalen · Vertaal 'un frère' naar het Nederlands.",
+              "answer": "een broer",
+              "hint": "Un is een, frère is een familielid.",
+              "explanation": "Un frère = een broer."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 4 – Vertalen · Vertaal 'une sœur' naar het Nederlands.",
+              "answer": "een zus",
+              "hint": "Une is een (vrouwelijk).",
+              "explanation": "Une sœur = een zus."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 4 – Vertalen · Vertaal 'un chat' naar het Nederlands.",
+              "answer": "een kat",
+              "hint": "Verwar chat niet met chien.",
+              "explanation": "Un chat = een kat. Un chien = een hond."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 5 – Zinnen schrijven · Schrijf in het Frans een volledige zin: 'Ik ben dertien jaar.'",
+              "answer": "J'ai treize ans.",
+              "hint": "In het Frans heb je je leeftijd: gebruik avoir.",
+              "explanation": "J'ai treize ans. Leeftijd wordt uitgedrukt met avoir."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 5 – Zinnen schrijven · Schrijf in het Frans een volledige zin: 'Ik woon in Amsterdam.'",
+              "answer": "J'habite à Amsterdam.",
+              "hint": "Je + habite wordt j'habite.",
+              "explanation": "J'habite à Amsterdam. Bij een stad gebruik je à."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 5 – Zinnen schrijven · Schrijf in het Frans een volledige zin: 'Mijn telefoonnummer is 06-14-07-18-5.' (Schrijf de cijfers als cijfers.)",
+              "answer": "Mon numéro de téléphone, c'est le 06-14-07-18-5.",
+              "hint": "Begin met 'Mon numéro de téléphone, c'est ...'.",
+              "explanation": "Mon numéro de téléphone, c'est le 06-14-07-18-5."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 6 – Grammatica · Vervang het bepaalde lidwoord door een onbepaald lidwoord: le garçon.",
+              "options": [
+                "une garçon",
+                "un garçon",
+                "un garçons",
+                "une garçons"
+              ],
+              "correct": 1,
+              "hint": "Garçon is mannelijk enkelvoud.",
+              "explanation": "Le garçon → un garçon."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 6 – Grammatica · Vervang het bepaalde lidwoord door een onbepaald lidwoord: la fille.",
+              "options": [
+                "une fille",
+                "un fille",
+                "les filles",
+                "la filles"
+              ],
+              "correct": 0,
+              "hint": "Fille is vrouwelijk enkelvoud.",
+              "explanation": "La fille → une fille."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 6 – Grammatica · Vervang het bepaalde lidwoord door een onbepaald lidwoord: l'hôtel.",
+              "options": [
+                "une hôtel",
+                "un hôtel",
+                "le hôtel",
+                "les hôtels"
+              ],
+              "correct": 1,
+              "hint": "Hôtel is mannelijk en de h spreek je niet uit.",
+              "explanation": "L'hôtel → un hôtel."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 6 – Grammatica · Zet in het meervoud, inclusief lidwoord: le camping.",
+              "answer": "les campings",
+              "hint": "Maak van le het lidwoord voor meervoud en voeg doorgaans -s toe.",
+              "explanation": "Le camping → les campings."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 6 – Grammatica · Zet in het meervoud, inclusief lidwoord: la tente.",
+              "answer": "les tentes",
+              "hint": "Vervang la door les.",
+              "explanation": "La tente → les tentes."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 6 – Grammatica · Zet in het meervoud, inclusief lidwoord: la fille.",
+              "answer": "les filles",
+              "hint": "Les is het lidwoord voor meervoud.",
+              "explanation": "La fille → les filles."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 7 – Avoir · Kies de juiste vervoeging: Je ___ une sœur.",
+              "options": [
+                "a",
+                "ai",
+                "as",
+                "ont"
+              ],
+              "correct": 1,
+              "hint": "Je + avoir.",
+              "explanation": "J'ai une sœur = ik heb een zus; je ai wordt j'ai."
+            },
+            {
+              "type": "mc",
+              "question": "Opdracht 7 – Avoir · Kies de juiste vervoeging: Nous ___ un chien.",
+              "options": [
+                "avez",
+                "ont",
+                "avons",
+                "as"
+              ],
+              "correct": 2,
+              "hint": "Nous betekent wij.",
+              "explanation": "Nous avons un chien."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 7 – Avoir · Vul de juiste vorm van avoir in: Tu ___ un frère.",
+              "answer": "as",
+              "hint": "Tu is jij.",
+              "explanation": "Tu as un frère = jij hebt een broer."
+            },
+            {
+              "type": "open",
+              "question": "Opdracht 7 – Avoir · Vul de juiste vorm van avoir in: Ils ___ une tente.",
+              "answer": "ont",
+              "hint": "Ils is zij (meervoud).",
+              "explanation": "Ils ont une tente."
+            }
+          ]
+        }
+      ]
     }
   ],
   "exams": []
