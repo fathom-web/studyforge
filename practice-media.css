@@ -1,0 +1,14 @@
+/* Franse proeftoets: luister- en leestekstvakken. */
+.sf-audio-panel,.sf-reading-passage{
+  background:linear-gradient(135deg,#1a3040,#1b2938);
+  border:1px solid #426675;
+  border-radius:15px;
+  padding:18px 20px;
+  margin:0 0 24px;
+  color:#e9f5ff;
+}
+.sf-audio-panel p{font-size:13px;line-height:1.65;color:#b8cbd8;margin:0 0 15px;}
+.sf-audio-panel .btn{white-space:normal;min-height:45px;}
+.sf-reading-passage strong{font-size:11px;letter-spacing:.14em;color:#9debd8;}
+.sf-reading-passage p{font-size:16px;line-height:1.8;margin-top:12px;white-space:pre-line;}
+@media(max-width:620px){.sf-audio-panel,.sf-reading-passage{padding:15px;}.sf-reading-passage p{font-size:14px;}}
