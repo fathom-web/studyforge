@@ -6030,6 +6030,796 @@
           ]
         }
       ]
+    },
+    {
+      "id": "nikki-frans-ch1-vocab-grammatica-2026-10-29-v1",
+      "profile": "Nikki",
+      "collections": [
+        {
+          "type": "quiz",
+          "subject": "Frans",
+          "title": "Frans · Oefentoets 1 – Woorden en basisgrammatica",
+          "description": "30 vragen: 15 meerkeuze en 15 open. Familie, vakantie, getallen, avoir, être en kennismaken. Inclusief hints en uitleg.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat betekent 'la sœur'? ",
+              "options": [
+                "de tante",
+                "de zus",
+                "de nicht",
+                "de dochter"
+              ],
+              "correct": 1,
+              "hint": "Het is een vrouwelijk familielid.",
+              "explanation": "La sœur betekent de zus."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: de broer.",
+              "answer": "le frère",
+              "hint": "Een mannelijk familielid met bepaald lidwoord.",
+              "explanation": "Le frère betekent de broer."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe schrijf je 'een broer' in het Frans?",
+              "options": [
+                "une frère",
+                "le frère",
+                "un frère",
+                "des frères"
+              ],
+              "correct": 2,
+              "hint": "Kijk naar het lidwoord voor een mannelijk zelfstandig naamwoord.",
+              "explanation": "Un frère = een broer."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: de nicht (vrouwelijke cousin).",
+              "answer": "la cousine",
+              "hint": "Het vrouwelijke woord van le cousin.",
+              "explanation": "La cousine = de nicht."
+            },
+            {
+              "type": "mc",
+              "question": "Welk persoonlijk voornaamwoord betekent 'wij'?",
+              "options": [
+                "vous",
+                "elles",
+                "nous",
+                "tu"
+              ],
+              "correct": 2,
+              "hint": "Het staat in het rijtje je, tu, il/elle, nous...",
+              "explanation": "Nous betekent wij."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: Ik heb een zus.",
+              "answer": "J'ai une sœur.",
+              "hint": "Begin met j'ai; sœur is vrouwelijk.",
+              "explanation": "J'ai une sœur. Je + ai wordt j'ai."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'nous avons'?",
+              "options": [
+                "wij zijn",
+                "wij wonen",
+                "wij hebben",
+                "wij gaan"
+              ],
+              "correct": 2,
+              "hint": "Avoir betekent hebben.",
+              "explanation": "Nous avons = wij hebben."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: Wij hebben een hond.",
+              "answer": "Nous avons un chien.",
+              "hint": "Nous + avoir.",
+              "explanation": "Nous avons un chien."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is de vertaling van 'les vacances'?",
+              "options": [
+                "het strand",
+                "de vakantie",
+                "de maandag",
+                "de familie"
+              ],
+              "correct": 1,
+              "hint": "Dit woord hoort bij op reis gaan.",
+              "explanation": "Les vacances = de vakantie."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: zij hebben (alleen meisjes).",
+              "answer": "elles ont",
+              "hint": "Het meervoud van elle is elles.",
+              "explanation": "Elles ont = zij hebben (vrouwelijke groep)."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'la plage'?",
+              "options": [
+                "het strand",
+                "de zee",
+                "het hotel",
+                "de camping"
+              ],
+              "correct": 0,
+              "hint": "Denk aan zand en zwemmen.",
+              "explanation": "La plage betekent het strand; la mer is de zee."
+            },
+            {
+              "type": "open",
+              "question": "Hoe vraag je in het Frans: Hoe heet jij?",
+              "answer": "Comment tu t'appelles ?",
+              "hint": "Begin met Comment...",
+              "explanation": "Comment tu t'appelles ? vraagt naar iemands naam."
+            },
+            {
+              "type": "mc",
+              "question": "Welke vorm van 'avoir' hoort bij 'tu'?",
+              "options": [
+                "ai",
+                "a",
+                "avons",
+                "as"
+              ],
+              "correct": 3,
+              "hint": "Tu is jij.",
+              "explanation": "Tu as = jij hebt."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf in het Frans: Ik heet Nikki.",
+              "answer": "Je m'appelle Nikki.",
+              "hint": "Gebruik de vorm je m'appelle.",
+              "explanation": "Je m'appelle Nikki."
+            },
+            {
+              "type": "mc",
+              "question": "Welke Franse zin betekent 'Ik heb een hond'?",
+              "options": [
+                "Je suis un chien.",
+                "J'ai un chien.",
+                "Tu as un chien.",
+                "Nous avons un chien."
+              ],
+              "correct": 1,
+              "hint": "Gebruik je + avoir; je wordt j' voor een klinker.",
+              "explanation": "J'ai un chien = ik heb een hond."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf in het Frans: Ik woon in Parijs.",
+              "answer": "J'habite à Paris.",
+              "hint": "Je + habite wordt j'habite.",
+              "explanation": "J'habite à Paris."
+            },
+            {
+              "type": "mc",
+              "question": "Welke vraag past bij het antwoord 'J'habite à Zwolle'?",
+              "options": [
+                "Comment tu t'appelles ?",
+                "Tu habites où ?",
+                "Tu as quel âge ?",
+                "Ça va ?"
+              ],
+              "correct": 1,
+              "hint": "Het antwoord vertelt waar iemand woont.",
+              "explanation": "Tu habites où ? = Waar woon je?"
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: de camping.",
+              "answer": "le camping",
+              "hint": "Het woord lijkt sterk op het Nederlands.",
+              "explanation": "Le camping = de camping."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een goed antwoord op 'Tu as quel âge ?'?",
+              "options": [
+                "J'ai douze ans.",
+                "Je m'appelle Nikki.",
+                "J'habite à Paris.",
+                "Au revoir."
+              ],
+              "correct": 0,
+              "hint": "Leeftijd gebruik je in het Frans met avoir.",
+              "explanation": "J'ai douze ans = ik ben twaalf jaar."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: de vriend (copain).",
+              "answer": "le copain",
+              "hint": "Het woord staat bij de familie- en vriendschapswoorden.",
+              "explanation": "Le copain betekent de vriend."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'le cousin'?",
+              "options": [
+                "de vader",
+                "de neef",
+                "de oom",
+                "de zoon"
+              ],
+              "correct": 1,
+              "hint": "Een familielid van dezelfde generatie.",
+              "explanation": "Le cousin = de neef; la cousine = de nicht."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf het getal 17 in het Frans.",
+              "answer": "dix-sept",
+              "hint": "Het is letterlijk tien-zeven.",
+              "explanation": "17 = dix-sept."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'de tent'?",
+              "options": [
+                "la tête",
+                "la mer",
+                "la tente",
+                "la tante"
+              ],
+              "correct": 2,
+              "hint": "Pas op: tente en tante zijn verschillende woorden.",
+              "explanation": "La tente = de tent; la tante = de tante."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: de familie.",
+              "answer": "la famille",
+              "hint": "Het lijkt op het Nederlandse woord.",
+              "explanation": "La famille = de familie."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe schrijf je het getal 14?",
+              "options": [
+                "quatre",
+                "quatorze",
+                "quarante",
+                "quinze"
+              ],
+              "correct": 1,
+              "hint": "Het staat tussen treize en quinze.",
+              "explanation": "14 = quatorze."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: de meisjes.",
+              "answer": "les filles",
+              "hint": "Gebruik les voor het meervoud.",
+              "explanation": "Les filles = de meisjes."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'au revoir'?",
+              "options": [
+                "dank je",
+                "tot ziens",
+                "hallo",
+                "goedemorgen"
+              ],
+              "correct": 1,
+              "hint": "Je zegt het wanneer je afscheid neemt.",
+              "explanation": "Au revoir = tot ziens."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: ik ben.",
+              "answer": "je suis",
+              "hint": "Dit is een vorm van être.",
+              "explanation": "Je suis = ik ben."
+            },
+            {
+              "type": "mc",
+              "question": "Welke vorm betekent 'jullie hebben'?",
+              "options": [
+                "vous êtes",
+                "vous avez",
+                "nous avons",
+                "ils ont"
+              ],
+              "correct": 1,
+              "hint": "Gebruik vous + avoir.",
+              "explanation": "Vous avez = jullie hebben (of u heeft)."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: Hij heeft een broer.",
+              "answer": "Il a un frère.",
+              "hint": "Il + avoir wordt il a.",
+              "explanation": "Il a un frère."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "subject": "Frans",
+          "title": "Frans · Oefentoets 2 – Grammatica en zinnen",
+          "description": "30 andere vragen: 15 meerkeuze en 15 open. Lidwoorden, meervoud, persoonlijke voornaamwoorden, avoir, être en zelf zinnen maken.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Welk onbepaald lidwoord hoort bij 'fille' (meisje)?",
+              "options": [
+                "un",
+                "le",
+                "une",
+                "les"
+              ],
+              "correct": 2,
+              "hint": "Fille is vrouwelijk.",
+              "explanation": "Une fille = een meisje."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: Ik heb een broer en een zus.",
+              "answer": "J'ai un frère et une sœur.",
+              "hint": "Combineer j'ai met un frère en une sœur.",
+              "explanation": "J'ai un frère et une sœur."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe schrijf je 'een jongen'?",
+              "options": [
+                "une garçon",
+                "un garçon",
+                "la garçon",
+                "les garçon"
+              ],
+              "correct": 1,
+              "hint": "Garçon is mannelijk.",
+              "explanation": "Un garçon = een jongen."
+            },
+            {
+              "type": "open",
+              "question": "Vervang de namen door een persoonlijk voornaamwoord: Hugo et Adam ont un chien.",
+              "answer": "Ils ont un chien.",
+              "hint": "Hugo en Adam zijn twee jongens.",
+              "explanation": "Ils ont un chien."
+            },
+            {
+              "type": "mc",
+              "question": "Welke schrijfwijze van 'de school' is juist?",
+              "options": [
+                "la école",
+                "le école",
+                "les école",
+                "l'école"
+              ],
+              "correct": 3,
+              "hint": "Voor een klinker valt de e van le/la weg.",
+              "explanation": "L'école = de school."
+            },
+            {
+              "type": "open",
+              "question": "Vervang de namen door een persoonlijk voornaamwoord: Sophie et Céline ont une sœur.",
+              "answer": "Elles ont une sœur.",
+              "hint": "Alleen meisjes -> elles.",
+              "explanation": "Elles ont une sœur."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe schrijf je 'de vriend' bij het woord ami?",
+              "options": [
+                "l'ami",
+                "le ami",
+                "la ami",
+                "les ami"
+              ],
+              "correct": 0,
+              "hint": "Ami begint met een klinker.",
+              "explanation": "L'ami is correct: le wordt l' voor een klinker."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: een idee.",
+              "answer": "une idée",
+              "hint": "Idée is vrouwelijk en begint met een klinker.",
+              "explanation": "Une idée = een idee. Bij un/une blijft une vóór een klinker staan."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is het meervoud van 'la tente' inclusief lidwoord?",
+              "options": [
+                "la tentes",
+                "les tente",
+                "les tentes",
+                "un tentes"
+              ],
+              "correct": 2,
+              "hint": "Het lidwoord wordt les en het zelfstandig naamwoord krijgt meestal een s.",
+              "explanation": "Les tentes = de tenten."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: een kat.",
+              "answer": "un chat",
+              "hint": "Chat is mannelijk.",
+              "explanation": "Un chat = een kat."
+            },
+            {
+              "type": "mc",
+              "question": "Vul aan: 'Il ... treize ans.'",
+              "options": [
+                "ai",
+                "as",
+                "ont",
+                "a"
+              ],
+              "correct": 3,
+              "hint": "Il is hij; gebruik de derde persoon enkelvoud van avoir.",
+              "explanation": "Il a treize ans = hij is dertien jaar."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: een barbecue.",
+              "answer": "un barbecue",
+              "hint": "Dit zelfstandig naamwoord is mannelijk.",
+              "explanation": "Un barbecue = een barbecue."
+            },
+            {
+              "type": "mc",
+              "question": "Vul aan: 'Nous ... un chien.'",
+              "options": [
+                "sommes",
+                "avons",
+                "avez",
+                "ont"
+              ],
+              "correct": 1,
+              "hint": "Nous + avoir.",
+              "explanation": "Nous avons un chien = wij hebben een hond."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf in het Frans: het hotel (met het juiste lidwoord).",
+              "answer": "l'hôtel",
+              "hint": "Hôtel begint met een niet-uitgesproken h.",
+              "explanation": "L'hôtel is correct, niet le hôtel."
+            },
+            {
+              "type": "mc",
+              "question": "Vul aan: 'Elles ... une sœur.'",
+              "options": [
+                "a",
+                "avons",
+                "ont",
+                "avez"
+              ],
+              "correct": 2,
+              "hint": "Elles is zij, vrouwelijk meervoud.",
+              "explanation": "Elles ont une sœur."
+            },
+            {
+              "type": "open",
+              "question": "Maak meervoud inclusief lidwoord: la fille.",
+              "answer": "les filles",
+              "hint": "Les voor meervoud, en meestal -s toevoegen.",
+              "explanation": "La fille -> les filles."
+            },
+            {
+              "type": "mc",
+              "question": "Welk persoonlijk voornaamwoord vervangt 'Hugo et Adam'?",
+              "options": [
+                "elles",
+                "vous",
+                "il",
+                "ils"
+              ],
+              "correct": 3,
+              "hint": "Twee jongens vormen een mannelijke meervoudsgroep.",
+              "explanation": "Hugo et Adam -> ils."
+            },
+            {
+              "type": "open",
+              "question": "Maak meervoud inclusief lidwoord: le camping.",
+              "answer": "les campings",
+              "hint": "Vervang le door les en voeg meestal -s toe.",
+              "explanation": "Le camping -> les campings."
+            },
+            {
+              "type": "mc",
+              "question": "Welk persoonlijk voornaamwoord vervangt 'Sophie et Céline'?",
+              "options": [
+                "ils",
+                "elles",
+                "elle",
+                "nous"
+              ],
+              "correct": 1,
+              "hint": "Het zijn twee meisjes.",
+              "explanation": "Sophie et Céline -> elles."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: jij hebt.",
+              "answer": "tu as",
+              "hint": "De vorm van avoir bij tu.",
+              "explanation": "Tu as."
+            },
+            {
+              "type": "mc",
+              "question": "Welk persoonlijk voornaamwoord gebruik je voor 'Hugo et Sophie' samen?",
+              "options": [
+                "elle",
+                "elles",
+                "il",
+                "ils"
+              ],
+              "correct": 3,
+              "hint": "Een gemengde groep krijgt in het Frans het mannelijke meervoud.",
+              "explanation": "Hugo et Sophie -> ils."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: zij heeft (één meisje).",
+              "answer": "elle a",
+              "hint": "Elle is enkelvoud.",
+              "explanation": "Elle a = zij heeft."
+            },
+            {
+              "type": "mc",
+              "question": "Welke vorm betekent 'jullie zijn'?",
+              "options": [
+                "vous avez",
+                "vous êtes",
+                "nous sommes",
+                "ils sont"
+              ],
+              "correct": 1,
+              "hint": "Dit is être, niet avoir.",
+              "explanation": "Vous êtes = jullie zijn (of u bent)."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: jullie hebben.",
+              "answer": "vous avez",
+              "hint": "Gebruik vous + avoir.",
+              "explanation": "Vous avez."
+            },
+            {
+              "type": "mc",
+              "question": "Welke vorm van être hoort bij 'nous'?",
+              "options": [
+                "sont",
+                "avons",
+                "sommes",
+                "êtes"
+              ],
+              "correct": 2,
+              "hint": "Het gaat om zijn.",
+              "explanation": "Nous sommes = wij zijn."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: zij hebben (meerdere jongens).",
+              "answer": "ils ont",
+              "hint": "Bij een mannelijke meervoudsgroep gebruik je ils.",
+              "explanation": "Ils ont."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'le mercredi'?",
+              "options": [
+                "maandag",
+                "woensdag",
+                "donderdag",
+                "zaterdag"
+              ],
+              "correct": 1,
+              "hint": "Het is een dag van de week.",
+              "explanation": "Le mercredi = de woensdag / op woensdag."
+            },
+            {
+              "type": "open",
+              "question": "Hoe vraag je in het Frans: Wat is jouw telefoonnummer?",
+              "answer": "Quel est ton numéro de téléphone ?",
+              "hint": "Begin met Quel est ton...",
+              "explanation": "Quel est ton numéro de téléphone ?"
+            },
+            {
+              "type": "mc",
+              "question": "Welke zin betekent 'Ik spreek Frans'?",
+              "options": [
+                "J'ai français.",
+                "Je suis français.",
+                "Je parle français.",
+                "Tu parles français."
+              ],
+              "correct": 2,
+              "hint": "Parler = spreken; je is ik.",
+              "explanation": "Je parle français = ik spreek Frans."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Frans: Het is een klein katje.",
+              "answer": "C'est un petit chat.",
+              "hint": "Gebruik c'est + un petit + chat.",
+              "explanation": "C'est un petit chat."
+            }
+          ]
+        },
+        {
+          "type": "flashcards",
+          "subject": "Frans",
+          "title": "Frans · Flashcards hoofdstuk 1",
+          "description": "40 kaartjes uit de gefotografeerde lesstof: woordenschat, grammatica, zinnen en getallen.",
+          "cards": [
+            {
+              "front": "avoir",
+              "back": "hebben"
+            },
+            {
+              "front": "j'ai",
+              "back": "ik heb"
+            },
+            {
+              "front": "tu as",
+              "back": "jij hebt"
+            },
+            {
+              "front": "il a / elle a",
+              "back": "hij heeft / zij heeft"
+            },
+            {
+              "front": "nous avons",
+              "back": "wij hebben"
+            },
+            {
+              "front": "vous avez",
+              "back": "jullie hebben / u heeft"
+            },
+            {
+              "front": "ils ont / elles ont",
+              "back": "zij hebben"
+            },
+            {
+              "front": "je suis",
+              "back": "ik ben"
+            },
+            {
+              "front": "tu es",
+              "back": "jij bent"
+            },
+            {
+              "front": "il est / elle est",
+              "back": "hij is / zij is"
+            },
+            {
+              "front": "nous sommes",
+              "back": "wij zijn"
+            },
+            {
+              "front": "vous êtes",
+              "back": "jullie zijn / u bent"
+            },
+            {
+              "front": "ils sont / elles sont",
+              "back": "zij zijn"
+            },
+            {
+              "front": "on",
+              "back": "wij (in de spreektaal); ook 'men'"
+            },
+            {
+              "front": "un / une",
+              "back": "een (mannelijk / vrouwelijk)"
+            },
+            {
+              "front": "le / la / l'",
+              "back": "de of het (mannelijk / vrouwelijk / voor klinker of stomme h)"
+            },
+            {
+              "front": "les",
+              "back": "de (meervoud)"
+            },
+            {
+              "front": "un frère / une sœur",
+              "back": "een broer / een zus"
+            },
+            {
+              "front": "le cousin / la cousine",
+              "back": "de neef / de nicht"
+            },
+            {
+              "front": "la famille",
+              "back": "de familie"
+            },
+            {
+              "front": "la fille / le garçon",
+              "back": "het meisje / de jongen"
+            },
+            {
+              "front": "un chien / un chat",
+              "back": "een hond / een kat"
+            },
+            {
+              "front": "la plage / la mer",
+              "back": "het strand / de zee"
+            },
+            {
+              "front": "la tente / les tentes",
+              "back": "de tent / de tenten"
+            },
+            {
+              "front": "le camping",
+              "back": "de camping"
+            },
+            {
+              "front": "l'hôtel",
+              "back": "het hotel"
+            },
+            {
+              "front": "Comment tu t'appelles ?",
+              "back": "Hoe heet jij?"
+            },
+            {
+              "front": "Je m'appelle ...",
+              "back": "Ik heet ..."
+            },
+            {
+              "front": "Tu habites où ?",
+              "back": "Waar woon jij?"
+            },
+            {
+              "front": "J'habite à ...",
+              "back": "Ik woon in ..."
+            },
+            {
+              "front": "Tu as quel âge ?",
+              "back": "Hoe oud ben jij?"
+            },
+            {
+              "front": "J'ai douze ans.",
+              "back": "Ik ben twaalf jaar."
+            },
+            {
+              "front": "Quel est ton numéro de téléphone ?",
+              "back": "Wat is jouw telefoonnummer?"
+            },
+            {
+              "front": "Bonjour / Au revoir",
+              "back": "Hallo of goedendag / Tot ziens"
+            },
+            {
+              "front": "quatorze / dix-sept",
+              "back": "veertien / zeventien"
+            },
+            {
+              "front": "les vacances",
+              "back": "de vakantie"
+            },
+            {
+              "front": "le mercredi",
+              "back": "woensdag / op woensdag"
+            },
+            {
+              "front": "Je parle français.",
+              "back": "Ik spreek Frans."
+            },
+            {
+              "front": "une idée",
+              "back": "een idee"
+            },
+            {
+              "front": "l'école",
+              "back": "de school"
+            }
+          ]
+        }
+      ]
     }
   ],
   "exams": []
