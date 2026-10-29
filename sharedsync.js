@@ -10,7 +10,7 @@
 
   const baseAdapter=window.sfAdapter;
   const shared={
-    pin:null, profile:null, cache:new Map(),
+    pin:null, profile:null, online:false, lastError:null, cache:new Map(),
     deviceId(){
       let id=localStorage.getItem('studyforge-device-id');
       if(!id){
@@ -58,6 +58,7 @@
       if(!result.data||!Array.isArray(result.data.attempts)||!Array.isArray(result.data.reviews))
         throw Error('Onverwacht antwoord van de database.');
       this.cache.set(profile,result.data);
+      this.online=true;this.lastError=null;
       return result.data;
     },
     async enter(profile,pin){
@@ -77,7 +78,7 @@
         return data;
       }catch(error){this.clear();throw error;}
     },
-    clear(){this.pin=null;this.profile=null;this.cache.clear();},
+    clear(){this.pin=null;this.profile=null;this.online=false;this.lastError=null;this.cache.clear();},
     async savePlan(profile,plan){return this.sync(profile,plan);},
     async getPlan(profile){
       const row=this.cache.get(Number(profile))||await this.sync(profile);
@@ -112,18 +113,39 @@
     if(action==='logout')shared.clear();
     if(action==='dashboard'){
       const local=await baseAdapter(action,b,params);
-      if(shared.pin)return shared.dashboard(params.profile,local);
+      if(shared.pin){
+        try{return await shared.dashboard(params.profile,local);}
+        catch(err){
+          shared.online=false;shared.lastError=String(err?.message||err);
+          console.warn('StudyForge: cloudgegevens ophalen mislukt. Lokale resultaten blijven beschikbaar.',err);
+          return local;
+        }
+      }
       return local;
     }
     if(action==='save_quiz'){
       const result=await baseAdapter(action,b,params);
-      if(shared.pin)await shared.sync(Number(b.profile));
+      if(shared.pin){
+        try{await shared.sync(Number(b.profile));}
+        catch(err){
+          shared.online=false;shared.lastError=String(err?.message||err);
+          console.warn('StudyForge: score wel lokaal opgeslagen maar cloudsync mislukt.',err);
+          if(typeof toast==='function')toast('Cijfer lokaal opgeslagen; cloudsynchronisatie is mislukt.',true);
+        }
+      }
       return result;
     }
     if(action==='flash_review'){
       const result=await baseAdapter(action,b,params);
       shared.afterReview(b.profile,b.collection_id,b.index);
-      if(shared.pin)await shared.sync(Number(b.profile));
+      if(shared.pin){
+        try{await shared.sync(Number(b.profile));}
+        catch(err){
+          shared.online=false;shared.lastError=String(err?.message||err);
+          console.warn('StudyForge: flashcard lokaal opgeslagen, cloudsync mislukt.',err);
+          if(typeof toast==='function')toast('Flashcard lokaal opgeslagen; cloud niet bereikbaar.',true);
+        }
+      }
       return result;
     }
     return baseAdapter(action,b,params);
