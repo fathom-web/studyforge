@@ -7215,6 +7215,548 @@
           ]
         }
       ]
+    },
+    {
+      "id": "nikki-drama-begrippen-1mhv-2026-11-02-v1",
+      "profile": "Nikki",
+      "collections": [
+        {
+          "type": "quiz",
+          "subject": "Drama",
+          "title": "Drama · Oefentoets 1 – Begrippenkennis",
+          "description": "20 multiplechoicevragen over de begrippenlijst 1e jaar: acteren, expressie, improvisatie, podium, verhaal en de vijf W's. Niveau havo/vwo. Met hints en uitleg.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat is een personage in een toneelstuk?",
+              "options": [
+                "De plaats waar een scène speelt",
+                "De rol die een acteur speelt",
+                "Het gevoel van een acteur",
+                "Een voorwerp op het toneel"
+              ],
+              "correct": 1,
+              "hint": "Denk aan het verschil tussen de acteur en wie die uitbeeldt.",
+              "explanation": "Een personage is de rol die door een acteur wordt gespeeld."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent emotie bij acteren?",
+              "options": [
+                "Hoe een personage zich voelt",
+                "Hoe een decor eruitziet",
+                "Hoe langzaam iemand beweegt",
+                "Hoe een scène is opgebouwd"
+              ],
+              "correct": 0,
+              "hint": "Denk aan de binnenwereld van de gespeelde rol.",
+              "explanation": "Emotie beschrijft het gevoel van een rol of personage."
+            },
+            {
+              "type": "mc",
+              "question": "Welke term hoort bij de melodie waarmee woorden worden uitgesproken?",
+              "options": [
+                "Mimiek",
+                "Jabbertalk",
+                "Intonatie",
+                "Lichaamstaal"
+              ],
+              "correct": 2,
+              "hint": "Denk aan hoe dezelfde woorden verschillend kunnen klinken.",
+              "explanation": "Intonatie is de melodie van de uitspraak."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent overacting?",
+              "options": [
+                "Een scène zonder tekst spelen",
+                "Een rol zonder voorbereiding spelen",
+                "Een pose vasthouden",
+                "Overdreven acteren"
+              ],
+              "correct": 3,
+              "hint": "Let op de mate waarin spel en uitdrukking worden aangezet.",
+              "explanation": "Overacting betekent overdreven acteren."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is slow motion?",
+              "options": [
+                "Bewegingen vertraagd uitvoeren",
+                "Stilstaan als een schilderij",
+                "Een scène in stilte spelen",
+                "Met wisselende stemmelodie praten"
+              ],
+              "correct": 0,
+              "hint": "Vergelijk een handeling op normaal tempo met een bijzondere uitvoering.",
+              "explanation": "Bij slow motion worden bewegingen vertraagd uitgevoerd."
+            },
+            {
+              "type": "mc",
+              "question": "Wat wordt bedoeld met jabbertalk?",
+              "options": [
+                "Een gesprek op het podium",
+                "Spreken in fantasietaal",
+                "Een woordloze houding",
+                "Overdreven luid praten"
+              ],
+              "correct": 1,
+              "hint": "Denk aan wat er gebeurt als spelers zelf klanken verzinnen.",
+              "explanation": "Jabbertalk is fantasietaal."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is mimiek?",
+              "options": [
+                "De inrichting van het toneel",
+                "Een gespannen botsing",
+                "Een beweging in vertraging",
+                "Uitdrukkingen op het gezicht"
+              ],
+              "correct": 3,
+              "hint": "Het gaat om een specifiek deel van het lichaam.",
+              "explanation": "Mimiek bestaat uit gezichtsuitdrukkingen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent lichaamstaal?",
+              "options": [
+                "Een rol uit het hoofd leren",
+                "Een fantasietaal spreken",
+                "Expressie van het lichaam zonder woorden",
+                "Een scène heel langzaam spelen"
+              ],
+              "correct": 2,
+              "hint": "Denk aan informatie die een speler kan overbrengen zonder te praten.",
+              "explanation": "Lichaamstaal is expressie van het lichaam zonder woorden."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent freeze in drama?",
+              "options": [
+                "Een stilstaande houding",
+                "Een dramatisch hoogtepunt",
+                "Een gesproken fantasietaal",
+                "Een scène zonder voorbereiding"
+              ],
+              "correct": 0,
+              "hint": "Denk aan wat er met de houding van een speler gebeurt.",
+              "explanation": "Een freeze is een stilstaande houding."
+            },
+            {
+              "type": "mc",
+              "question": "Welke omschrijving hoort bij tableau vivant?",
+              "options": [
+                "Een gesprek tussen acteurs",
+                "Een levend schilderij",
+                "Een probleem in een verhaal",
+                "Een voorwerp in een scène"
+              ],
+              "correct": 1,
+              "hint": "Denk aan een voorstelling die een afbeelding uitbeeldt.",
+              "explanation": "Een tableau vivant is een levend schilderij."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent improviseren?",
+              "options": [
+                "Een tekst langzaam uitspreken",
+                "Een emotie sterker uitbeelden",
+                "Een scène decoreren",
+                "Acteren zonder voorbereiding"
+              ],
+              "correct": 3,
+              "hint": "Bedenk of spelers de uitvoering vooraf hebben uitgewerkt.",
+              "explanation": "Improviseren is acteren zonder voorbereiding."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent accepteren tijdens improvisatie?",
+              "options": [
+                "Op elk voorstel kritiek geven",
+                "Het verhaal plotseling stoppen",
+                "Ideeën van een medespeler aannemen",
+                "Alleen eigen ideeën uitvoeren"
+              ],
+              "correct": 2,
+              "hint": "Denk aan hoe je samen een verhaal laat ontstaan.",
+              "explanation": "Accepteren houdt in dat je ideeën van een medespeler aanneemt."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent blokkeren in een improvisatie?",
+              "options": [
+                "Niet of negatief reageren op ideeën van een medespeler",
+                "Een voorstel verder uitwerken",
+                "Een medespeler uitnodigen iets toe te voegen",
+                "Een verhaal zonder voorbereiding beginnen"
+              ],
+              "correct": 0,
+              "hint": "Denk aan een reactie waardoor een idee niet verder komt.",
+              "explanation": "Blokkeren is niet of negatief reageren op ideeën van een medespeler."
+            },
+            {
+              "type": "mc",
+              "question": "Wat wordt in de begrippenlijst bedoeld met decor?",
+              "options": [
+                "De spanning in een verhaal",
+                "De inrichting van het toneel",
+                "Het gevoel van het personage",
+                "Een persoonlijk gebruiksvoorwerp"
+              ],
+              "correct": 1,
+              "hint": "Denk aan de omgeving waarin de acteurs hun scène spelen.",
+              "explanation": "Het decor is de inrichting van het toneel."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een rekwisiet?",
+              "options": [
+                "De rol van de hoofdpersoon",
+                "Een wisseling van locatie",
+                "De melodie van gesproken tekst",
+                "Een voorwerp in een toneelstuk"
+              ],
+              "correct": 3,
+              "hint": "Denk aan tastbare dingen die in een toneelstuk voorkomen.",
+              "explanation": "Een rekwisiet is een voorwerp in een toneelstuk."
+            },
+            {
+              "type": "mc",
+              "question": "Welke omschrijving van een scène staat in de begrippenlijst?",
+              "options": [
+                "De volledige voorstelling inclusief pauze",
+                "Het moment met de meeste spanning",
+                "Een eenheid zonder wisseling van tijd, plaats en handeling",
+                "Een botsing tussen twee rollen"
+              ],
+              "correct": 2,
+              "hint": "Let op wat tijdens één samenhangend deel van de voorstelling gelijk blijft.",
+              "explanation": "Een scène is een eenheid binnen een voorstelling zonder wisseling van tijd, plaats en handeling."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een climax?",
+              "options": [
+                "Het hoogtepunt van spanning in een verhaal",
+                "Het begin van iedere scène",
+                "Een verandering in het decor",
+                "De reden waarom een personage handelt"
+              ],
+              "correct": 0,
+              "hint": "Kijk naar hoe spanning in een verhaal zich ontwikkelt.",
+              "explanation": "Een climax is het hoogtepunt van de spanning in een verhaal."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een conflict in een toneelverhaal?",
+              "options": [
+                "Altijd een fysieke vechtpartij",
+                "Een probleem of botsing, niet noodzakelijk ruzie",
+                "Een stilstaand groepsbeeld",
+                "De inrichting van het podium"
+              ],
+              "correct": 1,
+              "hint": "Denk aan een belemmering of botsende doelen in het verhaal.",
+              "explanation": "Een conflict is een probleem of botsing en hoeft geen ruzie te zijn."
+            },
+            {
+              "type": "mc",
+              "question": "Welke van de vijf W's gaat over de ruimte of plaats van een scène?",
+              "options": [
+                "Wanneer",
+                "Waarom",
+                "Waar",
+                "Wie"
+              ],
+              "correct": 2,
+              "hint": "De vijf W's helpen verschillende aspecten van een scène beschrijven.",
+              "explanation": "Waar gaat over de ruimte of plaats waarin een scène speelt."
+            },
+            {
+              "type": "mc",
+              "question": "Welke van de vijf W's beschrijft de reden van een handeling?",
+              "options": [
+                "Wat",
+                "Wie",
+                "Wanneer",
+                "Waarom"
+              ],
+              "correct": 3,
+              "hint": "Denk aan het verschil tussen een handeling en de aanleiding ervoor.",
+              "explanation": "Waarom beschrijft de reden van de handeling."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "subject": "Drama",
+          "title": "Drama · Oefentoets 2 – Toepassen en inzicht",
+          "description": "20 nieuwe multiplechoicevragen met praktijksituaties over de begrippenlijst Drama 1e jaar. Extra uitdagend niveau havo/vwo. Met hints en uitleg.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Een speler beeldt verdriet uit met buitensporig hard huilen, grote armzwaaien en een extreem dramatische houding. Wat doet die speler vooral?",
+              "options": [
+                "Mimiek",
+                "Overacting",
+                "Slow motion",
+                "Improviseren"
+              ],
+              "correct": 1,
+              "hint": "Beoordeel hoe sterk de uitvoering is aangezet.",
+              "explanation": "Overacting is overdreven acteren; hier worden gebaren en gevoelens overdreven gespeeld."
+            },
+            {
+              "type": "mc",
+              "question": "Nikki speelt een dokter die in een sneeuwstorm verdwaalt. Wat is in deze beschrijving het personage?",
+              "options": [
+                "De sneeuwstorm",
+                "Nikki buiten het toneel",
+                "Het dokterskostuum",
+                "De verdwaalde dokter"
+              ],
+              "correct": 3,
+              "hint": "Maak onderscheid tussen de werkelijke speler, de rol en de omgeving.",
+              "explanation": "De verdwaalde dokter is de gespeelde rol, dus het personage."
+            },
+            {
+              "type": "mc",
+              "question": "Twee spelers voeren dezelfde scène uit. In de eerste versie voelt de hoofdpersoon angst, in de tweede versie opluchting. Wat is er veranderd?",
+              "options": [
+                "De emotie",
+                "Het decor",
+                "Het rekwisiet",
+                "De plaats"
+              ],
+              "correct": 0,
+              "hint": "Let op de innerlijke beleving van de rol.",
+              "explanation": "Angst en opluchting zijn emoties van het personage."
+            },
+            {
+              "type": "mc",
+              "question": "Een acteur zegt drie keer 'Kom hier'. De woorden blijven gelijk, maar de stem gaat telkens anders omhoog en omlaag. Wat verandert?",
+              "options": [
+                "Het conflict",
+                "De mimiek",
+                "De intonatie",
+                "Het personage"
+              ],
+              "correct": 2,
+              "hint": "De woorden veranderen niet; de manier waarop ze klinken wel.",
+              "explanation": "De wisselende melodie van de uitspraak heet intonatie."
+            },
+            {
+              "type": "mc",
+              "question": "In een achtervolging beweegt een speler nog steeds, maar voert hij alle passen en gebaren sterk vertraagd uit. Welke techniek is dit?",
+              "options": [
+                "Freeze",
+                "Tableau vivant",
+                "Jabbertalk",
+                "Slow motion"
+              ],
+              "correct": 3,
+              "hint": "Vergelijk bewegen met volledig stilstaan.",
+              "explanation": "Bij slow motion blijven bewegingen doorgaan, maar vertraagd."
+            },
+            {
+              "type": "mc",
+              "question": "Twee spelers doen alsof ze buitenaardse wezens zijn. Ze verstaan elkaar met zelfbedachte klanken die geen bestaande taal vormen. Wat gebruiken zij?",
+              "options": [
+                "Jabbertalk",
+                "Intonatie",
+                "Mimiek",
+                "Decor"
+              ],
+              "correct": 0,
+              "hint": "Kijk naar de gesproken taal zelf.",
+              "explanation": "De zelfbedachte fantasietaal is jabbertalk."
+            },
+            {
+              "type": "mc",
+              "question": "Een actrice laat zien dat haar personage geschrokken is door uitsluitend haar ogen wijd te openen en haar mond te veranderen. Welk begrip past het best?",
+              "options": [
+                "Lichaamstaal",
+                "Mimiek",
+                "Slow motion",
+                "Freeze"
+              ],
+              "correct": 1,
+              "hint": "Let op welk deel van haar lichaam ze gebruikt.",
+              "explanation": "Gezichtsuitdrukkingen van ogen en mond zijn mimiek."
+            },
+            {
+              "type": "mc",
+              "question": "Een speler laat zonder woorden zien dat hij bang is: hij kruipt ineen en trekt zijn schouders op. Wat gebruikt hij vooral?",
+              "options": [
+                "Intonatie",
+                "Rekwisieten",
+                "Lichaamstaal",
+                "Climax"
+              ],
+              "correct": 2,
+              "hint": "Hoe brengt iemand iets over zonder te spreken?",
+              "explanation": "De houding van het lichaam communiceert zonder woorden: lichaamstaal."
+            },
+            {
+              "type": "mc",
+              "question": "De docent roept 'Freeze!' tijdens het toneelspel. Een leerling loopt langzaam verder. Welke aanpassing is nodig om de opdracht goed uit te voeren?",
+              "options": [
+                "Nog langzamer lopen",
+                "Fantasietaal gebruiken",
+                "Grotere gebaren maken",
+                "Een stilstaande houding aannemen"
+              ],
+              "correct": 3,
+              "hint": "Het verschil tussen beweging en geen beweging is beslissend.",
+              "explanation": "Bij een freeze staat een speler stil in een houding; langzaam doorlopen is slow motion."
+            },
+            {
+              "type": "mc",
+              "question": "Vijf leerlingen vormen samen een afbeelding van een drukke markt en houden hun poses vast als een schilderij. Welk begrip hoort daarbij?",
+              "options": [
+                "Tableau vivant",
+                "Climax",
+                "Jabbertalk",
+                "Conflict"
+              ],
+              "correct": 0,
+              "hint": "Denk aan de volledige compositie die de groep uitbeeldt.",
+              "explanation": "De groep maakt een levend schilderij: een tableau vivant."
+            },
+            {
+              "type": "mc",
+              "question": "Twee leerlingen krijgen alleen de opdracht 'jullie zitten vast in een lift'. Ze beginnen meteen zonder afgesproken tekst of ingestudeerde scène. Wat doen ze?",
+              "options": [
+                "Blokkeren",
+                "Improviseren",
+                "Een tableau vivant maken",
+                "Een climax naspelen"
+              ],
+              "correct": 1,
+              "hint": "Hoeveel van hun spel ligt vooraf vast?",
+              "explanation": "Spelen zonder voorbereiding heet improviseren."
+            },
+            {
+              "type": "mc",
+              "question": "Tijdens improvisatie zegt een leerling: 'Kijk, daar komt de trein!' De ander antwoordt: 'Snel, we moeten onze koffers pakken!' Wat doet de tweede speler?",
+              "options": [
+                "Blokkeren",
+                "Overacting",
+                "Accepteren",
+                "Freeze"
+              ],
+              "correct": 2,
+              "hint": "Kijk of de tweede speler het voorstel van de eerste verder helpt.",
+              "explanation": "De tweede speler neemt het idee aan en bouwt erop voort: accepteren."
+            },
+            {
+              "type": "mc",
+              "question": "Een leerling zegt tijdens improvisatie: 'De vloer is lava!' De ander antwoordt: 'Nee hoor, dat is onzin, we doen alsof er niets gebeurt.' Wat gebeurt hier vooral?",
+              "options": [
+                "Accepteren",
+                "Slow motion",
+                "Tableau vivant",
+                "Blokkeren"
+              ],
+              "correct": 3,
+              "hint": "Kijk of het eerste idee ruimte krijgt om verder te gaan.",
+              "explanation": "De medespeler wijst het idee af en blokkeert daarmee de improvisatie."
+            },
+            {
+              "type": "mc",
+              "question": "Op het toneel staan geschilderde bomen en een nagebouwde voordeur die een boswachtershuis voorstellen. Onder welk begrip valt de inrichting van de speelruimte?",
+              "options": [
+                "Decor",
+                "Rekwisiet",
+                "Mimiek",
+                "Personage"
+              ],
+              "correct": 0,
+              "hint": "Kijk naar het geheel van de toneelinrichting.",
+              "explanation": "De inrichting van het toneel is het decor."
+            },
+            {
+              "type": "mc",
+              "question": "Een detective haalt in de voorstelling een vergrootglas uit zijn jas om een aanwijzing te onderzoeken. Wat is het vergrootglas?",
+              "options": [
+                "Decor",
+                "Rekwisiet",
+                "Scène",
+                "Conflict"
+              ],
+              "correct": 1,
+              "hint": "Denk aan de functie van één los voorwerp in het spel.",
+              "explanation": "Een vergrootglas dat in het toneelstuk voorkomt, is een rekwisiet."
+            },
+            {
+              "type": "mc",
+              "question": "Een verhaal speelt eerst 's morgens in een keuken en daarna 's avonds op een station. Waarom zijn dit volgens de begrippenlijst niet één ongewijzigde scène?",
+              "options": [
+                "Omdat er een conflict is",
+                "Omdat er andere emoties zijn",
+                "Omdat tijd en plaats veranderen",
+                "Omdat er een rekwisiet voorkomt"
+              ],
+              "correct": 2,
+              "hint": "Vergelijk de kenmerken van de beginsituatie met de vervolgsituatie.",
+              "explanation": "Een scène is een eenheid zonder wisseling van tijd, plaats en handeling; hier veranderen tijd en plaats."
+            },
+            {
+              "type": "mc",
+              "question": "Een geheim wordt langzaam onthuld. Precies wanneer de dader eindelijk wordt ontmaskerd, bereikt de spanning haar hoogste punt. Wat heet dat moment?",
+              "options": [
+                "Introductie",
+                "Freeze",
+                "Decorwisseling",
+                "Climax"
+              ],
+              "correct": 3,
+              "hint": "Let op de opbouw van spanning gedurende het verhaal.",
+              "explanation": "Het hoogtepunt van de spanning in een verhaal is de climax."
+            },
+            {
+              "type": "mc",
+              "question": "Twee vrienden willen dezelfde hoofdrol spelen. Ze blijven vriendelijk praten, maar hun tegengestelde wensen zorgen voor een probleem. Wat is aanwezig?",
+              "options": [
+                "Conflict",
+                "Jabbertalk",
+                "Freeze",
+                "Intonatie"
+              ],
+              "correct": 0,
+              "hint": "Een botsing hoeft niet luid of gewelddadig te zijn.",
+              "explanation": "Een botsing van wensen is een conflict, ook zonder ruzie."
+            },
+            {
+              "type": "mc",
+              "question": "Een scène speelt zich af in 2080. Een docent vraagt: 'Welke van de vijf W's beschrijft dat jaartal?' Wat is het juiste antwoord?",
+              "options": [
+                "Waar",
+                "Wanneer",
+                "Wie",
+                "Wat"
+              ],
+              "correct": 1,
+              "hint": "Denk aan het soort informatie dat een jaartal geeft.",
+              "explanation": "Wanneer gaat over de tijd waarin de scène zich afspeelt."
+            },
+            {
+              "type": "mc",
+              "question": "Een schrijver noteert: 'Een kapitein opent de schatkist omdat hij zijn bemanning wil redden.' Welke combinatie koppelt de juiste W aan de juiste informatie?",
+              "options": [
+                "Wie = de schatkist; Waar = de kapitein",
+                "Wat = zijn bemanning redden; Wanneer = de kapitein",
+                "Wie = de kapitein; Wat = het openen van de schatkist; Waarom = de bemanning redden",
+                "Waar = de schatkist; Waarom = het openen van de schatkist"
+              ],
+              "correct": 2,
+              "hint": "Scheid de rol, de handeling en de reden van die handeling.",
+              "explanation": "Wie gaat over de rol (kapitein), Wat over de handeling (schatkist openen) en Waarom over de reden (bemanning redden)."
+            }
+          ]
+        }
+      ]
     }
   ],
   "exams": []
