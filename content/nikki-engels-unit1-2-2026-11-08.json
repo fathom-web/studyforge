@@ -1,0 +1,1103 @@
+{
+  "schema": "studyforge-library/v1",
+  "packs": [
+    {
+      "id": "nikki-engels-unit1-unit2-2026-11-08-v1",
+      "profile": "Nikki",
+      "collections": [
+        {
+          "type": "quiz",
+          "subject": "Engels",
+          "title": "Engels · Unit 1 & 2 · Meerkeuze 1 (30 vragen)",
+          "description": "Nikki HAVO/VWO · 30 meerkeuzevragen: school, familie, landen, uiterlijk, to be, have got, voornaamwoorden, a/an en meervoud. Gebaseerd op de Study Box-foto's; met hints en uitleg.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat betekent 'corridor' (UK) / 'hallway' (US)?",
+              "options": [
+                "gang",
+                "schoolplein",
+                "klaslokaal",
+                "gymzaal"
+              ],
+              "correct": 0,
+              "hint": "Denk aan de ruimte tussen klaslokalen.",
+              "explanation": "Corridor (UK) en hallway (US) betekenen allebei gang."
+            },
+            {
+              "type": "mc",
+              "question": "Welk Engels woord betekent '(school)directeur'?",
+              "options": [
+                "classmate",
+                "head teacher",
+                "student",
+                "teacher"
+              ],
+              "correct": 1,
+              "hint": "Het gaat om de leidinggevende van de school.",
+              "explanation": "Head teacher betekent (school)directeur."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe vertaal je 'aantekeningen maken'?",
+              "options": [
+                "to take out",
+                "to do homework",
+                "to take notes",
+                "to teach"
+              ],
+              "correct": 2,
+              "hint": "Je schrijft belangrijke informatie op.",
+              "explanation": "To take notes = aantekeningen maken."
+            },
+            {
+              "type": "mc",
+              "question": "Welk woord betekent 'etui'?",
+              "options": [
+                "pencil",
+                "desk",
+                "exercise book",
+                "pencil case"
+              ],
+              "correct": 3,
+              "hint": "Hier bewaar je pennen in.",
+              "explanation": "Pencil case is een etui."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is 'broer of zus' in het Engels?",
+              "options": [
+                "sibling",
+                "cousin",
+                "nephew",
+                "niece"
+              ],
+              "correct": 0,
+              "hint": "Eén woord voor beide.",
+              "explanation": "Sibling betekent broer of zus."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'niece'?",
+              "options": [
+                "neef (zoon van broer of zus)",
+                "nicht (dochter van broer of zus)",
+                "tante",
+                "dochter"
+              ],
+              "correct": 1,
+              "hint": "In het boek staat ook nephew.",
+              "explanation": "Niece is de dochter van je broer of zus; nephew is de zoon."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'to look alike'?",
+              "options": [
+                "er mooi uitzien",
+                "iemand herkennen",
+                "op elkaar lijken",
+                "glimlachen"
+              ],
+              "correct": 2,
+              "hint": "Het gaat om gelijkenis.",
+              "explanation": "To look alike betekent op elkaar lijken."
+            },
+            {
+              "type": "mc",
+              "question": "Welke vertaling hoort bij 'national anthem'?",
+              "options": [
+                "nationaliteit",
+                "bevolking",
+                "gemeenschap",
+                "volkslied"
+              ],
+              "correct": 3,
+              "hint": "Denk aan wat je voor een wedstrijd zingt.",
+              "explanation": "National anthem betekent volkslied."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'vertegenwoordigen' in het Engels?",
+              "options": [
+                "to represent",
+                "to recognise",
+                "to agree",
+                "to accept"
+              ],
+              "correct": 0,
+              "hint": "Denk aan een speler die zijn land vertegenwoordigt.",
+              "explanation": "To represent = vertegenwoordigen."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'complexion'?",
+              "options": [
+                "haarlengte",
+                "teint / huidskleur",
+                "houding",
+                "rimpels"
+              ],
+              "correct": 1,
+              "hint": "Het gaat om de huid van iemands gezicht.",
+              "explanation": "Complexion = teint of huidskleur."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is een 'moustache'?",
+              "options": [
+                "baard",
+                "paardenstaart",
+                "snor",
+                "beugel"
+              ],
+              "correct": 2,
+              "hint": "Het is gezichtshaar boven de mond.",
+              "explanation": "Moustache = snor."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe vertaal je 'paardenstaart' (kapsel)?",
+              "options": [
+                "spot",
+                "wrinkle",
+                "earring",
+                "ponytail"
+              ],
+              "correct": 3,
+              "hint": "Je bindt lang haar samen.",
+              "explanation": "Ponytail = paardenstaart."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'braces' bij uiterlijk?",
+              "options": [
+                "beugel",
+                "contactlenzen",
+                "oorbellen",
+                "rimpels"
+              ],
+              "correct": 0,
+              "hint": "Het gaat om tanden.",
+              "explanation": "Braces betekent (tand)beugel."
+            },
+            {
+              "type": "mc",
+              "question": "Kies de juiste zin: 'Zij is Duits.'",
+              "options": [
+                "She are German.",
+                "She is German.",
+                "She am German.",
+                "She be German."
+              ],
+              "correct": 1,
+              "hint": "Bij she gebruik je de derde persoon enkelvoud.",
+              "explanation": "She is German: bij he/she/it gebruik je is."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: ___ you from England?",
+              "options": [
+                "Is",
+                "Am",
+                "Are",
+                "Have"
+              ],
+              "correct": 2,
+              "hint": "Vraag met het werkwoord to be.",
+              "explanation": "Are you from England? Bij you hoort are."
+            },
+            {
+              "type": "mc",
+              "question": "Welke ontkenning is juist? 'They ___ in France.'",
+              "options": [
+                "isn't",
+                "amn't",
+                "don't",
+                "aren't"
+              ],
+              "correct": 3,
+              "hint": "To be heeft eigen ontkenningen.",
+              "explanation": "They aren't in France."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe maak je van 'I am tired' een vraag?",
+              "options": [
+                "Am I tired?",
+                "Do I am tired?",
+                "Is I tired?",
+                "I am tired?"
+              ],
+              "correct": 0,
+              "hint": "Zet de vorm van to be vóór het onderwerp.",
+              "explanation": "Am I tired? is de juiste vraagvolgorde."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: My aunt ___ got curly hair.",
+              "options": [
+                "have",
+                "has",
+                "haven't",
+                "are"
+              ],
+              "correct": 1,
+              "hint": "Bij she/he/it gebruik je een andere vorm.",
+              "explanation": "My aunt = she, dus has got."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: We ___ got the same earrings.",
+              "options": [
+                "has",
+                "is",
+                "have",
+                "does"
+              ],
+              "correct": 2,
+              "hint": "Bij we hoort dezelfde vorm als bij I en they.",
+              "explanation": "We have got the same earrings."
+            },
+            {
+              "type": "mc",
+              "question": "Welke vraag is juist?",
+              "options": [
+                "Have your uncle got a moustache?",
+                "Does your uncle has got a moustache?",
+                "Is your uncle got a moustache?",
+                "Has your uncle got a moustache?"
+              ],
+              "correct": 3,
+              "hint": "Bij uncle gebruik je he.",
+              "explanation": "Has your uncle got ...? In vragen staat has vóór het onderwerp."
+            },
+            {
+              "type": "mc",
+              "question": "Welke ontkenning is juist?",
+              "options": [
+                "He hasn't got glasses.",
+                "He haven't got glasses.",
+                "He doesn't has got glasses.",
+                "He isn't got glasses."
+              ],
+              "correct": 0,
+              "hint": "Gebruik has not got bij he.",
+              "explanation": "He hasn't got glasses."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'My sister is here. Can you see ___?'",
+              "options": [
+                "she",
+                "her",
+                "hers",
+                "his"
+              ],
+              "correct": 1,
+              "hint": "Na see heb je de voorwerpsvorm nodig.",
+              "explanation": "Her is de voorwerpsvorm van she."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'These are ___ school books.' (onze)",
+              "options": [
+                "ours",
+                "us",
+                "our",
+                "we"
+              ],
+              "correct": 2,
+              "hint": "Het bezittelijk woord staat vóór het zelfstandig naamwoord.",
+              "explanation": "Our school books: our staat vóór een zelfstandig naamwoord."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'That pencil isn't yours. It's ___.' (van mij)",
+              "options": [
+                "my",
+                "me",
+                "I",
+                "mine"
+              ],
+              "correct": 3,
+              "hint": "Er volgt geen zelfstandig naamwoord.",
+              "explanation": "Mine betekent van mij en staat zonder zelfstandig naamwoord."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'The teacher is talking to ___.' (hen)",
+              "options": [
+                "them",
+                "they",
+                "their",
+                "theirs"
+              ],
+              "correct": 0,
+              "hint": "Na to gebruik je de voorwerpsvorm.",
+              "explanation": "Them is de voorwerpsvorm van they."
+            },
+            {
+              "type": "mc",
+              "question": "Welke combinatie is juist?",
+              "options": [
+                "a honest man",
+                "an honest man",
+                "an uniform",
+                "a umbrella"
+              ],
+              "correct": 1,
+              "hint": "Kies a of an op basis van de klank, niet de letter.",
+              "explanation": "Honest heeft een stomme h en begint in de uitspraak met een klinkerklank: an honest man."
+            },
+            {
+              "type": "mc",
+              "question": "Welke combinatie is juist?",
+              "options": [
+                "an uniform",
+                "an European",
+                "a uniform",
+                "a aunt"
+              ],
+              "correct": 2,
+              "hint": "De uitspraak van uniform begint met een j-klank.",
+              "explanation": "A uniform: de beginuitspraak is een medeklinkerklank."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is het meervoud van 'child'?",
+              "options": [
+                "childs",
+                "childes",
+                "childrens",
+                "children"
+              ],
+              "correct": 3,
+              "hint": "Dit is een onregelmatig meervoud.",
+              "explanation": "Child → children."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is het juiste meervoud van 'hobby'?",
+              "options": [
+                "hobbies",
+                "hobbys",
+                "hobbyes",
+                "hobb ies"
+              ],
+              "correct": 0,
+              "hint": "Medeklinker + y verandert in -ies.",
+              "explanation": "Hobby → hobbies."
+            },
+            {
+              "type": "mc",
+              "question": "Welk aanwijzend woord past? '___ shoes here are new.'",
+              "options": [
+                "Those",
+                "These",
+                "This",
+                "That"
+              ],
+              "correct": 1,
+              "hint": "Meervoud, dicht bij de spreker.",
+              "explanation": "These gebruik je voor meervoud dichtbij."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "subject": "Engels",
+          "title": "Engels · Unit 1 & 2 · Meerkeuze 2 (30 vragen)",
+          "description": "Nikki HAVO/VWO · 30 nieuwe meerkeuzevragen: hobby's, dagen, tijd, seizoenen, present simple, vragen/ontkenningen, meervoud en aanwijzende voornaamwoorden.",
+          "questions": [
+            {
+              "type": "mc",
+              "question": "Wat is de Engelse vertaling van 'woensdag'?",
+              "options": [
+                "Wednesday",
+                "Thursday",
+                "Tuesday",
+                "Saturday"
+              ],
+              "correct": 0,
+              "hint": "Denk aan de dag tussen Tuesday en Thursday.",
+              "explanation": "Wednesday = woensdag."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe vertaal je 'herfst' naar het Engels?",
+              "options": [
+                "spring",
+                "autumn",
+                "summer",
+                "winter"
+              ],
+              "correct": 1,
+              "hint": "In Amerika gebruikt men ook fall.",
+              "explanation": "Autumn (UK/US) of fall (US) = herfst."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'questionnaire'?",
+              "options": [
+                "ervaring",
+                "evenement",
+                "vragenlijst",
+                "podium"
+              ],
+              "correct": 2,
+              "hint": "Je vult hem in met antwoorden op vragen.",
+              "explanation": "Questionnaire = vragenlijst."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'experience'?",
+              "options": [
+                "activiteit",
+                "optreden",
+                "favoriet",
+                "ervaring"
+              ],
+              "correct": 3,
+              "hint": "Je doet dit op door iets mee te maken.",
+              "explanation": "Experience = ervaring."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is 'knutselen' in het Engels?",
+              "options": [
+                "crafting",
+                "dancing",
+                "gaming",
+                "acting"
+              ],
+              "correct": 0,
+              "hint": "Je maakt iets met je handen.",
+              "explanation": "Crafting betekent knutselen."
+            },
+            {
+              "type": "mc",
+              "question": "Welk woord betekent 'podium'?",
+              "options": [
+                "event",
+                "stage",
+                "cinema",
+                "assembly"
+              ],
+              "correct": 1,
+              "hint": "Hier staat de acteur of zanger.",
+              "explanation": "Stage = podium."
+            },
+            {
+              "type": "mc",
+              "question": "Hoe zeg je 'fotografie' in het Engels?",
+              "options": [
+                "geography",
+                "biology",
+                "photography",
+                "history"
+              ],
+              "correct": 2,
+              "hint": "Het gaat om foto's maken.",
+              "explanation": "Photography betekent fotografie."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'boring'?",
+              "options": [
+                "spannend",
+                "moeilijk",
+                "grappig",
+                "saai"
+              ],
+              "correct": 3,
+              "hint": "Het tegenovergestelde van interesting.",
+              "explanation": "Boring = saai."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'diary'?",
+              "options": [
+                "dagboek",
+                "kalender",
+                "woordenboek",
+                "schrift"
+              ],
+              "correct": 0,
+              "hint": "Je schrijft over je dag.",
+              "explanation": "Diary = dagboek; calendar = kalender."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'more often'?",
+              "options": [
+                "maandelijks",
+                "vaker",
+                "dagelijks",
+                "op tijd"
+              ],
+              "correct": 1,
+              "hint": "Het is een vergelijking van frequentie.",
+              "explanation": "More often = vaker."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'to set a date'?",
+              "options": [
+                "zeggen hoe laat het is",
+                "een afspraak verzetten",
+                "een datum afspreken",
+                "een lijst maken"
+              ],
+              "correct": 2,
+              "hint": "Denk aan het vastleggen van de trouwdatum.",
+              "explanation": "To set a date = een datum afspreken."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'monthly'?",
+              "options": [
+                "wekelijks",
+                "dagelijks",
+                "jaarlijks",
+                "maandelijks"
+              ],
+              "correct": 3,
+              "hint": "Month betekent maand.",
+              "explanation": "Monthly = maandelijks."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'midnight'?",
+              "options": [
+                "middernacht",
+                "middag",
+                "ochtend",
+                "avond"
+              ],
+              "correct": 0,
+              "hint": "Het is precies 12 uur 's nachts.",
+              "explanation": "Midnight = middernacht."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent '(to be) on time'?",
+              "options": [
+                "te laat zijn",
+                "op tijd (zijn)",
+                "om middernacht zijn",
+                "een tijd afspreken"
+              ],
+              "correct": 1,
+              "hint": "Denk aan de trein halen.",
+              "explanation": "(To be) on time = op tijd (zijn)."
+            },
+            {
+              "type": "mc",
+              "question": "Wat betekent 'cinema' in Brits-Engels?",
+              "options": [
+                "theaterles",
+                "sporthal",
+                "bioscoop",
+                "podium"
+              ],
+              "correct": 2,
+              "hint": "Je kijkt er films.",
+              "explanation": "Cinema = bioscoop."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'She ___ every Sunday.' (sing)",
+              "options": [
+                "sing",
+                "singes",
+                "singing",
+                "sings"
+              ],
+              "correct": 3,
+              "hint": "Bij she komt meestal -s achter het werkwoord.",
+              "explanation": "She sings every Sunday."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'My brother ___ English.' (study)",
+              "options": [
+                "studies",
+                "studys",
+                "study",
+                "studyes"
+              ],
+              "correct": 0,
+              "hint": "Medeklinker + y verandert in -ies.",
+              "explanation": "My brother studies English."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'He ___ TV after school.' (watch)",
+              "options": [
+                "watchs",
+                "watches",
+                "watch",
+                "watchies"
+              ],
+              "correct": 1,
+              "hint": "Na -ch gebruik je -es.",
+              "explanation": "He watches TV after school."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'Mum ___ to the cinema on Fridays.' (go)",
+              "options": [
+                "gos",
+                "go",
+                "goes",
+                "goies"
+              ],
+              "correct": 2,
+              "hint": "Go eindigt op -o.",
+              "explanation": "Mum goes to the cinema on Fridays."
+            },
+            {
+              "type": "mc",
+              "question": "Welke zin is juist?",
+              "options": [
+                "She plays usually tennis.",
+                "She usually play tennis.",
+                "She playing usually tennis.",
+                "She usually plays tennis."
+              ],
+              "correct": 3,
+              "hint": "Bij een gewoon hoofdwerkwoord staat usually er meestal vóór.",
+              "explanation": "She usually plays tennis: frequentiebijwoord vóór plays, en -s bij she."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'They never ___ meat.'",
+              "options": [
+                "eat",
+                "eats",
+                "eating",
+                "does eat"
+              ],
+              "correct": 0,
+              "hint": "Bij they komt geen -s.",
+              "explanation": "They never eat meat."
+            },
+            {
+              "type": "mc",
+              "question": "Welke vraag is correct?",
+              "options": [
+                "Does he plays hockey?",
+                "Does he play hockey?",
+                "Do he play hockey?",
+                "Is he play hockey?"
+              ],
+              "correct": 1,
+              "hint": "Na does gebruik je het hele werkwoord zonder -s.",
+              "explanation": "Does he play hockey?"
+            },
+            {
+              "type": "mc",
+              "question": "Welke ontkenning is juist?",
+              "options": [
+                "She doesn't likes swimming.",
+                "She don't like swimming.",
+                "She doesn't like swimming.",
+                "She isn't like swimming."
+              ],
+              "correct": 2,
+              "hint": "Gebruik doesn't met de basisvorm.",
+              "explanation": "She doesn't like swimming."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: '___ your friends read books?'",
+              "options": [
+                "Does",
+                "Are",
+                "Has",
+                "Do"
+              ],
+              "correct": 3,
+              "hint": "Friends is meervoud.",
+              "explanation": "Do your friends read books?"
+            },
+            {
+              "type": "mc",
+              "question": "Wat is het meervoud van 'church'?",
+              "options": [
+                "churches",
+                "churchs",
+                "churchies",
+                "churchen"
+              ],
+              "correct": 0,
+              "hint": "Na -ch komt -es.",
+              "explanation": "Church → churches."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is het meervoud van 'tomato'?",
+              "options": [
+                "tomatos",
+                "tomatoes",
+                "tomatoies",
+                "tomato's"
+              ],
+              "correct": 1,
+              "hint": "Dit woord op -o krijgt -es.",
+              "explanation": "Tomato → tomatoes."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is het meervoud van 'scarf'?",
+              "options": [
+                "scarfses",
+                "scarfes",
+                "scarves",
+                "scarvies"
+              ],
+              "correct": 2,
+              "hint": "Bij sommige woorden verandert f in ves.",
+              "explanation": "Scarf → scarves (scarf is een woord dat doorgaans scarves krijgt; scarfs komt ook voor, maar het boek gebruikt scarves)."
+            },
+            {
+              "type": "mc",
+              "question": "Wat is het meervoud van 'mouse'?",
+              "options": [
+                "mouses",
+                "mousees",
+                "mices",
+                "mice"
+              ],
+              "correct": 3,
+              "hint": "Onregelmatige vorm.",
+              "explanation": "Mouse → mice."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'Look at ___ shirt over there.'",
+              "options": [
+                "that",
+                "this",
+                "these",
+                "those"
+              ],
+              "correct": 0,
+              "hint": "Eén shirt, verder weg.",
+              "explanation": "That gebruik je voor enkelvoud verder weg."
+            },
+            {
+              "type": "mc",
+              "question": "Vul in: 'I like ___ books here.'",
+              "options": [
+                "this",
+                "these",
+                "that",
+                "those"
+              ],
+              "correct": 1,
+              "hint": "Meerdere boeken, dichtbij.",
+              "explanation": "These gebruik je voor meervoud dichtbij."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "subject": "Engels",
+          "title": "Engels · Unit 1 & 2 · Open toets 1 (20 vragen)",
+          "description": "Nikki HAVO/VWO · 20 open vragen over woordenschat en grammatica van Unit 1. Vertalen, zinnen maken, have got, to be, persoonlijke en bezittelijke voornaamwoorden. Beoordeel je antwoord met het modelantwoord.",
+          "questions": [
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'aardrijkskunde'.",
+              "answer": "geography",
+              "hint": "Het gaat om een schoolvak.",
+              "explanation": "Geography = aardrijkskunde."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'klasgenoot'.",
+              "answer": "classmate",
+              "hint": "Een leerling uit dezelfde klas.",
+              "explanation": "Classmate = klasgenoot."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'aantekeningen maken'.",
+              "answer": "to take notes",
+              "hint": "Twee woorden na to.",
+              "explanation": "To take notes = aantekeningen maken."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'neef (zoon van broer of zus)'.",
+              "answer": "nephew",
+              "hint": "Niet cousin.",
+              "explanation": "Nephew = neef, de zoon van je broer of zus."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'we lijken op elkaar'.",
+              "answer": "We look alike.",
+              "hint": "Gebruik look met we.",
+              "explanation": "We look alike. Look alike = op elkaar lijken."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Zij draagt contactlenzen.'",
+              "answer": "She wears contact lenses.",
+              "hint": "Contactlenzen = contact lenses.",
+              "explanation": "She wears contact lenses. Bij she krijgt wear een -s."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Ik woon in een dorp.'",
+              "answer": "I live in a village.",
+              "hint": "Begin met I live.",
+              "explanation": "I live in a village."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Hij is niet in Duitsland.'",
+              "answer": "He isn't in Germany.",
+              "hint": "Gebruik de korte ontkenning van is.",
+              "explanation": "He isn't in Germany. Ook He is not in Germany is goed."
+            },
+            {
+              "type": "open",
+              "question": "Maak een vraag van: 'You are from England.'",
+              "answer": "Are you from England?",
+              "hint": "Zet to be vóór het onderwerp.",
+              "explanation": "Are you from England?"
+            },
+            {
+              "type": "open",
+              "question": "Vul correct in: 'My sisters ___ (to be) at school.'",
+              "answer": "are",
+              "hint": "Sisters is meervoud.",
+              "explanation": "My sisters are at school."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Heeft zij bruine ogen?'",
+              "answer": "Has she got brown eyes?",
+              "hint": "Gebruik have got en zet has voor she.",
+              "explanation": "Has she got brown eyes?"
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Wij hebben geen oorbellen.'",
+              "answer": "We haven't got earrings.",
+              "hint": "Gebruik have not got, met de korte vorm.",
+              "explanation": "We haven't got earrings. Ook We have not got earrings is correct."
+            },
+            {
+              "type": "open",
+              "question": "Vervang 'my brother' door een persoonlijk voornaamwoord: 'I can see my brother.' Schrijf de hele nieuwe zin.",
+              "answer": "I can see him.",
+              "hint": "Het is een lijdend voorwerp.",
+              "explanation": "I can see him. Bij een lijdend voorwerp gebruik je him."
+            },
+            {
+              "type": "open",
+              "question": "Vul in: 'This book is ___.' (van mij, zonder zelfstandig naamwoord)",
+              "answer": "mine",
+              "hint": "Er staat geen noun na het antwoord.",
+              "explanation": "Mine gebruik je zelfstandig; my moet vóór een zelfstandig naamwoord."
+            },
+            {
+              "type": "open",
+              "question": "Vul in: 'It is ___ classroom.' (ons)",
+              "answer": "our",
+              "hint": "Er volgt een zelfstandig naamwoord.",
+              "explanation": "Our classroom. Ours gebruik je zonder zelfstandig naamwoord."
+            },
+            {
+              "type": "open",
+              "question": "Kies a of an en schrijf de combinatie: '___ honest person'.",
+              "answer": "an honest person",
+              "hint": "Denk aan de uitspraak van de h.",
+              "explanation": "An honest person: de h is niet hoorbaar."
+            },
+            {
+              "type": "open",
+              "question": "Kies a of an en schrijf de combinatie: '___ uniform'.",
+              "answer": "a uniform",
+              "hint": "De u klinkt als een j.",
+              "explanation": "A uniform: de uitspraak begint met een medeklinkerklank."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf het Engelse meervoud van 'baby'.",
+              "answer": "babies",
+              "hint": "Medeklinker + y.",
+              "explanation": "Baby → babies."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf het Engelse meervoud van 'woman'.",
+              "answer": "women",
+              "hint": "Dit is onregelmatig.",
+              "explanation": "Woman → women."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Deze schoenen hier zijn van haar.'",
+              "answer": "These shoes here are hers.",
+              "hint": "Meervoud dichtbij: these. 'Van haar' zonder zelfstandig naamwoord: hers.",
+              "explanation": "These shoes here are hers."
+            }
+          ]
+        },
+        {
+          "type": "quiz",
+          "subject": "Engels",
+          "title": "Engels · Unit 1 & 2 · Open toets 2 (20 vragen)",
+          "description": "Nikki HAVO/VWO · 20 open vragen over Unit 2. Zinnen vertalen en bouwen met present simple, do/does, meervoud, this/that/these/those, hobby's, data en tijd.",
+          "questions": [
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Ik vind geschiedenis interessant.'",
+              "answer": "I think history is interesting.",
+              "hint": "Geschiedenis = history.",
+              "explanation": "I think history is interesting."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Mijn hobby's zijn gamen en tekenen.'",
+              "answer": "My hobbies are gaming and drawing.",
+              "hint": "Na are noem je beide -ing-vormen.",
+              "explanation": "My hobbies are gaming and drawing."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Ik ga op zaterdag winkelen.'",
+              "answer": "I go shopping on Saturdays.",
+              "hint": "Voor een gewoonte op zaterdagen gebruik je Saturdays.",
+              "explanation": "I go shopping on Saturdays."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Wat doe jij in je vrije tijd?'",
+              "answer": "What do you do in your spare time?",
+              "hint": "Begin met What do you ...?",
+              "explanation": "What do you do in your spare time?"
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Ik speel graag tennis in de zomer.'",
+              "answer": "I like to play tennis in the summer.",
+              "hint": "Gebruik like to play.",
+              "explanation": "I like to play tennis in the summer. 'I like playing tennis in the summer' is ook goed."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Mijn broer zingt elke dag.'",
+              "answer": "My brother sings every day.",
+              "hint": "He/she/it krijgt meestal -s.",
+              "explanation": "My brother sings every day."
+            },
+            {
+              "type": "open",
+              "question": "Vul de juiste vorm in: 'She ___ (study) geography on Tuesdays.'",
+              "answer": "studies",
+              "hint": "Medeklinker + y verandert in -ies.",
+              "explanation": "She studies geography on Tuesdays."
+            },
+            {
+              "type": "open",
+              "question": "Vul de juiste vorm in: 'He ___ (watch) films every weekend.'",
+              "answer": "watches",
+              "hint": "Een werkwoord op -ch krijgt -es.",
+              "explanation": "He watches films every weekend."
+            },
+            {
+              "type": "open",
+              "question": "Maak een vraag van: 'They play hockey.'",
+              "answer": "Do they play hockey?",
+              "hint": "Begin met Do.",
+              "explanation": "Do they play hockey?"
+            },
+            {
+              "type": "open",
+              "question": "Maak een ontkenning van: 'She likes dancing.'",
+              "answer": "She doesn't like dancing.",
+              "hint": "Na doesn't staat het hele werkwoord.",
+              "explanation": "She doesn't like dancing."
+            },
+            {
+              "type": "open",
+              "question": "Maak een vraag van: 'Your cousin sings.'",
+              "answer": "Does your cousin sing?",
+              "hint": "Bij de derde persoon: Does, maar sing zonder -s.",
+              "explanation": "Does your cousin sing?"
+            },
+            {
+              "type": "open",
+              "question": "Vul in met het juiste frequentiebijwoord en de juiste woordvolgorde: 'He / often / read / books.' Schrijf de hele zin.",
+              "answer": "He often reads books.",
+              "hint": "Often komt vóór het hoofdwerkwoord; he krijgt -s.",
+              "explanation": "He often reads books."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf het meervoud van 'box'.",
+              "answer": "boxes",
+              "hint": "Het woord eindigt op -x.",
+              "explanation": "Box → boxes."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf het meervoud van 'tooth'.",
+              "answer": "teeth",
+              "hint": "Dit is een onregelmatige vorm.",
+              "explanation": "Tooth → teeth."
+            },
+            {
+              "type": "open",
+              "question": "Schrijf het meervoud van 'life'.",
+              "answer": "lives",
+              "hint": "De f wordt -ves.",
+              "explanation": "Life → lives."
+            },
+            {
+              "type": "open",
+              "question": "Vul het juiste woord in: 'Look at ___ shoes over there.' (die schoenen daar)",
+              "answer": "those",
+              "hint": "Meervoud en ver weg.",
+              "explanation": "Those shoes: those gebruik je voor meervoud op afstand."
+            },
+            {
+              "type": "open",
+              "question": "Vul het juiste woord in: 'I love ___ jumper here.' (deze trui hier)",
+              "answer": "this",
+              "hint": "Enkelvoud, dichtbij.",
+              "explanation": "This jumper: this gebruik je voor enkelvoud dichtbij."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'morgen is het donderdag'.",
+              "answer": "Tomorrow is Thursday.",
+              "hint": "Dagen schrijf je met een hoofdletter.",
+              "explanation": "Tomorrow is Thursday."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'Mijn theaterlessen beginnen om zeven uur 's avonds op 25 april.'",
+              "answer": "My drama lessons start at 7 p.m. on 25 April.",
+              "hint": "Theaterlessen = drama lessons; 19.00 uur = 7 p.m.",
+              "explanation": "My drama lessons start at 7 p.m. on 25 April."
+            },
+            {
+              "type": "open",
+              "question": "Vertaal naar het Engels: 'We zijn op tijd voor de afspraak.'",
+              "answer": "We are on time for the appointment.",
+              "hint": "Op tijd = on time; afspraak = appointment.",
+              "explanation": "We are on time for the appointment."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
