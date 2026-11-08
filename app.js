@@ -125,7 +125,13 @@ function moreContent(){
   return '<div class="page-enter">'+sectionHeading('ALLE FUNCTIES','Meer mogelijkheden','Kies waar je naartoe wilt.')+
     '<div class="pack-grid">'+items.map(([route,icon,title,desc])=>'<button class="pack-card" data-action="nav" data-route="'+route+'"><div class="pack-top"><span class="pack-icon">'+ic(icon,23)+'</span></div><h3>'+htmlEscape(title)+'</h3><p>'+htmlEscape(desc)+'</p></button>').join('')+'</div></div>';
 }
-const collections=()=>state.dashboard?.collections||[];
+// Nieuwste oefenmateriaal eerst (ook voor lokaal geimporteerde sets).
+// Bij gelijke aanmaakdatum bepaalt het oplopende collectie-ID de invoegvolgorde.
+const collections=()=>[...(state.dashboard?.collections||[])].sort((a,b)=>{
+  const dateA=Date.parse(a.created_at||'')||0;
+  const dateB=Date.parse(b.created_at||'')||0;
+  return (dateB-dateA)||(Number(b.id)-Number(a.id));
+});
 const attempts=()=>state.dashboard?.attempts||[];
 const flashes=()=>state.dashboard?.flash_progress||[];
 const missed=()=>state.dashboard?.missed||[];
