@@ -34,6 +34,18 @@ Webapp: https://fathom-web.github.io/studyforge/
 
 Er is dus geen JSON-upload, beheerders-importscherm, invoerformulier voor toetsdata of AI-API-koppeling in de website.
 
+## Extra leermethoden (20 november 2026)
+
+De StudyForge Scholte-concepten zijn geschikt gemaakt voor het bestaande donkere StudyForge-design. De originele lessen, profielcodes, toetsen en cijfers blijven ongewijzigd.
+
+- **Leer in stappen**: een uitleg op basis van uitsluitend bestaande velden uit het lespakket (`lessonTitle`, `learn`, `example` of `hint`), daarna een oefenvraag en feedback. Bij ontbrekende uitleg wordt geen nieuwe feitelijke lesstof verzonnen.
+- **Leg het uit**: zonder meerkeuzeopties in eigen woorden antwoorden, vergelijken met het modelantwoord en zelf beoordelen. Lastige vragen keren aan het eind van de sessie terug.
+- **Slim herhalen**: registreert resultaten van oefentoetsen, flashcards en beide nieuwe leermethoden. Fout → 20 minuten, bijna → 1 dag, goed → 3/7/14/30/60 dagen. Per sessie maximaal twaalf open herhaalvragen.
+- **Afwisselende vragen**: beide nieuwe leermethoden kiezen maximaal twaalf vragen en houden per leerling, leermethode en pakket een eigen rotatie bij; de bestaande toetsvragenrotatie blijft ongewijzigd.
+- **Profielscheiding**: alle nieuwe browserdata heeft aparte sleutels voor Nikki (1) en Dean (2). De huidige toetsgeschiedenis wordt bij een eerste profielbezoek als uitgangspunt ingelezen waar beschikbaar.
+
+**Opslagbeperking:** nieuwe leer- en herhaalresultaten staan voorlopig uitsluitend in `localStorage` op het gebruikte apparaat. Zij synchroniseren **nog niet via Supabase**. Browsergegevens wissen kan deze aanvullende resultaten verwijderen. Bestaande cijfers, flashcards en planning blijven hun oorspronkelijke Supabase-koppeling gebruiken. De originele StudyForge Scholte-repository is niet aangepast.
+
 ## Wat Nikki en Dean kunnen doen
 - Profiel kiezen
 - Oefenexamens maken (meerkeuze en open vragen met zelfbeoordeling)
