@@ -80,3 +80,10 @@
 @media(max-width:850px){.sf-subject-grid{grid-template-columns:1fr}.sf-coach{align-items:stretch;flex-direction:column}.sf-coach-metrics>div{flex:1}}
 @media(max-width:520px){.sf-learning-card{padding:23px 17px}.sf-rate-row .btn{flex:1}.sf-learning-heading h1{font-size:23px}.sf-review-stats>div{padding:15px 10px}.sf-review-stats b{font-size:25px}.sf-review-stats span{font-size:10px}.sf-review-panel{padding:21px 17px}.sf-subject-meta{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){.sf-subject-card,.sf-progress-track span{transition:none}}
+
+
+/* Extra leermethoden passen ook op laptops met een lager scherm. */
+.sidebar .sidebar-label{margin-top:30px}
+.sidebar .nav-list{overflow-y:auto;min-height:0;scrollbar-width:thin}
+.sidebar .nav-link{padding:10px 12px}
+.sidebar .sidebar-bottom{flex-shrink:0}
