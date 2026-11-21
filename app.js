@@ -45,8 +45,7 @@ async function api(action, data=null, params={}) {
 }
 async function init() {
   try {
-    const status=await api('status');state.csrf=status.csrf;state.admin=status.admin; const badge=$('#demobadge');if(badge)badge.textContent=window.sfMode()==='shared'?'STUDYFORGE · CLOUD':window.sfMode()==='supabase'?'STUDYFORGE · SUPABASE':'STUDYFORGE · LOKALE VERSIE';
-    if(status.locked){state.route='unlock';render();return;}
+    const status=await api('status');state.csrf=status.csrf;state.admin=status.admin; const badge=$('#demobadge');if(badge)badge.textContent='STUDYFORGE · LOKAAL';
     await window.sfSyncPublished?.();
     await boot();
   } catch(e){renderFatal(e.message);}
@@ -60,17 +59,13 @@ function brand(){return `<div class="brand"><span class="brand-glyph">${ic('book
 function profileName() {return state.profiles.find(x=>+x.id===+state.profile)?.name||'';}
 function sectionHeading(kicker,title,desc='') {return `<div class="section-heading"><div><div class="eyebrow">${htmlEscape(kicker)}</div><h1>${htmlEscape(title)}</h1>${desc?`<p class="sub">${htmlEscape(desc)}</p>`:''}</div></div>`;}
 function render(){
-  if(state.route==='unlock'){renderUnlock();return;}
   if(state.route==='choose'){renderChoose();return;}
   if(state.route==='profile-pin'){renderProfilePin();return;}
   const navItems=[['dashboard','home','Dashboard'],['quizzes','exam','Oefentoetsen'],['flashcards','cards','Flashcards'],['learning-guided','book','Leer in stappen'],['learning-recall','spark','Leg het uit'],['review','refresh','Slim herhalen'],['progress','chart','Progressie'],['library','library','Bibliotheek'],['planning','book','Mijn toetsen'],['ready','spark','Toetsklaar'],['parent','chart','Ouderoverzicht']];
-  $('#app').innerHTML=`<div class="app-layout"><aside class="sidebar">${brand()}<div class="sidebar-label">JOUW LEEROMGEVING</div><nav class="nav-list">${navItems.map(([r,i,t])=>`<button class="nav-link ${state.route===r?'active':''}" data-action="nav" data-route="${r}">${ic(i)}<span>${t}</span>${state.route===r?`<span class="nav-active-dot"></span>`:''}</button>`).join('')}</nav><div class="sidebar-bottom"><button class="nav-link" data-action="change-profile">${ic('swap')}<span>Wissel profiel</span></button><button class="nav-link" data-action="logout">${ic('lock')}<span>${window.sfMode()==='supabase'?'Uitloggen':'Startscherm'}</span></button><div class="tiny sidebar-foot">GEMAAKT VOOR NIKKI & DEAN</div></div></aside><div class="main-column"><header class="topbar"><button class="mobile-brand" data-action="change-profile">${ic('swap',18)} ${brand()}</button><span class="topbar-breadcrumb">STUDYFORGE <span>/</span> ${htmlEscape(state.route==='dashboard'?'OVERZICHT':state.route.toUpperCase())}</span><div class="topbar-right"><span class="online-indicator"></span><span class="online-text">${window.sfMode()==='shared'?(window.sfCloud?.online?'Cloudopslag':'Lokaal opgeslagen · cloud offline'):window.sfMode()==='supabase'?'Cloudopslag':'Lokaal opgeslagen'}</span><button class="profile-chip" data-action="change-profile"><span class="avatar small ${profileName().toLowerCase()}">${htmlEscape(profileName()[0])}</span><span>${htmlEscape(profileName())}</span>${ic('swap',15)}</button></div></header><main class="main-content">${routeContent()}</main><nav class="bottom-nav">${navItems.slice(0,4).map(([r,i,t])=>`<button class="bottom-link ${state.route===r?'active':''}" data-action="nav" data-route="${r}">${ic(i,21)}<span>${t==='Oefentoetsen'?'Toetsen':t}</span></button>`).join('')}<button class="bottom-link ${state.route==='more'?'active':''}" data-action="nav" data-route="more">${ic('menu',21)}<span>Meer</span></button></nav></div></div>`;
-}
-function renderUnlock(){
-  $('#app').innerHTML=`<main class="welcome-shell"><div class="welcome-orb one"></div><div class="welcome-orb two"></div><div class="welcome-content unlock-content">${brand()}<div class="unlock-icon">${ic('lock',30)}</div><div class="eyebrow">JULLIE PRIVÉ LEERPLEK</div><h1>Welkom terug<span class="accent-dot">.</span></h1><p class="welcome-lead">Log in op jullie Supabase-account om StudyForge te openen en resultaten tussen apparaten te synchroniseren.</p><form id="unlockForm" class="sign-in-form"><label for="family-email" class="field-label">E-mailadres</label><input id="family-email" type="email" autocomplete="username" required placeholder="jouw@email.nl"><label for="family-password" class="field-label">Wachtwoord</label><input id="family-password" type="password" autocomplete="current-password" required placeholder="Wachtwoord"><button type="submit" class="btn btn-primary btn-wide">Log in ${ic('arrow',18)}</button></form><p class="tiny">Gebruik een Supabase Auth-account dat je zelf hebt aangemaakt. Jouw wachtwoord staat niet op GitHub.</p></div></main>`;
+  $('#app').innerHTML=`<div class="app-layout"><aside class="sidebar">${brand()}<div class="sidebar-label">JOUW LEEROMGEVING</div><nav class="nav-list">${navItems.map(([r,i,t])=>`<button class="nav-link ${state.route===r?'active':''}" data-action="nav" data-route="${r}">${ic(i)}<span>${t}</span>${state.route===r?`<span class="nav-active-dot"></span>`:''}</button>`).join('')}</nav><div class="sidebar-bottom"><button class="nav-link" data-action="change-profile">${ic('swap')}<span>Wissel profiel</span></button><button class="nav-link" data-action="logout">${ic('lock')}<span>Startscherm</span></button><div class="tiny sidebar-foot">GEMAAKT VOOR NIKKI & DEAN</div></div></aside><div class="main-column"><header class="topbar"><button class="mobile-brand" data-action="change-profile">${ic('swap',18)} ${brand()}</button><span class="topbar-breadcrumb">STUDYFORGE <span>/</span> ${htmlEscape(state.route==='dashboard'?'OVERZICHT':state.route.toUpperCase())}</span><div class="topbar-right"><span class="online-indicator"></span><span class="online-text">Lokaal opgeslagen</span><button class="profile-chip" data-action="change-profile"><span class="avatar small ${profileName().toLowerCase()}">${htmlEscape(profileName()[0])}</span><span>${htmlEscape(profileName())}</span>${ic('swap',15)}</button></div></header><main class="main-content">${routeContent()}</main><nav class="bottom-nav">${navItems.slice(0,4).map(([r,i,t])=>`<button class="bottom-link ${state.route===r?'active':''}" data-action="nav" data-route="${r}">${ic(i,21)}<span>${t==='Oefentoetsen'?'Toetsen':t}</span></button>`).join('')}<button class="bottom-link ${state.route==='more'?'active':''}" data-action="nav" data-route="more">${ic('menu',21)}<span>Meer</span></button></nav></div></div>`;
 }
 function renderChoose(){
-  $('#app').innerHTML=`<main class="welcome-shell"><div class="welcome-orb one"></div><div class="welcome-orb two"></div><div class="welcome-content">${brand()}<div class="welcome-copy"><div class="eyebrow"><span class="eyebrow-line"></span> JOUW PERSOONLIJKE STUDYSPACE</div><h1>Jouw tempo.<br><span class="gradient-text">Jouw progressie.</span></h1><p class="welcome-lead">Flashcards, oefentoetsen en je eigen voortgang. Alles op één plek.</p><p class="pick-label">WIE GAAT ER VANDAAG LEREN?</p><div class="pick-cards">${state.profiles.map((p,i)=>`<button class="pick-card p-${htmlEscape(p.name.toLowerCase())}" data-action="select-profile" data-id="${+p.id}"><span class="pick-avatar ${htmlEscape(p.name.toLowerCase())}">${htmlEscape(p.name[0])}</span><span class="pick-details"><span class="pick-name">${htmlEscape(p.name)}</span><span class="pick-sub">Open mijn dashboard</span></span><span class="pick-arrow">${ic('arrow',24)}</span></button>`).join('')}</div><div class="welcome-bottom">${ic('shield',15)} ${window.sfMode()==='shared'?'Centrale opslag via Supabase':window.sfMode()==='supabase'?'Privé opslag via Supabase':'Je gegevens blijven voorlopig op dit apparaat'} ${window.sfMode()==='supabase'?'<button data-action="logout" class="text-btn">Uitloggen</button>':''}</div></div></div><div class="welcome-art" aria-hidden="true"><img class="owl-hero-image" src="owl-study.webp" alt=""><div class="floating-label float-1">${ic('cards')} FLASHCARDS</div><div class="floating-label float-2">${ic('exam')} OEFENTOETSEN</div><div class="floating-label float-3">${ic('chart')} PROGRESSIE</div></div></main>`;
+  $('#app').innerHTML=`<main class="welcome-shell"><div class="welcome-orb one"></div><div class="welcome-orb two"></div><div class="welcome-content">${brand()}<div class="welcome-copy"><div class="eyebrow"><span class="eyebrow-line"></span> JOUW PERSOONLIJKE STUDYSPACE</div><h1>Jouw tempo.<br><span class="gradient-text">Jouw progressie.</span></h1><p class="welcome-lead">Flashcards, oefentoetsen en je eigen voortgang. Alles op één plek.</p><p class="pick-label">WIE GAAT ER VANDAAG LEREN?</p><div class="pick-cards">${state.profiles.map((p,i)=>`<button class="pick-card p-${htmlEscape(p.name.toLowerCase())}" data-action="select-profile" data-id="${+p.id}"><span class="pick-avatar ${htmlEscape(p.name.toLowerCase())}">${htmlEscape(p.name[0])}</span><span class="pick-details"><span class="pick-name">${htmlEscape(p.name)}</span><span class="pick-sub">Open mijn dashboard</span></span><span class="pick-arrow">${ic('arrow',24)}</span></button>`).join('')}</div><div class="welcome-bottom">${ic('shield',15)} Je voortgang staat op dit apparaat. Bewaar regelmatig een back-up.</div></div></div><div class="welcome-art" aria-hidden="true"><img class="owl-hero-image" src="owl-study.webp" alt=""><div class="floating-label float-1">${ic('cards')} FLASHCARDS</div><div class="floating-label float-2">${ic('exam')} OEFENTOETSEN</div><div class="floating-label float-3">${ic('chart')} PROGRESSIE</div></div></main>`;
 }
 function requestProfilePin(id){
   id=Number(id);
@@ -210,7 +205,7 @@ function flashContent(){
  const id=f.order[f.index];const card=f.content.cards[id];
  return `<div class="page-enter focus-page flash-page"><button class="back-link" data-action="nav" data-route="flashcards">${ic('back',18)} Terug naar flashcards</button><div class="focus-header"><div><div class="eyebrow">${htmlEscape(f.pack.subject)} <span class="bullet">·</span> FLASHCARDS</div><h2>${htmlEscape(f.pack.title)}</h2></div><span class="step-count">Kaart ${f.index+1} <span>/ ${f.order.length}</span></span></div><div class="step-bar"><div style="width:${f.index/f.order.length*100}%"></div></div><button class="flip-card ${f.flipped?'flipped':''}" data-action="flip"><span class="flip-inner"><span class="flip-label">${f.flipped?'ANTWOORD':'VRAAG'}</span><span class="flip-text">${htmlEscape(f.flipped?card.back:card.front)}</span><span class="flip-tip">${ic('refresh',17)} Tik om ${f.flipped?'de vraag':'het antwoord'} te zien</span></span></button><div class="flash-controls">${f.flipped?`<button class="btn btn-red" data-action="rate-flash" data-known="0">${ic('refresh',18)} Nog oefenen</button><button class="btn btn-primary" data-action="rate-flash" data-known="1">${ic('check',18)} Ik weet het!</button>`:`<button class="btn btn-secondary" data-action="flip">Draai kaart om ${ic('arrow',18)}</button>`}</div></div>`;
 }
-async function selectProfile(id){state.profile=id;await refreshDashboard();window.sfBackup?.captureCloud?.(id);await refreshDashboard();window.sfLearning?.reset?.();window.sfReview?.reset?.();window.sfReview?.importLegacy?.();await window.studyBeforeRoute?.('dashboard');state.route='dashboard';render();}
+async function selectProfile(id){state.profile=id;state.cloudWarning=window.sfBackup?.migrationWarning?.(id)||'';await refreshDashboard();window.sfLearning?.reset?.();window.sfReview?.reset?.();window.sfReview?.importLegacy?.();await window.studyBeforeRoute?.('dashboard');state.route='dashboard';render();}
 async function refreshDashboard(){if(!state.profile)return;state.dashboard=await api('dashboard',null,{profile:state.profile});}
 async function navigate(route){if(!state.profile){state.route='choose';render();return;}if(['dashboard','progress','learning-guided','learning-recall','review'].includes(route))await refreshDashboard();if(['planning','ready','parent','dashboard'].includes(route))await window.studyBeforeRoute?.(route);state.route=route;render();window.scrollTo({top:0,behavior:'instant'});}
 async function openPack(id){
@@ -282,7 +277,7 @@ async function flashRate(known){
  if(known)f.sessionKnown++;f.index++;f.flipped=false;
  if(f.index===f.order.length)await refreshDashboard();render();
 }
-function handleError(e){console.error(e);toast(e?.message||'Er ging iets mis.',true);if(e?.message?.includes('uitgelogd')){state.route='unlock';render();}}
+function handleError(e){console.error(e);toast(e?.message||'Er ging iets mis.',true);}
 document.addEventListener('click',async ev=>{
  const btn=ev.target.closest('[data-action]');if(!btn||btn.disabled)return;
  const action=btn.dataset.action;
@@ -295,9 +290,9 @@ document.addEventListener('click',async ev=>{
    case 'reload': location.reload();break;
    case 'select-profile':requestProfilePin(+btn.dataset.id);break;
    case 'pin-back':state.pendingProfile=null;state.pinError=false;state.route='choose';render();break;
-   case 'change-profile':window.sfCloud?.clear();state.profile=null;state.pendingProfile=null;state.pinError=false;state.route='choose';state.dashboard=null;render();break;
+   case 'change-profile':state.profile=null;state.pendingProfile=null;state.pinError=false;state.cloudWarning='';state.route='choose';state.dashboard=null;render();break;
    case 'nav':await navigate(btn.dataset.route);break;
-   case 'logout':await api('logout',{});state.route=window.sfMode()==='supabase'?'unlock':'choose';state.profile=null;state.admin=window.sfMode()==='local';render();break;
+   case 'logout':await api('logout',{});state.route='choose';state.profile=null;state.admin=true;state.cloudWarning='';render();break;
    case 'open-pack':await openPack(btn.dataset.id);break;
    case 'practice-mistakes':await practiceMistakes();break;
    case 'quit-quiz':if(window.confirm('Wil je de toets verlaten? Je huidige antwoorden worden niet opgeslagen.')){state.quiz=null;await navigate('quizzes');}break;
@@ -316,34 +311,14 @@ document.addEventListener('click',async ev=>{
  }catch(e){handleError(e);}
 });
 document.addEventListener('submit',async ev=>{
- const form=ev.target;if(!['unlockForm','sfPinForm'].includes(form.id))return;ev.preventDefault();
+ const form=ev.target;if(form.id!=='sfPinForm')return;ev.preventDefault();
  try{
-  if(form.id==='unlockForm') {const r=await api('unlock',{email:$('#family-email').value,password:$('#family-password').value});state.csrf=r.csrf;await window.sfSyncPublished?.();await boot();}
-  else if(form.id==='sfPinForm'){
-    const pin=$('#sf-profile-pin')?.value||'',id=state.pendingProfile;
-    if(window.sfCloudEnabled){
-      try{
-        await window.sfCloud.enter(id,pin);
-        state.pendingProfile=null;state.pinError=false;
-        await selectProfile(id);
-      }catch(err){
-        // Een storing bij Supabase betekent NIET dat de code verkeerd is.
-        const reason=String(err?.message||'Onbekende verbindingsfout');
-        window.sfCloud?.clear();
-        if(pin==='2007'){
-          state.pendingProfile=null;
-          state.pinError=false;
-          state.cloudWarning='Code 2007 is correct, maar de cloudsynchronisatie is niet beschikbaar. Je voortgang wordt voorlopig lokaal bewaard. Foutmelding: '+reason;
-          await selectProfile(id);
-          toast('Code correct. Cloud niet bereikbaar; tijdelijk lokaal opgeslagen.',true);
-        }else{
-          state.pinError=true;state.cloudWarning='';
-          render();$('#sf-profile-pin')?.focus();
-        }
-      }
-    }else if(pin==='2007'){
-      state.pendingProfile=null;state.pinError=false;await selectProfile(id);
-    }else{state.pinError=true;render();$('#sf-profile-pin')?.focus();}
+  const pin=$('#sf-profile-pin')?.value||'',id=state.pendingProfile;
+  if(pin==='2007'){
+    state.pendingProfile=null;state.pinError=false;
+    await selectProfile(id);
+  }else{
+    state.pinError=true;render();$('#sf-profile-pin')?.focus();
   }
  }catch(e){handleError(e);}
 });
