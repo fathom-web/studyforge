@@ -112,3 +112,10 @@ De GitHub-repository en gepubliceerde bibliotheek zijn openbaar. Plaats daar gee
 
 ## Techniek
 Statische website op GitHub Pages (HTML, CSS, JavaScript); `app.js` bevat de leerinterface, `data.js` laadt de gepubliceerde bibliotheek en slaat resultaten op, `studytools.js` regelt leerplanning en doelen. Er is geen betaalde AI-integratie nodig.
+## StudyForge 2.0 — R0: veilige overstap naar lokaal
+
+Deze eerste release is **niet** de definitieve uitschakeling van Supabase. Zodra een profiel met een werkende cloudverbinding wordt geopend, neemt `backup.js` de historische cloudresultaten zoveel mogelijk lokaal over. De oorspronkelijke externe client-ID blijft behouden, zodat opnieuw synchroniseren geen dubbele toetsresultaten veroorzaakt. Nog niet aan lesmateriaal te koppelen cloudregels worden lokaal afzonderlijk bewaard. De database wordt **niet** gewist of veranderd.
+
+Ga per leerling naar **Meer → Back-up en herstel** en download een privé JSON-bestand. Herhaal dit voor Nikki én Dean, want de back-ups zijn gescheiden. Het bestand bevat toetsresultaten, flashcards, leer- en herhaalvoortgang, toetsplanning, lesmateriaal en eventueel de recente cloudgegevens. In dezelfde sectie kan de juiste leerling een back-up terugzetten, zonder bestaande resultaten eerst te wissen.
+
+**Veiligheidsvoorwaarde voor R1 (database uitschakelen):** controleer op beide leerlingprofielen de historische cijfers, download beide back-ups en test het herstel op een ander apparaat of in een schoon browserprofiel. R0 wordt eerst op een eigen ontwikkelbranch getest. Browsergegevens wissen zonder werkende back-up kan lokale voortgang doen verdwijnen. De zichtbare viercijferige toegangscode is geen bescherming voor een geëxporteerd JSON-bestand.
