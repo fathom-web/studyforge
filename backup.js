@@ -3,7 +3,7 @@
 'use strict';
 (function(){
  const KEY='studyforge-cloud-migration-v1:',UNMAPPED='studyforge-cloud-unmapped-v1:';
- const parse=(v,f)=>{try{return JSON.parse(v);}catch{return f;}};
+ const parse=(v,f)=>{if(v===null||v===undefined||v==='')return f;try{const x=JSON.parse(v);return x===null?f:x;}catch{return f;}};
  const read=k=>{try{return localStorage.getItem(k);}catch{return null;}};
  const save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
  const pid=()=>Number(state.profile);
