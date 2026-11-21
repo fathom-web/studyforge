@@ -1,9 +1,10 @@
-/* StudyForge centrale opslag via Supabase; geen individuele e-mailaccounts.
-   Vul uitsluitend de PUBLIEKE publishable (of anon) API key in.
-   SQL Editor: voer eerst supabase/shared-progress.sql uit.
-   Geen databasewachtwoorden, service_role keys of secret keys gebruiken! */
-window.STUDYFORGE_SUPABASE = {
+/* StudyForge 2.0 R1: standaard volledig lokaal, zonder database.
+   Alleen expliciete herstelmodus haalt historische gegevens uit de oude cloud.
+   De sleutel hieronder is een openbare Supabase publishable key, geen geheim. */
+const SF_LEGACY_CLOUD = new URLSearchParams(window.location.search).get('legacy-cloud') === '1';
+window.STUDYFORGE_SUPABASE = SF_LEGACY_CLOUD ? {
   url: 'https://vjqgodidvpkybeoectxu.supabase.co',
-  publishableKey: 'sb_publishable_wazrGrYlvv0ANucwPL_KeA_yTwrQd8y', // Publieke API-sleutel (geen geheime sleutel)
+  publishableKey: 'sb_publishable_wazrGrYlvv0ANucwPL_KeA_yTwrQd8y',
   sharedMode: true
-};
+} : {};
+window.STUDYFORGE_LEGACY_CLOUD = SF_LEGACY_CLOUD;
