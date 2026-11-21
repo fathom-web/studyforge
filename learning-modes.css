@@ -96,3 +96,39 @@
 .sf-source-text b{font-size:12px;color:var(--mint);display:block;margin-bottom:8px}
 .sf-source-text p{white-space:pre-wrap;font-size:14px;line-height:1.65;color:var(--ink)}
 @media(max-width:520px){.sf-rate-row{gap:8px}.sf-rate-row .btn{flex:1 1 100%;}}
+
+/* R3 — Persoonlijke leercoach */
+.sf-coach-r3{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.92fr);gap:18px;align-items:stretch;background:linear-gradient(120deg,#17302f,#18263c);border:1px solid #426761;border-radius:19px;padding:22px;margin:0 0 25px;color:var(--ink)}
+.sf-coach-r3-intro{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:5px 8px}
+.sf-coach-r3-intro h2{font-size:clamp(21px,2.5vw,30px);line-height:1.2;margin:11px 0;color:var(--ink)}
+.sf-coach-r3-intro p,.sf-coach-r3-pick p{color:#bed1d5;font-size:13px;line-height:1.7}
+.sf-coach-r3-metrics{display:flex;gap:15px;flex-wrap:wrap;margin-top:20px;color:#b2c9cc;font-size:12px}
+.sf-coach-r3-metrics span{display:inline-flex;align-items:center;gap:6px}
+.sf-coach-r3-metrics b{font-size:20px;color:var(--mint)}
+.sf-coach-r3-pick{border:1px solid #46645f;background:#1e343d;border-radius:15px;padding:22px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+.sf-coach-r3-chip,.sf-coach-r3-tag{font-size:11px;letter-spacing:.03em;color:#a6eada;font-weight:800}
+.sf-coach-r3-chip{border:1px solid #466961;background:#294c47;border-radius:30px;padding:6px 10px}
+.sf-coach-r3-subject{font-size:12px;color:#c7d4d6;margin-top:7px}
+.sf-coach-r3-pick h3{font-size:20px;line-height:1.3;color:var(--ink);margin:0;overflow-wrap:anywhere}
+.sf-coach-r3-pick p{margin:0 0 5px}
+.sf-coach-r3-exam{color:#f6d9ab!important;font-size:12px!important;font-weight:700}
+.sf-coach-r3-pick .btn{margin-top:auto;min-height:43px}
+.sf-coach-r3-link{border:0;color:var(--mint);background:transparent;font:inherit;font-size:12px;font-weight:800;cursor:pointer;padding:8px 0;text-align:left}
+.sf-coach-r3-link:hover{text-decoration:underline}
+.sf-coach-page{max-width:1000px;margin:0 auto}
+.sf-coach-r3-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0 24px}
+.sf-coach-r3-overview>div{background:var(--panel);border:1px solid var(--stroke);border-radius:15px;display:grid;gap:4px;padding:19px}
+.sf-coach-r3-overview b{font-size:27px;color:var(--mint)}
+.sf-coach-r3-overview span{color:var(--muted);font-size:12px}
+.sf-coach-r3-list{display:grid;gap:13px}
+.sf-coach-r3-item{display:flex;gap:18px;align-items:flex-start;background:var(--panel);border:1px solid var(--stroke);border-radius:16px;padding:21px}
+.sf-coach-r3-number{flex:0 0 35px;width:35px;height:35px;display:grid;place-items:center;background:#264c47;color:var(--mint);border-radius:10px;font-size:14px;font-weight:800}
+.sf-coach-r3-body{min-width:0;flex:1}
+.sf-coach-r3-body h2{font-size:19px;line-height:1.35;margin:7px 0 6px;overflow-wrap:anywhere;color:var(--ink)}
+.sf-coach-r3-body p{font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 9px}
+.sf-coach-r3-body .btn{min-height:40px;margin-top:8px}
+.sf-coach-r3-explain{border:1px solid var(--stroke2);border-radius:13px;background:#1a2a37;padding:20px;margin:21px 0}
+.sf-coach-r3-explain b{color:var(--ink)}
+.sf-coach-r3-explain p{color:var(--muted);font-size:13px;line-height:1.6;margin:9px 0 0}
+@media(max-width:800px){.sf-coach-r3{grid-template-columns:1fr}.sf-coach-r3-pick .btn{margin-top:8px}}
+@media(max-width:520px){.sf-coach-r3{padding:15px}.sf-coach-r3-pick{padding:17px}.sf-coach-r3-overview{grid-template-columns:1fr 1fr;gap:8px}.sf-coach-r3-overview>div{padding:13px}.sf-coach-r3-overview b{font-size:23px}.sf-coach-r3-item{padding:15px;gap:10px}.sf-coach-r3-number{flex-basis:29px;width:29px;height:29px}}
