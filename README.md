@@ -1,6 +1,6 @@
 # StudyForge — leren via het Huiswerk-project
 
-## Huidige versie — R2: begeleid leren en zelfstandig uitleggen (21 november 2026)
+## Huidige versie — R4: gerichte toetsvoorbereiding en ouderdashboard (21 november 2026)
 
 **Standaard gebruikt StudyForge geen Supabase meer.** GitHub Pages levert de website en de JSON-lespakketten; cijfers, flashcards, plannen, leerresultaten en Slim herhalen worden per leerling in de opslag van de browser bewaard. Er zijn geen leerlingaccounts, betaalde API-calls of databaseverbindingen nodig om te oefenen.
 
@@ -12,6 +12,40 @@ De oude Supabase-installatie, tabellen en bestaande clouddata blijven intact als
 
 ---
 
+
+## R4 — toetsvoorbereiding en ouderdashboard (21 november 2026)
+
+De bestaande lokaal opgeslagen `studyforge-planning-v1`-gegevens blijven bruikbaar. Er is **geen database, server of betaalde AI nodig**. 
+
+### Zelf een toets plannen
+
+- Ga naar **Mijn toetsen**. Vul de naam, het vak, een toekomstige toetsdatum en het streefcijfer (1–10) in.
+- De toets wordt **alleen binnen het gekozen profiel** bewaard. Dubbele toetsen met dezelfde naam, datum en vak worden tegengehouden.
+- Nieuw aangemaakte toetsen zijn te verwijderen; gemaakte oefentoetsen, cijfers en leerresultaten worden daardoor niet gewijzigd.
+- Gepubliceerde toetsdata uit het Huiswerk-project blijven mogelijk; die kan de leerling niet zelf verwijderen.
+
+### Gericht voorbereiden
+
+Onder **Toetsklaar** maakt `exam-prep.js` maximaal tien oefensessies per toets. De planner kiest uitsluitend uit het beschikbare lesmateriaal voor het gekozen vak; hij gebruikt de leercoachprioriteiten om per oefendag een concreet lespakket en leermethode voor te stellen. Bij een toets die verder weg ligt, begint het schema met één oriëntatiesessie en concentreert het zich op de laatste dagen. Er zijn geen verzonnen vragen of lessen als bronmateriaal ontbreekt.
+
+De kalenderdagen worden bij de eerste planning vastgelegd in `scheduleStarts`, zodat afgevinkte dagen **niet verschuiven bij opnieuw openen of op een volgende dag**. Iedere sessie heeft een startknop en kan handmatig worden afgevinkt. De voortgang (X van Y) verschijnt ook bij de toetskaart en op het dashboard. De streefscore en labels zoals 'Toetsklaar' zijn indicaties, geen cijfergaranties.
+
+### Ouderoverzicht
+
+Het scherm **Ouderoverzicht** toont voor Nikki en Dean apart:
+- Het aantal gemaakte oefentoetsen en het gemiddelde over maximaal de drie nieuwste cijfers.
+- Indien minimaal zes cijfers beschikbaar zijn: vergelijking tussen de drie nieuwste en de drie daarvoor.
+- Openstaande herhaalvragen en lespakketten die volgens de leercoach extra aandacht vragen.
+- Het huidige aanbevolen onderwerp en een korte onderbouwing.
+- Aankomende toetsen en het aantal afgevinkte voorbereiding-sessies.
+
+Alleen gegevens die **in dezelfde browser** staan zijn zichtbaar; resultaten op andere apparaten moeten handmatig via **Meer → Back-up en herstel** worden overgezet. Het ouderoverzicht maakt geen externe synchronisatieverbinding en verzint geen ontbrekende scores.
+
+### Techniek
+
+`exam-prep.js` berekent oefenschema's en leerlingoverzichten zonder gegevens te muteren. `studytools.js` beheert de bestaande planning, nieuwe handmatige toetsen en afvinkstatus. Het opslagformaat `studyforge-planning-v1` is alleen uitgebreid met het optionele veld `scheduleStarts`. De bestaande back-ups blijven compatibel.
+
+---
 
 ## R3 — persoonlijke leercoach (21 november 2026)
 
