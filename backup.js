@@ -82,6 +82,7 @@
      data:{sets,attempts:d.attempts.filter(x=>Number(x.profile_id)===p&&ids.has(Number(x.collection_id))),
        reviews:d.reviews.filter(x=>Number(x.profile_id)===p&&ids.has(Number(x.collection_id)))},
      planning:typeof spReadLocal==='function'?spReadLocal(p):null,extras:extra(p),
+     migration:parse(read(KEY+p),null),
      cloud:cache&&Number(window.sfCloud?.profile)===p?cache:null,
      unmapped:parse(read(UNMAPPED+p),{attempts:[],reviews:[]})};
  }
@@ -141,6 +142,11 @@
      for(const [k,v]of Object.entries(backup.extras||{}))mergeExtra(p,k,v);
      const unknown=backup.unmapped;
      if(unknown&&Array.isArray(unknown.attempts)&&Array.isArray(unknown.reviews))save(UNMAPPED+p,unknown);
+     // R0-back-ups bevatten de cloudgegevens, maar soms nog geen apart migratiemerk.
+     if(backup.migration&&typeof backup.migration==='object')save(KEY+p,backup.migration);
+     else if(Array.isArray(backup.cloud?.attempts)&&Array.isArray(backup.cloud?.reviews))
+       save(KEY+p,{date:new Date().toISOString(),attempts:backup.cloud.attempts.length,
+         reviews:backup.cloud.reviews.length,missing:(unknown?.attempts||[]).length+(unknown?.reviews||[]).length});
      if(typeof refreshDashboard==='function')await refreshDashboard();
      if(typeof window.studyBeforeRoute==='function')await window.studyBeforeRoute('dashboard');
      if(typeof render==='function')render();
@@ -148,22 +154,53 @@
      return {attempts,reviews};
    }catch(e){SF_LOCAL_DATA=JSON.parse(before);try{sfPersist();}catch{}throw e;}
  }
+ function recoveryUrl(legacy){
+   const u=new URL(window.location.href);
+   if(legacy)u.searchParams.set('legacy-cloud','1');
+   else u.searchParams.delete('legacy-cloud');
+   return u.pathname+u.search+u.hash;
+ }
+ function marker(p){return parse(read(KEY+p),null);}
+ function notice(){
+   const p=pid();
+   if(![1,2].includes(p))return '';
+   if(window.sfCloudEnabled)
+     return '<div class="study-warning">Je gebruikt de tijdelijke herstelmodus voor oude resultaten. '+
+       '<button class="text-link" data-action="nav" data-route="backup">Back-up en terug naar lokaal</button></div>';
+   if(marker(p))return '';
+   return '<div class="study-warning" role="status">Oude cloudresultaten zijn op dit apparaat nog niet gecontroleerd. '+
+     'Dit heeft geen invloed op nieuwe oefeningen. '+
+     '<button class="text-link" data-action="nav" data-route="backup">Oude cijfers ophalen / back-up maken</button></div>';
+ }
  function page(){
-   const p=pid(),d=sfLocal(),marker=parse(read(KEY+p),null);
+   const p=pid(),d=sfLocal(),stamp=marker(p),cloud=!!window.sfCloudEnabled;
    const attempts=d.attempts.filter(x=>Number(x.profile_id)===p).length;
    const reviews=d.reviews.filter(x=>Number(x.profile_id)===p).length;
-   const status=window.sfCloudEnabled?(marker?'Cloudcontrole: '+new Date(marker.date).toLocaleDateString('nl-NL')+
-     '. Niet te koppelen records: '+marker.missing+'.':'Cloudgegevens nog niet bevestigd als lokaal overgenomen.'):'Alle gegevens staan lokaal op dit apparaat.';
-   return '<div class="page-enter">'+sectionHeading('STUDYFORGE 2.0','Back-up en herstel','Bewaar je voortgang veilig als JSON-bestand.')+
-     '<section class="panel" style="padding:24px"><h3>'+htmlEscape(profileName())+' — leerresultaten</h3>'+
-     '<p>'+attempts+' toetsresultaten · '+reviews+' flashcardbeoordelingen</p><p>'+htmlEscape(status)+'</p>'+
-     '<p>Download voor Nikki en Dean afzonderlijk een back-up en bewaar de bestanden privé.</p>'+
+   const status=cloud?(stamp?
+     'Cloudresultaten opgehaald op '+new Date(stamp.date).toLocaleDateString('nl-NL')+
+     '. Nog niet gekoppeld: '+Number(stamp.missing||0)+'.':
+     'Cloudgegevens zijn nog niet bevestigd als lokaal overgenomen.'):
+     stamp?'Deze browser heeft eerder cloudgegevens overgenomen of een back-up met cloudhistorie hersteld.':
+     'Op dit apparaat is nog niet vastgesteld dat alle oude cloudresultaten zijn overgenomen.';
+   const action=cloud?
+      '<button class="btn btn-secondary" data-action="backup-exit-legacy">Terug naar lokale versie</button>':
+      '<button class="btn btn-secondary" data-action="backup-open-legacy">Haal oude cloudresultaten op</button>';
+   const help=cloud?'Je bent in de eenmalige cloudherstelmodus. Download een back-up vóór je teruggaat naar de lokale versie.':
+     'StudyForge werkt zonder database. Met de herstelknop open je tijdelijk de oude cloud om eerdere resultaten op te halen. Daarna ga je weer terug naar de lokale versie.';
+   return '<div class="page-enter">'+sectionHeading('STUDYFORGE 2.0','Back-up en herstel',
+     'Bewaar jouw cijfers, flashcards, leerresultaten en planning als een privé JSON-bestand.')+
+     '<section class="panel" style="padding:24px"><div class="eyebrow">LEERLING '+htmlEscape(profileName())+'</div>'+
+     '<h3>Jouw leerresultaten</h3>'+
+     '<p>'+attempts+' toetsresultaten · '+reviews+' flashcardbeoordelingen (lokaal)</p>'+
+     '<p>'+htmlEscape(status)+'</p><p>'+htmlEscape(help)+'</p>'+
+     '<p>Maak twee aparte back-ups, één voor Nikki en één voor Dean. Bij een ander apparaat ontbreken lokale resultaten totdat je hun back-up importeert.</p>'+
      '<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">'+
      '<button class="btn btn-primary" data-action="backup-export">Download back-up</button>'+
-     '<button class="btn btn-secondary" data-action="backup-import">Herstel back-up</button></div>'+
-     '<input id="sf-backup-file" type="file" accept=".json,application/json" hidden></section>'+
-     '<p class="sub" style="margin-top:16px">De cloud is voorlopig nog actief. Er wordt niets verwijderd.</p></div>';
+     '<button class="btn btn-secondary" data-action="backup-import">Herstel back-up</button>'+
+     action+'</div><input id="sf-backup-file" type="file" accept=".json,application/json" hidden></section>'+
+     '<p class="sub" style="margin-top:16px">Back-upbestanden kunnen persoonlijke leerresultaten bevatten: bewaar ze privé. De oude cloudgegevens worden niet gewist.</p></div>';
  }
+
  document.addEventListener('change',async e=>{
    if(e.target?.id!=='sf-backup-file')return;
    const file=e.target.files?.[0];e.target.value='';
@@ -171,5 +208,8 @@
    try{await restoreFile(file);}catch(err){console.error(err);toast(err.message||'Herstellen mislukt.',true);}
  });
  window.sfBackup={captureCloud,build,page,restoreFile,
-   handle(action){if(action==='backup-export')download();else if(action==='backup-import')document.getElementById('sf-backup-file')?.click();}};
+   handle(action){if(action==='backup-export')download();
+     else if(action==='backup-import')document.getElementById('sf-backup-file')?.click();
+     else if(action==='backup-open-legacy')window.location.assign(recoveryUrl(true));
+     else if(action==='backup-exit-legacy')window.location.assign(recoveryUrl(false));},notice};
 })();
