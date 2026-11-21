@@ -65,3 +65,28 @@
 }
 
 @media(max-width:620px){.bottom-nav{grid-template-columns:repeat(5,minmax(0,1fr));padding-left:3px;padding-right:3px}.bottom-link{font-size:10px}}
+
+/* R4 — adaptive exam plan & parent dashboard */
+.study-form-r4{margin-top:15px}
+.study-next-action{border:1px solid #467568;background:linear-gradient(105deg,#193632,#213145);padding:21px;border-radius:15px;margin:20px 0}
+.study-next-action h3{font-size:19px;color:var(--ink);margin:13px 0 8px;line-height:1.35}
+.study-next-action p{color:#c7d8df;line-height:1.6;font-size:13px;margin:6px 0}
+.study-next-action .study-link{font-weight:800;min-height:40px;padding:5px 0}
+.study-progress-row{display:flex;gap:12px;justify-content:space-between;align-items:center;color:var(--ink);font-size:13px;margin:20px 0 9px}
+.study-progress-row span{font-weight:900;color:#9ddecf}
+.study-progress-track{height:9px;background:#304152;border-radius:40px;overflow:hidden;margin-bottom:14px}
+.study-progress-track span{display:block;height:100%;background:linear-gradient(90deg,#57c5a9,#b0d8b0);border-radius:40px}
+.study-reason{font-size:12px!important;opacity:.86;line-height:1.5!important}
+.study-parent-metrics{grid-template-columns:repeat(2,minmax(0,1fr))!important;margin:8px 0 17px}
+.study-parent-metrics>div{min-width:0}
+.study-parent-metrics span{overflow-wrap:anywhere}
+.study-parent-focus{background:#1e3340;border:1px solid #3e5966;padding:17px;border-radius:13px;margin:16px 0}
+.study-parent-focus b{color:var(--ink);font-size:13px}
+.study-parent-focus p{color:var(--muted);font-size:13px;line-height:1.6;margin:8px 0 0}
+.study-parent-card .study-person{margin-bottom:18px}
+.study-parent-card .study-parent-exam p{margin:5px 0 0;color:var(--muted);font-size:12px}
+.study-parent-card .study-parent-exam span{font-size:12px;line-height:1.5}
+.study-form-r4 input[type="date"]{color-scheme:dark}
+.study-form-r4 input[list]{background:#0e1522}
+@media(max-width:760px){.study-next-action{padding:17px}.study-parent-metrics{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:400px){.study-day{gap:8px}.study-day .study-link{font-size:12px}.study-check{width:32px;height:32px}}
