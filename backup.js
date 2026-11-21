@@ -150,7 +150,8 @@
        spWriteLocal(p,{
          ...incomingPlan,...(hasLocal?current:{}),exams,
          goals:hasLocal&&!defaultGoals?current.goals:(incomingPlan.goals||current.goals),
-         completed:{...(incomingPlan.completed||{}),...(hasLocal?current.completed||{}:{})}
+         completed:{...(incomingPlan.completed||{}),...(hasLocal?current.completed||{}:{})},
+         scheduleStarts:{...(incomingPlan.scheduleStarts||{}),...(hasLocal?current.scheduleStarts||{}:{})}
        });
      }
      for(const [k,v]of Object.entries(backup.extras||{}))mergeExtra(p,k,v);
