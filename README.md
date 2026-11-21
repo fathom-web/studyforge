@@ -13,6 +13,22 @@ De oude Supabase-installatie, tabellen en bestaande clouddata blijven intact als
 ---
 
 
+## R3 — persoonlijke leercoach (21 november 2026)
+
+**Mijn leercoach** staat in de zijbalk, onder **Meer** en als advieskaart op het dashboard. De coach maakt **geen** nieuwe lesstof en verstuurt **geen** gegevens naar een externe AI. `coach.js` berekent adviezen uitsluitend uit de op dit apparaat beschikbare gegevens van de **geselecteerde leerling**:
+
+- Gemaakte oefentoetsen: maximaal de laatste drie cijfers per lespakket.
+- Slim herhalen: openstaande herhaalvragen en de laatste beoordeling (nog oefenen/bijna/goed).
+- Flashcards: bekende en nog niet bekende kaarten, voor zover beoordeeld.
+- Leer in stappen / Leg het uit: de laatst opgeslagen eerste-pogingresultaten.
+- Toetsplanning: toekomstige toetsen in hetzelfde vak geven tijdelijk meer prioriteit.
+
+**Volgorde:** eerst vragen die daadwerkelijk klaarstaan voor herhaling, vervolgens lage recente resultaten of onzekerheid, daarna nog niet geoefende stof en ten slotte onderhoud van al geoefende onderwerpen. Iedere aanbeveling zegt **waarom** hij verschijnt. De aanbeveling opent rechtstreeks `Leer in stappen`, `Leg het uit`, flashcards of een **op dat specifieke lespakket gefilterde** Slim-herhalenronde.
+
+De coach is geen cijferprognose en vult bij ontbrekende resultaten geen zwakke punten in. Zonder geschiedenis zegt hij expliciet dat hij op basis van beschikbaar materiaal een startonderwerp kiest. De bronvragen, bestaande toetsen, eerste scores en opslagkeys blijven ongewijzigd. Bij overstap naar een andere browser worden aanbevelingen opnieuw bepaald op basis van wat in die browser staat of wat via de bestaande JSON-back-up is hersteld. Er is geen database nodig.
+
+---
+
 ## R2 — nieuwe leerervaring
 
 **Leer in stappen:** de leerling ziet eerst `learn` uit de gepubliceerde bron, als die beschikbaar is. Bij de huidige pakketten is er nog geen apart `learn`-veld; dan toont de app de bestaande `hint`, expliciet als **aanwijzing**, niet als volledige les. Pas na de oefenvraag worden het modelantwoord en de bestaande `explanation` getoond. Een fout antwoord komt één keer terug aan het eind van de sessie.
