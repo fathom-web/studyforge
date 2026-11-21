@@ -130,9 +130,11 @@
        De herhaalplanning wordt voorlopig op dit apparaat bewaard en synchroniseert nog niet via Supabase.</p>
    </div>`;
  }
- async function start(){
-   const list=dueData().dueItems.slice(0,12);
-   if(!list.length){toast('Geen herhalingen open.');return navigate('review');}
+ async function start(sourceKey=null){
+   // R3 kan gericht herhalen; bestaande herhaalrondes blijven hetzelfde.
+   const available=dueData().dueItems;
+   const list=(sourceKey?available.filter(x=>x.source===String(sourceKey)):available).slice(0,12);
+   if(!list.length){toast(sourceKey?'Voor dit onderwerp staan geen vragen klaar.':'Geen herhalingen open.');return navigate('review');}
    const queue=[],cache=new Map();
    for(const task of list){
      try{
