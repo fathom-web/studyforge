@@ -172,7 +172,7 @@ function sfValidateImport(text){
   });
   return {profile,cols};
 }
-/* R1: geen netwerkcalls, geen accounts en geen cloudmutaties. */
+/* R1: geen databaseverzoeken, accounts of cloudmutaties. Lesmateriaal komt van GitHub Pages. */
 async function sfAdapter(action,b=null,params={}){
   const d=sfLocal();
   if(action==='status')return {csrf:'local',locked:false,admin:true,mode:'local'};
