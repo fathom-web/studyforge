@@ -113,6 +113,7 @@ function routeContent(){
   if(state.route==='learning-recall') return window.sfLearning.catalog('recall');
   if(state.route==='learning-run') return window.sfLearning.render();
   if(state.route==='review') return window.sfReview.catalog();
+  if(state.route==='backup') return window.sfBackup.page();
   if(state.route==='review-run') return window.sfReview.runner();
   if(state.route==='library') return libraryContent();
   if(state.route==='progress') return progressContent();
@@ -126,7 +127,7 @@ function routeContent(){
   return dashboardContent();
 }
 function moreContent(){
-  const items=[['learning-guided','book','Leer in stappen','Eerst begrijpen en dan oefenen'],['learning-recall','spark','Leg het uit','Zonder meerkeuze jezelf overhoren'],['review','refresh','Slim herhalen','Geplande herhaalvragen'],['planning','book','Mijn toetsen','Toetsdata en leerplanning'],['ready','spark','Toetsklaar','Check wat je nog moet oefenen'],['progress','chart','Progressie','Bekijk je cijfers'],['library','library','Bibliotheek','Je oefenmateriaal'],['parent','chart','Ouderoverzicht','Beide kinderen in beeld']];
+  const items=[['learning-guided','book','Leer in stappen','Eerst begrijpen en dan oefenen'],['learning-recall','spark','Leg het uit','Zonder meerkeuze jezelf overhoren'],['review','refresh','Slim herhalen','Geplande herhaalvragen'],['planning','book','Mijn toetsen','Toetsdata en leerplanning'],['ready','spark','Toetsklaar','Check wat je nog moet oefenen'],['progress','chart','Progressie','Bekijk je cijfers'],['library','library','Bibliotheek','Je oefenmateriaal'],['parent','chart','Ouderoverzicht','Beide kinderen in beeld'],['backup','shield','Back-up en herstel','Bewaar je voortgang zonder database']];
   return '<div class="page-enter">'+sectionHeading('ALLE FUNCTIES','Meer mogelijkheden','Kies waar je naartoe wilt.')+
     '<div class="pack-grid">'+items.map(([route,icon,title,desc])=>'<button class="pack-card" data-action="nav" data-route="'+route+'"><div class="pack-top"><span class="pack-icon">'+ic(icon,23)+'</span></div><h3>'+htmlEscape(title)+'</h3><p>'+htmlEscape(desc)+'</p></button>').join('')+'</div></div>';
 }
@@ -209,7 +210,7 @@ function flashContent(){
  const id=f.order[f.index];const card=f.content.cards[id];
  return `<div class="page-enter focus-page flash-page"><button class="back-link" data-action="nav" data-route="flashcards">${ic('back',18)} Terug naar flashcards</button><div class="focus-header"><div><div class="eyebrow">${htmlEscape(f.pack.subject)} <span class="bullet">·</span> FLASHCARDS</div><h2>${htmlEscape(f.pack.title)}</h2></div><span class="step-count">Kaart ${f.index+1} <span>/ ${f.order.length}</span></span></div><div class="step-bar"><div style="width:${f.index/f.order.length*100}%"></div></div><button class="flip-card ${f.flipped?'flipped':''}" data-action="flip"><span class="flip-inner"><span class="flip-label">${f.flipped?'ANTWOORD':'VRAAG'}</span><span class="flip-text">${htmlEscape(f.flipped?card.back:card.front)}</span><span class="flip-tip">${ic('refresh',17)} Tik om ${f.flipped?'de vraag':'het antwoord'} te zien</span></span></button><div class="flash-controls">${f.flipped?`<button class="btn btn-red" data-action="rate-flash" data-known="0">${ic('refresh',18)} Nog oefenen</button><button class="btn btn-primary" data-action="rate-flash" data-known="1">${ic('check',18)} Ik weet het!</button>`:`<button class="btn btn-secondary" data-action="flip">Draai kaart om ${ic('arrow',18)}</button>`}</div></div>`;
 }
-async function selectProfile(id){state.profile=id;await refreshDashboard();window.sfLearning?.reset?.();window.sfReview?.reset?.();window.sfReview?.importLegacy?.();await window.studyBeforeRoute?.('dashboard');state.route='dashboard';render();}
+async function selectProfile(id){state.profile=id;await refreshDashboard();window.sfBackup?.captureCloud?.(id);await refreshDashboard();window.sfLearning?.reset?.();window.sfReview?.reset?.();window.sfReview?.importLegacy?.();await window.studyBeforeRoute?.('dashboard');state.route='dashboard';render();}
 async function refreshDashboard(){if(!state.profile)return;state.dashboard=await api('dashboard',null,{profile:state.profile});}
 async function navigate(route){if(!state.profile){state.route='choose';render();return;}if(['dashboard','progress','learning-guided','learning-recall','review'].includes(route))await refreshDashboard();if(['planning','ready','parent','dashboard'].includes(route))await window.studyBeforeRoute?.(route);state.route=route;render();window.scrollTo({top:0,behavior:'instant'});}
 async function openPack(id){
@@ -289,6 +290,7 @@ document.addEventListener('click',async ev=>{
   if(action.startsWith('study-')){await window.studyHandleAction(action,btn);return;}
   if(action.startsWith('learn-')){await window.sfLearning.handle(action,btn);return;}
   if(action.startsWith('review-')){await window.sfReview.handle(action,btn);return;}
+   if(action.startsWith('backup-')){await window.sfBackup.handle(action,btn);return;}
   switch(action){
    case 'reload': location.reload();break;
    case 'select-profile':requestProfilePin(+btn.dataset.id);break;
