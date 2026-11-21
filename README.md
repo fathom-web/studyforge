@@ -1,6 +1,6 @@
 # StudyForge — leren via het Huiswerk-project
 
-## Huidige versie — R1: lokaal zonder database (21 november 2026)
+## Huidige versie — R2: begeleid leren en zelfstandig uitleggen (21 november 2026)
 
 **Standaard gebruikt StudyForge geen Supabase meer.** GitHub Pages levert de website en de JSON-lespakketten; cijfers, flashcards, plannen, leerresultaten en Slim herhalen worden per leerling in de opslag van de browser bewaard. Er zijn geen leerlingaccounts, betaalde API-calls of databaseverbindingen nodig om te oefenen.
 
@@ -12,6 +12,28 @@ De oude Supabase-installatie, tabellen en bestaande clouddata blijven intact als
 
 ---
 
+
+## R2 — nieuwe leerervaring
+
+**Leer in stappen:** de leerling ziet eerst `learn` uit de gepubliceerde bron, als die beschikbaar is. Bij de huidige pakketten is er nog geen apart `learn`-veld; dan toont de app de bestaande `hint`, expliciet als **aanwijzing**, niet als volledige les. Pas na de oefenvraag worden het modelantwoord en de bestaande `explanation` getoond. Een fout antwoord komt één keer terug aan het eind van de sessie.
+
+**Leg het uit:** alleen volledig zelfstandige vragen worden aangeboden. Open vragen uit de bestaande lesstof zijn toegestaan; meerkeuzevragen alleen als hun originele vraag ook zonder opties begrijpelijk is. Verwijzingen naar afbeeldingen, luisterfragmenten en antwoordkeuzes worden standaard uitgesloten. Een redacteur kan voor een vraag een zelfstandig `recallQuestion` en eventueel `recallAnswer` aanleveren; de app bedenkt die tekst niet zelf.
+
+**Zelfbeoordeling:** `Nog oefenen` (kwaliteit 0), `Bijna goed` (kwaliteit 1) en `Goed` (kwaliteit 2). De resultaten worden meegenomen in de bestaande lokale herhaalplanning. Lastige vragen komen eenmaal extra terug, zonder dat een tweede poging de eerste score overschrijft. De bestaande toetsen, antwoordmodellen en oude cijfers veranderen niet.
+
+**Nieuwe optionele velden per quizvraag in de GitHub JSON** (nooit automatisch invullen als de bron ontbreekt):
+
+- `lessonTitle`: kopje uit de aangeleverde leerstof
+- `learn`: letterlijke of zorgvuldig brongetrouwe uitleg
+- `example`: voorbeeld uit de bron
+- `recallQuestion`: op zichzelf begrijpelijke, gecontroleerde vraag
+- `recallAnswer`: gecontroleerd modelantwoord
+
+De JSON-loader valideert de lengte van deze velden. Bij een bestaand lespakket worden uitsluitend deze nieuwe leervelden aangevuld of bijgewerkt als het aantal vragen, de vraagtekst, antwoordopties en juiste antwoorden **ongewijzigd** zijn. Zo blijven eerdere resultaten aan dezelfde vragen gekoppeld. Als de inhoudelijke vragen zelf veranderen, vraagt dat om een nieuwe lespakketversie.
+
+R2 voegt **geen nieuwe schoolfeiten** toe aan bestaande lespakketten. Voor diepere uitleg moet eerst daadwerkelijk schoolboekmateriaal worden aangeleverd; de site heeft geen ingebouwde betaalde AI.
+
+---
 
 ## Historische inrichting (R0): centrale voortgang via Supabase
 
