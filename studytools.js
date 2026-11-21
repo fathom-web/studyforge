@@ -19,21 +19,6 @@ function spWriteLocal(profile,record){
 async function spLoad(profile){
   let val=spReadLocal(profile);
   spCloudWarning='';
-  if(window.sfCloudEnabled&&window.sfCloud?.pin){
-    const cloudPlan=await window.sfCloud.getPlan(profile);
-    if(cloudPlan&&Array.isArray(cloudPlan.exams)){
-      val={...SP_EMPTY(),...cloudPlan,goals:{...SP_EMPTY().goals,...cloudPlan.goals}};
-      spWriteLocal(profile,val);
-    }
-  }
-  if(window.sfMode?.()==='supabase'){
-    try{
-      const client=await sfClient(),res=await client.from('sf_study_state').select('payload').eq('profile_id',profile).maybeSingle();
-      if(res.error)throw res.error;
-      if(res.data?.payload&&Array.isArray(res.data.payload.exams))val={...SP_EMPTY(),...res.data.payload,goals:{...SP_EMPTY().goals,...res.data.payload.goals}};
-      spWriteLocal(profile,val);
-    }catch(err){spCloudWarning='Planning wordt nog lokaal bewaard. Activeer later de aanvullende Supabase-tabel.';console.warn('StudyForge planning cloud',err)}
-  }
   // Afronden Engels: ruim alleen de eerder automatisch geplande My Future-toets op.
   // Alle gemaakte toetsen, cijfers en leerstatistieken blijven behouden.
   if(Number(profile)===2){
@@ -67,22 +52,8 @@ async function spLoad(profile){
   return val;
 }
 async function spSave(profile,val){
+  // R1: alleen opslag op dit apparaat; geen netwerkverzoeken.
   spWriteLocal(profile,val);
-  if(window.sfCloudEnabled&&window.sfCloud?.pin){
-    try{
-      await window.sfCloud.savePlan(profile,val);
-      spCloudWarning='';
-    }catch(err){spCloudWarning='Planning lokaal bewaard, maar cloud synchronisatie is mislukt.';toast(spCloudWarning,true);}
-  }
-  if(window.sfMode?.()==='supabase'){
-    try{
-      const client=await sfClient(),user=await sfRemoteUser();
-      if(!user)throw Error('Nog niet ingelogd');
-      const res=await client.from('sf_study_state').upsert({owner_id:user.id,profile_id:profile,payload:val,updated_at:new Date().toISOString()},{onConflict:'owner_id,profile_id'});
-      if(res.error)throw res.error;
-      spCloudWarning='';
-    }catch(err){spCloudWarning='Op dit apparaat opgeslagen. Cloud synchronisatie wacht op de Supabase-inrichting.';toast(spCloudWarning,true)}
-  }
 }
 async function studyBeforeRoute(route){
   if(route==='parent'){
@@ -195,7 +166,7 @@ function studyParentContent(){
      const m=spReadiness(e,p.dashboard,p.plan.goals);
      return '<div class="study-parent-exam"><b>'+htmlEscape(e.title)+'</b><span>'+spDayLabel(e.date)+' · '+htmlEscape(m.label)+'</span></div>';
    }).join(''):'<p class="study-muted">Nog geen toetsen gepland</p>')+'</section>';
- }).join('')+'</div><p class="study-muted">Resultaten worden voorlopig in deze browser bewaard. Synchronisatie tussen apparaten komt beschikbaar zodra Supabase met een gezinsaccount is gekoppeld.</p></div>';
+ }).join('')+'</div><p class="study-muted">Resultaten staan alleen op dit apparaat. Gebruik Back-up en herstel om ze naar een ander apparaat over te zetten.</p></div>';
 }
 async function studyHandleAction(action,btn){
  if(action==='study-save-goals'){
