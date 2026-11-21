@@ -147,55 +147,102 @@ function spWeekProgress(db=state.dashboard,goal=spCurrent.goals){
   return {count,target};
 }
 function studyPlanContent(){
-  const upcoming=spDueExams();
-  const goals=spCurrent.goals;
-  const weekly=spWeekProgress();
-  return '<div class="page-enter">'+sectionHeading('JOUW PLANNING','Mijn toetsen','Bekijk je toetsdata en oefenschema. Nieuwe toetsen komen uit het Huiswerk-project.')+
-  (spCloudWarning?'<p class="study-warning">'+htmlEscape(spCloudWarning)+'</p>':'')+
-  '<section class="study-panel"><h2>Mijn leerdoelen</h2><p>We kijken naar gemaakte oefentoetsen. Dit zijn doelen, geen voorspelde cijfers.</p><p><b>Deze week: '+weekly.count+' van '+weekly.target+' geplande oefensessies</b> (gemaakte oefentoetsen).</p>'+
-  '<div class="study-form"><label>Oefensessies per week<input type="number" id="study-weekly-goal" min="1" max="14" value="'+Number(goals.sessionsPerWeek||3)+'"></label>'+
-  '<label>Algemeen streefcijfer<input type="number" id="study-general-target" min="1" max="10" step="0.5" value="'+Number(goals.targetGrade||7)+'"></label></div>'+
-  '<button class="study-button secondary" data-action="study-save-goals">Doelen opslaan</button></section>'+
-  '<section class="study-section"><h2>Geplande toetsen</h2><div class="study-exam-grid">'+(upcoming.length?upcoming.map(e=>spExamCard(e)).join(''):'<p class="study-muted">Er zijn nog geen toetsen gepland. Nieuwe toetsdata worden via het Huiswerk-project toegevoegd.</p>')+'</div></section></div>';
+  const upcoming=spDueExams(),goals=spCurrent.goals,weekly=spWeekProgress();
+  const subjects=[...new Set(collections().map(c=>String(c.subject||'').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'nl'));
+  return '<div class="page-enter">'+sectionHeading('JOUW PLANNING','Mijn toetsen','Voeg zelf een toets toe of gebruik de toetsdata uit het Huiswerk-project.')+
+    (spCloudWarning?'<p class="study-warning">'+htmlEscape(spCloudWarning)+'</p>':'')+
+    '<section class="study-panel"><h2>Mijn leerdoelen</h2><p>Deze doelen zijn geen voorspelling van je echte toetscijfer.</p>'+
+    '<p><b>Deze week: '+weekly.count+' van '+weekly.target+' geplande oefentoetsen</b> (alleen afgeronde oefentoetsen worden hier meegeteld).</p>'+
+    '<div class="study-form"><label>Oefentoetsen per week<input type="number" id="study-weekly-goal" min="1" max="14" value="'+Number(goals.sessionsPerWeek||3)+'"></label>'+
+    '<label>Algemeen streefcijfer<input type="number" id="study-general-target" min="1" max="10" step="0.5" value="'+Number(goals.targetGrade||7)+'"></label></div>'+
+    '<button class="study-button secondary" data-action="study-save-goals">Doelen opslaan</button></section>'+
+    '<section class="study-panel"><h2>Nieuwe toets plannen</h2>'+
+    '<p>Je mag ook een toets invoeren waarvoor nog geen lesstof op StudyForge staat. Het oefenschema wordt dan aangevuld zodra dat materiaal is gepubliceerd.</p>'+
+    '<div class="study-form study-form-r4">'+
+      '<label>Naam toets<input id="study-new-title" type="text" maxlength="120" placeholder="Bijvoorbeeld Hoofdstuk 2" autocomplete="off"></label>'+
+      '<label>Vak<input id="study-new-subject" type="text" list="study-subject-list" maxlength="80" placeholder="Bijvoorbeeld Wiskunde" autocomplete="off">'+
+      '<datalist id="study-subject-list">'+subjects.map(x=>'<option value="'+htmlEscape(x)+'"></option>').join('')+'</datalist></label>'+
+      '<label>Toetsdatum<input id="study-new-date" type="date" min="'+spDate()+'"></label>'+
+      '<label>Streefcijfer<input id="study-new-target" type="number" min="1" max="10" step="0.5" value="'+Number(goals.targetGrade||7)+'"></label>'+
+    '</div><button class="study-button" data-action="study-add-exam">Toets toevoegen</button></section>'+
+    '<section class="study-section"><h2>Geplande toetsen</h2><div class="study-exam-grid">'+
+    (upcoming.length?upcoming.map(e=>spExamCard(e)).join(''):
+      '<p class="study-muted">Nog geen toetsen gepland. Vul hierboven een datum in om een persoonlijk oefenschema te maken.</p>')+
+    '</div></section></div>';
 }
 function spGenerateSessions(exam,limit=10){
- const dates=[],count=Math.min(Math.max(spDaysUntil(exam.date)+1,1),14),start=spMidnight(spDate());
- const m=spBySubject(exam.subject),packs=[...m.quizzes,...m.cards];
- for(let i=0;i<count&&dates.length<limit;i++){
-   const d=new Date(start);d.setDate(start.getDate()+i);
-   const key=[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
-   if(key>exam.date)break;
-   const pack=packs.length?packs[i%packs.length]:null;
-   dates.push({key,label:spDayLabel(key),pack,title:pack?(pack.type==='quiz'?'Maak oefentoets':'Oefen flashcards'):'Herhaal de lesstof'});
- }
- return dates;
+  return window.sfExamPrep.plan(exam,state.profile,state.dashboard,spCurrent,new Date(),limit).items;
 }
 function studyReadyContent(){
- const exam=spExamSelect();
- if(!exam)return '<div class="page-enter">'+sectionHeading('TOETSKLAAR','Toetsklaar','Zodra er een toetsdatum via het Huiswerk-project is toegevoegd, verschijnt hier jouw leeradvies.')+'</div>';
- const m=spReadiness(exam),sessions=spGenerateSessions(exam);
- return '<div class="page-enter">'+sectionHeading('HOE STA JE ERVOOR?','Toetsklaar · '+exam.title,'Op basis van je eigen oefeningen. Geen garantie voor je toetscijfer.')+
- '<div class="study-summary"><div><span class="study-big-label">'+htmlEscape(m.label)+'</span><h2>'+htmlEscape(exam.subject)+'</h2><p>'+spDayLabel(exam.date)+' · Streefcijfer '+m.target+'</p></div><div class="study-score">'+(m.avg===null?'—':gradeFmt(m.avg))+'<small>Gemiddelde laatste toetsen</small></div></div>'+
- '<div class="study-metrics"><div><b>'+m.attempts+'</b><span>Oefentoetsen gemaakt</span></div><div><b>'+m.missed+'</b><span>Openstaande fouten</span></div><div><b>'+m.known+'/'+m.totalCards+'</b><span>Flashcards gekend</span></div></div>'+
- '<section class="study-panel"><h2>Jouw oefenschema</h2><p>Per dag één gerichte oefensessie. Je kunt zelf afvinken wat je hebt gedaan.</p><div class="study-timeline">'+sessions.map(s=>{
-   const done=!!spCurrent.completed[exam.id+'|'+s.key];
-   return '<div class="study-day"><button class="study-check '+(done?'done':'')+'" data-action="study-toggle-day" data-id="'+htmlEscape(exam.id)+'" data-date="'+s.key+'" aria-label="Oefensessie afvinken">'+(done?'✓':'○')+'</button><div><b>'+htmlEscape(s.label)+'</b><p>'+htmlEscape(s.title)+(s.pack?' · '+htmlEscape(s.pack.title):'')+'</p></div>'+(s.pack?'<button class="study-link" data-action="study-open-pack" data-id="'+s.pack.id+'">Start →</button>':'')+'</div>';
- }).join('')+'</div></section>'+
- '<button class="study-button secondary" data-action="nav" data-route="planning">Andere toets bekijken</button></div>';
+  const exam=spExamSelect();
+  if(!exam)return '<div class="page-enter">'+sectionHeading('TOETSKLAAR','Toetsvoorbereiding','Voeg eerst een toetsdatum toe bij Mijn toetsen.')+
+    '<section class="study-panel"><p>Er is nog geen aankomende toets ingepland. Je kunt zelf de datum en het vak invoeren.</p>'+
+    '<button class="study-button" data-action="nav" data-route="planning">Nieuwe toets plannen →</button></section></div>';
+  const m=spReadiness(exam),schedule=window.sfExamPrep.plan(exam,state.profile,state.dashboard,spCurrent),next=schedule.next;
+  const percentage=schedule.total?Math.round(100*schedule.complete/schedule.total):0;
+  const link=(item,label='Start →')=>item?.pack?'<button class="study-link" data-action="study-start-session" data-id="'+Number(item.pack.id)+
+    '" data-mode="'+htmlEscape(item.mode)+'" data-source="'+htmlEscape(String(item.pack.source_key||item.pack.id))+'">'+htmlEscape(label)+'</button>':'';
+  const timeline=schedule.items.map(item=>{
+    const action=link(item,'Oefenen →');
+    const when=item.date===spDate()?'Vandaag':spDayLabel(item.date);
+    return '<div class="study-day">'+
+      '<button class="study-check '+(item.completed?'done':'')+'" data-action="study-toggle-day" data-id="'+htmlEscape(exam.id)+
+        '" data-date="'+item.date+'" aria-pressed="'+(item.completed?'true':'false')+
+        '" aria-label="Oefensessie '+htmlEscape(when)+' '+(item.completed?'opnieuw openen':'afvinken')+'">'+(item.completed?'✓':'○')+'</button>'+
+      '<div><b>'+htmlEscape(when)+'</b><p>'+htmlEscape(item.label)+(item.pack?' · '+htmlEscape(item.pack.title):'')+'</p>'+
+      (item.reason?'<p class="study-reason">'+htmlEscape(item.reason)+'</p>':'')+'</div>'+action+'</div>';
+  }).join('');
+  const nextAction=next?.pack?'<div class="study-next-action"><span class="study-chip">VOLGENDE STAP</span>'+
+    '<h3>'+htmlEscape(next.label)+' · '+htmlEscape(next.pack.title)+'</h3>'+
+    '<p>'+htmlEscape(next.reason||'Oefen dit onderwerp op jouw eigen tempo.')+'</p>'+
+    '<p>'+htmlEscape(next.date===spDate()?'Vandaag':spDayLabel(next.date))+'</p>'+link(next,'Begin direct →')+'</div>':'';
+  return '<div class="page-enter">'+sectionHeading('HOE STA JE ERVOOR?','Toetsklaar · '+exam.title,'Een oefenadvies op basis van jouw eigen leerresultaten. Geen voorspelling van je echte cijfer.')+
+    '<div class="study-summary"><div><span class="study-big-label">'+htmlEscape(m.label)+'</span>'+
+    '<h2>'+htmlEscape(exam.subject)+'</h2><p>'+spDayLabel(exam.date)+' · Streefcijfer '+Number(m.target).toLocaleString('nl-NL')+'</p></div>'+
+    '<div class="study-score">'+(m.avg===null?'—':gradeFmt(m.avg))+'<small>Gemiddelde laatste oefentoetsen</small></div></div>'+
+    '<div class="study-metrics"><div><b>'+m.attempts+'</b><span>Oefentoetsen gemaakt</span></div><div><b>'+m.missed+'</b><span>Nog fout beantwoorde vragen</span></div>'+
+    '<div><b>'+m.known+'/'+m.totalCards+'</b><span>Flashcards gekend</span></div></div>'+
+    '<section class="study-panel"><h2>Jouw persoonlijke voorbereiding</h2>'+
+    '<p>De planning geeft prioriteit aan lastige en nog niet geoefende stof. Je kunt iedere oefening zelf starten en afvinken.</p>'+
+    '<div class="study-progress-row"><b>'+schedule.complete+' van '+schedule.total+' sessies afgevinkt</b><span>'+percentage+'%</span></div>'+
+    '<div class="study-progress-track"><span style="width:'+percentage+'%"></span></div>'+
+    (schedule.available?nextAction:
+      '<p class="study-warning">Er staat nog geen oefenmateriaal voor '+htmlEscape(exam.subject)+
+      ' op StudyForge. Het schema kan wel worden afgevinkt; voor gerichte oefeningen moet de lesstof eerst via het Huiswerk-project worden toegevoegd.</p>')+
+    '<div class="study-timeline">'+timeline+'</div></section>'+
+    '<button class="study-button secondary" data-action="nav" data-route="planning">Andere toets bekijken</button></div>';
 }
 function studyParentContent(){
- if(!spParentData)return '<div class="page-enter">'+sectionHeading('OVERZICHT','Ouderoverzicht','Gegevens ophalen...')+'</div>';
- return '<div class="page-enter">'+sectionHeading('VOOR HET GEZIN','Ouderoverzicht','De leerresultaten en komende toetsen van Nikki en Dean op één plek.')+
- '<div class="study-parent-grid">'+spParentData.map(p=>{
-   const recent=p.dashboard.attempts||[],grades=recent.map(a=>Number(a.grade)),average=grades.length?grades.reduce((a,b)=>a+b,0)/grades.length:null;
-   const upcoming=spDueExams(p.plan.exams);
-   return '<section class="study-panel"><div class="study-person"><span class="avatar small '+p.name.toLowerCase()+'">'+p.name[0]+'</span><h2>'+p.name+'</h2></div>'+
-   '<div class="study-metrics"><div><b>'+recent.length+'</b><span>Toetsen gemaakt</span></div><div><b>'+(average===null?'—':gradeFmt(average))+'</b><span>Gemiddeld cijfer</span></div></div>'+
-   '<h3>Komende toetsen</h3>'+(upcoming.length?upcoming.map(e=>{
-     const m=spReadiness(e,p.dashboard,p.plan.goals);
-     return '<div class="study-parent-exam"><b>'+htmlEscape(e.title)+'</b><span>'+spDayLabel(e.date)+' · '+htmlEscape(m.label)+'</span></div>';
-   }).join(''):'<p class="study-muted">Nog geen toetsen gepland</p>')+'</section>';
- }).join('')+'</div><p class="study-muted">Resultaten worden voorlopig in deze browser bewaard. Synchronisatie tussen apparaten komt beschikbaar zodra Supabase met een gezinsaccount is gekoppeld.</p></div>';
+  if(!spParentData)return '<div class="page-enter">'+sectionHeading('OVERZICHT','Ouderoverzicht','Gegevens ophalen...')+'</div>';
+  return '<div class="page-enter">'+sectionHeading('VOOR HET GEZIN','Ouderoverzicht',
+    'De voortgang en toetsvoorbereiding van Nikki en Dean op dit apparaat.')+
+    '<p class="study-warning">Dit overzicht gebruikt alleen gegevens die in deze browser staan. Oefeningen op een andere telefoon of computer zijn pas zichtbaar nadat een back-up is hersteld.</p>'+
+    '<div class="study-parent-grid">'+spParentData.map(p=>{
+      const snap=window.sfExamPrep.parent(p.id,p.dashboard,p.plan),name=htmlEscape(p.name);
+      const trend=snap.trend===null?'Nog geen vergelijking':snap.trend>0.15?'Stijging van '+gradeFmt(snap.trend)+' punt':snap.trend<-.15?
+        'Daling van '+gradeFmt(Math.abs(snap.trend))+' punt':'Nagenoeg gelijk';
+      const last=snap.mostRecent&&Number.isFinite(Date.parse(snap.mostRecent.created_at||''))?
+        'Laatste oefentoets: '+htmlEscape(snap.mostRecent.title)+' · '+htmlEscape(snap.mostRecent.created_at.slice(0,10)):'Nog geen lokale toetsresultaten';
+      const reco=snap.topRecommendation;
+      return '<section class="study-panel study-parent-card"><div class="study-person"><span class="avatar small '+p.name.toLowerCase()+'">'+p.name[0]+'</span><h2>'+name+'</h2></div>'+
+        '<div class="study-metrics study-parent-metrics"><div><b>'+snap.count+'</b><span>Oefentoetsen gemaakt</span></div>'+
+        '<div><b>'+(snap.avg===null?'—':gradeFmt(snap.avg))+'</b><span>Gemiddelde laatste 3 toetsen</span></div>'+
+        '<div><b>'+snap.due+'</b><span>Herhaalvragen klaar</span></div>'+
+        '<div><b>'+snap.focus+'</b><span>Lespakketten met extra aandacht</span></div></div>'+
+        '<p class="study-muted">'+last+'</p>'+
+        (snap.trend!==null?'<p class="study-muted">Vergelijking laatste 3 met vorige 3: '+htmlEscape(trend)+'</p>':'')+
+        '<div class="study-parent-focus"><b>Aandacht voor de volgende oefening</b>'+
+          (reco?'<p>'+htmlEscape(reco.subject)+' · '+htmlEscape(reco.title)+'</p>'+
+            '<p>'+htmlEscape(reco.reason)+'</p>':
+            '<p>Nog onvoldoende lokale gegevens om een onderwerp aan te bevelen.</p>')+'</div>'+
+        '<h3>Komende toetsen</h3>'+(snap.upcoming.length?snap.upcoming.map(x=>{
+          const m=spReadiness(x.exam,p.dashboard,p.plan.goals);
+          return '<div class="study-parent-exam"><div><b>'+htmlEscape(x.exam.title)+'</b>'+
+            '<p>'+htmlEscape(x.exam.subject)+' · '+htmlEscape(spDayLabel(x.exam.date))+'</p></div>'+
+            '<span>'+htmlEscape(m.label)+' · '+x.schedule.complete+'/'+x.schedule.total+' voorbereid</span></div>';
+        }).join(''):'<p class="study-muted">Nog geen toets gepland in deze browser</p>')+
+        '</section>';
+    }).join('')+'</div></div>';
 }
 async function studyHandleAction(action,btn){
  if(action==='study-save-goals'){
