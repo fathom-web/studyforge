@@ -1,5 +1,5 @@
-/* StudyForge 2.0 — veilige lokale back-up en cloudmigratie (R0).
-   Bestaande cloudgegevens blijven onaangeroerd. */
+/* StudyForge R1 — lokale back-up en herstel, ook van oude R0-cloudexporten.
+   Geen databaseverbinding; de oorspronkelijke Supabase-database blijft onaangeroerd. */
 'use strict';
 (function(){
  const KEY='studyforge-cloud-migration-v1:',UNMAPPED='studyforge-cloud-unmapped-v1:';
@@ -40,30 +40,6 @@
    }
    return {attempts,reviews,unknown};
  }
- function captureCloud(p){
-   const cloud=window.sfCloud;
-   if(!cloud?.online||Number(cloud.profile)!==Number(p))return null;
-   const data=cloud.cache?.get(Number(p));
-   if(!data||!Array.isArray(data.attempts)||!Array.isArray(data.reviews))return null;
-   const d=sfLocal(),before=JSON.stringify(d),localDevice=device();
-   try{
-     ensureId(d);
-     const seen=new Set(d.attempts.filter(x=>Number(x.profile_id)===Number(p)).map(x=>x.cloud_client_id||localDevice+':'+x.id));
-     const result=applyCloud(d,Number(p),data,seen);
-     if(result.attempts||result.reviews)sfPersist();
-     const old=parse(read(UNMAPPED+p),{attempts:[],reviews:[]});
-     const unknown={attempts:[...new Map([...(old.attempts||[]),...result.unknown.attempts].map(x=>[String(x.client_id),x])).values()],
-       reviews:[...new Map([...(old.reviews||[]),...result.unknown.reviews].map(x=>[String(x.source_key)+':'+x.card_index,x])).values()]};
-     save(UNMAPPED+p,unknown);
-     if(data.plan&&Array.isArray(data.plan.exams)&&typeof spWriteLocal==='function')spWriteLocal(p,data.plan);
-     const marker={date:new Date().toISOString(),attempts:data.attempts.length,reviews:data.reviews.length,
-       missing:unknown.attempts.length+unknown.reviews.length};
-     save(KEY+p,marker);return marker;
-   }catch(e){
-     SF_LOCAL_DATA=JSON.parse(before);
-     console.warn('Studiegegevens lokaal overnemen mislukt',e);return null;
-   }
- }
  function extra(p){
    const data={},prefix='studyforge-quiz-rotation-v1:'+p+':';
    for(let i=0;i<localStorage.length;i++){
@@ -76,13 +52,12 @@
  function build(){
    const p=pid();if(![1,2].includes(p))throw Error('Selecteer eerst een profiel.');
    const d=sfLocal(),sets=d.sets.filter(x=>Number(x.profile_id)===p),ids=new Set(sets.map(x=>Number(x.id)));
-   const cache=window.sfCloud?.cache?.get(p);
    return {schema:'studyforge-backup/v1',profile_id:p,profile_name:p===1?'Nikki':'Dean',
      created_at:new Date().toISOString(),device_id:device(),
      data:{sets,attempts:d.attempts.filter(x=>Number(x.profile_id)===p&&ids.has(Number(x.collection_id))),
        reviews:d.reviews.filter(x=>Number(x.profile_id)===p&&ids.has(Number(x.collection_id)))},
      planning:typeof spReadLocal==='function'?spReadLocal(p):null,extras:extra(p),
-     cloud:cache&&Number(window.sfCloud?.profile)===p?cache:null,
+     cloud:null,
      unmapped:parse(read(UNMAPPED+p),{attempts:[],reviews:[]})};
  }
  function download(){
@@ -139,30 +114,52 @@
      sfPersist();
      if(backup.planning&&Array.isArray(backup.planning.exams)&&typeof spWriteLocal==='function')spWriteLocal(p,backup.planning);
      for(const [k,v]of Object.entries(backup.extras||{}))mergeExtra(p,k,v);
-     const unknown=backup.unmapped;
-     if(unknown&&Array.isArray(unknown.attempts)&&Array.isArray(unknown.reviews))save(UNMAPPED+p,unknown);
+     // Bewaar ook oude cloudrecords die niet bij de huidige lespakketten passen.
+     const oldUnknown=parse(read(UNMAPPED+p),{attempts:[],reviews:[]});
+     const unknown=backup.unmapped||{};
+     save(UNMAPPED+p,{
+       attempts:[...new Map([...(oldUnknown.attempts||[]),...(unknown.attempts||[]),...from.unknown.attempts]
+         .map(x=>[String(x.client_id||JSON.stringify(x)),x])).values()],
+       reviews:[...new Map([...(oldUnknown.reviews||[]),...(unknown.reviews||[]),...from.unknown.reviews]
+         .map(x=>[String(x.source_key)+':'+x.card_index,x])).values()]
+     });
+     // Alleen een geldige herstelde back-up kan de R1-migratiewaarschuwing opheffen.
+     if(backup.data.attempts.length||backup.data.reviews.length||
+       (backup.cloud?.attempts?.length||0)||(backup.cloud?.reviews?.length||0))
+       save('studyforge-r1-restored-v1:'+p,{date:new Date().toISOString(),source:backup.created_at||null});
      if(typeof refreshDashboard==='function')await refreshDashboard();
+     window.sfReview?.reimportLegacy?.();
+     if(typeof state!=='undefined')state.cloudWarning=migrationWarning(p);
      if(typeof window.studyBeforeRoute==='function')await window.studyBeforeRoute('dashboard');
      if(typeof render==='function')render();
      toast('Back-up hersteld: '+attempts+' cijfers, '+reviews+' flashcards.');
      return {attempts,reviews};
    }catch(e){SF_LOCAL_DATA=JSON.parse(before);try{sfPersist();}catch{}throw e;}
  }
+ function migrationWarning(p){
+   p=Number(p);
+   if(read(KEY+p)||read('studyforge-r1-restored-v1:'+p))return '';
+   return 'Let op: eerdere cloudresultaten zijn op dit apparaat niet als overgenomen bevestigd. Importeer je R0-back-up via Meer → Back-up en herstel. Je oude databasegegevens zijn niet verwijderd.';
+ }
  function page(){
    const p=pid(),d=sfLocal(),marker=parse(read(KEY+p),null);
+   const restored=parse(read('studyforge-r1-restored-v1:'+p),null);
    const attempts=d.attempts.filter(x=>Number(x.profile_id)===p).length;
    const reviews=d.reviews.filter(x=>Number(x.profile_id)===p).length;
-   const status=window.sfCloudEnabled?(marker?'Cloudcontrole: '+new Date(marker.date).toLocaleDateString('nl-NL')+
-     '. Niet te koppelen records: '+marker.missing+'.':'Cloudgegevens nog niet bevestigd als lokaal overgenomen.'):'Alle gegevens staan lokaal op dit apparaat.';
-   return '<div class="page-enter">'+sectionHeading('STUDYFORGE 2.0','Back-up en herstel','Bewaar je voortgang veilig als JSON-bestand.')+
+   const status=marker?'Eerdere cloudcontrole voltooid op '+new Date(marker.date).toLocaleDateString('nl-NL')+'.':
+     restored?'Back-up hersteld op '+new Date(restored.date).toLocaleDateString('nl-NL')+'.':
+     'Er is geen bevestigde overname van de oude cloudresultaten op dit apparaat.';
+   return '<div class="page-enter">'+sectionHeading('STUDYFORGE 2.0 · R1','Back-up en herstel',
+     'Deze versie gebruikt geen database. Je resultaten staan op dit apparaat.')+
      '<section class="panel" style="padding:24px"><h3>'+htmlEscape(profileName())+' — leerresultaten</h3>'+
      '<p>'+attempts+' toetsresultaten · '+reviews+' flashcardbeoordelingen</p><p>'+htmlEscape(status)+'</p>'+
-     '<p>Download voor Nikki en Dean afzonderlijk een back-up en bewaar de bestanden privé.</p>'+
+     (migrationWarning(p)?'<p class="study-warning">'+htmlEscape(migrationWarning(p))+'</p>':'')+
+     '<p>Maak voor Nikki en Dean afzonderlijk een back-up. Bewaar deze bestanden privé en importeer ze op een ander apparaat als je daar verder wilt oefenen.</p>'+
      '<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">'+
      '<button class="btn btn-primary" data-action="backup-export">Download back-up</button>'+
      '<button class="btn btn-secondary" data-action="backup-import">Herstel back-up</button></div>'+
      '<input id="sf-backup-file" type="file" accept=".json,application/json" hidden></section>'+
-     '<p class="sub" style="margin-top:16px">De cloud is voorlopig nog actief. Er wordt niets verwijderd.</p></div>';
+     '<p class="sub" style="margin-top:16px">De oorspronkelijke database is niet gewist, maar StudyForge R1 maakt er geen verbinding meer mee. Wis geen browsergegevens zonder actuele back-up.</p></div>';
  }
  document.addEventListener('change',async e=>{
    if(e.target?.id!=='sf-backup-file')return;
@@ -170,6 +167,6 @@
    if(!file)return;
    try{await restoreFile(file);}catch(err){console.error(err);toast(err.message||'Herstellen mislukt.',true);}
  });
- window.sfBackup={captureCloud,build,page,restoreFile,
+ window.sfBackup={build,page,restoreFile,migrationWarning,
    handle(action){if(action==='backup-export')download();else if(action==='backup-import')document.getElementById('sf-backup-file')?.click();}};
 })();
