@@ -25,10 +25,14 @@ function sfExamFindPacks(subject,dashboard){
 
 function sfExamPlans(exam,profile,dashboard,plan,now=new Date(),limit=10){
   const day=sfExamDate(exam?.date),today=sfExamLocalToday(now),start=sfExamDate(today);
+  const saved=sfExamDate(plan?.scheduleStarts?.[exam.id]);
+  // Eenmaal gestart blijft de planning op dezelfde kalenderdagen staan.
+  const anchor=saved&&saved.getTime()<=day?.getTime()?saved:start;
   const empty={items:[],complete:0,total:0,next:null,days:null,available:0};
   if(!day||!start||!sfExamSubject(exam.subject))return empty;
-  const days=Math.round((day.getTime()-start.getTime())/86400000);
-  if(days<0)return {...empty,days};
+  const daysRemaining=Math.round((day.getTime()-start.getTime())/86400000);
+  const days=Math.round((day.getTime()-anchor.getTime())/86400000);
+  if(daysRemaining<0||days<0)return {...empty,days:daysRemaining};
   const packs=sfExamFindPacks(exam.subject,dashboard),allowed=new Map(packs.map(p=>[Number(p.id),p]));
   const ranked=window.sfCoach?.collect?.(profile,dashboard,new Date(now).getTime())||[];
   const rankedPacks=ranked.filter(p=>allowed.has(Number(p.id)));
@@ -41,7 +45,7 @@ function sfExamPlans(exam,profile,dashboard,plan,now=new Date(),limit=10){
     days<=14?[...Array(size).keys()].map(i=>Math.round(i*days/Math.max(1,size-1))):
       [0,...[...Array(size-1).keys()].map(i=>days-(size-2)+i)];
   const items=offsets.map((offset,i)=>{
-    const d=new Date(start);
+    const d=new Date(anchor);
     d.setDate(d.getDate()+offset);
     const date=sfExamLocalToday(d),selection=rankedPacks.length?rankedPacks[i%rankedPacks.length]:null;
     const pack=selection?allowed.get(Number(selection.id)):null;
@@ -57,7 +61,7 @@ function sfExamPlans(exam,profile,dashboard,plan,now=new Date(),limit=10){
       completed:!!plan?.completed?.[key],isToday:date===today};
   });
   const complete=items.filter(x=>x.completed).length,next=items.find(x=>!x.completed)||null;
-  return {items,complete,total:items.length,next,days,available:packs.length};
+  return {items,complete,total:items.length,next,days:daysRemaining,available:packs.length};
 }
 
 function sfExamParent(profile,dashboard,plan,now=new Date()){
