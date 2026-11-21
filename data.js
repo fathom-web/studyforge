@@ -71,6 +71,24 @@ function sfPersist(){try{localStorage.setItem(SF_STORE_KEY,JSON.stringify(SF_LOC
 
 /* Lees de door ChatGPT in GitHub gepubliceerde originele oefensets in.
    De browser bewaart zijn eigen scores; bestanden worden niet door leerlingen geüpload. */
+function sfEnrichLesson(current,incoming){
+ if(current?.type!=='quiz'||!Array.isArray(current.content?.questions)||!Array.isArray(incoming?.questions))return false;
+ const old=current.content.questions,latest=incoming.questions;
+ if(old.length!==latest.length)return false;
+ for(let i=0;i<old.length;i++){
+   const a=old[i],b=latest[i];
+   if(a.type!==b.type||a.question!==b.question||a.answer!==b.answer||a.correct!==b.correct||
+      JSON.stringify(a.options||null)!==JSON.stringify(b.options||null))return false;
+ }
+ const fields=['lessonTitle','learn','example','recallQuestion','recallAnswer'];let changed=false;
+ for(let i=0;i<old.length;i++)for(const field of fields){
+   const value=latest[i][field];
+   if(typeof value==='string'&&value.trim()&&old[i][field]!==value){
+     old[i][field]=value;changed=true;
+   }
+ }
+ return changed;
+}
 async function sfSyncPublished(){
   const d=SF_REMOTE?null:sfLocal();
   try{
@@ -165,8 +183,9 @@ async function sfSyncPublished(){
             const meta=current.title!==col.title||current.subject!==col.subject||current.description!==col.description;
             const biologyChange=source_key==='dean-biologie-unit1-organen-cellen-2026-10-28-v1::0' &&
               (current.count!==col.count||current.content?.questionsPerAttempt!==col.content.questionsPerAttempt);
+            const enriched=sfEnrichLesson(current,col.content);
             if(biologyChange){Object.assign(current,{subject:col.subject,title:col.title,description:col.description,count:col.count,content:col.content});updated++;}
-            else if(meta){Object.assign(current,{subject:col.subject,title:col.title,description:col.description});updated++;}
+            else if(meta||enriched){Object.assign(current,{subject:col.subject,title:col.title,description:col.description});updated++;}
             continue;
           }
           d.sets.push({id:d.nextId++,...col,source_key,created_at:new Date().toISOString()});
@@ -224,6 +243,13 @@ function sfValidateImport(text){
     if(isQuiz&&c.questionsPerAttempt!==undefined&&(!Number.isInteger(c.questionsPerAttempt)||c.questionsPerAttempt<1||c.questionsPerAttempt>rows.length))throw Error('Ongeldig aantal vragen per oefenronde.');
     for(const q of rows){
       if(!q||typeof q!=='object')throw Error('Een vraag of kaart is ongeldig.');
+      if(isQuiz){
+        // R2-velden worden uitsluitend uit het aangeleverde lespakket overgenomen.
+        for(const [field,max] of Object.entries({lessonTitle:200,learn:5000,example:2500,recallQuestion:500,recallAnswer:2000})){
+          if(q[field]!==undefined&&(typeof q[field]!=='string'||q[field].length>max))
+            throw Error('Ongeldig leerinhoudveld: '+field);
+        }
+      }
       if(isQuiz){
         if(!['mc','open'].includes(q.type)||typeof q.question!=='string'||!q.question.trim())throw Error('Ongeldige toetsvraag.');
         if(q.type==='mc' && (!Array.isArray(q.options)||q.options.length<2||q.options.length>6||q.options.some(t=>typeof t!=='string'||!t.trim())||!Number.isInteger(q.correct)||q.correct<0||q.correct>=q.options.length))throw Error('Ongeldige multiplechoicevraag.');
