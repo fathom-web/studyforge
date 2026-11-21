@@ -28,7 +28,7 @@
         .slice(-900).map(a=>{
           const col=byId.get(Number(a.collection_id));
           return {
-            client_id:device+':'+a.id,source_key:col.source_key,
+            client_id:a.cloud_client_id||device+':'+a.id,source_key:col.source_key,
             title:col.title,subject:col.subject,
             correct_count:Number(a.correct_count||0),total_count:Number(a.total_count||1),
             grade:Number(a.grade),details:a.details||[],
