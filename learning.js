@@ -67,7 +67,7 @@
        <span class="sf-subject-top"><span class="sf-subject-icon">${ic(k.icon,24)}</span><span class="sf-subject-tag">${htmlEscape(p.subject)}</span></span>
        <strong>${htmlEscape(p.title)}</strong>
        <span class="sf-subject-description">${htmlEscape(p.description||'Oefen dit onderwerp op jouw tempo.')}</span>
-       <span class="sf-subject-meta">${available?available+' geschikte vragen':'Geen zelfstandige vragen beschikbaar'}${st?' · Laatste keer '+st.correct+'/'+st.total+' goed':''}
+       <span class="sf-subject-meta">${available?available+(available===1?' geschikte vraag':' geschikte vragen'):'Geen zelfstandige vragen beschikbaar'}${st?' · Laatste keer '+st.correct+'/'+st.total+' goed':''}
          <b>${available?'Start →':'Niet beschikbaar'}</b></span>
      </button>`;}).join('')}</div>`:
        '<div class="sf-empty"><b>Nog geen leerstof</b><p>Nieuwe oefenpakketten verschijnen hier zodra ze zijn toegevoegd.</p></div>'}
