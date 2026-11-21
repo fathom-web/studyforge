@@ -140,13 +140,20 @@
      sfPersist();
      if(backup.planning&&Array.isArray(backup.planning.exams)&&typeof spWriteLocal==='function')spWriteLocal(p,backup.planning);
      for(const [k,v]of Object.entries(backup.extras||{}))mergeExtra(p,k,v);
-     const unknown=backup.unmapped;
-     if(unknown&&Array.isArray(unknown.attempts)&&Array.isArray(unknown.reviews))save(UNMAPPED+p,unknown);
+     // Ook niet-gekoppelde gegevens uit oude back-ups én huidige browser behouden.
+     const unknown=backup.unmapped||{},previous=parse(read(UNMAPPED+p),{attempts:[],reviews:[]});
+     const unavailable={
+       attempts:[...new Map([...(previous.attempts||[]),...(unknown.attempts||[]),...from.unknown.attempts]
+         .map(x=>[String(x.client_id||JSON.stringify(x)),x])).values()],
+       reviews:[...new Map([...(previous.reviews||[]),...(unknown.reviews||[]),...from.unknown.reviews]
+         .map(x=>[String(x.source_key)+':'+x.card_index,x])).values()]
+     };
+     save(UNMAPPED+p,unavailable);
      // R0-back-ups bevatten de cloudgegevens, maar soms nog geen apart migratiemerk.
      if(backup.migration&&typeof backup.migration==='object')save(KEY+p,backup.migration);
      else if(Array.isArray(backup.cloud?.attempts)&&Array.isArray(backup.cloud?.reviews))
        save(KEY+p,{date:new Date().toISOString(),attempts:backup.cloud.attempts.length,
-         reviews:backup.cloud.reviews.length,missing:(unknown?.attempts||[]).length+(unknown?.reviews||[]).length});
+         reviews:backup.cloud.reviews.length,missing:unavailable.attempts.length+unavailable.reviews.length});
      if(typeof refreshDashboard==='function')await refreshDashboard();
      if(typeof window.studyBeforeRoute==='function')await window.studyBeforeRoute('dashboard');
      if(typeof render==='function')render();
