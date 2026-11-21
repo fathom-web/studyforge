@@ -1,67 +1,41 @@
-# StudyForge — leren via het Huiswerk-project
+# StudyForge 2.0 — R1 (GitHub Pages, zonder database)
 
-## Centrale voortgang zonder persoonlijke gebruikersaccounts
+Website: https://fathom-web.github.io/studyforge/
 
-De cloudadapter staat in `sharedsync.js`; SQL in `supabase/shared-progress.sql`. Het profielscherm vraagt om 2007. De publieke Supabase publishable key en project-URL zijn sinds 29 oktober 2026 in `config.js` ingesteld; de SQL werd door de beheerder uitgevoerd. De code 2007 wordt via de databasefunctie gecontroleerd zodra de verbinding lukt. Daarna synchroniseren toetsresultaten, foute vragen, flashcards, leerdoelen en toetsplanning voor Nikki en Dean tussen apparaten. De eerste keer worden bestaande lokale resultaten zoveel mogelijk meegenomen.
+## Hoe R1 werkt
 
-**Installatie bijgewerkt (29 oktober 2026):**
-- SQL uitgevoerd volgens screenshot van de beheerder.
-- Project-URL en publieke publishable key in de GitHub-configuratie geplaatst.
-- De site laadt een cache-gebuste config en gebruikt `sharedMode: true`.
-- De clientflow is getest met twee gesimuleerde browsers. De live Supabase-verbinding kan pas door de gebruiker in de browser daadwerkelijk worden bevestigd.
-- Gebruik het profielscherm en code 2007; na succesvolle verbinding staat bovenin **Cloudopslag**.
+StudyForge draait als statische HTML/CSS/JavaScript-website op GitHub Pages. Lesmateriaal komt uit `content/library.json` en de aanvullende JSON-lespakketten in `content/`. Cijfers, gemaakte toetsen, flashcardbeoordelingen, leerplanning, leerdoelen, *Leer in stappen*, *Leg het uit* en *Slim herhalen* staan in de **localStorage van de gebruikte browser**. Er zijn **geen Supabase-scripts, accounts, API-sleutels, databasecalls of AI-API-calls** nodig.
 
-De tabellen kunnen niet rechtstreeks vanuit een anonieme client worden gelezen of gewijzigd. Alle toegang loopt via een beperkte databasefunctie met profielcode. De code 2007 is openbaar in de GitHub-code en is geen sterke beveiliging. Publiceer geen privédocumenten of gevoelige persoonsgegevens.
+De oorspronkelijke opslagkeys blijven bestaan, zodat bestaande lokale voortgang bij een update van R0 naar R1 niet wordt gewist. Ook de nieuwste-eerst-sortering, profielscheiding, toetsvragenrotatie en gearchiveerde oude lespakketten blijven intact.
 
+**Belangrijk:** de voortgang synchroniseert niet tussen verschillende telefoons, computers, browsers of privévensters. Browsergegevens wissen, van apparaat wisselen of een andere browser gebruiken kan lokale resultaten onbereikbaar maken. Maak daarom geregeld een back-up.
 
-## Profielcode (StudyForge)
+## Gebruik
 
-- Na het kiezen van **Nikki** of **Dean** verschijnt een apart codescherm.
-- De viercijferige code is **2007**; foutieve codes geven geen toegang tot het dashboard.
-- Bij het wisselen van profiel wordt de code opnieuw gevraagd.
-- **Dit is uitsluitend een schermdrempel, geen sterke beveiliging.** De websitecode is via de openbare GitHub-repository te lezen. De code staat niet gelijk aan een Supabase-login, databasewachtwoord of echte toegangsrechten.
-- Centrale synchronisatie is in de code ingeschakeld. Gebruik de site om de daadwerkelijke verbinding te verifiëren. Met de korte publiek bekende code 2007 blijft dit een eenvoudige gedeelde toegang en geen sterke bescherming tegen misbruik.
+1. Kies **Nikki** of **Dean** en vul de bestaande viercijferige profielcode in.
+2. Open oefentoetsen, flashcards of een van de nieuwe leermethoden.
+3. Onder **Meer → Back-up en herstel** download je een JSON-back-up van het gekozen profiel.
+4. Doe dat **apart voor Nikki en Dean**. Op een ander apparaat kun je de bestanden via hetzelfde scherm terugzetten. Bestaande resultaten worden zoveel mogelijk samengevoegd, niet eerst verwijderd.
+5. Voeg nieuwe lesstof toe via ChatGPT in het StudyForge/Huiswerk-project. ChatGPT publiceert nieuwe JSON-lespakketten naar GitHub. De leerlingen kunnen zelf geen lesmateriaal in de website uploaden.
 
+## Overstap vanaf R0 en eerdere cloudresultaten
 
-Webapp: https://fathom-web.github.io/studyforge/
+R0 probeerde bestaande Supabase-resultaten per profiel lokaal over te nemen en bood een back-up aan. R1 doet **geen enkele nieuwe databaseaanvraag**. Heb je een back-up uit R0, herstel die in R1 via **Meer → Back-up en herstel**. R1 toont een waarschuwing als het gebruikte apparaat geen bevestigde cloudmigratie of herstelde back-up heeft. De waarschuwing betekent niet automatisch dat er cijfers ontbreken; het betekent dat we dat niet kunnen verifiëren.
 
-## Zo werkt het
-1. Upload lesmateriaal **in het ChatGPT-project Huiswerk**, met vermelding van Nikki of Dean.
-2. Vraag: "Maak hiervan oefentoetsen en flashcards en voeg ze toe aan StudyForge."
-3. ChatGPT verwerkt de stof tot vragen, antwoorden, hints en flashcards en publiceert deze in `content/library.json` van de GitHub-repository.
-4. StudyForge leest de gepubliceerde inhoud bij het openen automatisch in. De kinderen **kunnen in de app geen toetsen maken, toevoegen, importeren of verwijderen**.
-5. In dezelfde openbare bibliotheek kunnen toetsdata worden toegevoegd via de optionele `exams`-lijst. In StudyForge zelf is de toetsplanning alleen-lezen.
+De oude Supabase-database en de daarin bewaarde records zijn **niet gewist**. De laatste R0-code staat als rollback op GitHub-branch `studyforge-2-safe-local-backup`. De hoofdwebsite is volledig lokaal. Een eventuele latere migratie uit het oude cloudarchief moet apart en bewust worden uitgevoerd.
 
-Er is dus geen JSON-upload, beheerders-importscherm, invoerformulier voor toetsdata of AI-API-koppeling in de website.
+## Leermethoden
 
-## Extra leermethoden (20 november 2026)
+- **Oefentoetsen:** meerkeuze en open vragen, cijfers en foutenanalyse. Gepubliceerde lespakketten met een vraagpool kunnen wisselende vragen per ronde aanbieden.
+- **Flashcards:** antwoorden omdraaien, beoordelen en de voortgang lokaal bewaren.
+- **Leer in stappen:** bestaande lesuitleg/hints uit de gepubliceerde leerstof, daarna oefenen en feedback. Geen automatisch verzonnen schoolinhoud.
+- **Leg het uit:** zelf een antwoord formuleren, vergelijken met het modelantwoord en moeilijke vragen herhalen.
+- **Slim herhalen:** herhaling op basis van eerdere resultaten (fout: 20 minuten; bijna: 1 dag; goed: 3/7/14/30/60 dagen).
+- **Planning en toetsklaar:** toetsdata, streefcijfers en een ouderoverzicht per profiel.
 
-De StudyForge Scholte-concepten zijn geschikt gemaakt voor het bestaande donkere StudyForge-design. De originele lessen, profielcodes, toetsen en cijfers blijven ongewijzigd.
+## Profielcode en privacy
 
-- **Leer in stappen**: een uitleg op basis van uitsluitend bestaande velden uit het lespakket (`lessonTitle`, `learn`, `example` of `hint`), daarna een oefenvraag en feedback. Bij ontbrekende uitleg wordt geen nieuwe feitelijke lesstof verzonnen.
-- **Leg het uit**: zonder meerkeuzeopties in eigen woorden antwoorden, vergelijken met het modelantwoord en zelf beoordelen. Lastige vragen keren aan het eind van de sessie terug.
-- **Slim herhalen**: registreert resultaten van oefentoetsen, flashcards en beide nieuwe leermethoden. Fout → 20 minuten, bijna → 1 dag, goed → 3/7/14/30/60 dagen. Per sessie maximaal twaalf open herhaalvragen.
-- **Afwisselende vragen**: beide nieuwe leermethoden kiezen maximaal twaalf vragen en houden per leerling, leermethode en pakket een eigen rotatie bij; de bestaande toetsvragenrotatie blijft ongewijzigd.
-- **Profielscheiding**: alle nieuwe browserdata heeft aparte sleutels voor Nikki (1) en Dean (2). De huidige toetsgeschiedenis wordt bij een eerste profielbezoek als uitgangspunt ingelezen waar beschikbaar.
-
-**Opslagbeperking:** nieuwe leer- en herhaalresultaten staan voorlopig uitsluitend in `localStorage` op het gebruikte apparaat. Zij synchroniseren **nog niet via Supabase**. Browsergegevens wissen kan deze aanvullende resultaten verwijderen. Bestaande cijfers, flashcards en planning blijven hun oorspronkelijke Supabase-koppeling gebruiken. De originele StudyForge Scholte-repository is niet aangepast.
-
-## Wat Nikki en Dean kunnen doen
-- Profiel kiezen
-- Oefenexamens maken (meerkeuze en open vragen met zelfbeoordeling)
-- Flashcards herhalen
-- Fouten oefenen
-- Cijfers en voortgang volgen
-- Mijn toetsen en toetsdata bekijken
-- Toetsklaar-status en een leerplanning bekijken; oefensessies afvinken
-- Eigen oefendoelen en streefcijfer instellen
-- Ouderoverzicht voor beide profielen raadplegen
-
-## Gegevens en Supabase
-- De huidige configuratie gebruikt de gedeelde cloudmodus met Supabase RPC `sf_shared_sync`; er is geen persoonlijk e-mailaccount nodig.
-- De tabellen staan beschreven in `supabase/schema.sql`, `supabase/planning-v2.sql` en `supabase/shared-progress.sql`.
-- Lokaal bewaarde resultaten worden bij het eerste geldige profielbezoek per apparaat waar mogelijk naar de cloud overgezet. De publieke GitHub-bibliotheek bevat alleen lesmateriaal, niet de cijfers.
-- De profielcode is geen sterke authenticatie. De RPC heeft beperkte permissies; plaats geen gevoelige persoonsgegevens of vertrouwelijke bestanden. Geen databasewachtwoorden of `service_role`-sleutels publiceren.
+De profielcode is alleen een gebruiksvriendelijke schermdrempel en **geen beveiliging**. De website en lesbibliotheek zijn openbaar, en gegevens in de lokale browser zijn toegankelijk voor iemand die het apparaat/browserprofiel kan gebruiken. Bewaar back-upbestanden privé. Plaats nooit privéleerlingresultaten, wachtwoorden of schooldocumenten in de openbare GitHub-repository.
 
 ## Gepubliceerde bibliotheek
 `content/library.json`:
@@ -107,15 +81,13 @@ De StudyForge Scholte-concepten zijn geschikt gemaakt voor het bestaande donkere
 
 `packs` bevat oefenvragen/flashcards; `exams` bevat toetsdata. De JSON-velden voor oefenvragen volgen het `studyforge/v1`-importformaat intern, maar er is **geen importknop meer**. Wijzig gepubliceerde IDs niet zomaar: resultaten worden per collectie bijgehouden.
 
-## Privacy
-De GitHub-repository en gepubliceerde bibliotheek zijn openbaar. Plaats daar geen originele schooldocumenten, privédocumenten, wachtwoorden, persoonlijke cijfers of vertrouwelijke leerlinggegevens. Publiceer alleen geschikt oefenmateriaal en niet-gevoelige gegevens. Gesynchroniseerde leerlingresultaten horen uitsluitend in een afgeschermde database.
+## Techniek en beheer
 
-## Techniek
-Statische website op GitHub Pages (HTML, CSS, JavaScript); `app.js` bevat de leerinterface, `data.js` laadt de gepubliceerde bibliotheek en slaat resultaten op, `studytools.js` regelt leerplanning en doelen. Er is geen betaalde AI-integratie nodig.
-## StudyForge 2.0 — R0: veilige overstap naar lokaal
+- `data.js`: lokale adapter, validatie en inlezen van de gepubliceerde JSON-lesstof.
+- `app.js`: profielen, dashboard, toetsen, flashcards en navigatie.
+- `studytools.js`: lokaal opgeslagen planning, doelen en ouderoverzicht.
+- `learning.js` en `review.js`: aanvullende leermethoden en herhaalplanning.
+- `backup.js`: per-profiel JSON-back-up en herstel, ook van oude R0-exporten.
+- `index.html`: laadt uitsluitend de statische, lokale modules. `config.js` en `sharedsync.js` zijn in R1 verwijderd; ze staan nog in de historische R0-branch.
 
-Deze eerste release is **niet** de definitieve uitschakeling van Supabase. Zodra een profiel met een werkende cloudverbinding wordt geopend, neemt `backup.js` de historische cloudresultaten zoveel mogelijk lokaal over. De oorspronkelijke externe client-ID blijft behouden, zodat opnieuw synchroniseren geen dubbele toetsresultaten veroorzaakt. Nog niet aan lesmateriaal te koppelen cloudregels worden lokaal afzonderlijk bewaard. De database wordt **niet** gewist of veranderd.
-
-Ga per leerling naar **Meer → Back-up en herstel** en download een privé JSON-bestand. Herhaal dit voor Nikki én Dean, want de back-ups zijn gescheiden. Het bestand bevat toetsresultaten, flashcards, leer- en herhaalvoortgang, toetsplanning, lesmateriaal en eventueel de recente cloudgegevens. In dezelfde sectie kan de juiste leerling een back-up terugzetten, zonder bestaande resultaten eerst te wissen.
-
-**Veiligheidsvoorwaarde voor R1 (database uitschakelen):** controleer op beide leerlingprofielen de historische cijfers, download beide back-ups en test het herstel op een ander apparaat of in een schoon browserprofiel. R0 wordt eerst op een eigen ontwikkelbranch getest. Browsergegevens wissen zonder werkende back-up kan lokale voortgang doen verdwijnen. De zichtbare viercijferige toegangscode is geen bescherming voor een geëxporteerd JSON-bestand.
+Nieuwe vragen worden alleen uit aangeleverd lesmateriaal samengesteld. De app heeft geen ingebouwde AI- of databasekosten.
