@@ -49,7 +49,7 @@ function sfCoachCollect(profile=Number(state.profile),dashboard=state.dashboard,
    const examBonus=exam?(exam.days<=3?22:exam.days<=7?15:exam.days<=14?8:0):0;
    let score=0,label='',reason='',mode='',tone='';
    if(due>0){
-     score=100+Math.min(due,8)*4+examBonus;
+     score=150+Math.min(due,8)*4+examBonus;
      label='Tijd om te herhalen';tone='due';
      reason=due+' '+(due===1?'vraag staat':'vragen staan')+' klaar voor herhaling.';
      mode='review';
