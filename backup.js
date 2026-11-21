@@ -112,7 +112,21 @@
      const from=applyCloud(d,p,backup.cloud,seen);
      attempts+=from.attempts;reviews+=from.reviews;
      sfPersist();
-     if(backup.planning&&Array.isArray(backup.planning.exams)&&typeof spWriteLocal==='function')spWriteLocal(p,backup.planning);
+     // Combineer de planning zonder nieuwere, lokaal ingestelde doelen of afvinkingen te wissen.
+     const incomingPlan=backup.planning?.exams?.length?backup.planning:
+       (backup.cloud?.plan&&Array.isArray(backup.cloud.plan.exams)?backup.cloud.plan:backup.planning);
+     if(incomingPlan&&Array.isArray(incomingPlan.exams)&&typeof spWriteLocal==='function'){
+       const current=typeof spReadLocal==='function'?spReadLocal(p):{exams:[],goals:{},completed:{}};
+       const hasLocal=!!parse(read('studyforge-planning-v1'),{})[p];
+       const exams=[...new Map([...(incomingPlan.exams||[]),...(hasLocal?current.exams:[])]
+         .filter(e=>e&&typeof e.id==='string').map(e=>[e.id,e])).values()];
+       const defaultGoals=Number(current.goals?.targetGrade||7)===7&&Number(current.goals?.sessionsPerWeek||3)===3;
+       spWriteLocal(p,{
+         ...incomingPlan,...(hasLocal?current:{}),exams,
+         goals:hasLocal&&!defaultGoals?current.goals:(incomingPlan.goals||current.goals),
+         completed:{...(incomingPlan.completed||{}),...(hasLocal?current.completed||{}:{})}
+       });
+     }
      for(const [k,v]of Object.entries(backup.extras||{}))mergeExtra(p,k,v);
      // Bewaar ook oude cloudrecords die niet bij de huidige lespakketten passen.
      const oldUnknown=parse(read(UNMAPPED+p),{attempts:[],reviews:[]});
