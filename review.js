@@ -41,14 +41,11 @@
    const profile=Number(state.profile),x=read();if(!profile||x.migrated)return;
    try{
      const local=typeof sfLocal==='function'?sfLocal():null;
-     const visible=collections().filter(p=>p.profile_id===profile);
      const byId=new Map((local?.sets||[]).filter(p=>Number(p.profile_id)===profile).map(p=>[Number(p.id),p]));
-     const bySource=new Map(visible.map(p=>[String(p.source_key||p.id),byId.get(Number(p.id))]).filter(([,p])=>!!p));
      let imported=0;
-     // Zowel offline-resultaten als de reeds opgehaalde (gedeelde) cloudresultaten gebruiken.
-     const cloud=window.sfCloud?.cache?.get(profile);
-     const rows=[...(local?.attempts||[]).filter(a=>Number(a.profile_id)===profile).map(a=>({attempt:a,pack:byId.get(Number(a.collection_id))})),
-       ...(cloud?.attempts||[]).map(a=>({attempt:a,pack:bySource.get(String(a.source_key))}))];
+     // R1: alleen lokale en uit een back-up herstelde toetsresultaten.
+     const rows=(local?.attempts||[]).filter(a=>Number(a.profile_id)===profile)
+       .map(a=>({attempt:a,pack:byId.get(Number(a.collection_id))}));
      rows.sort((a,b)=>Date.parse(b.attempt.created_at||0)-Date.parse(a.attempt.created_at||0));
      for(const {attempt:a,pack} of rows){
        if(pack?.type!=='quiz')continue;
@@ -60,8 +57,8 @@
        }
        if(imported>=600)break;
      }
-     const oldReviews=[...(local?.reviews||[]).filter(r=>Number(r.profile_id)===profile).map(r=>({review:r,pack:byId.get(Number(r.collection_id))})),
-       ...(cloud?.reviews||[]).map(r=>({review:r,pack:bySource.get(String(r.source_key))}))];
+     const oldReviews=(local?.reviews||[]).filter(r=>Number(r.profile_id)===profile)
+       .map(r=>({review:r,pack:byId.get(Number(r.collection_id))}));
      oldReviews.sort((a,b)=>Date.parse(b.review.updated_at||b.review.created_at||0)-Date.parse(a.review.updated_at||a.review.created_at||0));
      for(const {review:r,pack} of oldReviews){
        if(imported>=700)break;
@@ -127,7 +124,7 @@
          `<p>${s.upcoming?`Je volgende herhaling is ${when(s.nextAt)}.`:'Begin eerst met een oefentoets, flashcards of leerstappen.'}</p>
          <button class="btn btn-secondary" data-action="nav" data-route="learning-guided">Nieuw onderwerp leren →</button>`}</section>
      <p class="sf-review-help">Fout: na 20 minuten · Bijna: morgen · Goed: na 3, 7, 14, 30 of 60 dagen.
-       De herhaalplanning wordt voorlopig op dit apparaat bewaard en synchroniseert nog niet via Supabase.</p>
+       De herhaalplanning wordt voorlopig op dit apparaat bewaard. Gebruik Back-up en herstel om de voortgang mee te nemen naar een ander apparaat.</p>
    </div>`;
  }
  async function start(){
@@ -189,5 +186,6 @@
    }
  }
  document.addEventListener('input',ev=>{if(ev.target?.id==='sf-review-text'&&session)session.typed=ev.target.value;});
- window.sfReview={record,importLegacy,summary:dueData,dashboard,catalog,start,runner,handle,key,reset:()=>{session=null;}};
+ function reimportLegacy(){const x=read();x.migrated=false;write(x);importLegacy();}
+ window.sfReview={record,importLegacy,reimportLegacy,summary:dueData,dashboard,catalog,start,runner,handle,key,reset:()=>{session=null;}};
 })();
