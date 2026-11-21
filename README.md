@@ -13,7 +13,7 @@ De oude Supabase-installatie, tabellen en bestaande clouddata blijven intact als
 ---
 
 
-## Centrale voortgang zonder persoonlijke gebruikersaccounts
+## Historische inrichting (R0): centrale voortgang via Supabase
 
 De cloudadapter staat in `sharedsync.js`; SQL in `supabase/shared-progress.sql`. Het profielscherm vraagt om 2007. De publieke Supabase publishable key en project-URL zijn sinds 29 oktober 2026 in `config.js` ingesteld; de SQL werd door de beheerder uitgevoerd. De code 2007 wordt via de databasefunctie gecontroleerd zodra de verbinding lukt. Daarna synchroniseren toetsresultaten, foute vragen, flashcards, leerdoelen en toetsplanning voor Nikki en Dean tussen apparaten. De eerste keer worden bestaande lokale resultaten zoveel mogelijk meegenomen.
 
@@ -70,7 +70,7 @@ De StudyForge Scholte-concepten zijn geschikt gemaakt voor het bestaande donkere
 - Eigen oefendoelen en streefcijfer instellen
 - Ouderoverzicht voor beide profielen raadplegen
 
-## Gegevens en Supabase
+## Historische technische details van Supabase
 - De huidige configuratie gebruikt de gedeelde cloudmodus met Supabase RPC `sf_shared_sync`; er is geen persoonlijk e-mailaccount nodig.
 - De tabellen staan beschreven in `supabase/schema.sql`, `supabase/planning-v2.sql` en `supabase/shared-progress.sql`.
 - Lokaal bewaarde resultaten worden bij het eerste geldige profielbezoek per apparaat waar mogelijk naar de cloud overgezet. De publieke GitHub-bibliotheek bevat alleen lesmateriaal, niet de cijfers.
