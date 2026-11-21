@@ -102,58 +102,72 @@
        <button class="btn btn-outline" data-action="learn-exit">Ander onderwerp</button>
        <button class="btn btn-outline" data-action="nav" data-route="dashboard">Naar start</button></div></div>`;
  }
+ function ratingButtons(){
+ return `<p class="sf-learning-note">Beoordeel jezelf eerlijk. Lastige vragen komen straks nog eens terug.</p>
+  <div class="sf-rate-row">
+   <button class="btn btn-outline" data-action="learn-rate" data-quality="0">Nog oefenen</button>
+   <button class="btn btn-outline" data-action="learn-rate" data-quality="1">Bijna goed</button>
+   <button class="btn btn-primary" data-action="learn-rate" data-quality="2">Goed</button>
+  </div>`;
+}
+ function passageFromSource(q){
+ if(!q?.passage)return '';
+ return `<div class="sf-source-text"><b>Tekst bij de opgave</b><p>${htmlEscape(String(q.passage))}</p></div>`;
+}
+ function learningTeaching(q){
+ const full=typeof q.learn==='string'&&q.learn.trim()?q.learn.trim():'';
+ const hint=typeof q.hint==='string'&&q.hint.trim()?q.hint.trim():'';
+ const label=full?'UITLEG UIT HET LESMATERIAAL':hint?'AANWIJZING UIT HET OEFENMATERIAAL':'GEEN UITLEG VOORAF';
+ const info=full||hint||'Voor deze vraag is nog geen uitleg vooraf aangeleverd. Na het oefenen zie je de toelichting uit het lespakket.';
+ return `<div class="sf-step-kicker"><span>01</span> EERST BEGRIJPEN</div>
+   <h2>${htmlEscape(q.lessonTitle||'Lees de aanwijzing')}</h2>
+   <div class="sf-teach-panel"><span class="sf-teach-label">${label}</span><p>${htmlEscape(info)}</p>
+   ${q.example?`<div class="sf-teach-example"><b>Voorbeeld uit het lesmateriaal</b><p>${htmlEscape(q.example)}</p></div>`:''}</div>
+   <button class="btn btn-primary sf-wide-btn" data-action="learn-practice">Zelf proberen →</button>`;
+}
+ function learningPractice(q,s){
+ return `<div class="sf-step-kicker"><span>02</span> NU ZELF PROBEREN</div>
+  ${passageFromSource(q)}<h2>${htmlEscape(q.question)}</h2>
+  ${q.type==='mc'?`<div class="sf-choice-list">${q.options.map((o,i)=>`<button class="sf-choice" data-action="learn-answer" data-value="${i}"><span>${String.fromCharCode(65+i)}</span>${htmlEscape(o)}</button>`).join('')}</div>`:
+    `<label class="sf-answer-label" for="sf-learning-text">Jouw antwoord (schrijf of zeg het hardop)</label>
+     <textarea id="sf-learning-text" class="sf-answer-field" maxlength="2500" rows="4" placeholder="Wat denk je?">${htmlEscape(s.typed||'')}</textarea>
+     <button class="btn btn-primary sf-wide-btn" data-action="learn-reveal">Bekijk het modelantwoord →</button>`}`;
+}
+ function learningFeedback(q,s){
+ const open=q.type==='open',correct=s.result===true,answer=model(q),exp=explanation(q),same=exp.trim().toLowerCase()===answer.trim().toLowerCase();
+ return `<div class="sf-step-kicker"><span>03</span> WAT HEB JE GELEERD?</div>
+   <h2>${open?'Vergelijk je antwoord':correct?'Goed gedaan!':'Zo zit het'}</h2>
+   ${open&&s.typed.trim()?`<div class="sf-your-answer"><b>Jouw antwoord</b><p>${htmlEscape(s.typed)}</p></div>`:''}
+   <div class="sf-feedback ${correct||open?'good':'retry'}"><b>Modelantwoord uit je oefenmateriaal</b><p>${htmlEscape(answer)}</p>
+    ${exp&&!same?`<b>Waarom?</b><p>${htmlEscape(exp)}</p>`:''}</div>
+   ${open&&s.result===null?ratingButtons():
+     `<p class="sf-learning-note">${correct?'Op naar de volgende vraag.':'Deze vraag komt één keer terug aan het einde van de ronde.'}</p>
+      <button class="btn btn-primary sf-wide-btn" data-action="learn-next">Volgende stap →</button>`}`;
+}
+ function learningRecall(q,s){
+ if(s.phase==='answer')return `<div class="sf-step-kicker"><span>✦</span> HAAL HET UIT JE GEHEUGEN</div>
+  ${passageFromSource(q)}<h2>${htmlEscape(recallPrompt(q))}</h2>
+  <p class="sf-learning-note">Zonder antwoordopties. Probeer eerst zelf te antwoorden.</p>
+  <label class="sf-answer-label" for="sf-learning-text">Jouw uitleg (schrijf of zeg het hardop)</label>
+  <textarea id="sf-learning-text" class="sf-answer-field" rows="5" maxlength="2500" placeholder="Wat weet je nog?">${htmlEscape(s.typed||'')}</textarea>
+  <button class="btn btn-primary sf-wide-btn" data-action="learn-reveal">Vergelijk met het antwoord →</button>`;
+ const ans=model(q),why=explanation(q),same=why.trim().toLowerCase()===ans.trim().toLowerCase();
+ return `<div class="sf-step-kicker"><span>✓</span> VERGELIJK EN BEOORDEEL</div>
+   <h2>Hoe goed had je het?</h2>
+   ${s.typed.trim()?`<div class="sf-your-answer"><b>Jouw antwoord</b><p>${htmlEscape(s.typed)}</p></div>`:''}
+   <div class="sf-feedback good"><b>Modelantwoord</b><p>${htmlEscape(ans)}</p>
+    ${why&&!same?`<b>Toelichting uit het oefenmateriaal</b><p>${htmlEscape(why)}</p>`:''}</div>
+   ${ratingButtons()}`;
+}
  function renderMethod(){
-   if(!session)return '<div class="sf-empty">Kies eerst een onderwerp.</div>';
-   if(session.stage==='complete')return completed();
-   const q=originalQuestion(),s=session;
-   if(!q)return '<div class="sf-empty">Deze oefening is niet beschikbaar.</div>';
-   let body='';
-   if(s.kind==='guided'){
-     if(s.phase==='explain'){
-       body=`<div class="sf-step-kicker"><span>01</span> EERST BEGRIJPEN</div>
-         <h2>${htmlEscape(q.lessonTitle||'Korte uitleg')}</h2>
-         <div class="sf-teach-panel"><span class="sf-teach-label">DIT MOET JE WETEN</span>
-           <p>${htmlEscape(q.learn||q.hint||'Lees de vraag en probeer de belangrijkste begrippen te herkennen. Na het oefenen zie je het modelantwoord.')}</p>
-           ${q.example?`<div class="sf-teach-example"><b>Voorbeeld</b><p>${htmlEscape(q.example)}</p></div>`:''}</div>
-         <button class="btn btn-primary sf-wide-btn" data-action="learn-practice">Ik snap het, oefenen →</button>`;
-     }else if(s.phase==='practice'){
-       body=`<div class="sf-step-kicker"><span>02</span> NU ZELF PROBEREN</div>
-         <h2>${htmlEscape(q.question)}</h2>${q.type==='mc'?`<div class="sf-choice-list">${q.options.map((opt,i)=>`<button class="sf-choice" data-action="learn-answer" data-value="${i}"><span>${String.fromCharCode(65+i)}</span>${htmlEscape(opt)}</button>`).join('')}</div>`:
-         `<label class="sf-answer-label" for="sf-learning-text">Schrijf je antwoord in je eigen woorden</label>
-          <textarea id="sf-learning-text" class="sf-answer-field" rows="4" placeholder="Wat denk je?">${htmlEscape(s.typed||'')}</textarea>
-          <button class="btn btn-primary" data-action="learn-reveal">Bekijk voorbeeldantwoord →</button>`}`;
-     }else{
-       const correct=s.result===true,answer=model(q);
-       body=`<div class="sf-step-kicker"><span>03</span> WAT HEB JE GELEERD?</div>
-         <h2>${correct?'Dat heb je goed!':'Kijk, zo zit het.'}</h2>
-         <div class="sf-feedback ${correct?'good':'retry'}"><b>Juiste antwoord</b><p>${htmlEscape(answer)}</p>
-           <b>Waarom?</b><p>${htmlEscape(explanation(q))}</p></div>
-         ${q.type==='open'&&s.result===null?`<div class="sf-rate-row"><button class="btn btn-outline" data-action="learn-rate" data-known="0">Nog niet helemaal</button><button class="btn btn-primary" data-action="learn-rate" data-known="1">Dit wist ik!</button></div>`:
-         `<button class="btn btn-primary sf-wide-btn" data-action="learn-next">Volgende stap →</button>`}`;
-     }
-   }else if(s.phase==='answer'){
-     body=`<div class="sf-step-kicker"><span>✦</span> HAAL HET UIT JE GEHEUGEN</div>
-       <h2>${htmlEscape(q.question)}</h2>
-       <p class="sf-learning-note">Zonder antwoordopties. Probeer eerst zelf te formuleren wat je weet.</p>
-       <label class="sf-answer-label" for="sf-learning-text">Jouw uitleg</label>
-       <textarea id="sf-learning-text" class="sf-answer-field" rows="5" placeholder="Schrijf of vertel in je eigen woorden...">${htmlEscape(s.typed||'')}</textarea>
-       <button class="btn btn-primary sf-wide-btn" data-action="learn-reveal">Vergelijk met het antwoord →</button>`;
-   }else{
-     body=`<div class="sf-step-kicker"><span>✓</span> VERGELIJK EN BEOORDEEL</div>
-       <h2>Hoe goed had je het?</h2>
-       ${s.typed?.trim()?`<div class="sf-your-answer"><b>Jouw antwoord</b><p>${htmlEscape(s.typed)}</p></div>`:''}
-       <div class="sf-feedback good"><b>Modelantwoord</b><p>${htmlEscape(model(q))}</p>
-         <b>Uitleg</b><p>${htmlEscape(explanation(q))}</p></div>
-       <p class="sf-learning-note">Beoordeel jezelf eerlijk. Wat je nog niet weet, oefenen we nog een keer.</p>
-       <div class="sf-rate-row"><button class="btn btn-outline" data-action="learn-rate" data-known="0">Nog oefenen</button>
-       <button class="btn btn-primary" data-action="learn-rate" data-known="1">Ik wist het</button></div>`;
-   }
-   return `<div class="sf-learning-screen">${title()}
-      <section class="sf-learning-card">${body}</section>
-      <p class="sf-learning-foot">Kleine stappen, regelmatig oefenen en jezelf terugvragen helpen om de stof te onthouden.</p>
-    </div>`;
- }
-
+ if(!session)return '<div class="sf-empty">Kies eerst een onderwerp.</div>';
+ if(session.stage==='complete')return completed();
+ const q=originalQuestion(),s=session;
+ if(!q)return '<div class="sf-empty">Deze oefening is niet beschikbaar.</div>';
+ const body=s.kind==='guided'?(s.phase==='explain'?learningTeaching(q):s.phase==='practice'?learningPractice(q,s):learningFeedback(q,s)):learningRecall(q,s);
+ return `<div class="sf-learning-screen">${title()}<section class="sf-learning-card">${body}</section>
+   <p class="sf-learning-foot">Regelmatig oefenen en jezelf terugvragen helpen de stof te onthouden.</p></div>`;
+}
  // Eigen vragenrotatie per leerling en leermethode: oefentoetsrotatie blijft intact.
  function nextRound(kind,pack,total){
    const count=Math.min(12,total),key='studyforge-learning-round-v1:'+state.profile+':'+kind+':'+String(pack.source_key||pack.id);
