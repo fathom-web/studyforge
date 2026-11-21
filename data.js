@@ -1,12 +1,7 @@
-/* StudyForge data layer: local browser storage by default, optional Supabase Auth + RLS. */
+/* StudyForge R1 — volledig lokale voortgang; lesmateriaal via GitHub Pages. */
 'use strict';
 const SF_PROFILES = [{id:1,name:'Nikki'},{id:2,name:'Dean'}];
-const SF_CONFIG = window.STUDYFORGE_SUPABASE || {};
-const SF_CLOUD = !!(SF_CONFIG.sharedMode && SF_CONFIG.url && (SF_CONFIG.publishableKey || SF_CONFIG.anonKey));
-const SF_REMOTE = !!(!SF_CONFIG.sharedMode && SF_CONFIG.url && (SF_CONFIG.publishableKey || SF_CONFIG.anonKey));
 const SF_STORE_KEY = 'studyforge-local-v1';
-let SF_CLIENT = null;
-let SF_ADMIN = false;
 let SF_LOCAL_DATA = null;
 /* Afgeronde Engelse My Future-pakketten (27 oktober 2026).
    Alleen verbergen in het oefenaanbod, NIET verwijderen uit de opslag:
@@ -23,18 +18,7 @@ function sfIsArchivedCollection(col){
   return SF_ARCHIVED_PACK_IDS.has(col.source_key.split('::')[0]);
 }
 
-async function sfClient(){
-  if(!SF_REMOTE&&!SF_CLOUD) return null;
-  if(!SF_CLIENT){
-    const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2.95.2');
-    SF_CLIENT = createClient(SF_CONFIG.url, SF_CONFIG.publishableKey || SF_CONFIG.anonKey, {
-      auth: { persistSession:true, autoRefreshToken:true, detectSessionInUrl:true }
-    });
-  }
-  return SF_CLIENT;
-}
-function sfError(res){if(res?.error)throw new Error(res.error.message||String(res.error));return res?.data;}
-function sfMode(){return SF_CLOUD?'shared':SF_REMOTE?'supabase':'local';}
+function sfMode(){return 'local';}
 function sfFresh(){
   return {sets:[],attempts:[],reviews:[],hiddenPublished:[],nextId:1};
 }
@@ -72,7 +56,7 @@ function sfPersist(){try{localStorage.setItem(SF_STORE_KEY,JSON.stringify(SF_LOC
 /* Lees de door ChatGPT in GitHub gepubliceerde originele oefensets in.
    De browser bewaart zijn eigen scores; bestanden worden niet door leerlingen geüpload. */
 async function sfSyncPublished(){
-  const d=SF_REMOTE?null:sfLocal();
+  const d=sfLocal();
   try{
     const response=await fetch('./content/library.json',{cache:'no-store'});
     if(!response.ok)throw Error('HTTP '+response.status);
@@ -103,52 +87,6 @@ async function sfSyncPublished(){
       typeof e.date==='string' && /^\d{4}-\d{2}-\d{2}$/.test(e.date)
     ).slice(0,200):[];
 
-    if(SF_REMOTE){
-      const user=await sfRemoteUser();
-      if(!user)return {added:0,mode:'supabase',error:'Log in om de lessen te synchroniseren'};
-      const client=await sfClient();
-      const [rowsRes,hidesRes]=await Promise.all([
-        client.from('sf_collections').select('id,source_key,count,content,title,subject,description').not('source_key','is',null),
-        client.from('sf_hidden_publications').select('source_key')
-      ]);
-      if(rowsRes.error)throw rowsRes.error;
-      if(hidesRes.error)throw hidesRes.error;
-      const existing=new Set((rowsRes.data||[]).map(r=>r.source_key));
-      const hidden=new Set((hidesRes.data||[]).map(r=>r.source_key));
-      const inserts=[],updates=[],seen=new Set();
-      for(const pack of library.packs){
-        if(!pack||typeof pack.id!=='string'||!pack.id.trim()||seen.has(pack.id))continue;
-        seen.add(pack.id);
-        try{
-          const {cols}=sfValidateImport(JSON.stringify({schema:'studyforge/v1',profile:pack.profile,collections:pack.collections}));
-          for(const [i,col] of cols.entries()){
-            const source_key=pack.id+'::'+i;
-            if(hidden.has(source_key))continue;
-            if(existing.has(source_key)){
-              const previous=(rowsRes.data||[]).find(r=>r.source_key===source_key);
-              if(previous){
-                const metadataChanged=previous.title!==col.title||previous.subject!==col.subject||previous.description!==col.description;
-                const biologyChange=source_key==='dean-biologie-unit1-organen-cellen-2026-10-28-v1::0' &&
-                  (previous.count!==col.count||previous.content?.questionsPerAttempt!==col.content.questionsPerAttempt);
-                if(biologyChange||metadataChanged)updates.push({id:previous.id,col,metadataOnly:!biologyChange});
-              }
-              continue;
-            }
-            inserts.push({...col,source_key,owner_id:user.id});
-            existing.add(source_key);
-          }
-        }catch(error){console.warn('Lespakket overgeslagen',pack.id,error);}
-      }
-      if(inserts.length){
-        const res=await client.from('sf_collections').insert(inserts);
-        if(res.error)throw res.error;
-      }
-      for(const u of updates){
-        const res=await client.from('sf_collections').update(u.metadataOnly?{title:u.col.title,subject:u.col.subject,description:u.col.description}:{content:u.col.content,count:u.col.count,title:u.col.title,subject:u.col.subject,description:u.col.description}).eq('id',u.id);
-        if(res.error)throw res.error;
-      }
-      return {added:inserts.length,updated:updates.length,mode:'supabase'};
-    }
     let added=0,updated=0;
     const seen=new Set(),hidden=new Set(d.hiddenPublished||[]);
     for(const pack of library.packs){
@@ -234,87 +172,53 @@ function sfValidateImport(text){
   });
   return {profile,cols};
 }
-async function sfRemoteUser(){const c=await sfClient();const {data,error}=await c.auth.getUser();if(error&&!['Auth session missing!','Auth session missing'].includes(error.message))throw Error(error.message);return data?.user||null;}
-async function sfRemoteRows(table,profile){
-  const c=await sfClient();
-  return sfError(await c.from(table).select('*').eq('profile_id',profile).order('created_at',{ascending:false}));
-}
+/* R1: geen netwerkcalls, geen accounts en geen cloudmutaties. */
 async function sfAdapter(action,b=null,params={}){
-  const d=SF_REMOTE?null:sfLocal();
-  if(action==='status'){
-    if(!SF_REMOTE)return {csrf:'local',locked:false,admin:true,mode:'local'};
-    return {csrf:'supabase',locked:!(await sfRemoteUser()),admin:SF_ADMIN,mode:'supabase'};
-  }
-  if(action==='unlock'){
-    if(!SF_REMOTE)return {ok:true,csrf:'local'};
-    const c=await sfClient();sfError(await c.auth.signInWithPassword({email:String(b.email||'').trim(),password:String(b.password||'')}));
-    SF_ADMIN=false;return {ok:true,csrf:'supabase'};
-  }
-  if(action==='bootstrap'){
-    if(SF_REMOTE&&!(await sfRemoteUser()))throw Error('Log eerst in bij Supabase.');
-    return {profiles:SF_PROFILES,csrf:SF_REMOTE?'supabase':'local',admin:SF_REMOTE?SF_ADMIN:true,mode:sfMode()};
-  }
-  if(action==='logout'){
-    if(SF_REMOTE){const c=await sfClient();sfError(await c.auth.signOut());}
-    SF_ADMIN=false;return {ok:true};
-  }
-  if(SF_REMOTE&&!(await sfRemoteUser()))throw Error('Je bent uitgelogd. Log opnieuw in.');
+  const d=sfLocal();
+  if(action==='status')return {csrf:'local',locked:false,admin:true,mode:'local'};
+  if(action==='unlock')return {ok:true,csrf:'local'};
+  if(action==='bootstrap')return {profiles:SF_PROFILES,csrf:'local',admin:true,mode:'local'};
+  if(action==='logout')return {ok:true};
   if(action==='dashboard'){
     const pid=sfGoodProfile(params.profile);
-    let sets,attempts,reviews;
-    if(SF_REMOTE){
-      [sets,attempts,reviews]=await Promise.all([sfRemoteRows('sf_collections',pid),sfRemoteRows('sf_attempts',pid),sfRemoteRows('sf_reviews',pid)]);
-    }else{
-      sets=d.sets.filter(s=>s.profile_id===pid);
-      attempts=d.attempts.filter(s=>s.profile_id===pid).slice().sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));
-      reviews=d.reviews.filter(s=>s.profile_id===pid);
-    }
-    // Verberg afgeronde lespakketten uit het actuele aanbod.
-    // Eerdere toetsresultaten blijven zichtbaar bij Progressie.
-    sets=sets.filter(s=>!sfIsArchivedCollection(s));
-    const exists=new Set(sets.map(s=>s.id));
-    reviews=reviews.filter(r=>exists.has(r.collection_id));
-    return {collections:sets.map(({content,...rest})=>({...rest,questions_per_attempt:content?.questionsPerAttempt||null})),attempts:attempts.map(({details,...rest})=>rest),
-      flash_progress:reviews,missed:sfLatestMissed(attempts).filter(m=>exists.has(m.collection_id))};
+    const sets=d.sets.filter(x=>Number(x.profile_id)===pid&&!sfIsArchivedCollection(x));
+    const attempts=d.attempts.filter(x=>Number(x.profile_id)===pid)
+      .slice().sort((a,b)=>Date.parse(b.created_at)-Date.parse(a.created_at));
+    const allowed=new Set(sets.map(x=>Number(x.id)));
+    const reviews=d.reviews.filter(x=>Number(x.profile_id)===pid&&allowed.has(Number(x.collection_id)));
+    return {
+      collections:sets.map(({content,...rest})=>({...rest,questions_per_attempt:content?.questionsPerAttempt||null})),
+      attempts:attempts.map(({details,...rest})=>rest),
+      flash_progress:reviews,
+      missed:sfLatestMissed(attempts).filter(x=>allowed.has(Number(x.collection_id)))
+    };
   }
   if(action==='collection'){
-    const pid=sfGoodProfile(params.profile);const id=Number(params.id);
-    let set;
-    if(SF_REMOTE){const c=await sfClient();set=sfError(await c.from('sf_collections').select('*').eq('id',id).eq('profile_id',pid).maybeSingle());}
-    else set=d.sets.find(s=>s.id===id&&s.profile_id===pid);
-    if(!set||sfIsArchivedCollection(set))throw Error('Deze oefenset is afgerond en gearchiveerd.');return {collection:set};
+    const pid=sfGoodProfile(params.profile),id=Number(params.id);
+    const set=d.sets.find(x=>Number(x.id)===id&&Number(x.profile_id)===pid);
+    if(!set||sfIsArchivedCollection(set))throw Error('Deze oefenset is afgerond en gearchiveerd.');
+    return {collection:set};
   }
   if(action==='save_quiz'){
-    const pid=sfGoodProfile(b.profile);const id=Number(b.collection_id);
-    let col;
-    if(SF_REMOTE){const c=await sfClient();col=sfError(await c.from('sf_collections').select('*').eq('id',id).eq('profile_id',pid).maybeSingle());}
-    else col=d.sets.find(s=>s.id===id&&s.profile_id===pid);
+    const pid=sfGoodProfile(b.profile),id=Number(b.collection_id);
+    const col=d.sets.find(x=>Number(x.id)===id&&Number(x.profile_id)===pid&&!sfIsArchivedCollection(x));
     const result=sfCalcQuiz(col,b);
-    const item={profile_id:pid,collection_id:id,title:col.title,subject:col.subject,correct_count:result.correct,
-      total_count:result.total,grade:result.grade,details:result.details,created_at:new Date().toISOString()};
-    if(SF_REMOTE){const c=await sfClient();const u=await sfRemoteUser();sfError(await c.from('sf_attempts').insert({...item,owner_id:u.id}));}
-    else{d.attempts.push({id:d.nextId++,...item});sfPersist();}
-    return result;
+    const item={id:d.nextId++,profile_id:pid,collection_id:id,title:col.title,subject:col.subject,
+      correct_count:result.correct,total_count:result.total,grade:result.grade,
+      details:result.details,created_at:new Date().toISOString()};
+    d.attempts.push(item);sfPersist();return result;
   }
   if(action==='flash_review'){
-    const pid=sfGoodProfile(b.profile);const id=Number(b.collection_id);const index=Number(b.index);
+    const pid=sfGoodProfile(b.profile),id=Number(b.collection_id),index=Number(b.index);
     if(!Number.isInteger(index)||index<0)throw Error('Ongeldige kaart.');
-    if(SF_REMOTE){
-      const c=await sfClient(),u=await sfRemoteUser();
-      const col=sfError(await c.from('sf_collections').select('id,content,type').eq('id',id).eq('profile_id',pid).maybeSingle());
-      if(!col||col.type!=='flashcards'||index>=col.content.cards.length)throw Error('Flashcard niet gevonden.');
-      const old=sfError(await c.from('sf_reviews').select('reviews').eq('collection_id',id).eq('profile_id',pid).eq('card_index',index).maybeSingle());
-      sfError(await c.from('sf_reviews').upsert({owner_id:u.id,profile_id:pid,collection_id:id,card_index:index,known:b.known?1:0,reviews:(old?.reviews||0)+1,created_at:new Date().toISOString()}, {onConflict:'owner_id,collection_id,card_index'}));
-    }else{
-      const col=d.sets.find(s=>s.id===id&&s.profile_id===pid);
-      if(!col||col.type!=='flashcards'||index>=col.content.cards.length)throw Error('Flashcard niet gevonden.');
-      let r=d.reviews.find(r=>r.profile_id===pid&&r.collection_id===id&&r.card_index===index);
-      if(!r){r={profile_id:pid,collection_id:id,card_index:index,reviews:0};d.reviews.push(r);}
-      r.known=b.known?1:0;r.reviews++;sfPersist();
-    }
-    return {ok:true};
+    const col=d.sets.find(x=>Number(x.id)===id&&Number(x.profile_id)===pid&&!sfIsArchivedCollection(x));
+    if(!col||col.type!=='flashcards'||index>=col.content.cards.length)throw Error('Flashcard niet gevonden.');
+    let r=d.reviews.find(x=>Number(x.profile_id)===pid&&Number(x.collection_id)===id&&Number(x.card_index)===index);
+    if(!r){r={profile_id:pid,collection_id:id,card_index:index,reviews:0};d.reviews.push(r);}
+    r.known=b.known?1:0;r.reviews++;r.updated_at=new Date().toISOString();
+    sfPersist();return {ok:true};
   }
-  throw Error(`Onbekende handeling: ${action}`);
+  throw Error('Onbekende handeling: '+action);
 }
 window.sfSyncPublished=sfSyncPublished;
 window.sfAdapter=sfAdapter;
