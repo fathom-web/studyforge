@@ -268,6 +268,22 @@ async function sfAdapter(action,b=null,params={}){
       sets=d.sets.filter(s=>s.profile_id===pid);
       attempts=d.attempts.filter(s=>s.profile_id===pid).slice().sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));
       reviews=d.reviews.filter(s=>s.profile_id===pid);
+      // Gearchiveerde cloudresultaten zonder bronlespakket blijven in het cijferscherm zichtbaar.
+      try{
+        const orphan=JSON.parse(localStorage.getItem('studyforge-cloud-unmapped-v1:'+pid)||'null');
+        const known=new Set(attempts.map(a=>a.cloud_client_id).filter(Boolean));
+        for(const a of Array.isArray(orphan?.attempts)?orphan.attempts:[]){
+          if(!a||!Number.isFinite(Number(a.grade))||!Number.isFinite(Date.parse(a.created_at)))continue;
+          const id=String(a.client_id||'');
+          if(id&&known.has(id))continue;
+          attempts.push({id:id||'oud-'+attempts.length,profile_id:pid,collection_id:-1,
+            title:String(a.title||'Gearchiveerde toets'),subject:String(a.subject||'Onbekend vak'),
+            correct_count:Number(a.correct_count)||0,total_count:Number(a.total_count)||0,
+            grade:Number(a.grade),created_at:a.created_at});
+          if(id)known.add(id);
+        }
+        attempts.sort((a,b)=>Date.parse(b.created_at)-Date.parse(a.created_at));
+      }catch(err){console.warn('Historische cloudcijfers konden niet lokaal gelezen worden',err);}
     }
     // Verberg afgeronde lespakketten uit het actuele aanbod.
     // Eerdere toetsresultaten blijven zichtbaar bij Progressie.
