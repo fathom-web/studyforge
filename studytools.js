@@ -1,7 +1,7 @@
 /* StudyForge — planning, doelen, indicatieve toetsgereedheid en ouderoverzicht */
 'use strict';
 const SP_KEY='studyforge-planning-v1';
-const SP_EMPTY=()=>({exams:[],goals:{sessionsPerWeek:3,targetGrade:7},completed:{}});
+const SP_EMPTY=()=>({exams:[],goals:{sessionsPerWeek:3,targetGrade:7},completed:{},scheduleStarts:{}});
 let spCurrent=SP_EMPTY(),spProfile=null,spParentData=null,spSelectedExam=null,spCloudWarning='';
 const spDate=()=>{const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')};
 const spMidnight=(s)=>new Date(s+'T12:00:00');
@@ -63,7 +63,15 @@ async function spLoad(profile){
     if(i===-1){val.exams.push(normalized);revised=true}
     else if(JSON.stringify(val.exams[i])!==JSON.stringify(normalized)){val.exams[i]=normalized;revised=true}
   }
-  if(revised)await spSave(profile,val);
+  val.scheduleStarts=val.scheduleStarts&&typeof val.scheduleStarts==='object'?val.scheduleStarts:{};
+  let anchorsAdded=false;
+  for(const exam of val.exams){
+    if(exam&&window.sfExamPrep?.date?.(exam.date)&&exam.date>=spDate()&&!val.scheduleStarts[exam.id]){
+      val.scheduleStarts[exam.id]=spDate();
+      anchorsAdded=true;
+    }
+  }
+  if(revised||anchorsAdded)await spSave(profile,val);
   return val;
 }
 async function spSave(profile,val){
@@ -279,6 +287,8 @@ async function studyHandleAction(action,btn){
    }
    const id='local-exam-'+state.profile+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);
    spCurrent.exams.push({id,title,subject,date,targetGrade:target});
+   spCurrent.scheduleStarts=spCurrent.scheduleStarts||{};
+   spCurrent.scheduleStarts[id]=spDate();
    await spSave(state.profile,spCurrent);spSelectedExam=id;render();toast('Toets toegevoegd. Het oefenschema is beschikbaar.');
  }
  else if(action==='study-delete-exam'){
