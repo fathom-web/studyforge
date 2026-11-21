@@ -189,5 +189,6 @@
    }
  }
  document.addEventListener('input',ev=>{if(ev.target?.id==='sf-review-text'&&session)session.typed=ev.target.value;});
- window.sfReview={record,importLegacy,summary:dueData,dashboard,catalog,start,runner,handle,key,reset:()=>{session=null;}};
+ function reimportLegacy(){const x=read();x.migrated=false;write(x);importLegacy();}
+ window.sfReview={record,importLegacy,reimportLegacy,summary:dueData,dashboard,catalog,start,runner,handle,key,reset:()=>{session=null;}};
 })();
