@@ -27,34 +27,59 @@
    try{localStorage.setItem(storageKey(),JSON.stringify(data));}catch(e){console.warn('Voortgang van leermethode niet opgeslagen',e);}
    session.recorded=true;
  }
+ function recallPrompt(q){
+ return typeof q?.recallQuestion==='string'&&q.recallQuestion.trim()?q.recallQuestion.trim():String(q?.question||'');
+}
+ function isRecallEligible(q){
+ if(!q||!String(q.question||'').trim())return false;
+ const answer=q.type==='open'?q.answer:q?.options?.[q.correct];
+ if(!String(q.recallAnswer||answer||'').trim())return false;
+ if(typeof q.recallQuestion==='string'&&q.recallQuestion.trim())return true;
+ if(q.type==='open')return true;
+ if(q.type!=='mc'||q.audioText||q.passage)return false;
+ const t=q.question.trim();
+ if(!/^(wat|hoe|waarom|waar|wanneer|hoeveel|noem|geef|leg uit|beschrijf|bereken|schrijf|vertaal|in welk jaar|rond welk jaar)\b/i.test(t))return false;
+ if(/\b(luister|fragment|hieronder|hierboven|onderstaande|volgende|afbeelding|plaatje|foto|antwoordopties|meerkeuze|juiste zin|juiste antwoord|het beste|de tekst|deze tekst|kolom|schema)\b/i.test(t))return false;
+ return true;
+}
+ function learningEligible(kind,q){
+ if(kind==='recall')return isRecallEligible(q);
+ return !!q&&['mc','open'].includes(q.type)&&!!String(q.question||'').trim();
+}
+ function fullPack(summary){
+ return typeof sfLocal==='function'?sfLocal().sets.find(x=>Number(x.id)===Number(summary.id)&&Number(x.profile_id)===Number(state.profile)):null;
+}
  function catalog(kind){
-   const k=kinds[kind];if(!k)return '';
-   const packs=collections().filter(c=>c.type==='quiz');
-   return `<div class="page-enter sf-method-page">
-      <button class="back-link" data-action="nav" data-route="dashboard">← Terug naar start</button>
-      <header class="sf-page-intro"><span class="sf-eyebrow">${k.label} · ${htmlEscape(profileName())}</span>
-        <h1>${k.title}</h1><p>${k.desc}</p></header>
-      <div class="sf-mini-guide"><span class="sf-mini-mark">${ic(k.icon,23)}</span>
-       <div><b>${kind==='guided'?'Zo leer je echt de stof':'Zo train je je geheugen'}</b>
-       <p>${kind==='guided'?'Lees een korte uitleg → maak de oefening → bekijk de feedback.':'Probeer te antwoorden zonder hulp → vergelijk met het model → herhaal moeilijke vragen.'}</p></div></div>
-      <h2 class="sf-section-label">Kies een onderwerp</h2>
-      ${packs.length?`<div class="sf-subject-grid">${packs.map(p=>{
-          const st=stats(kind,p);
-          return `<button class="sf-subject-card" data-action="learn-start" data-kind="${kind}" data-id="${Number(p.id)}">
-            <span class="sf-subject-top"><span class="sf-subject-icon">${ic(k.icon,24)}</span><span class="sf-subject-tag">${htmlEscape(p.subject)}</span></span>
-            <strong>${htmlEscape(p.title)}</strong>
-            <span class="sf-subject-description">${htmlEscape(p.description||'Oefen dit onderwerp op jouw tempo.')}</span>
-            <span class="sf-subject-meta">${Number(p.count)} vragen ${st?'· Laatste keer '+st.correct+'/'+st.total+' goed':''} <b>Start →</b></span>
-          </button>`;}).join('')}</div>`:
-          '<div class="sf-empty"><b>Nog geen leerstof</b><p>Zodra een oefenpakket is toegevoegd, kun je hier meteen beginnen.</p></div>'}
-    </div>`;
- }
+ const k=kinds[kind];if(!k)return '';
+ const packs=collections().filter(c=>c.type==='quiz');
+ return `<div class="page-enter sf-method-page">
+   <button class="back-link" data-action="nav" data-route="dashboard">← Terug naar start</button>
+   <header class="sf-page-intro"><span class="sf-eyebrow">${k.label} · ${htmlEscape(profileName())}</span>
+     <h1>${k.title}</h1><p>${k.desc}</p></header>
+   <div class="sf-mini-guide"><span class="sf-mini-mark">${ic(k.icon,23)}</span>
+     <div><b>${kind==='guided'?'Eerst begrijpen en dan proberen':'Zelf uitleggen zonder antwoordopties'}</b>
+       <p>${kind==='guided'?'We gebruiken alleen aanwijzingen en uitleg uit het lespakket. Als een uitgebreide uitleg ontbreekt, geven we dat aan.':'Alleen vragen die zonder meerkeuzeopties zelfstandig te beantwoorden zijn. Beoordeel jezelf eerlijk.'}</p></div></div>
+   <h2 class="sf-section-label">Kies een onderwerp</h2>
+   ${packs.length?`<div class="sf-subject-grid">${packs.map(p=>{
+     const st=stats(kind,p),pack=fullPack(p);
+     const available=(pack?.content?.questions||[]).filter(q=>learningEligible(kind,q)).length;
+     return `<button class="sf-subject-card" ${available?`data-action="learn-start" data-kind="${kind}" data-id="${Number(p.id)}"`:'disabled aria-disabled="true"'}>
+       <span class="sf-subject-top"><span class="sf-subject-icon">${ic(k.icon,24)}</span><span class="sf-subject-tag">${htmlEscape(p.subject)}</span></span>
+       <strong>${htmlEscape(p.title)}</strong>
+       <span class="sf-subject-description">${htmlEscape(p.description||'Oefen dit onderwerp op jouw tempo.')}</span>
+       <span class="sf-subject-meta">${available?available+' geschikte vragen':'Geen zelfstandige vragen beschikbaar'}${st?' · Laatste keer '+st.correct+'/'+st.total+' goed':''}
+         <b>${available?'Start →':'Niet beschikbaar'}</b></span>
+     </button>`;}).join('')}</div>`:
+       '<div class="sf-empty"><b>Nog geen leerstof</b><p>Nieuwe oefenpakketten verschijnen hier zodra ze zijn toegevoegd.</p></div>'}
+ </div>`;
+}
  function originalQuestion(){return session?.pack?.content?.questions?.[session.queue[session.index]];}
  function model(q){
-   if(!q)return 'Geen modelantwoord beschikbaar.';
-   if(q.type==='mc')return String(q.options?.[q.correct]||'Geen antwoord');
-   return String(q.answer||'Geen modelantwoord');
- }
+ if(!q)return 'Geen modelantwoord beschikbaar.';
+ if(typeof q.recallAnswer==='string'&&q.recallAnswer.trim())return q.recallAnswer.trim();
+ if(q.type==='mc')return String(q.options?.[q.correct]||'Geen antwoord');
+ return String(q.answer||'Geen modelantwoord');
+}
  function explanation(q){return q?.explanation||q?.hint||'Bekijk wat het juiste antwoord betekent en probeer het straks opnieuw.';}
  function title(){
    const s=session,k=kinds[s.kind];
