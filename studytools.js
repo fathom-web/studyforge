@@ -126,17 +126,27 @@ function spExamSelect(){
   return due.find(e=>e.id===spSelectedExam)||due[0];
 }
 function spExamCard(exam,compact=false){
-  const m=spReadiness(exam),days=spDaysUntil(exam.date);
-  return '<article class="study-exam">'+
-    '<div class="study-exam-top"><span class="study-subject">'+htmlEscape(exam.subject)+'</span><span class="study-chip">'+(days===0?'Vandaag':days===1?'Morgen':'Over '+days+' dagen')+'</span></div>'+
-    '<h3>'+htmlEscape(exam.title)+'</h3><p>'+htmlEscape(spDayLabel(exam.date))+' · Streefcijfer '+htmlEscape(m.target.toLocaleString('nl-NL'))+'</p>'+
-    '<div class="study-readiness">'+htmlEscape(m.label)+(m.avg!==null?' · gemiddeld '+gradeFmt(m.avg):'')+'</div>'+
-    '<div class="study-actions"><button class="study-button" data-action="study-open-ready" data-id="'+htmlEscape(exam.id)+'">Toetsklaar bekijken</button>'+
-    '</div></article>';
+ const m=spReadiness(exam),days=spDaysUntil(exam.date);
+ const schedule=window.sfExamPrep.plan(exam,state.profile,state.dashboard,spCurrent);
+ return '<article class="study-exam">'+
+   '<div class="study-exam-top"><span class="study-subject">'+htmlEscape(exam.subject)+'</span><span class="study-chip">'+(days===0?'Vandaag':days===1?'Morgen':'Over '+days+' dagen')+'</span></div>'+
+   '<h3>'+htmlEscape(exam.title)+'</h3><p>'+htmlEscape(spDayLabel(exam.date))+' · Streefcijfer '+htmlEscape(m.target.toLocaleString('nl-NL'))+'</p>'+
+   '<div class="study-readiness">'+htmlEscape(m.label)+(m.avg!==null?' · gemiddeld '+gradeFmt(m.avg):'')+'</div>'+
+   '<p>'+schedule.complete+' van '+schedule.total+' geplande oefensessies afgevinkt</p>'+
+   '<div class="study-actions"><button class="study-button" data-action="study-open-ready" data-id="'+htmlEscape(exam.id)+'">Toetsklaar bekijken</button>'+
+   (String(exam.id||'').startsWith('local-exam-')?'<button class="study-button secondary" data-action="study-delete-exam" data-id="'+htmlEscape(exam.id)+'">Verwijderen</button>':'')+
+   '</div></article>';
 }
 function studyDashboardWidget(){
-  const upcoming=spDueExams();
-  return '<section class="study-dashboard-strip"><div><div class="eyebrow">JOUW LEERPLANNING</div><h2>'+(upcoming.length?'Binnenkort: '+htmlEscape(upcoming[0].title):'Nog geen toetsen gepland')+'</h2><p>'+(upcoming.length?'Nog '+spDaysUntil(upcoming[0].date)+' dagen · '+htmlEscape(upcoming[0].subject):'Toetsdata en nieuw lesmateriaal worden via het Huiswerk-project toegevoegd.')+'</p></div><button class="study-button" data-action="nav" data-route="planning">Mijn toetsen →</button></section>';
+ const upcoming=spDueExams();
+ const first=upcoming[0],schedule=first?window.sfExamPrep.plan(first,state.profile,state.dashboard,spCurrent):null;
+ return '<section class="study-dashboard-strip"><div><div class="eyebrow">JOUW LEERPLANNING</div><h2>'+
+   (first?'Binnenkort: '+htmlEscape(first.title):'Nog geen toetsen gepland')+'</h2>'+
+   '<p>'+(first?'Nog '+spDaysUntil(first.date)+' dagen · '+htmlEscape(first.subject)+
+     ' · '+schedule.complete+'/'+schedule.total+' oefensessies afgevinkt':
+     'Voeg een toetsdatum toe om een gericht oefenschema te maken.')+'</p></div>'+
+   (first?'<button class="study-button" data-action="study-open-ready" data-id="'+htmlEscape(first.id)+'">Bekijk voorbereiding →</button>':
+     '<button class="study-button" data-action="nav" data-route="planning">Toets plannen →</button>')+'</section>';
 }
 function spWeekProgress(db=state.dashboard,goal=spCurrent.goals){
   const d=spMidnight(spDate()),day=(d.getDay()+6)%7;
@@ -246,20 +256,62 @@ function studyParentContent(){
 }
 async function studyHandleAction(action,btn){
  if(action==='study-save-goals'){
-   const sessions=Number(document.querySelector('#study-weekly-goal')?.value),grade=Number(document.querySelector('#study-general-target')?.value);
-   if(!Number.isInteger(sessions)||sessions<1||sessions>14||!Number.isFinite(grade)||grade<1||grade>10){toast('Controleer je leerdoelen.',true);return;}
+   const sessions=Number(document.querySelector('#study-weekly-goal')?.value);
+   const grade=Number(document.querySelector('#study-general-target')?.value);
+   if(!Number.isInteger(sessions)||sessions<1||sessions>14||!Number.isFinite(grade)||grade<1||grade>10){
+     toast('Controleer je leerdoelen.',true);return;
+   }
    spCurrent.goals={sessionsPerWeek:sessions,targetGrade:grade};
    await spSave(state.profile,spCurrent);render();toast('Leerdoelen opgeslagen.');
+ }
+ else if(action==='study-add-exam'){
+   const title=String(document.querySelector('#study-new-title')?.value||'').trim();
+   const subject=String(document.querySelector('#study-new-subject')?.value||'').trim();
+   const date=String(document.querySelector('#study-new-date')?.value||'').trim();
+   const target=Number(document.querySelector('#study-new-target')?.value);
+   if(title.length<2||title.length>120||subject.length<2||subject.length>80||
+      !window.sfExamPrep.date(date)||date<spDate()||!Number.isFinite(target)||target<1||target>10){
+     toast('Vul een toetsnaam, vak, geldige toekomstige datum en streefcijfer van 1 tot 10 in.',true);return;
+   }
+   if(spCurrent.exams.some(e=>e.date===date&&window.sfExamPrep.subject(e.subject)===window.sfExamPrep.subject(subject)&&
+      String(e.title||'').trim().toLowerCase()===title.toLowerCase())){
+     toast('Deze toets staat al in je planning.',true);return;
+   }
+   const id='local-exam-'+state.profile+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);
+   spCurrent.exams.push({id,title,subject,date,targetGrade:target});
+   await spSave(state.profile,spCurrent);spSelectedExam=id;render();toast('Toets toegevoegd. Het oefenschema is beschikbaar.');
+ }
+ else if(action==='study-delete-exam'){
+   const id=String(btn.dataset.id||'');
+   if(!id.startsWith('local-exam-')||!spCurrent.exams.some(e=>e.id===id))return;
+   if(!window.confirm('Deze geplande toets verwijderen? Bestaande cijfers en leerresultaten blijven bewaard.'))return;
+   spCurrent.exams=spCurrent.exams.filter(e=>e.id!==id);
+   if(spSelectedExam===id)spSelectedExam=null;
+   await spSave(state.profile,spCurrent);render();toast('Toets uit de planning verwijderd.');
+ }
+ else if(action==='study-start-session'){
+   const id=Number(btn.dataset.id),mode=String(btn.dataset.mode||''),source=String(btn.dataset.source||'');
+   const pack=collections().find(x=>Number(x.id)===id);
+   if(!pack){toast('Het oefenmateriaal is niet meer beschikbaar.',true);return;}
+   if(mode==='review'){
+     const due=window.sfReview?.summary?.().dueItems||[];
+     if(due.some(x=>x.source===source))return window.sfReview.start(source);
+     if(pack.type==='flashcards')return openPack(id);
+     return window.sfLearning.start('guided',id);
+   }
+   if(mode==='guided'||mode==='recall')return window.sfLearning.start(mode,id);
+   return openPack(id);
  }
  else if(action==='study-open-ready'){
    spSelectedExam=btn.dataset.id;await navigate('ready');
  }
  else if(action==='study-toggle-day'){
    const key=btn.dataset.id+'|'+btn.dataset.date;
+   spCurrent.completed=spCurrent.completed||{};
    spCurrent.completed[key]=!spCurrent.completed[key];
    await spSave(state.profile,spCurrent);render();
  }
- else if(action==='study-open-pack'){await openPack(btn.dataset.id)}
+ else if(action==='study-open-pack'){await openPack(btn.dataset.id);}
 }
 window.studyBeforeRoute=studyBeforeRoute;
 window.studyDashboardWidget=studyDashboardWidget;
