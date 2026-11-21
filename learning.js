@@ -7,7 +7,7 @@
  const storageKey=()=>KEY_BASE+String(state.profile||0);
  const kinds={
    guided:{title:'Leer in stappen',label:'Methode 03',verb:'Stap voor stap',desc:'Eerst begrijpen, dan een kleine opdracht. Bij iedere stap krijg je meteen uitleg.',icon:'book'},
-   recall:{title:'Leg het uit',label:'Methode 04',verb:'Actief onthouden',desc:'Geef zelf antwoord zonder keuzes. Vergelijk daarna met het modelantwoord en herhaal wat lastig is.',icon:'spark'}
+   recall:{title:'Leg het uit',label:'Methode 04',verb:'Actief onthouden',desc:'Geef zelfstandig antwoord op heldere vragen. Vergelijk met de uitleg en herhaal wat nog lastig is.',icon:'spark'}
  };
  let session=null;
  const esc=String;
@@ -23,7 +23,7 @@
    const data=store(),id=session.kind+':'+String(session.pack.source_key||session.pack.id);
    const previous=data[id]||{};
    data[id]={sessions:(previous.sessions||0)+1,correct:session.firstPassCorrect,
-     total:session.originalTotal,last:new Date().toISOString()};
+     almost:session.firstPassAlmost,total:session.originalTotal,last:new Date().toISOString()};
    try{localStorage.setItem(storageKey(),JSON.stringify(data));}catch(e){console.warn('Voortgang van leermethode niet opgeslagen',e);}
    session.recorded=true;
  }
@@ -97,7 +97,7 @@
      <span class="sf-eyebrow">${kinds[s.kind].label.toUpperCase()} · AFGEROND</span>
      <h1>Goed bezig, ${htmlEscape(profileName())}!</h1><p>Je hebt actief gewerkt aan ${htmlEscape(s.pack.title)}. Herhaling maakt het verschil.</p>
      <div class="sf-complete-score"><strong>${s.firstPassCorrect} / ${s.originalTotal}</strong>
-       <span>direct goed of zelf gekend</span></div>
+       <span>direct goed · ${s.firstPassAlmost} bijna goed</span></div>
      <div class="sf-complete-actions"><button class="btn btn-primary" data-action="learn-restart">Nog een ronde ↗</button>
        <button class="btn btn-outline" data-action="learn-exit">Ander onderwerp</button>
        <button class="btn btn-outline" data-action="nav" data-route="dashboard">Naar start</button></div></div>`;
@@ -169,47 +169,49 @@
    <p class="sf-learning-foot">Regelmatig oefenen en jezelf terugvragen helpen de stof te onthouden.</p></div>`;
 }
  // Eigen vragenrotatie per leerling en leermethode: oefentoetsrotatie blijft intact.
- function nextRound(kind,pack,total){
-   const count=Math.min(12,total),key='studyforge-learning-round-v1:'+state.profile+':'+kind+':'+String(pack.source_key||pack.id);
-   let old=null;try{old=JSON.parse(localStorage.getItem(key)||'null');}catch{}
-   const valid=old?.count===total&&Array.isArray(old.remaining)&&old.remaining.every(i=>Number.isInteger(i)&&i>=0&&i<total)&&new Set(old.remaining).size===old.remaining.length;
-   let remaining=valid?old.remaining.slice():[];
-   if(remaining.length<count){
-     const exclude=new Set(valid&&Array.isArray(old.last)?old.last:[]);
-     const candidates=[...Array(total).keys()].filter(i=>!remaining.includes(i));
-     for(let i=candidates.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[candidates[i],candidates[j]]=[candidates[j],candidates[i]];}
-     candidates.sort((a,b)=>Number(exclude.has(a))-Number(exclude.has(b)));
-     remaining.push(...candidates);
-   }
-   const selected=remaining.slice(0,count);
-   try{localStorage.setItem(key,JSON.stringify({count:total,remaining:remaining.slice(count),last:selected}));}catch{}
-   return selected;
+ function nextRound(kind,pack,pool){
+ const count=Math.min(12,pool.length),key='studyforge-learning-round-v1:'+state.profile+':'+kind+':'+String(pack.source_key||pack.id);
+ let old=null;try{old=JSON.parse(localStorage.getItem(key)||'null');}catch{}
+ const signature=pool.join(',');
+ const valid=old?.poolKey===signature&&Array.isArray(old.remaining)&&old.remaining.every(i=>pool.includes(i))&&new Set(old.remaining).size===old.remaining.length;
+ let remaining=valid?old.remaining.slice():[];
+ if(remaining.length<count){
+   const exclude=new Set(valid&&Array.isArray(old.last)?old.last:[]);
+   const candidates=pool.filter(i=>!remaining.includes(i));
+   for(let i=candidates.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[candidates[i],candidates[j]]=[candidates[j],candidates[i]];}
+   candidates.sort((a,b)=>Number(exclude.has(a))-Number(exclude.has(b)));
+   remaining.push(...candidates);
  }
+ const selected=remaining.slice(0,count);
+ try{localStorage.setItem(key,JSON.stringify({count:pool.length,poolKey:signature,remaining:remaining.slice(count),last:selected}));}catch{}
+ return selected;
+}
  async function start(kind,id){
-   if(!kinds[kind])return;
-   const summary=collections().find(p=>p.type==='quiz'&&Number(p.id)===Number(id));
-   if(!summary){toast('Dit onderwerp is niet gevonden.',true);return;}
-   const result=await api('collection',null,{profile:state.profile,id:summary.id});
-   const pack=result?.collection,questions=pack?.content?.questions;
-   if(!Array.isArray(questions)||!questions.length){toast('Dit onderwerp bevat nog geen vragen.',true);return;}
-   // Beperk de leerroute tot 12 stappen per sessie; alle originele vragen blijven beschikbaar.
-   const selected=nextRound(kind,pack,questions.length);
-   session={kind,pack,queue:selected,index:0,originalTotal:selected.length,
-     firstPassCorrect:0,seen:new Set(),retried:new Set(),phase:kind==='guided'?'explain':'answer',
-     stage:'run',result:null,typed:'',recorded:false};
-   state.route='learning-run';render();window.scrollTo({top:0,behavior:'instant'});
+ if(!kinds[kind])return;
+ const summary=collections().find(p=>p.type==='quiz'&&Number(p.id)===Number(id));
+ if(!summary){toast('Dit onderwerp is niet gevonden.',true);return;}
+ const result=await api('collection',null,{profile:state.profile,id:summary.id});
+ const pack=result?.collection,questions=pack?.content?.questions;
+ if(!Array.isArray(questions)||!questions.length){toast('Dit onderwerp bevat nog geen vragen.',true);return;}
+ const pool=questions.map((q,i)=>learningEligible(kind,q)?i:-1).filter(i=>i>=0);
+ if(!pool.length){toast('Dit pakket bevat nog geen geschikte vragen voor deze leermethode.',true);return;}
+ const selected=nextRound(kind,pack,pool);
+ session={kind,pack,queue:selected,index:0,originalTotal:selected.length,
+   firstPassCorrect:0,firstPassAlmost:0,seen:new Set(),retried:new Set(),
+   phase:kind==='guided'?'explain':'answer',stage:'run',result:null,typed:'',recorded:false};
+ state.route='learning-run';render();window.scrollTo({top:0,behavior:'instant'});
+}
+ function setQuality(quality){
+ const s=session;if(!s||s.stage!=='run'||![0,1,2].includes(quality))return;
+ const index=s.queue[s.index];
+ if(!s.seen.has(index)){
+   s.seen.add(index);
+   if(quality===2)s.firstPassCorrect++;
+   if(quality===1)s.firstPassAlmost++;
+   window.sfReview?.record?.({pack:s.pack,index,item:originalQuestion(),quality,mode:s.kind==='guided'?'leer-in-stappen':'leg-het-uit'});
  }
- function setResult(known){
-   const s=session;if(!s||s.stage!=='run')return;
-   const number=s.queue[s.index];
-   if(!s.seen.has(number)){
-     s.seen.add(number);if(known)s.firstPassCorrect++;
-     window.sfReview?.record({pack:s.pack,index:number,item:originalQuestion(),quality:known?2:0,mode:s.kind==='guided'?'leer-in-stappen':'leg-het-uit'});
-   }
-   if(s.kind==='recall'&&!known&&!s.retried.has(number)){
-     s.retried.add(number);s.queue.push(number);
-   }
- }
+ if(quality<2&&!s.retried.has(index)){s.retried.add(index);s.queue.push(index);}
+}
  function next(){
    const s=session;if(!s)return;
    s.index++;s.typed='';s.result=null;
@@ -218,29 +220,30 @@
    render();window.scrollTo({top:0,behavior:'instant'});
  }
  async function handle(action,btn){
-   if(action==='learn-start')return start(btn.dataset.kind,btn.dataset.id);
-   if(action==='learn-exit'){
-     const kind=session?.kind||'guided';session=null;return navigate(kind==='guided'?'learning-guided':'learning-recall');
-   }
-   if(action==='learn-restart')return start(session.kind,session.pack.id);
-   if(!session)return;
-   if(action==='learn-practice'&&session.kind==='guided'&&session.phase==='explain'){session.phase='practice';return render();}
-   if(action==='learn-answer'&&session.kind==='guided'&&session.phase==='practice'){
-     const q=originalQuestion(),n=Number(btn.dataset.value);
-     if(q.type!=='mc'||!Number.isInteger(n)||n<0||n>=q.options.length)return;
-     session.result=n===q.correct;session.phase='feedback';setResult(session.result);return render();
-   }
-   if(action==='learn-reveal'&&['answer','practice'].includes(session.phase)){
-     session.typed=document.getElementById('sf-learning-text')?.value||'';
-     if(session.kind==='guided'){session.phase='feedback';session.result=null;}
-     else session.phase='review';
-     return render();
-   }
-   if(action==='learn-rate'&&((session.kind==='guided'&&session.phase==='feedback')||(session.kind==='recall'&&session.phase==='review'))){
-     setResult(btn.dataset.known==='1');return next();
-   }
-   if(action==='learn-next'&&session.kind==='guided'&&session.phase==='feedback')return next();
+ if(action==='learn-start')return start(btn.dataset.kind,btn.dataset.id);
+ if(action==='learn-exit'){const kind=session?.kind||'guided';session=null;return navigate(kind==='guided'?'learning-guided':'learning-recall');}
+ if(action==='learn-restart')return session?start(session.kind,session.pack.id):null;
+ if(!session||session.stage!=='run')return;
+ if(action==='learn-practice'&&session.kind==='guided'&&session.phase==='explain'){session.phase='practice';return render();}
+ if(action==='learn-answer'&&session.kind==='guided'&&session.phase==='practice'){
+   const q=originalQuestion(),n=Number(btn.dataset.value);
+   if(q.type!=='mc'||!Number.isInteger(n)||n<0||n>=q.options.length)return;
+   session.result=n===q.correct;session.phase='feedback';setQuality(session.result?2:0);return render();
  }
+ if(action==='learn-reveal'&&['answer','practice'].includes(session.phase)){
+   session.typed=String(document.getElementById('sf-learning-text')?.value||session.typed||'').slice(0,2500);
+   if(session.kind==='guided'){session.phase='feedback';session.result=null;}
+   else session.phase='review';
+   return render();
+ }
+ if(action==='learn-rate'&&((session.kind==='guided'&&session.phase==='feedback'&&session.result===null)||
+     (session.kind==='recall'&&session.phase==='review'))){
+   const quality=Number(btn.dataset.quality);
+   if(![0,1,2].includes(quality))return;
+   setQuality(quality);return next();
+ }
+ if(action==='learn-next'&&session.kind==='guided'&&session.phase==='feedback'&&session.result!==null)return next();
+}
  document.addEventListener('input',e=>{if(e.target?.id==='sf-learning-text'&&session)session.typed=e.target.value;});
  window.sfLearning={catalog,render:renderMethod,start,handle,stats,progress:store,reset:()=>{session=null;}};
 })();
