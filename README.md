@@ -1,5 +1,18 @@
 # StudyForge — leren via het Huiswerk-project
 
+## Huidige versie — R1: lokaal zonder database (21 november 2026)
+
+**Standaard gebruikt StudyForge geen Supabase meer.** GitHub Pages levert de website en de JSON-lespakketten; cijfers, flashcards, plannen, leerresultaten en Slim herhalen worden per leerling in de opslag van de browser bewaard. Er zijn geen leerlingaccounts, betaalde API-calls of databaseverbindingen nodig om te oefenen.
+
+**Eenmalige migratie van bestaande cloudcijfers:** eerdere Supabase-gegevens zijn niet verwijderd. Als een profiel op het huidige apparaat nog geen cloudmigratie heeft bevestigd, geeft het dashboard een waarschuwing. Ga naar **Meer → Back-up en herstel → Haal oude cloudresultaten op**. Dit opent tijdelijk de speciale herstelmodus (`?legacy-cloud=1`). Kies de juiste leerling, voer code `2007` in en controleer de cijfers. De bestaande migratielogica neemt beschikbare cloudresultaten lokaal over. Download dan een JSON-back-up en kies **Terug naar lokale versie**. Doe dit afzonderlijk voor Nikki en Dean. Ook gearchiveerde cloudcijfers zonder herkenbaar lespakket blijven in de lokale resultaatweergave beschikbaar.
+
+**Belangrijk:** nieuwe cijfers op één apparaat komen niet automatisch op een ander apparaat. Exporteer op het bronapparaat en herstel op het tweede apparaat via het back-upscherm. Wis geen browseropslag voordat beide back-ups veilig zijn gedownload én gecontroleerd. De back-upbestanden bevatten persoonlijke leerresultaten; bewaar ze privé. De viercijferige profielcode is een gemakscode, geen sterke beveiliging.
+
+De oude Supabase-installatie, tabellen en bestaande clouddata blijven intact als noodherstel. De optionele herstelmodus gebruikt alleen de bestaande openbare publishable key, geen geheime databasegegevens. R1 vergt nog een handmatige controle met de echte leerlinggegevens op de apparaten van Nikki en Dean.
+
+---
+
+
 ## Centrale voortgang zonder persoonlijke gebruikersaccounts
 
 De cloudadapter staat in `sharedsync.js`; SQL in `supabase/shared-progress.sql`. Het profielscherm vraagt om 2007. De publieke Supabase publishable key en project-URL zijn sinds 29 oktober 2026 in `config.js` ingesteld; de SQL werd door de beheerder uitgevoerd. De code 2007 wordt via de databasefunctie gecontroleerd zodra de verbinding lukt. Daarna synchroniseren toetsresultaten, foute vragen, flashcards, leerdoelen en toetsplanning voor Nikki en Dean tussen apparaten. De eerste keer worden bestaande lokale resultaten zoveel mogelijk meegenomen.
