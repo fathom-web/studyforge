@@ -245,5 +245,5 @@
  if(action==='learn-next'&&session.kind==='guided'&&session.phase==='feedback'&&session.result!==null)return next();
 }
  document.addEventListener('input',e=>{if(e.target?.id==='sf-learning-text'&&session)session.typed=e.target.value;});
- window.sfLearning={catalog,render:renderMethod,start,handle,stats,progress:store,reset:()=>{session=null;}};
+ window.sfLearning={catalog,render:renderMethod,start,handle,stats,progress:store,isRecallEligible,learningEligible,reset:()=>{session=null;}};
 })();
