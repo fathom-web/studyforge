@@ -177,7 +177,7 @@
  }
  async function handle(action,btn){
    if(action==='review-start')return start();
-   if(action==='review-exit'){session=null;return navigate('review');}
+   if(action==='review-exit'){if(session&&session.index<session.queue.length&&!window.confirm('Je herhaalronde is nog niet afgemaakt. Stoppen? Eerdere beoordelingen blijven bewaard.'))return;session=null;return navigate('review',true);}
    if(!session)return;
    if(action==='review-reveal'&&session.phase==='answer'){
      session.typed=String(document.getElementById('sf-review-text')?.value||'').slice(0,2500);
