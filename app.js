@@ -305,9 +305,11 @@ async function finishQuiz(){
      window.sfReview?.record?.({pack:q.pack,index:d.index,item:q.content.questions[d.index],
        quality:d.correct?2:0,mode:q.isMistakes?'fouten oefenen':'oefentoets'});
    }
-   q.result=result;await refreshDashboard();
-   state.route='quiz-result';render();window.scrollTo(0,0);
- }catch(err){q.saving=false;render();throw err;}
+   q.result=result;
+   try{await refreshDashboard();}
+   catch(refreshError){console.warn('Toets opgeslagen, resultaten nog niet vernieuwd',refreshError);toast('Je cijfer is bewaard. Het overzicht wordt bij opnieuw openen vernieuwd.',true);}
+   q.saving=false;state.route='quiz-result';render();window.scrollTo(0,0);
+ }catch(err){q.saving=false;if(q.result){state.route='quiz-result';render();toast('Je cijfer is opgeslagen, maar het overzicht kon niet worden vernieuwd.',true);return;}render();throw err;}
 }
 async function flashRate(known){
  const f=state.flash;if(!f||f.saving||f.index>=f.order.length)return;
