@@ -65,10 +65,10 @@
    }
  }
  function extra(p){
-   const data={},prefix='studyforge-quiz-rotation-v1:'+p+':';
+   const data={},prefix='studyforge-quiz-rotation-v1:'+p+':',learnPrefix='studyforge-learning-round-v1:'+p+':';
    for(let i=0;i<localStorage.length;i++){
      const k=localStorage.key(i);
-     if(k==='studyforge-reviews-v1:'+p||k==='studyforge-learning-v1:'+p||k?.startsWith(prefix))
+     if(k==='studyforge-reviews-v1:'+p||k==='studyforge-learning-v1:'+p||k?.startsWith(prefix)||k?.startsWith(learnPrefix))
        data[k]=parse(read(k),null);
    }
    return data;
@@ -103,7 +103,7 @@
      for(const [id,row]of Object.entries(v.records))if(row&&(!old.records[id]||Date.parse(row.lastAt||0)>Date.parse(old.records[id].lastAt||0)))old.records[id]=row;
      old.events=[...new Map([...old.events,...v.events].map(e=>[JSON.stringify(e),e])).values()].slice(-1000);
      old.migrated=!!(old.migrated||v.migrated);save(k,old);
-   }else if(k.startsWith('studyforge-quiz-rotation-v1:'+p+':')&&!read(k))save(k,v);
+   }else if((k.startsWith('studyforge-quiz-rotation-v1:'+p+':')||k.startsWith('studyforge-learning-round-v1:'+p+':'))&&!read(k))save(k,v);
  }
  async function restoreFile(file){
    if(!file||file.size>12*1024*1024)throw Error('Ongeldig bestand (maximaal 12 MB).');
