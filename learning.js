@@ -221,7 +221,7 @@
  }
  async function handle(action,btn){
  if(action==='learn-start')return start(btn.dataset.kind,btn.dataset.id);
- if(action==='learn-exit'){const kind=session?.kind||'guided';session=null;return navigate(kind==='guided'?'learning-guided':'learning-recall');}
+ if(action==='learn-exit'){if(session?.stage==='run'&&!window.confirm('Je leersessie is nog bezig. Stoppen? Eerdere beoordelingen blijven bewaard.'))return;const kind=session?.kind||'guided';session=null;return navigate(kind==='guided'?'learning-guided':'learning-recall',true);}
  if(action==='learn-restart')return session?start(session.kind,session.pack.id):null;
  if(!session||session.stage!=='run')return;
  if(action==='learn-practice'&&session.kind==='guided'&&session.phase==='explain'){session.phase='practice';return render();}
