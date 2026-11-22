@@ -296,18 +296,32 @@ async function practiceMistakes(){
  if(grouped.size>1)toast('We beginnen met de fouten uit één toets. Daarna kun je de andere oefenen.');
 }
 async function finishQuiz(){
- const q=state.quiz;
- const r=await api('save_quiz',{profile:state.profile,collection_id:q.pack.id,answers:q.answers,mode:q.isMistakes?'mistakes':'all',indices:q.indices});
- // Nieuwe herhaalplanning is aanvullend en verandert het bestaande cijfer niet.
- for(const d of r.details||[]){window.sfReview?.record?.({pack:q.pack,index:d.index,item:q.content.questions[d.index],quality:d.correct?2:0,mode:q.isMistakes?'fouten oefenen':'oefentoets'});}
- q.result=r;await refreshDashboard();state.route='quiz-result';render();window.scrollTo(0,0);
+ const q=state.quiz;if(!q||q.saving||q.result)return;
+ q.saving=true;render();
+ try{
+   const result=await api('save_quiz',{profile:state.profile,collection_id:q.pack.id,answers:q.answers,
+     mode:q.isMistakes?'mistakes':'all',indices:q.indices});
+   for(const d of result.details||[]){
+     window.sfReview?.record?.({pack:q.pack,index:d.index,item:q.content.questions[d.index],
+       quality:d.correct?2:0,mode:q.isMistakes?'fouten oefenen':'oefentoets'});
+   }
+   q.result=result;await refreshDashboard();
+   state.route='quiz-result';render();window.scrollTo(0,0);
+ }catch(err){q.saving=false;render();throw err;}
 }
 async function flashRate(known){
- const f=state.flash;const cardIndex=f.order[f.index];
- await api('flash_review',{profile:state.profile,collection_id:f.pack.id,index:cardIndex,known});
- window.sfReview?.record?.({pack:f.pack,index:cardIndex,item:f.content.cards[cardIndex],quality:known?2:0,mode:'flashcards'});
- if(known)f.sessionKnown++;f.index++;f.flipped=false;
- if(f.index===f.order.length)await refreshDashboard();render();
+ const f=state.flash;if(!f||f.saving||f.index>=f.order.length)return;
+ f.saving=true;render();
+ try{
+   const cardIndex=f.order[f.index];
+   await api('flash_review',{profile:state.profile,collection_id:f.pack.id,index:cardIndex,known});
+   window.sfReview?.record?.({pack:f.pack,index:cardIndex,item:f.content.cards[cardIndex],
+     quality:known?2:0,mode:'flashcards'});
+   if(known)f.sessionKnown++;
+   f.index++;f.flipped=false;
+   if(f.index===f.order.length)await refreshDashboard();
+   f.saving=false;render();
+ }catch(err){f.saving=false;render();throw err;}
 }
 function handleError(e){console.error(e);toast(e?.message||'Er ging iets mis.',true);if(e?.message?.includes('uitgelogd')){state.route='unlock';render();}}
 document.addEventListener('click',async ev=>{
