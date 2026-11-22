@@ -72,3 +72,42 @@ body{background:var(--bg);color:var(--ink)}h1,h2,h3,.pick-name,.brand{font-famil
 .sf-pin-owl{flex:0 1 380px;max-width:37vw}
 .sf-pin-owl img{width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 18px 45px #0006)}
 @media(max-width:770px){.sf-pin-owl{display:none}.sf-pin-shell{padding:16px}.sf-pin-panel{padding:26px}.sf-pin-input{font-size:23px;letter-spacing:11px}}
+
+/* R5 — mobiele bediening, leesbaarheid en focus */
+.sidebar{overflow-y:auto;scrollbar-width:thin;overscroll-behavior:contain}
+.sidebar .nav-list{flex:0 0 auto}
+.sidebar .sidebar-bottom{flex-shrink:0;padding-top:16px}
+.main-column,.main-content,.page-enter{min-width:0}
+.question-card,.panel,.study-panel,.sf-learning-card,.pack-card,.sf-coach-r3-item{overflow-wrap:anywhere}
+button,.btn,.answer-option,.study-button,.study-link{touch-action:manipulation}
+:focus-visible{outline:3px solid #a5f3df;outline-offset:3px}
+textarea,input,select{scroll-margin-bottom:140px}
+.toast{line-height:1.45;overflow-wrap:anywhere}
+@media(max-width:900px) and (min-width:621px){
+  .sidebar{padding-top:16px;padding-bottom:14px}
+  .sidebar .nav-list{margin-top:20px}
+  .sidebar .nav-link{min-height:48px;padding:12px}
+  .sidebar-bottom{margin-top:18px}
+}
+@media(max-width:620px){
+  .main-content{padding-bottom:calc(122px + env(safe-area-inset-bottom,0px))}
+  .bottom-nav{grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;padding-left:6px;padding-right:6px}
+  .bottom-link{min-width:0;min-height:49px;gap:4px;padding:6px 1px;font-size:10px}
+  .bottom-link span{line-height:1.15;overflow-wrap:anywhere;text-align:center}
+  .btn,.study-button,.study-link{white-space:normal;text-align:center;min-height:44px}
+  .question-footer{gap:9px}
+  .question-footer .btn{flex:1 1 0;min-width:0}
+  .rate-buttons .btn,.flash-controls .btn{flex:1 1 130px}
+  .answer-option{min-height:47px;overflow-wrap:anywhere}
+  .question-card h2{overflow-wrap:anywhere}
+  .toast{bottom:calc(91px + env(safe-area-inset-bottom,0px));max-width:calc(100% - 24px)}
+  .flip-card{min-height:290px}
+  .flip-inner{min-height:245px}
+  .topbar,.profile-chip{min-width:0}
+}
+@media(max-width:360px){
+  .main-content{padding-left:11px;padding-right:11px}
+  .topbar{padding-left:11px;padding-right:11px}
+  .bottom-link{font-size:9px}
+  .activity-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
