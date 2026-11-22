@@ -211,7 +211,7 @@ function flashContent(){
   const known=f.sessionKnown;return `<div class="page-enter result-page"><div class="result-spark">✳</div><div class="eyebrow">FLASHCARDS AFGEROND</div><h1>Weer wat geleerd!</h1><p>Goed bezig, ${htmlEscape(profileName())}. Iedere keer oefenen helpt je vooruit.</p><div class="result-big-grade"><span class="result-grade-label">KAARTEN DIE JE KENDE</span><span class="result-grade-number">${known}</span><span>van ${f.order.length} kaarten</span></div><div class="result-buttons"><button class="btn btn-primary" data-action="restart-flash">${ic('refresh',18)} Opnieuw oefenen</button><button class="btn btn-outline" data-action="nav" data-route="flashcards">Alle flashcards ${ic('arrow',18)}</button></div></div>`;
  }
  const id=f.order[f.index];const card=f.content.cards[id];
- return `<div class="page-enter focus-page flash-page"><button class="back-link" data-action="nav" data-route="flashcards">${ic('back',18)} Terug naar flashcards</button><div class="focus-header"><div><div class="eyebrow">${htmlEscape(f.pack.subject)} <span class="bullet">·</span> FLASHCARDS</div><h2>${htmlEscape(f.pack.title)}</h2></div><span class="step-count">Kaart ${f.index+1} <span>/ ${f.order.length}</span></span></div><div class="step-bar"><div style="width:${f.index/f.order.length*100}%"></div></div><button class="flip-card ${f.flipped?'flipped':''}" data-action="flip"><span class="flip-inner"><span class="flip-label">${f.flipped?'ANTWOORD':'VRAAG'}</span><span class="flip-text">${htmlEscape(f.flipped?card.back:card.front)}</span><span class="flip-tip">${ic('refresh',17)} Tik om ${f.flipped?'de vraag':'het antwoord'} te zien</span></span></button><div class="flash-controls">${f.flipped?`<button class="btn btn-red" data-action="rate-flash" data-known="0" ${f.saving?'disabled':''}>${ic('refresh',18)} Nog oefenen</button><button class="btn btn-primary" data-action="rate-flash" data-known="1" ${f.saving?'disabled':''}>${ic('check',18)} Ik weet het!</button>`:`<button class="btn btn-secondary" data-action="flip">Draai kaart om ${ic('arrow',18)}</button>`}</div></div>`;
+ return `<div class="page-enter focus-page flash-page"><button class="back-link" data-action="nav" data-route="flashcards">${ic('back',18)} Terug naar flashcards</button><div class="focus-header"><div><div class="eyebrow">${htmlEscape(f.pack.subject)} <span class="bullet">·</span> FLASHCARDS</div><h2>${htmlEscape(f.pack.title)}</h2></div><span class="step-count">Kaart ${f.index+1} <span>/ ${f.order.length}</span></span></div><div class="step-bar"><div style="width:${f.index/f.order.length*100}%"></div></div><button class="flip-card ${f.flipped?'flipped':''}" data-action="flip" ${f.saving?'disabled':''}><span class="flip-inner"><span class="flip-label">${f.flipped?'ANTWOORD':'VRAAG'}</span><span class="flip-text">${htmlEscape(f.flipped?card.back:card.front)}</span><span class="flip-tip">${ic('refresh',17)} Tik om ${f.flipped?'de vraag':'het antwoord'} te zien</span></span></button><div class="flash-controls">${f.flipped?`<button class="btn btn-red" data-action="rate-flash" data-known="0" ${f.saving?'disabled':''}>${ic('refresh',18)} Nog oefenen</button><button class="btn btn-primary" data-action="rate-flash" data-known="1" ${f.saving?'disabled':''}>${ic('check',18)} Ik weet het!</button>`:`<button class="btn btn-secondary" data-action="flip">Draai kaart om ${ic('arrow',18)}</button>`}</div></div>`;
 }
 async function selectProfile(id){state.profile=id;await refreshDashboard();window.sfBackup?.captureCloud?.(id);await refreshDashboard();window.sfLearning?.reset?.();window.sfReview?.reset?.();window.sfReview?.importLegacy?.();await window.studyBeforeRoute?.('dashboard');state.route='dashboard';render();}
 async function refreshDashboard(){if(!state.profile)return;state.dashboard=await api('dashboard',null,{profile:state.profile});}
@@ -348,9 +348,16 @@ document.addEventListener('click',async ev=>{
    case 'reveal-answer':state.quiz.answers[state.quiz.index].revealed=true;render();break;
    case 'self-grade':state.quiz.answers[state.quiz.index].self_grade=btn.dataset.known==='1';render();break;
    case 'quiz-prev':if(state.quiz.index>0){state.quiz.index--;state.quiz.hint=false;render();}break;
-   case 'quiz-next':if(state.quiz.index<state.quiz.indices.length-1){state.quiz.index++;state.quiz.hint=false;render();window.scrollTo(0,0);}else await finishQuiz();break;
+   case 'quiz-next':{
+     const quiz=state.quiz;if(!quiz||quiz.saving)return;
+     const item=quiz.content.questions[quiz.indices[quiz.index]],answer=quiz.answers[quiz.index]||{};
+     if(!(item.type==='mc'?Number.isInteger(answer.selected):answer.self_grade!==undefined))break;
+     if(quiz.index<quiz.indices.length-1){quiz.index++;quiz.hint=false;render();window.scrollTo(0,0);}
+     else await finishQuiz();
+     break;
+   }
    case 'restart-quiz':startQuiz(state.quiz.isMistakes?state.quiz.indices:null);break;
-   case 'flip':state.flash.flipped=!state.flash.flipped;render();break;
+   case 'flip':if(state.flash&&!state.flash.saving){state.flash.flipped=!state.flash.flipped;render();}break;
    case 'rate-flash':await flashRate(btn.dataset.known==='1');break;
    case 'restart-flash':startFlash();break;
    case 'filter':state.libraryFilter=btn.dataset.value;render();break;
