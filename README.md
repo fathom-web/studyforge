@@ -1,6 +1,6 @@
 # StudyForge — leren via het Huiswerk-project
 
-## Huidige versie — R4: gerichte toetsvoorbereiding en ouderdashboard (21 november 2026)
+## Huidige versie — R5: mobiele optimalisatie en kwaliteitscontrole (22 november 2026)
 
 **Standaard gebruikt StudyForge geen Supabase meer.** GitHub Pages levert de website en de JSON-lespakketten; cijfers, flashcards, plannen, leerresultaten en Slim herhalen worden per leerling in de opslag van de browser bewaard. Er zijn geen leerlingaccounts, betaalde API-calls of databaseverbindingen nodig om te oefenen.
 
@@ -12,6 +12,20 @@ De oude Supabase-installatie, tabellen en bestaande clouddata blijven intact als
 
 ---
 
+
+## R5 — mobiele optimalisatie en stabiliteit (22 november 2026)
+
+- De compacte tablet-zijbalk is scrollbaar; icoonmenu's hebben nu toegankelijke tekstlabels en titels.
+- De onderste mobiele menubalk gebruikt vijf gelijk verdeelde knoppen, grotere aanraakvlakken en betere ruimte voor iPhone-veilige schermranden. Meldingen staan boven het mobiele menu en langere toetsvragen, antwoorden en knoppen worden netjes afgebroken.
+- De actieve navigatie is ook bij lopende toetsen of flashcards herkenbaar.
+- Onbedoeld verlaten van een onafgemaakte oefentoets, flashcardronde, leersessie of herhaalronde vraagt bevestiging. Een geannuleerde actie bewaart de lopende oefening.
+- Tijdens het opslaan van een toets of flashcard is opnieuw beoordelen of afronden tijdelijk geblokkeerd. Dubbel tikken kan daardoor geen extra cijfer of extra flashcardbeoordeling veroorzaken. Een tweede tik op **Volgende vraag** kan geen onbeantwoorde vraag overslaan.
+- De JSON-back-up neemt nu ook `studyforge-learning-round-v1` (vragenrotatie voor Leer in stappen / Leg het uit) mee. Deze staat per leerling gescheiden.
+- Het bewaren van een cijfer is losgekoppeld van het opnieuw laden van het dashboard: bij een tijdelijke weergavefout wordt niet nogmaals hetzelfde cijfer opgeslagen.
+
+**Kwaliteitscontrole:** de echte lesbibliotheek met 33 collecties en de belangrijkste regressiestromen zijn in een gesimuleerde browseromgeving getest. Zie [QA-R5.md](QA-R5.md) voor de gecontroleerde situaties en de resterende **handmatige visuele test op iPhone, Android en tablet**. Er zijn geen bestaande cijfers of lespakketten verwijderd.
+
+---
 
 ## R4 — toetsvoorbereiding en ouderdashboard (21 november 2026)
 
